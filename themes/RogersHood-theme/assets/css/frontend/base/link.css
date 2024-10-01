@@ -1,0 +1,22 @@
+/*
+ * Ensure that we are not overriding the editor styles of the
+ * WordPress Components.
+ *
+ * This is a workaround for: https://github.com/WordPress/gutenberg/issues/10178
+ *
+ * using :where to prevent the specificity increase of using :not
+ */
+
+a:where(:not(.components-external-link)) {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 24px;
+}
+
+a.primary-btn {
+	background-color: var(--wp--preset--color--light-blue);
+	border-radius: 42px;
+	color: var(--wp--preset--color--black);
+	padding: 14px 43.5px;
+	text-decoration: none;
+}

@@ -1,0 +1,39 @@
+@import url("reset.css");
+
+@import url("colors.css");
+
+@import url("media-queries.css");
+
+html {
+	font-family: var(--wp--preset--font-family--sofia-pro);
+	font-weight: 300;
+}
+
+.page-container {
+	margin: 0 auto;
+	max-width: 1440px;
+}
+
+.page-container__inner > h1.hero-section-final-title {
+	max-width: 311px;
+}
+
+.video-text-section__inner {
+	max-width: 504px;
+}
+
+@media only screen and (--bp-medium) {
+	.page-container__inner > h1.hero-section-final-title {
+		max-width: 320px;
+	}
+}
+
+@media only screen and (--bp-large-2) {
+	.page-container__inner > h1.hero-section-final-title {
+		max-width: 880px;
+	}
+
+	.video-text-section__inner {
+		max-width: 504px;
+	}
+}

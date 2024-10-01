@@ -1,0 +1,157 @@
+.hero-section__container {
+	background-color: var(--wp--preset--color--light-blue);
+	height: 37.5em;
+	position: relative;
+	z-index: 1;
+}
+
+.hero-svg {
+	color: var(--wp--preset--color--white);
+}
+
+.hero-svg__left,
+.hero-svg__top-right,
+.hero-svg__bottom-left,
+.hero-svg__bottom-right {
+	position: absolute;
+}
+
+.hero-svg__left {
+	left: 0;
+	top: 55px;
+	z-index: 5;
+}
+
+.hero-svg__bottom-left {
+	bottom: 0;
+	left: 0;
+	z-index: 5;
+}
+
+.hero-svg__bottom-right {
+	bottom: 0;
+	right: 0;
+	z-index: 5;
+}
+
+.hero-svg__top-right {
+	right: 0;
+	top: 24px;
+	z-index: 5;
+}
+
+.hero-curve-svg {
+	color: var(--wp--preset--color--light-blue);
+	height: 16px;
+	width: 100%;
+	z-index: 5;
+}
+
+.hero-section-text__container {
+	align-items: center;
+	display: flex;
+	height: 100%;
+	justify-content: center;
+	position: relative;
+	z-index: 10;
+}
+
+.hero-section-final-title {
+	color: var(--wp--preset--color--white);
+	font-size: clamp(1.563rem, 2vw + 1rem, 3.25rem);
+	text-align: center;
+}
+
+.video-section__container {
+	height: 100%;
+	padding: 64px 36px 80px 36px;
+}
+
+.hero-video {
+	border-radius: 12px;
+	margin-bottom: 40px;
+	object-fit: cover;
+	position: relative;
+	width: 317px;
+	z-index: 3;
+}
+
+.video-text-section__container {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.wysig-video__container {
+	font-size: 16px;
+	margin-bottom: 32px;
+}
+
+@media only screen and (--bp-large) {
+	.video-section__container {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.hero-svg__left {
+		top: 0;
+		width: 167px;
+	}
+
+	.hero-svg__bottom-left {
+		width: 139px;
+	}
+
+	.hero-svg__bottom-right {
+		width: 99.83px;
+	}
+
+	.hero-svg__top-right {
+		width: 100px;
+	}
+}
+
+@media only screen and (--bp-large-2) {
+	.hero-video {
+		position: absolute;
+		top: -175px;
+		z-index: 3;
+	}
+
+	.video-section__container {
+		height: 728px;
+		padding: 100px 96px;
+		position: relative;
+		z-index: 1;
+	}
+
+	.video-text-section__container {
+		align-items: flex-end;
+	}
+
+	.hero-curve-svg {
+		height: auto;
+	}
+
+	.wysig-video__container {
+		font-size: clamp(1rem, 2vw + 1rem, 1.375rem);
+		margin-bottom: 32px;
+	}
+}
+
+@media only screen and (--bp-xlarge) {
+	.hero-video {
+		position: absolute;
+		top: -175px;
+		width: 500px;
+		z-index: 3;
+	}
+}
+
+@media only screen and (--bp-xxlarge) {
+	.hero-video {
+		width: 614px;
+	}
+}
