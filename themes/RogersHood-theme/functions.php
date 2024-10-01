@@ -77,6 +77,9 @@ if ( ! function_exists( 'wp_body_open' ) ) {
 	}
 }
 
+/**
+ *  Disable Site Visibility in the Admin Bar
+ */
 add_action(
 	'admin_bar_menu',
 	function ( $wp_admin_bar ) {
@@ -92,4 +95,33 @@ function modify_woocommerce_demo_store() {
 	return null;
 }
 
-add_filter( 'woocommerce_demo_store', 'modify_woocommerce_demo_store', 99 );
+add_filter( 'woocommerce_demo_store', 'modify_woocommerce_demo_store', 10, 2 );
+
+/**
+ *  Remove Ebook and Any Uncategorized in the default Shop Query
+ */
+function custom_pre_get_posts_query( $q ) {
+
+	$tax_query = (array) $q->get( 'tax_query' );
+
+	$tax_query[] = array(
+		'taxonomy' => 'product_cat',
+		'field'    => 'slug',
+		'terms'    => array( 'ebooks', 'uncategorized' ),
+		'operator' => 'NOT IN',
+	);
+
+	$q->set( 'tax_query', $tax_query );
+}
+
+add_action( 'woocommerce_product_query', 'custom_pre_get_posts_query' );
+
+/**
+ * Change the breadcrumb separator
+ */
+add_filter( 'woocommerce_breadcrumb_defaults', 'wcc_change_breadcrumb_delimiter' );
+function wcc_change_breadcrumb_delimiter( $defaults ) {
+	// Change the breadcrumb delimeter from '/' to '>'
+	$defaults['delimiter'] = ' &gt; ';
+	return $defaults;
+}

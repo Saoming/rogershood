@@ -1,170 +1,171 @@
 {
-  "$schema": "https://schemas.wp.org/wp/6.2/theme.json",
-  "version": 2,
-  "settings": {
-    "color": {
-      "defaultPalette": false,
-      "defaultGradients": false,
-      "defaultDuotone": false,
-      "custom": false,
-      "customDuotone": false,
-      "customGradient": false,
-      "duotone": [],
-      "gradients": [],
-      "link": false,
-      "palette": [
-        {
-          "name": "Light Blue",
-          "slug": "light-blue",
-          "color": "#B5C3CD"
-        },
-        {
-          "name": "Beige",
-          "slug": "beige",
-          "color": "#ECE8E2"
-        },
-        {
-          "name": "Green",
-          "slug": "Green",
-          "color": "#627479"
-        },
-        {
-          "name": "Black",
-          "slug": "black",
-          "color": "#121212"
-        },
-        {
-          "name": "Light Beige",
-          "slug": "light-beige",
-          "color": "#F2F1EF"
-        },
-        {
-          "name": "Dark Grey",
-          "slug": "dark-grey",
-          "color": "#5E5E5E"
-        },
-        {
-          "name": "White",
-          "slug": "white",
-          "color": "#fff"
-        }
-      ]
-    },
-    "custom": {},
-    "layout": {
-      "contentSize": "800px",
-      "wideSize": "1000px"
-    },
-    "spacing": {
-      "margin": false,
-      "padding": false,
-      "units": []
-    },
-    "typography": {
-      "customFontSize": false,
-      "lineHeight": false,
-      "dropCap": false,
-      "fontSizes": [],
-      "fontFamilies": [
-        {
-          "fontFamily": "Sofia Pro",
-          "slug": "sofia-pro",
-          "fontFace": [
-            {
-              "fontStyle": "normal",
-              "fontWeight": "300",
-              "fontStretch": "normal",
-              "src": "file:./assets/fonts/sofia-pro/sofiapro-light.otf"
-            },
-            {
-              "fontStyle": "italic",
-              "fontWeight": "300",
-              "fontStretch": "normal",
-              "src": "file:./assets/fonts/sofia-pro/sofiapro-lightitalic.otf"
-            },
-            {
-              "fontStyle": "normal",
-              "fontWeight": "500",
-              "fontStretch": "normal",
-              "src": "file:./assets/fonts/sofia-pro/sofiapro-medium.otf"
-            }
-          ]
-        },
-        {
-          "fontFamily": "Scilla",
-          "slug": "scilla",
-          "fontFace": [
-            {
-              "fontStyle": "normal",
-              "fontWeight": "400",
-              "fontStretch": "normal",
-              "src": "file:./assets/fonts/scilla/scilla-regular-webfont.woff"
-            },
-            {
-              "fontStyle": "italic",
-              "fontWeight": "400",
-              "fontStretch": "normal",
-              "src": "file:./assets/fonts/scilla/scilla-regularitalic-webfont.woff"
-            }
-          ]
-        }
-      ]
-    },
-    "blocks": {
-      "core/button": {
-        "color": {
-          "palette": []
-        }
-      }
-    }
-  },
-  "styles": {
-    "color": {},
-    "elements": {
-      "h1": {
-        "typography": {
-          "fontFamily": "Scilla",
-          "fontWeight": "500"
-        }
-      },
-      "h2": {
-        "typography": {
-          "fontFamily": "Scilla",
-          "fontWeight": "500"
-        }
-      },
-      "h3": {
-        "typography": {
-          "fontFamily": "Sofia Pro",
-          "fontWeight": "500"
-        }
-      },
-      "h4": {
-        "typography": {
-          "fontFamily": "Sofia Pro",
-          "fontWeight": "500"
-        }
-      },
-      "h5": {
-        "typography": {
-          "fontFamily": "Sofia Pro",
-          "fontWeight": "500"
-        }
-      },
-      "h6": {
-        "typography": {
-          "fontFamily": "Sofia Pro",
-          "fontWeight": "500"
-        }
-      },
-      "link": {
-        "typography": {
-          "fontFamily": "Sofia Pro",
-          "fontWeight": "500"
-        }
-      }
-    },
-    "typography": {},
-    "blocks": {}
-  }
+	"$schema": "https://schemas.wp.org/wp/6.2/theme.json",
+	"version": 2,
+	"settings": {
+		"color": {
+			"defaultPalette": false,
+			"defaultGradients": false,
+			"defaultDuotone": false,
+			"custom": false,
+			"customDuotone": false,
+			"customGradient": false,
+			"duotone": [],
+			"gradients": [],
+			"link": false,
+			"palette": [
+				{
+					"name": "Light Blue",
+					"slug": "light-blue",
+					"color": "#B5C3CD"
+				},
+				{
+					"name": "Beige",
+					"slug": "beige",
+					"color": "#ECE8E2"
+				},
+				{
+					"name": "Green",
+					"slug": "Green",
+					"color": "#627479"
+				},
+				{
+					"name": "Black",
+					"slug": "black",
+					"color": "#121212"
+				},
+				{
+					"name": "Light Beige",
+					"slug": "light-beige",
+					"color": "#F2F1EF"
+				},
+				{
+					"name": "Dark Grey",
+					"slug": "dark-grey",
+					"color": "#5E5E5E"
+				},
+				{
+					"name": "White",
+					"slug": "white",
+					"color": "#fff"
+				}
+			]
+		},
+		"custom": {},
+		"layout": {
+			"contentSize": "800px",
+			"wideSize": "1000px"
+		},
+		"spacing": {
+			"margin": false,
+			"padding": false,
+			"units": []
+		},
+		"typography": {
+			"customFontSize": false,
+			"lineHeight": false,
+			"dropCap": false,
+			"fontSizes": [],
+			"fontFamilies": [
+				{
+					"fontFamily": "Sofia Pro",
+					"slug": "sofia-pro",
+					"fontFace": [
+						{
+							"fontStyle": "normal",
+							"fontWeight": "300",
+							"fontStretch": "normal",
+							"src": "file:./assets/fonts/sofia-pro/sofiapro-light.otf"
+						},
+						{
+							"fontStyle": "italic",
+							"fontWeight": "300",
+							"fontStretch": "normal",
+							"src": "file:./assets/fonts/sofia-pro/sofiapro-lightitalic.otf"
+						},
+						{
+							"fontStyle": "normal",
+							"fontWeight": "500",
+							"fontStretch": "normal",
+							"src": "file:./assets/fonts/sofia-pro/sofiapro-medium.otf"
+						}
+					]
+				},
+				{
+					"fontFamily": "Scilla",
+					"slug": "scilla",
+					"fontFace": [
+						{
+							"fontStyle": "normal",
+							"fontWeight": "400",
+							"fontStretch": "normal",
+							"src": "file:./assets/fonts/scilla/scilla-regular-webfont.woff"
+						},
+						{
+							"fontStyle": "italic",
+							"fontWeight": "400",
+							"fontStretch": "normal",
+							"src": "file:./assets/fonts/scilla/scilla-regularitalic-webfont.woff"
+						}
+					]
+				}
+			]
+		},
+		"blocks": {
+			"core/button": {
+				"color": {
+					"palette": []
+				}
+			}
+		}
+	},
+	"styles": {
+		"color": {},
+		"elements": {
+			"h1": {
+				"typography": {
+					"fontSize": "36px",
+					"fontFamily": "Scilla",
+					"fontWeight": "500"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontFamily": "Scilla",
+					"fontWeight": "500"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontFamily": "Sofia Pro",
+					"fontWeight": "500"
+				}
+			},
+			"h4": {
+				"typography": {
+					"fontFamily": "Sofia Pro",
+					"fontWeight": "500"
+				}
+			},
+			"h5": {
+				"typography": {
+					"fontFamily": "Sofia Pro",
+					"fontWeight": "500"
+				}
+			},
+			"h6": {
+				"typography": {
+					"fontFamily": "Sofia Pro",
+					"fontWeight": "500"
+				}
+			},
+			"link": {
+				"typography": {
+					"fontFamily": "Sofia Pro",
+					"fontWeight": "500"
+				}
+			}
+		},
+		"typography": {},
+		"blocks": {}
+	}
 }

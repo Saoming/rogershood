@@ -19,7 +19,7 @@ function setup() {
 	$n = function ( $function ) {
 		return __NAMESPACE__ . "\\$function";
 	};
-
+	// we need to micro optimize this in the future
 	add_action( 'init', $n( 'init' ), apply_filters( 'tenup_theme_init_priority', 8 ) );
 	add_action( 'after_setup_theme', $n( 'i18n' ) );
 	add_action( 'after_setup_theme', $n( 'theme_setup' ) );
@@ -33,6 +33,7 @@ function setup() {
 
 	add_filter( 'script_loader_tag', $n( 'script_loader_tag' ), 10, 2 );
 	add_filter( 'woocommerce_page_title', $n( 'change_woo_title' ), 10, 2 );
+	add_filter( 'woocommerce_product_tabs', $n( 'remove_tab' ), 10, 2 );
 }
 
 /**
@@ -61,6 +62,9 @@ function init() {
 	ModuleInitialization::instance()->init_classes();
 
 	do_action( 'tenup_theme_init' );
+
+	remove_all_actions( 'woocommerce_sidebar' );
+	remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
 }
 
 /**
@@ -341,4 +345,14 @@ if ( ! function_exists( 'change_woo_title' ) ) {
 			return $page_title;
 		}
 	}
+}
+
+/**
+ * Remove WooCommerce Product Tabs
+ */
+function remove_tab( $tabs ) {
+	unset( $tabs['description'] );
+	unset( $tabs['reviews'] );
+	unset( $tabs['additional_information'] );
+	return $tabs;
 }
