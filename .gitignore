@@ -8,6 +8,10 @@ uploads
 upgrade
 cache
 plugins
+themes/twentytwentyfour
+themes/twentytwentythree
+themes/twentytwentytwo
+.gitignore
 
 # Project Files
 dist
