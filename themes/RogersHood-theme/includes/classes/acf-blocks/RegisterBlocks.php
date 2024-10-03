@@ -31,6 +31,7 @@ class RegisterBlocks {
 			return;
 		}
 		$this->register_hero_section_block();
+		$this->register_text_and_image_callout_block();
 	}
 
 	/**
@@ -50,6 +51,30 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/Hero-Section.png',
+						),
+					),
+				),
+			)
+		);
+	}
+	/**
+	 * Registers the Hero Section block on the homepage
+	 */
+	protected function register_text_and_image_callout_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'text-and-image-callout',
+				'title'           => __( 'Text and Image Callout' ),
+				'description' => __('Half screen content / half screen image'),
+				'render_template' => 'partials/blocks/text-and-image-callout/text-and-image-callout.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/text-and-image-callout.jpg',
 						),
 					),
 				),

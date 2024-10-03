@@ -25,7 +25,7 @@
 
 /* Layout - styles specific to layout */
 
-/* @import url("layout/index.css"); */
+@import url("layout/index.css");
 
 /* Templates */
 
@@ -37,4 +37,4 @@
 
 /* Gutenberg blocks */
 
-/* @import url("../blocks/index.css"); */
+@import url("../blocks/index.css");

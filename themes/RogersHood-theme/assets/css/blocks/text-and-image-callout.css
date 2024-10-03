@@ -1,0 +1,31 @@
+@import url("../frontend/global/media-queries.css");
+
+.text-and-image-callout__container {
+	padding: 0;
+}
+
+.text-and-image-callout__row {
+	grid-gap: 0;
+}
+
+.text-and-image-callout__content {
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.text-and-image-callout__content__inner {
+	max-width: 457px;
+	text-align: center;
+}
+
+.text-and-image-callout__description {
+	font-size: 16px;
+}
+
+@media (--bp-medium) {
+	.text-and-image-callout__description {
+		font-size: 20px;
+	}
+}
