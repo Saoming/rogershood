@@ -128,43 +128,49 @@
 		"elements": {
 			"h1": {
 				"typography": {
-					"fontSize": "36px",
+					"fontSize": "clamp(1.625rem, 2vw + 1rem, 3.25rem)",
 					"fontFamily": "Scilla",
 					"fontWeight": "500"
 				}
 			},
 			"h2": {
 				"typography": {
+					"fontSize": "clamp(1.625rem, 2vw + 1rem, 2.25rem)",
 					"fontFamily": "Scilla",
 					"fontWeight": "500"
 				}
 			},
 			"h3": {
 				"typography": {
+					"fontSize": "clamp(1.125rem, 2vw + 1rem, 1.375rem)",
 					"fontFamily": "Sofia Pro",
 					"fontWeight": "500"
 				}
 			},
 			"h4": {
 				"typography": {
+					"fontSize": "clamp(1rem, 2vw + 1rem, 1.125rem)",
 					"fontFamily": "Sofia Pro",
 					"fontWeight": "500"
 				}
 			},
 			"h5": {
 				"typography": {
+					"fontSize": "clamp(0.875rem, 2vw + 1rem, 1rem);",
 					"fontFamily": "Sofia Pro",
 					"fontWeight": "500"
 				}
 			},
 			"h6": {
 				"typography": {
+					"fontSize": "14px",
 					"fontFamily": "Sofia Pro",
 					"fontWeight": "500"
 				}
 			},
 			"link": {
 				"typography": {
+					"fontSize": "16px",
 					"fontFamily": "Sofia Pro",
 					"fontWeight": "500"
 				}
