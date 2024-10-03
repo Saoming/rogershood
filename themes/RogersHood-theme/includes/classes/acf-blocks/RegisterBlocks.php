@@ -31,6 +31,7 @@ class RegisterBlocks {
 			return;
 		}
 		$this->register_hero_section_block();
+		$this->register_benefits_section_block();
 	}
 
 	/**
@@ -50,6 +51,30 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/Hero-Section.png',
+						),
+					),
+				),
+			)
+		);
+	}
+
+	/**
+	 * Registers the Hero Section block on the homepage
+	 */
+	protected function register_benefits_section_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'benefits-section',
+				'title'           => __( 'Benefits Section' ),
+				'render_template' => 'partials/blocks/benefits-section/benefits-section.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/Benefits-Section.png',
 						),
 					),
 				),
