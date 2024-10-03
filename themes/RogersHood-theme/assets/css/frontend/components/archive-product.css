@@ -22,7 +22,6 @@
 .toggle-link {
 	color: var(--wp--preset--color--black);
 	display: inline-block;
-	font-size: 16px;
 	padding: 10px 20px;
 	text-align: center;
 	text-decoration: none;
@@ -36,7 +35,6 @@
 }
 
 .woocommerce-products-header__title {
-	font-size: clamp(1.625rem, 2vw + 1rem, 2.25rem);
 	margin-bottom: 76px;
 	margin-top: 0;
 }
@@ -103,18 +101,6 @@
 	visibility: hidden;
 	width: 100%;
 	z-index: 5;
-}
-
-.product-indicator {
-	background-color: var(--wp--preset--color--white);
-	border-radius: 48px;
-	color: var(--wp--preset--color--black);
-	font-size: clamp(0.75rem, 2vw + 1rem, 0.875rem);
-	padding: 10px 33px;
-	position: absolute;
-	right: 20px;
-	top: 20px;
-	z-index: 10;
 }
 
 @media only screen and (--bp-large-2) {
