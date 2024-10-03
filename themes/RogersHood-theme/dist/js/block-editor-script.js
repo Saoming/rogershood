@@ -1,1 +1,0 @@
-!function(){"use strict";var t=window.wp.i18n;(0,window.wp.blocks.registerBlockCollection)("tenup",{title:(0,t.__)("Custom Blocks","tenup-theme")})}();

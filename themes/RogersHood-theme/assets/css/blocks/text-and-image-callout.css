@@ -35,3 +35,10 @@
 	min-height: 100%;
 	object-fit: cover;
 }
+
+.text-and-image-callout--image-left .text-and-image-callout__content{
+		order: 2;
+}
+.text-and-image-callout--image-left .text-and-image-callout__image-container{
+		order: 1;
+}

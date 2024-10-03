@@ -26,22 +26,17 @@ $background_color = get_field( 'background_color' );
 $background_color = ! $background_color || 'none' === $background_color ? '' : $background_color;
 
 // Image position - default LEFT
-$image_position = get_field( 'image_position' ) ? 'text-and-image-callout--left' : '';
+$image_position = get_field( 'image_position' ) ? '' : 'text-and-image-callout--image-left';
 
 // Button Style - default PRIMARY
-$button_style = get_field( 'button_style' );
-if ( $button_style ) {
-	$button_style_class = 'is-style--secondary';
-} else {
-	$button_style_class = 'is-style--primary';
-}
-
-
-wp_print_styles( 'text-and-image-callout' );
-include TENUP_THEME_PATH . 'partials/dynamic-stylesheets/block-spacing-stylesheet.php';
+//$button_style = get_field( 'button_style' );
+//if ( $button_style ) {
+//	$button_style_class = 'is-style--secondary';
+//} else {
+//	$button_style_class = 'is-style--primary';
+//}
 
 ?>
-<!--TODO delete container class-->
 <section
 		class="rh-block text-and-image-callout <?php echo esc_attr( " $image_position " ); ?>"
 		id="<?php echo esc_attr( $id ); ?>"
@@ -50,7 +45,7 @@ include TENUP_THEME_PATH . 'partials/dynamic-stylesheets/block-spacing-styleshee
 	>
 		<div class="text-and-image-callout__row row">
 
-			<div class="col-md-6 text-and-image-callout__column  text-and-image-callout__content"
+			<div class="col-md-6 text-and-image-callout__content"
 				 style="background: <?php echo esc_attr( " $background_color " ); ?> ">
 				<div class="text-and-image-callout__content__inner">
 					<?php if ( $pretitle ) { ?>
