@@ -4,3 +4,12 @@
  * https://project-website.tld
  *
  */
+
+#tinymce p {
+	margin-left: 16px;
+}
+
+#tinymce ul {
+	padding-left: 40px;
+	list-style: disc;
+}

@@ -165,7 +165,7 @@
 								</div>
 								<?php if ( $args['cta'] ) : ?>
 								<a
-									class="primary-btn"
+									class="btn-primary"
 									href="<?php echo esc_url( $args['cta']['link'] ); ?>"
 									aria-label="Link to <?php esc_attr( $args['cta']['title'] ); ?> page"
 									target="<?php echo esc_attr( $args['cta']['target'] ); ?>"

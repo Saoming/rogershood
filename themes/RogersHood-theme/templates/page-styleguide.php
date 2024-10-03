@@ -52,11 +52,11 @@ get_header();
 			<h2 class="heading">Headings</h2>
 
 			<div class="content">
-				<h1>H1, Heading 1 {64px}</h1>
-				<h2>H2, Heading 2 {48px}</h2>
-				<h3>H3, Heading 3 {38px}</h3>
-				<h4>H4, Heading 4 {30px}</h4>
-				<h5>H5, Heading 5 {26px}</h5>
+				<h1>H1, Heading 1 {52px}</h1>
+				<h2>H2, Heading 2 {36px}</h2>
+				<h3>H3, Heading 3 {22px}</h3>
+				<h4>H4, Heading 4 {18px}</h4>
+				<h5>H5, Heading 5 {16px}</h5>
 			</div><!--/.content-->
 
 		</section><!--/.uikit__section-->
@@ -66,7 +66,7 @@ get_header();
 
 			<div class="content">
 				<p>
-					22pt, Acta Book, line 36 ( 1.5rem ). Lorem ipsum dolor sit amet,
+					16px, Sofia Pro Light, line 22 ( 1.375rem ). Lorem ipsum dolor sit amet,
 					consectetur adipiscing elit. Multa sunt dicta ab antiquis de contemnendis
 					ac despiciendis rebus humanis; Hoc mihi cum tuo fratre convenit. Fortasse
 					id optimum, sed ubi illud: Plus semper voluptatis? Haec quo modo conveniant,
@@ -89,7 +89,6 @@ get_header();
 			<div class="content">
 				<button type="button" class="button-primary">Button</button>
 				<button type="button" class="button-secondary">Button</button>
-				<button type="button" class="button-tertiary">Button</button>
 			</div><!--/.content-->
 
 		</section><!--/.uikit__section-->

@@ -8,7 +8,6 @@
 	--c-uikit-color-label-bg: #fff;
 
 	@custom-media --bp-uikit-small (min-width: 40.625em);
-
 }
 
 .uikit__container {
@@ -68,7 +67,6 @@
 
 		&:focus,
 		&:hover {
-
 			& .uikit__color--label {
 				left: auto;
 			}
@@ -154,7 +152,10 @@
 	display: block;
 }
 
-.uikit__section > .heading > .toggle[aria-expanded="true"] .uikit__chevron-down {
+.uikit__section
+	> .heading
+	> .toggle[aria-expanded="true"]
+	.uikit__chevron-down {
 	display: none;
 }
 
@@ -170,12 +171,71 @@
 	display: none;
 }
 
+.uikit__section > .content input,
+.uikit__section > .content select {
+	border: 1px solid var(--wp--preset--color--grey, #eee);
+	border-radius: 42px;
+	color: var(--wp--preset--color--black);
+	font-weight: 300;
+	padding: 12px 28.5px;
+}
+
+.uikit__section > .content select {
+	appearance: none;
+	background-image: url("/wp-content/themes/RogersHood-theme/assets/images/caret-down.svg");
+	background-position: calc(100% - 28.5px) center;
+	background-repeat: no-repeat;
+	background-size: 14px;
+	min-width: 200px;
+}
+
+.uikit__section > .content input::placeholder {
+	color: var(--wp--preset--color--dark-grey);
+	font-size: 16px;
+	font-weight: 300;
+}
+
 .uikit-mb-1 {
+	align-items: start;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
 	margin-bottom: 1em;
 }
 
-@media (--bp-uikit-small) {
+.button-primary {
+	background-color: var(--wp--preset--color--light-blue);
+	border: 1px solid var(--wp--preset--color--light-blue);
+	border-radius: 42px;
+	color: var(--wp--preset--color--black);
+	padding: 14px 43.5px;
+	text-decoration: none;
+	transition: background 300ms ease-in;
+}
 
+.button-primary:hover {
+	background-color: var(--wp--preset--color--green);
+	border: 1px solid var(--wp--preset--color--green);
+	color: var(--wp--preset--color--white);
+}
+
+.button-secondary {
+	background-color: var(--wp--preset--color--white);
+	border: 1px solid var(--wp--preset--color--light-blue);
+	border-radius: 42px;
+	color: var(--wp--preset--color--black);
+	padding: 14px 43.5px;
+	text-decoration: none;
+	transition: background 300ms ease-in;
+}
+
+.button-secondary:hover {
+	background-color: var(--wp--preset--color--green);
+	border: 1px solid var(--wp--preset--color--green);
+	color: var(--wp--preset--color--white);
+}
+
+@media (--bp-uikit-small) {
 	.uikit__section > .heading {
 		width: 145px;
 	}
@@ -191,5 +251,4 @@
 	.uikit__section.-secondary > .content {
 		width: 100%;
 	}
-
 }
