@@ -29,7 +29,7 @@ use TenUpTheme\WooCommerceCustomization\WooCommerceCustomization;
 	 * Creates all the Classes
 	 */
 	public function __construct() {
-//		$this->woocommerce = new WooCommerceCustomization();
+		$this->woocommerce = new WooCommerceCustomization();
 		$this->register_block_categories  = new RegisterBlockCategory();
 		$this->register_blocks            = new RegisterBlocks();
 		$this->acf_options_page           = new AcfOptionsPage();
@@ -44,7 +44,7 @@ use TenUpTheme\WooCommerceCustomization\WooCommerceCustomization;
 	 * @return void
 	 */
 	public function init_hooks() {
-//		$this->woocommerce->init_hooks();
+		$this->woocommerce->init_hooks();
 		$this->register_block_categories->init_hooks();
 		$this->register_blocks->init_hooks();
 		$this->acf_options_page->init_hooks();
