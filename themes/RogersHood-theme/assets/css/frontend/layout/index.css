@@ -1,5 +1,5 @@
 /* Layout */
-@import url("../global/media-queries.css");
+/* @import url("../global/media-queries.css"); */
 
 /* Layout */
 * {
@@ -176,7 +176,7 @@ body.admin-bar .header {
 }
 
 /*  TODO @SAM pls check */
-@media all and (min-width: 768px) and (max-width: 992px) {
+@media all and (--bp-medium) and (max-width: 992px) {
 	.col-md-hidden {
 		display: none;
 	}
