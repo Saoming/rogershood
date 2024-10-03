@@ -1,0 +1,42 @@
+.benefits-section__container {
+	background-color: var(--wp--preset--color--light-beige);
+	padding: 80px 16px;
+	text-align: center;
+}
+
+.sub-heading-benefits {
+	margin-bottom: 16px;
+	text-transform: uppercase;
+}
+
+.heading-benefits {
+	line-height: 50px;
+	margin: 0 auto;
+	max-width: 736px;
+}
+
+.benefits-card-container {
+	display: grid;
+	gap: 8px;
+	grid-template-columns: repeat(4, 1fr);
+	margin-top: 64px;
+	text-align: left;
+}
+
+.benefit-card-item {
+	background-color: var(--wp--preset--color--white);
+	border-radius: 12px;
+	list-style: none;
+	padding: 20px;
+}
+
+.benefit-card-heading {
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+@media only screen and (--bp-large-2) {
+	.benefits-section__container {
+		padding: 100px 65px 100px 110px;
+	}
+}

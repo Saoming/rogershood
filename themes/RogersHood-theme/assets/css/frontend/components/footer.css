@@ -26,6 +26,7 @@
 
 .footer__menu > li > a {
 	color: var(--wp--preset--color--white);
+	font-size: 16px;
 	line-height: 32px;
 	text-decoration: none;
 }
