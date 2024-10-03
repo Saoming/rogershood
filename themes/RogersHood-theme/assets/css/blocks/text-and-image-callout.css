@@ -17,6 +17,7 @@
 
 .text-and-image-callout__content__inner {
 	max-width: 457px;
+	padding: 80px 30px;
 	text-align: center;
 }
 
@@ -28,4 +29,9 @@
 	.text-and-image-callout__description {
 		font-size: 20px;
 	}
+}
+
+.text-and-image-callout__image {
+	min-height: 100%;
+	object-fit: cover;
 }
