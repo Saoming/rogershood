@@ -24,10 +24,13 @@ if ( $is_local && file_exists( __DIR__ . '/dist/fast-refresh.php' ) ) {
 	TenUpToolkit\set_dist_url_path( basename( __DIR__ ), TENUP_THEME_DIST_URL, TENUP_THEME_DIST_PATH );
 }
 
+
 // Require Composer autoloader if it exists.
 if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 	require_once __DIR__ . '/vendor/autoload.php';
 }
+
+
 
 /**
  * Get all the include files for the theme.
@@ -127,3 +130,4 @@ function wcc_change_breadcrumb_delimiter( $defaults ) {
 	$defaults['delimiter'] = ' &gt; ';
 	return $defaults;
 }
+
