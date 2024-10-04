@@ -32,7 +32,7 @@ class RegisterBlocks {
 		}
 		$this->register_hero_section_block();
 		$this->register_text_and_image_callout_block();
-		$this->register_product_what_is_it_block();
+		$this->register_product_includes_block();
 	}
 
 	/**
@@ -86,13 +86,13 @@ class RegisterBlocks {
 	/**
 	 * Registers the Product What Is It  Block
 	 */
-	protected function register_product_what_is_it_block() {
+	protected function register_product_includes_block() {
 		acf_register_block_type(
 			array(
-				'name'            => 'product-what-is-it',
-				'title'           => __( 'Product What Is It  Block' ),
+				'name'            => 'product-includes',
+				'title'           => __( 'Product Includes' ),
 				'description' => __('Half screen explaining what is it, helps with and ingredients for Product / half screen image'),
-				'render_template' => 'partials/blocks/product-what-is-it/product-what-is-it.php',
+				'render_template' => 'partials/blocks/product-includes/product-includes.php',
 				'mode'            => 'auto',
 				'category'        => 'rogershood',
 				'supports'        => array( 'anchor' => true ),
@@ -100,7 +100,7 @@ class RegisterBlocks {
 					'attributes' => array(
 						'mode' => 'preview',
 						'data' => array(
-							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/product-what-is-it.jpg',
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/product-includes.jpg',
 						),
 					),
 				),

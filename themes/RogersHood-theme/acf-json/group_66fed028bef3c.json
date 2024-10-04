@@ -1,6 +1,6 @@
 {
     "key": "group_66fed028bef3c",
-    "title": "Blocks - Product What is it",
+    "title": "Blocks - Product Includes",
     "fields": [
         {
             "key": "field_66fed028c60f2",
@@ -16,7 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "What Is It",
+            "default_value": "What's Included",
             "maxlength": "",
             "allow_in_bindings": 1,
             "placeholder": "",
@@ -24,32 +24,11 @@
             "append": ""
         },
         {
-            "key": "field_66fed17ad8cc2",
-            "label": "Product Title",
-            "name": "product_title",
+            "key": "field_66ffb6596eba3",
+            "label": "Products",
+            "name": "products",
             "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 1,
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_66fed24d456ef",
-            "label": "What is it",
-            "name": "what_is_it",
-            "aria-label": "",
-            "type": "group",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -59,11 +38,105 @@
                 "id": ""
             },
             "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Add Row",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_66fed28a456f0",
-                    "label": "Description",
-                    "name": "description",
+                    "key": "field_66ffb71afba61",
+                    "label": "Title",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_66ffb6596eba3"
+                },
+                {
+                    "key": "field_66ffb732d5efd",
+                    "label": "Section Title 1",
+                    "name": "section_title_1",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "What it is",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_66ffb6596eba3"
+                },
+                {
+                    "key": "field_66ffb8f4614cb",
+                    "label": "Section Description 1",
+                    "name": "section_description_1",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "rows": 4,
+                    "placeholder": "",
+                    "new_lines": "",
+                    "parent_repeater": "field_66ffb6596eba3"
+                },
+                {
+                    "key": "field_66ffb8e4614c8",
+                    "label": "Section Title 2",
+                    "name": "section_title_2",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Helps with",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_66ffb6596eba3"
+                },
+                {
+                    "key": "field_66ffb77ad5efe",
+                    "label": "Section Description 2",
+                    "name": "section_description_2",
                     "aria-label": "",
                     "type": "textarea",
                     "instructions": "",
@@ -79,30 +152,35 @@
                     "allow_in_bindings": 0,
                     "rows": 2,
                     "placeholder": "",
-                    "new_lines": ""
-                }
-            ]
-        },
-        {
-            "key": "field_66fed2997ff26",
-            "label": "Helps with",
-            "name": "helps_with",
-            "aria-label": "",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
+                    "new_lines": "",
+                    "parent_repeater": "field_66ffb6596eba3"
+                },
                 {
-                    "key": "field_66fed2a87ff27",
-                    "label": "Description",
-                    "name": "description",
+                    "key": "field_66ffb8e6614c9",
+                    "label": "Section Title 3",
+                    "name": "section_title_3",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "Ingredients",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_66ffb6596eba3"
+                },
+                {
+                    "key": "field_66ffb8ec614ca",
+                    "label": "Section Description 3",
+                    "name": "section_description_3",
                     "aria-label": "",
                     "type": "textarea",
                     "instructions": "",
@@ -118,73 +196,10 @@
                     "allow_in_bindings": 0,
                     "rows": 2,
                     "placeholder": "",
-                    "new_lines": ""
+                    "new_lines": "",
+                    "parent_repeater": "field_66ffb6596eba3"
                 }
             ]
-        },
-        {
-            "key": "field_66fed4ca4e5d9",
-            "label": "Ingredients",
-            "name": "ingredients",
-            "aria-label": "",
-            "type": "group",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "sub_fields": [
-                {
-                    "key": "field_66fed4dc4e5da",
-                    "label": "Description",
-                    "name": "description",
-                    "aria-label": "",
-                    "type": "textarea",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 1,
-                    "rows": 2,
-                    "placeholder": "",
-                    "new_lines": ""
-                }
-            ]
-        },
-        {
-            "key": "field_66fed028c6110",
-            "label": "Image",
-            "name": "image",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "id",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
         }
     ],
     "location": [
@@ -192,7 +207,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/product-what-is-it"
+                "value": "acf\/product-includes"
             }
         ]
     ],
@@ -205,5 +220,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1727976900
+    "modified": 1728035711
 }
