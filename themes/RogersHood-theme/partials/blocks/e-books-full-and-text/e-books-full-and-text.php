@@ -12,7 +12,7 @@ if ( ! empty( $block['anchor'] ) ) {
 
 $fields = get_fields();
 echo '<pre>';
-var_dump( $fields );
+//var_dump( $fields );
 echo '</pre>';
 
 // Image position - default LEFT
@@ -48,7 +48,7 @@ $image_position = $fields["image_position"] ? '' : 'e-books-full-and-text--image
 			<div class="col-md-8 e-books-full-and-text__content"
 				 style="background-image: url('<?php echo esc_url( $fields["background_image"]["url"] ); ?>')"
 			>
-			<div class="e-books-full-and-text__content__inner">
+				<!--			<div class="e-books-full-and-text__content__inner">-->
 				<?php if ( $fields["pretitle"] ) { ?>
 					<div class="e-books-full-and-text__pretitle pretitle ">
 						<?php echo esc_attr( $fields["pretitle"] ); ?>
@@ -81,6 +81,6 @@ $image_position = $fields["image_position"] ? '' : 'e-books-full-and-text--image
 			</div>
 		</div>
 
-	</div>
+<!--	</div>-->
 	</div>
 </section>
