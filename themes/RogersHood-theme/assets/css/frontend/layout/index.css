@@ -91,6 +91,10 @@ body.admin-bar .header {
 	grid-template-columns: repeat(12, 1fr);
 }
 
+.row--no-gap {
+	grid-gap: 0;
+}
+
 .row-10 {
 	grid-template-columns: repeat(10, 1fr);
 }

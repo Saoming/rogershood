@@ -34,7 +34,12 @@ class RegisterBlocks {
 		$this->temp_tome_register_blocks();
 
 		$this->register_hero_section_block();
+		$this->register_text_and_image_callout_block();
+		$this->register_product_includes_block();
 		$this->register_benefits_section_block();
+		$this->register_community_cards_block();
+		$this->register_hub_cards_block();
+		$this->register_e_books_full_and_text_block();
 	}
 
 
@@ -137,6 +142,57 @@ class RegisterBlocks {
 	}
 
 	/**
+	 * Registers the Content and Image Full Width Block
+	 */
+	protected function register_text_and_image_callout_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'text-and-image-callout',
+				'title'           => __( 'Text and Image Callout' ),
+				'description'     => __( 'Half screen content / half screen image' ),
+				'render_template' => 'partials/blocks/text-and-image-callout/text-and-image-callout.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/text-and-image-callout.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+
+	/**
+	 * Registers the Product What Is It  Block
+	 */
+	protected function register_product_includes_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'product-includes',
+				'title'           => __( 'Product Includes' ),
+				'description'     => __( 'Half screen explaining what is it, helps with and ingredients for Product / half screen image' ),
+				'render_template' => 'partials/blocks/product-includes/product-includes.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/product-includes.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+
+
+	/**
 	 * Registers the Hero Section block on the homepage
 	 */
 	protected function register_benefits_section_block() {
@@ -159,4 +215,79 @@ class RegisterBlocks {
 			)
 		);
 	}
+
+	/**
+	 * Registers the Commuinity Cards
+	 */
+	protected function register_community_cards_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'community-cards',
+				'title'           => __( 'Commuinity Cards' ),
+				'description'     => __( 'Commuinity Cards' ),
+				'render_template' => 'partials/blocks/community-cards/community-cards.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/community-cards.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+
+	/**
+	 * Registers the Hub Cards
+	 */
+	protected function register_hub_cards_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'hub-cards',
+				'title'           => __( 'Hub Cards' ),
+				'description'     => __( 'Hub Cards' ),
+				'render_template' => 'partials/blocks/hub-cards/hub-cards.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/hub-cards.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+	/**
+	 * Registers the E-books Image and Content
+	 */
+	protected function register_e_books_full_and_text_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'e-books-full-and-text',
+				'title'           => __( 'E-books Image and Content' ),
+				'description'     => __( 'E-books Image and Content' ),
+				'render_template' => 'partials/blocks/e-books-full-and-text/e-books-full-and-text.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/e-books-full-and-text.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+
 }
