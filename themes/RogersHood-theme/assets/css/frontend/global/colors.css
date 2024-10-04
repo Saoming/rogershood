@@ -19,8 +19,9 @@
 
 
 :root {
-	--cart-background-beige: #F9F9F9;
+	--c-white: #fff;
 
+	--cart-background-beige: #F9F9F9;
 	--blue-background: #e0eaf7;
 }
 
