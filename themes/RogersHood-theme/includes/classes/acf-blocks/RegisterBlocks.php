@@ -34,6 +34,7 @@ class RegisterBlocks {
 		$this->register_text_and_image_callout_block();
 		$this->register_product_includes_block();
 		$this->register_benefits_section_block();
+		$this->register_community_cards_block();
 	}
 
 	/**
@@ -134,4 +135,30 @@ class RegisterBlocks {
 			)
 		);
 	}
+
+	/**
+	 * Registers the Commuinity Cards
+	 */
+	protected function register_community_cards_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'community-cards',
+				'title'           => __( 'Commuinity Cards' ),
+				'description'     => __( 'Commuinity Cards' ),
+				'render_template' => 'partials/blocks/community-cards/community-cards.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/community-cards.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+
 }

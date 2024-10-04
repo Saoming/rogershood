@@ -69,7 +69,7 @@
                 },
                 {
                     "key": "field_66ffc016be310",
-                    "label": "image",
+                    "label": "Image",
                     "name": "image",
                     "aria-label": "",
                     "type": "image",
@@ -247,5 +247,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728037764
+    "modified": 1728050963
 }
