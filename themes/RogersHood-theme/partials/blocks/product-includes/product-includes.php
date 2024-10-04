@@ -11,54 +11,102 @@ if ( ! empty( $block['anchor'] ) ) {
 }
 // Block content
 $fields = get_fields();
-//echo '<pre>';
+echo '<pre>';
 //var_dump( $fields );
-//echo '</pre>';
+echo '</pre>';
 ?>
 
 <section class="rh-block--full-bleed product-includes"
 		 id="<?php echo esc_attr( $id ); ?>"
 >
-		<div class="product-includes__row row">
-
-			<div class="col-md-6 product-includes__content"
-				 style="background: <?php echo esc_attr( " $background_color " ); ?> ">
-				<div class="product-includes__content__inner">
-					<?
-					if ( $fields["title"] ) {
+	<?php if ( $fields["title"] ) { ?>
+		<h2 class="product-includes__title text-center">
+			<?php echo esc_attr( $fields["title"] ); ?>
+		</h2>
+	<?php } ?>
+	<div class="product-includes__topics">
+		<?php foreach ( $fields["products"] as $product ) { ?>
+			<a class="product-includes__topic">
+				<?php echo esc_attr( $product["title"] ); ?>
+			</a>
+		<?php } ?>
+	</div>
+	<div class="container--inner">
+		<?php foreach ( $fields["products"] as $product ) { ?>
+		<div class="product-includes__product">
+			<div class="product-includes__product__row row">
+				<div class="col-md-5 product-includes__product__image-container">
+					<?php
+					if ( $product["image"] ) {
+						// TODO: Set image sizes when design
+						echo wp_get_attachment_image( $product["image"], 'full', null, array( 'class' => 'product-includes__product__image' ) );
+					} else {
 						?>
-						<h2 class="product-includes__title">
-							<?php echo esc_attr( $fields["title"] ); ?>
-						</h2>
-						<?php
-					}
-					if ( $fields["product_title"] ) {
-						?>
-						<div class="product-includes__description-container">
-							<div class="product-includes__description"><?php echo wp_kses_post( $fields["product_title"] ); ?></div>
-						</div>
-						<?php
-					}
-
-					if ( $fields["what_is_it"] ) {
-						?>
-						<div class="product-includes__description-container">
-							<div class="product-includes__description"><?php echo wp_kses_post( $fields["what_is_it"]["description"] ); ?></div>
-						</div>
+						<img class="missing-image"
+							 src="<?php echo esc_url( TENUP_THEME_DIST_URL . '/images/missing-image.png' ); ?>">
 					<?php } ?>
 				</div>
+				<div class="col-md-7 product-includes__product__content">
+					<div class="product-includes__product__content__inner">
+						<?php if ( $product["title"] ) { ?>
+							<div class="product-includes__product__title"><?php echo wp_kses_post( $product["title"] ); ?></div>
+						<?php } ?>
+						<div class="product-includes__product__section">
+							<?php
+							if ( $product["section_title_1"] ) {
+								?>
+								<div class="product-includes__product__section-title uppercase fw-500">
+									<?php echo wp_kses_post( $product["section_title_1"] ); ?><span
+											class="remove-on-mobile">:</span>
+								</div>
+								<?php
+							}
+							if ( $product["section_description_1"] ) {
+								?>
+								<div class="product-includes__product__section-description">
+									<?php echo wp_kses_post( $product["section_description_1"] ); ?>
+								</div>
+							<?php } ?>
+						</div>
+						<div class="product-includes__product__section">
+							<?php
+							if ( $product["section_title_2"] ) {
+								?>
+								<div class="product-includes__product__section-title uppercase fw-500">
+									<?php echo wp_kses_post( $product["section_title_2"] ); ?><span
+											class="remove-on-mobile">:</span>
+								</div>
+								<?php
+							}
+							if ( $product["section_description_2"] ) {
+								?>
+								<div class="product-includes__product__section-description">
+									<?php echo wp_kses_post( $product["section_description_2"] ); ?>
+								</div>
+							<?php } ?>
+						</div>
+						<div class="product-includes__product__section">
+							<?php
+							if ( $product["section_title_3"] ) {
+								?>
+								<div class="product-includes__product__section-title uppercase fw-500">
+									<?php echo wp_kses_post( $product["section_title_3"] ); ?><span
+											class="remove-on-mobile">:</span>
+								</div>
+								<?php
+							}
+							if ( $product["section_description_3"] ) {
+								?>
+								<div class="product-includes__product__section-description">
+									<?php echo wp_kses_post( $product["section_description_3"] ); ?>
+								</div>
+							<?php } ?>
+						</div>
+					</div>
+
+				</div>
 			</div>
-			<div class="col-md-6 product-includes__column product-includes__image-container">
-				<?php
-				if ( $fields["image"]  ) {
-					// TODO: Set image sizes when design
-					echo wp_get_attachment_image( $fields["image"] , 'full', null, array( 'class' => 'product-includes__image' ) );
-				} else {
-					?>
-					<img class="missing-image"
-						 src="<?php echo esc_url( TENUP_THEME_DIST_URL . '/images/missing-image.png' ); ?>">
-				<?php } ?>
-			</div>
+			<?php } ?>
 		</div>
-<!--	</div>-->
+	</div>
 </section>

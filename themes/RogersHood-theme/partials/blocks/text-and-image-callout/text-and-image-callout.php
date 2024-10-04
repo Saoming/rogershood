@@ -30,7 +30,7 @@ $image_position = $fields["image_position"] ? '' : 'text-and-image-callout--imag
 		class="rh-block--full-bleed text-and-image-callout <?php echo esc_attr( " $image_position " ); ?>"
 		id="<?php echo esc_attr( $id ); ?>"
 >
-	<div class="text-and-image-callout__row row">
+	<div class="text-and-image-callout__row row row--no-gap">
 
 		<div class="col-md-6 text-and-image-callout__content"
 			 style="background: <?php echo esc_attr( $fields["background_color"] ); ?> ">

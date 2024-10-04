@@ -1,0 +1,20 @@
+.text-center {
+	text-align: center;
+}
+
+.ff-scilla {
+	font-family: var(--wp--preset--font-family--scilla);
+}
+
+.uppercase {
+	text-transform: uppercase;
+}
+
+.fw-500 {
+	font-weight: 500;
+}
+
+.fs-18 {
+	font-size: 18px;
+}
+

@@ -1,5 +1,9 @@
 @import url("../frontend/global/media-queries.css");
 
+.text-and-image-callout {
+	padding-bottom: 0;
+	padding-top: 0;
+}
 .text-and-image-callout__row {
 	grid-gap: 0;
 }
