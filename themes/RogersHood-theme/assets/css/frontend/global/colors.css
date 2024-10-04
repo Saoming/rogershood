@@ -16,3 +16,18 @@
 	--c-black: #121212;
 	--c-yellow: #e5d68c;
 } */
+
+
+:root {
+	--cart-background-beige: #F9F9F9;
+
+	--blue-background: #e0eaf7;
+}
+
+
+
+
+
+.bg-blue {
+	background-color: var(--blue-background);
+}
