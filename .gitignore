@@ -8,6 +8,8 @@ uploads
 upgrade
 cache
 plugins
+themes/RogersHood-theme/vendor
+
 
 # Project Files
 dist
