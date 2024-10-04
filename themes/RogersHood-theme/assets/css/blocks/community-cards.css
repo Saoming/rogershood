@@ -3,3 +3,24 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
+.community-cards__title {
+	margin-bottom: 64px;
+}
+
+.community-card {
+	position: relative;
+
+}
+
+/* TODO - remove bcg and width ofcta */
+
+.community-card__cta {
+	background: var(--wp--preset--color--white);
+	border-radius: 42px;
+	bottom: 40%;
+	height: 50px;
+	left: calc(50% - 80px);
+	position: absolute;
+	width: 160px;
+}

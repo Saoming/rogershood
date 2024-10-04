@@ -10,14 +10,38 @@
 	text-transform: uppercase;
 }
 
+.fw-300 {
+	font-weight: 300;
+}
+
 .fw-500 {
 	font-weight: 500;
+}
+
+.fs-16 {
+	font-size: 16px;
 }
 
 .fs-18 {
 	font-size: 18px;
 }
 
+.fs-22 {
+	font-size: 22px;
+}
+
 body {
 	-webkit-font-smoothing: antialiased;
+}
+
+.br-12 {
+	border-radius: 12px;
+}
+
+.mb-12 {
+	margin-bottom: 12px;
+}
+
+.mb-20 {
+	margin-bottom: 20px;
 }

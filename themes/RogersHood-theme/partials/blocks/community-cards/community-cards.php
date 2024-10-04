@@ -12,68 +12,60 @@ if ( ! empty( $block['anchor'] ) ) {
 
 
 // Block content
-$fields = get_fields();
+$community = get_fields();
 echo '<pre>';
-//var_dump( $fields );
+//var_dump( $community );
 echo '</pre>';
 ?>
 
 <section class="rh-block rh-block--full-bleed  community-cards"
 		 id="<?php echo esc_attr( $id ); ?>"
-		 style="background-image: url(<?php echo esc_attr( $fields["background_image"]["url"] ); ?>"
+		 style="background-image: url(<?php echo esc_attr( $community["background_image"]["url"] ); ?>"
 >
 	<div class="container container--narrow"
 	>
-		<?php if ( $fields["pretitle"] ) { ?>
-			<h2 class="community-cards__pretitle text-center">
-				<?php echo esc_attr( $fields["pretitle"] ); ?>
-			</h2>
+		<?php if ( $community["pretitle"] ) { ?>
+			<div class="community-cards__pretitle text-center fw-300 uppercase fs-16">
+				<?php echo esc_attr( $community["pretitle"] ); ?>
+			</div>
 		<?php } ?>
-		<?php if ( $fields["title"] ) { ?>
+		<?php if ( $community["title"] ) { ?>
 			<h2 class="community-cards__title text-center">
-				<?php echo esc_attr( $fields["title"] ); ?>
+				<?php echo esc_attr( $community["title"] ); ?>
 			</h2>
 		<?php } ?>
 		<div class="container--inner">
-			<?php foreach ( $fields["communities"] as $community ) { ?>
-			<div class="community-cards__product">
-				<div class="community-cards__product__row row">
-					<div class="col-md-5 community-cards__product__image-container">
-						<?php
-						if ( $community["image"] ) {
-							// TODO: Set image sizes when design
-							echo wp_get_attachment_image( $community["image"], 'full', null, array( 'class' => 'community-cards__product__image' ) );
-						} else {
-							?>
-							<img class="missing-image"
-								 src="<?php echo esc_url( TENUP_THEME_DIST_URL . '/images/missing-image.png' ); ?>">
-						<?php } ?>
-					</div>
-					<div class="col-md-7 community-cards__product__content">
-						<div class="community-cards__product__content__inner">
-							<?php if ( $community["title"] ) { ?>
-								<div class="community-cards__product__title"><?php echo wp_kses_post( $community["title"] ); ?></div>
+			<div class="community-card__row row">
+				<?php foreach ( $community["communities"] as $community ) { ?>
+					<div class="community-card col-lg-3 ">
+						<div class=" community-card__image-container mb-20">
+							<?php
+							if ( $community["image"] ) {
+								echo wp_get_attachment_image( $community["image"]["ID"], 'full', null, array( 'class' => 'community-card__image br-12' ) );
+							} else {
+								?>
+								<img class="missing-image"
+									 src="<?php echo esc_url( TENUP_THEME_DIST_URL . '/images/missing-image.png' ); ?>">
 							<?php } ?>
-							<div class="community-cards__product__section">
-								<?php
-								if ( $community["section_title_1"] ) {
-									?>
-									<div class="community-cards__product__section-title uppercase fw-500">
-										<?php echo wp_kses_post( $community["section_title_1"] ); ?><span
-												class="remove-on-mobile">:</span>
-									</div>
-									<?php
-								}
-								if ( $community["section_description_1"] ) {
-									?>
-									<div class="community-cards__product__section-description">
-										<?php echo wp_kses_post( $community["section_description_1"] ); ?>
-									</div>
-								<?php } ?>
+						</div>
+						<?php if ( $community["cta"] ) { ?>
+							<div class="community-card__cta">
+								<a class="button community-card__button"
+								   href="<?php echo esc_url( $community["cta"]["url"] ); ?>"
+								   target="<?php echo esc_attr( $community["cta"]["target"] ); ?>"><?php echo esc_html( $community["cta"]["title"] ); ?></a>
 							</div>
+						<?php } ?>
+						<div class="community-card__content__inner text-center">
+							<?php if ( $community["title"] ) { ?>
+								<div class="community-card__title fs-22  ff-scilla mb-12"><?php echo wp_kses_post( $community["title"] ); ?></div>
+								<?php
+							}
+							if ( $community["description"] ) { ?>
+								<div class="community-card__title fs-16  fw-300"><?php echo wp_kses_post( $community["description"] ); ?></div>
+							<?php } ?>
+						</div>
 
 					</div>
-				</div>
 				<?php } ?>
 			</div>
 		</div>
