@@ -1,9 +1,11 @@
-@import url("../global/media-queries.css");
-
 /* Layout */
 
 * {
 	box-sizing: border-box;
+}
+
+body {
+	overflow-x: hidden;
 }
 
 html.fonts-loaded {
@@ -17,37 +19,38 @@ video {
 	max-width: 100%;
 }
 
-.container {
-	width: 1180px;
-	max-width: 100%;
+.page-container {
 	padding-left: 20px;
 	padding-right: 20px;
+}
+
+.rh-block {
+	margin-left: calc(50% - 50vw);
+	max-width: 100vw;
+	padding: 100px 20px;
 	position: relative;
+	width: 100vw;
+}
+
+.rh-block--full-bleed {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1180px;
 }
 
 .container--narrow {
 	max-width: 1050px;
 }
 
-.container--inner {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 1050px;
-}
-
-
-.rh-block {
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 1240px;
-	padding-top: 100px;
-	padding-bottom: 100px;
-}
-
-
-.rh-block--full-bleed {
-	margin-left: -20px;
-	margin-right: -20px;
+.rh-full-block {
+	margin-left: calc(50% - 50vw);
+	max-width: 100vw;
+	width: 100vw;
 }
 
 .container--tiny {
@@ -80,8 +83,8 @@ body.admin-bar .header {
 	grid-template-columns: repeat(12, 1fr);
 }
 
-.row--no-gap {
-	grid-gap: 0;
+.row-10 {
+	grid-template-columns: repeat(10, 1fr);
 }
 
 [class*=" col-"],
@@ -127,7 +130,20 @@ body.admin-bar .header {
 
 /*  TODO @SAM pls check */
 
-@media (--bp-medium) {
+@media all and (--bp-until-phone) {
+	.rh-block {
+		padding-bottom: 50px;
+		padding-top: 50px;
+	}
+
+	.col-sm-hidden {
+		display: none;
+	}
+}
+
+/*  TODO @SAM pls check */
+
+@media all and (--bp-medium) {
 	.col-md-1 {
 		grid-column: span 1;
 	}
@@ -171,7 +187,7 @@ body.admin-bar .header {
 
 /*  TODO @SAM pls check */
 
-@media all and (min-width: 768px) and (max-width: 992px) {
+@media all and (--bp-medium) and (max-width: 992px) {
 	.col-md-hidden {
 		display: none;
 	}

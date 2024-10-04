@@ -16,9 +16,10 @@ echo '<pre>';
 echo '</pre>';
 ?>
 
-<section class="rh-block--full-bleed product-includes"
+<section class="rh-block product-includes"
 		 id="<?php echo esc_attr( $id ); ?>"
 >
+	<div class="container container--narrow">
 	<?php if ( $fields["title"] ) { ?>
 		<h2 class="product-includes__title text-center">
 			<?php echo esc_attr( $fields["title"] ); ?>
@@ -108,5 +109,6 @@ echo '</pre>';
 			</div>
 			<?php } ?>
 		</div>
+	</div>
 	</div>
 </section>
