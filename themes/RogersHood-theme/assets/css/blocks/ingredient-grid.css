@@ -1,0 +1,45 @@
+.ingredient-grid {
+	margin-bottom: 42px;
+	margin-top: 42px;
+}
+
+.ingredient-grid__image {
+	line-height: 0;
+}
+
+.ingredient-grid__single {
+	cursor: pointer;
+}
+
+.ingredient-grid__single-container {
+	gap: 20px;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	margin-top: 16px;
+}
+
+.ingredient-grid__single-icon {
+	padding-left: 20px;
+}
+
+
+@media all and (width <= 767px) {
+
+	.ingredient-grid__single-container {
+		justify-content: center;
+		gap: 0;
+	}
+
+	.ingredient-grid__image {
+		text-align: center;
+	}
+
+	.ingredient-grid__single-container {
+		margin-bottom: 20px;
+	}
+
+	.ingredient-grid__title {
+		margin-bottom: 20px;
+	}
+}
