@@ -36,6 +36,7 @@ class RegisterBlocks {
 		$this->register_benefits_section_block();
 		$this->register_community_cards_block();
 		$this->register_hub_cards_block();
+		$this->register_e_books_full_and_text_block();
 	}
 
 	/**
@@ -160,7 +161,9 @@ class RegisterBlocks {
 				),
 			)
 		);
-	}	/**
+	}
+
+	/**
 	 * Registers the Hub Cards
 	 */
 	protected function register_hub_cards_block() {
@@ -178,6 +181,30 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/hub-cards.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+	/**
+	 * Registers the E-books Image and Content
+	 */
+	protected function register_e_books_full_and_text_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'e-books-full-and-text',
+				'title'           => __( 'E-books Image and Content' ),
+				'description'     => __( 'E-books Image and Content' ),
+				'render_template' => 'partials/blocks/e-books-full-and-text/e-books-full-and-text.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/e-books-full-and-text.jpg',
 						),
 					),
 				),
