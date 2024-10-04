@@ -8,8 +8,8 @@ uploads
 upgrade
 cache
 plugins
+themes/RogersHood-theme/node_modules/.cache/stylelint-webpack-plugin
 themes/RogersHood-theme/vendor
-
 
 # Project Files
 dist
