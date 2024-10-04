@@ -35,6 +35,5 @@ tasks.json
 Thumbs.db
 Desktop.ini
 /debug.log
-
 composer.lock
 package-lock.json
