@@ -278,8 +278,8 @@
         },
         {
             "key": "field_66ffcf348c232",
-            "label": "Test Align",
-            "name": "test_align",
+            "label": "Text Align",
+            "name": "text_align",
             "aria-label": "",
             "type": "true_false",
             "instructions": "",
@@ -316,5 +316,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728045001
+    "modified": 1728051856
 }
