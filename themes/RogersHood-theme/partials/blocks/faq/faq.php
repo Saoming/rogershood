@@ -36,7 +36,7 @@ $description = get_field( 'intro_description' );
 $image       = get_field( 'intro_image' );
 $cta         = get_field( 'intro_cta' );
 
-$alignment_class        = get_field( 'alignment' ) ? 'text-center' : ''g;
+$alignment_class        = get_field( 'alignment' ) ? 'text-center' : '';
 $background_color_class = get_field( 'background_color' ) ? 'bg-blue' : '';
 
 if ( $cta ) {
