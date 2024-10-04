@@ -9,25 +9,14 @@ $id = 'text-and-image-callout-' . $block['id'];
 if ( ! empty( $block['anchor'] ) ) {
 	$id = $block['anchor'];
 }
-// Block content
-$image          = get_field( 'image' );
-$pretitle       = get_field( 'pretitle' );
-$title          = get_field( 'title' );
-$description    = get_field( 'description' );
-$call_to_action = get_field( 'call_to_action' );
-if ( $call_to_action ) {
-	$call_to_action_url    = $call_to_action['url'];
-	$call_to_action_title  = $call_to_action['title'];
-	$call_to_action_target = $call_to_action['target'] ? $call_to_action['target'] : '_self';
-}
 
-// Block settings
-$background_color = get_field( 'background_color' );
-$background_color = ! $background_color || 'none' === $background_color ? '' : $background_color;
+$fields = get_fields();
+
+$fields["background_color"] = ! $fields["background_color"] || 'none' === $fields["background_color"] ? '' : $fields["background_color"];
 
 // Image position - default LEFT
-$image_position = get_field( 'image_position' ) ? '' : 'text-and-image-callout--image-left';
-
+$image_position = $fields["image_position"] ? '' : 'text-and-image-callout--image-left';
+//TODO apply button properly
 // Button Style - default PRIMARY
 //$button_style = get_field( 'button_style' );
 //if ( $button_style ) {
@@ -46,44 +35,44 @@ $image_position = get_field( 'image_position' ) ? '' : 'text-and-image-callout--
 		<div class="text-and-image-callout__row row">
 
 			<div class="col-md-6 text-and-image-callout__content"
-				 style="background: <?php echo esc_attr( " $background_color " ); ?> ">
+				 style="background: <?php echo esc_attr( $fields["background_color"] ); ?> ">
 				<div class="text-and-image-callout__content__inner">
-					<?php if ( $pretitle ) { ?>
+					<?php if ( $fields["pretitle"] ) { ?>
 						<div class="text-and-image-callout__pretitle pretitle ">
-							<?php echo esc_attr( $pretitle ); ?>
+							<?php echo esc_attr( $fields["pretitle"] ); ?>
 						</div>
 						<?php
 					}
-					if ( $title ) {
+					if ( $fields["title"] ) {
 						?>
 						<h2 class="text-and-image-callout__title">
-							<?php echo esc_attr( $title ); ?>
+							<?php echo esc_attr( $fields["title"] ); ?>
 						</h2>
 						<?php
 					}
-					if ( $description ) {
+					if ( $fields["description"] ) {
 						?>
 						<div class="text-and-image-callout__description-container">
-							<div class="text-and-image-callout__description"><?php echo wp_kses_post( $description ); ?></div>
+							<div class="text-and-image-callout__description"><?php echo wp_kses_post( $fields["description"] ); ?></div>
 						</div>
 						<?php
 					}
 
-					if ( $call_to_action ) {
+					if ( $fields["call_to_action"] ) {
 						?>
 						<div class="text-and-image-callout__cta">
 							<a class="button text-and-image-callout__button  <?php echo( esc_attr( $button_style_class ) ); ?>"
-							   href="<?php echo esc_url( $call_to_action_url ); ?>"
-							   target="<?php echo esc_attr( $call_to_action_target ); ?>"><?php echo esc_html( $call_to_action_title ); ?></a>
+							   href="<?php echo esc_url( $fields["call_to_action"]["url"] ); ?>"
+							   target="<?php echo esc_attr( $fields["call_to_action"]["target"] ); ?>"><?php echo esc_html( $fields["call_to_action"]["title"] ); ?></a>
 						</div>
 					<?php } ?>
 				</div>
 			</div>
 			<div class="col-md-6 text-and-image-callout__column text-and-image-callout__image-container">
 				<?php
-				if ( $image ) {
+				if ( $fields["image"] ) {
 					// TODO: Set image sizes when design
-					echo wp_get_attachment_image( $image, 'full', null, array( 'class' => 'text-and-image-callout__image' ) );
+					echo wp_get_attachment_image( $fields["image"], 'full', null, array( 'class' => 'text-and-image-callout__image' ) );
 				} else {
 					?>
 					<img class="missing-image"

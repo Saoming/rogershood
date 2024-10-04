@@ -18,7 +18,7 @@ echo '</pre>';
 include TENUP_THEME_PATH . 'partials/dynamic-stylesheets/block-spacing-stylesheet.php';
 
 ?>
-<!--TODO apply button properly-->
+
 <section class="rh-full-block product-what-is-it"
 		 id="<?php echo esc_attr( $id ); ?>"
 >
