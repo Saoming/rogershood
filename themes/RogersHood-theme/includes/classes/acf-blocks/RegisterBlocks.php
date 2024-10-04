@@ -6,6 +6,7 @@
  */
 
 namespace TenUpTheme\Blocks;
+use TenUpTheme\Theme\ResourceEnqueuer;
 
 /**
  * Handles Registration of the Custom Blocks
@@ -30,6 +31,8 @@ class RegisterBlocks {
 		if ( ! function_exists( 'acf_register_block_type' ) ) {
 			return;
 		}
+		$this->temp_tome_register_blocks();
+
 		$this->register_hero_section_block();
 		$this->register_text_and_image_callout_block();
 		$this->register_product_includes_block();
@@ -38,6 +41,81 @@ class RegisterBlocks {
 		$this->register_hub_cards_block();
 		$this->register_e_books_full_and_text_block();
 	}
+
+
+//	TODO: Remove the function and add the methods to the main one, this is to prevent merge conflicts
+	public function temp_tome_register_blocks() {
+		$this->register_faq_block();
+		$this->register_ingredient_grid_block();;
+		$this->register_founders_block();
+	}
+
+	protected function register_faq_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'rh-faq',
+				'title'           => __( 'FAQs' ),
+				'render_template' => 'partials/blocks/faq/faq.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/Faq.png',
+						),
+					),
+				),
+			)
+		);
+	}
+
+	protected function register_ingredient_grid_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'rh-ingredient-grid',
+				'title'           => __( 'Ingredient Grid' ),
+				'render_template' => 'partials/blocks/ingredient-grid/ingredient-grid.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'enqueue_assets'  => ResourceEnqueuer::enqueue_lightbox_assets(),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/Ingredient-grid.png',
+						),
+					),
+				),
+			)
+		);
+	}
+
+	protected function register_founders_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'rh-founders-slider',
+				'title'           => __( 'Founders Slider' ),
+				'render_template' => 'partials/blocks/founders-slider/founders-slider.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/founders-slider.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+
+
+
 
 	/**
 	 * Registers the Hero Section block on the homepage
