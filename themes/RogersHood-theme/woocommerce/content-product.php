@@ -43,7 +43,6 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 	echo '<div class="woo-product-link__container">';
 	echo woocommerce_get_product_thumbnail();
 	if ( has_term( array( 'kits' ), 'product_cat', $product->ID ) ) {
-		// do something if product with ID 50 is either in category "sneakers" or "backpacks"
 		echo '<div class="product-indicator">' . 'Kit' . '</div>';
 	}
 	echo '<div class="woo-product-link__hover">';

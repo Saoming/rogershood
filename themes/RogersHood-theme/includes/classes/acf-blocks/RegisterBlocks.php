@@ -33,6 +33,7 @@ class RegisterBlocks {
 		$this->register_hero_section_block();
 		$this->register_text_and_image_callout_block();
 		$this->register_product_includes_block();
+		$this->register_benefits_section_block();
 	}
 
 	/**
@@ -58,6 +59,7 @@ class RegisterBlocks {
 			)
 		);
 	}
+
 	/**
 	 * Registers the Content and Image Full Width Block
 	 */
@@ -66,7 +68,7 @@ class RegisterBlocks {
 			array(
 				'name'            => 'text-and-image-callout',
 				'title'           => __( 'Text and Image Callout' ),
-				'description' => __('Half screen content / half screen image'),
+				'description'     => __( 'Half screen content / half screen image' ),
 				'render_template' => 'partials/blocks/text-and-image-callout/text-and-image-callout.php',
 				'mode'            => 'auto',
 				'category'        => 'rogershood',
@@ -91,8 +93,31 @@ class RegisterBlocks {
 			array(
 				'name'            => 'product-includes',
 				'title'           => __( 'Product Includes' ),
-				'description' => __('Half screen explaining what is it, helps with and ingredients for Product / half screen image'),
+				'description'     => __( 'Half screen explaining what is it, helps with and ingredients for Product / half screen image' ),
 				'render_template' => 'partials/blocks/product-includes/product-includes.php',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/product-includes.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+
+
+	/**
+	 * Registers the Hero Section block on the homepage
+	 */
+	protected function register_benefits_section_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'benefits-section',
+				'title'           => __( 'Benefits Section' ),
+				'render_template' => 'partials/blocks/benefits-section/benefits-section.php',
 				'mode'            => 'auto',
 				'category'        => 'rogershood',
 				'supports'        => array( 'anchor' => true ),
@@ -100,7 +125,7 @@ class RegisterBlocks {
 					'attributes' => array(
 						'mode' => 'preview',
 						'data' => array(
-							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/product-includes.jpg',
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/Benefits-Section.png',
 						),
 					),
 				),
