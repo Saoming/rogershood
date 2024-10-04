@@ -2,34 +2,6 @@
 /**
  * Renders the FAQ Block
  */
-?>
-
-<style>
-	.fs-block {
-		width: 1440px;
-		max-width: 100%;
-		padding-left: 20px;
-		padding-right: 20px;
-		position: relative;
-	}
-
-	.container {
-		max-width: 1180px;
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	.container--narrow {
-		max-width: 1550px;
-	}
-
-	[class*=" col-"],
-	[class^="col-"] {
-		padding-left: 20px;
-		padding-right: 20px;
-	}
-</style>
-<?php
 
 $title       = get_field( 'intro_title' );
 $description = get_field( 'intro_description' );
