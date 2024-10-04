@@ -1,9 +1,8 @@
 import '../../css/frontend/style.css';
 
-import cart from './components/cart';
-import Blocks from "./blocks/blocks";
+import Cart from './components/Cart';
+import Blocks from "./blocks/Blocks";
 
 
-cart();
+Cart();
 Blocks();
-// import foo from './components/bar';

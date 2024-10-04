@@ -1,5 +1,5 @@
-import Faq from "./faq";
-import IngredientsGrid from "./ingredients-grid";
+import Faq from "./Faq";
+import IngredientsGrid from "./IngredientsGrid";
 
 const Blocks = () =>  {
 	Faq();
