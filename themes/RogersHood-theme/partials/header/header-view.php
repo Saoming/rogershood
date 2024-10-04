@@ -28,13 +28,14 @@
 <header role="banner" class="header__container page-container">
 	<div class="header__menu-mobile">
 		<button
+			id="mobile-navigation-button"
 			type="button"
 			class="header__menu-mobile-button"
-			:aria-expanded="modal"
+			aria-expanded="false"
 			aria-controls="mobile-navigation"
 			aria-label="Navigation Menu"
 		>
-			<svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 				<path d="M0 10.77V9.76998H16V10.77H0ZM0 5.99998V4.99998H16V5.99998H0ZM0 1.22998V0.22998H16V1.22998H0Z" fill="currentColor"/>
 			</svg>
 		</button>

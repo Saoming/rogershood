@@ -100,11 +100,14 @@ class ResourceEnqueuer {
 		);
 
 		wp_enqueue_script(
-			'splide-script-defer',
+			'splide-script',
 			TENUP_THEME_TEMPLATE_URL . '/3rd-party/splide-js-4.1.3/splide.min.js',
 			array(),
 			filemtime( TENUP_THEME_PATH . '/3rd-party/splide-js-4.1.3/splide.min.js' ),
-			true
+			array(
+				'strategy'  => 'defer',
+				'in_footer' => true,
+			)
 		);
 	}
 

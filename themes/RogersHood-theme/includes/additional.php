@@ -16,7 +16,7 @@ use TenUpTheme\Blocks\RegisterBlockCategory;
  * Register Additional Functionality to support the theme
  */
 
- Class Additional {
+class Additional {
 
 	protected $register_block_categories;
 	protected $register_blocks;
@@ -27,10 +27,10 @@ use TenUpTheme\Blocks\RegisterBlockCategory;
 	 * Creates all the Classes
 	 */
 	public function __construct() {
-		$this->register_block_categories  = new RegisterBlockCategory();
-		$this->register_blocks            = new RegisterBlocks();
-		$this->acf_options_page           = new AcfOptionsPage();
-		$this->add_svg_support            = new AddSvgSupport();
+		$this->register_block_categories = new RegisterBlockCategory();
+		$this->register_blocks           = new RegisterBlocks();
+		$this->acf_options_page          = new AcfOptionsPage();
+		$this->add_svg_support           = new AddSvgSupport();
 	}
 
 	/**
@@ -44,5 +44,4 @@ use TenUpTheme\Blocks\RegisterBlockCategory;
 		$this->acf_options_page->init_hooks();
 		$this->add_svg_support->init_hooks();
 	}
-
 }

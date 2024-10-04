@@ -7,6 +7,8 @@
 
 namespace TenUpTheme\Blocks;
 
+use TenUpTheme\Theme\ResourceEnqueuer;
+
 /**
  * Handles Registration of the Custom Blocks
  */
@@ -70,6 +72,7 @@ class RegisterBlocks {
 				'mode'            => 'auto',
 				'category'        => 'rogershood',
 				'supports'        => array( 'anchor' => true ),
+				'enqueue_assets'  => ResourceEnqueuer::register_splide_assets(),
 				'example'         => array(
 					'attributes' => array(
 						'mode' => 'preview',

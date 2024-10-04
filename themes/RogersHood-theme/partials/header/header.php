@@ -15,6 +15,7 @@ $args['menu_header'] = wp_nav_menu(
 		'link_before'     => '<span class="menu-item-text">',
 		'link_after'      => '</span>',
 		'items_wrap'      => '<ul id="%1$s" class="%2$s" role="navigation">%3$s</ul>',
+		'walker'		  => new \TenUpTheme\Theme\CustomNavWalker(),
 	)
 );
 
@@ -39,3 +40,4 @@ if ( function_exists( 'get_field' ) ) {
 }
 
 get_template_part( 'partials/header/header', 'view', $args );
+get_template_part( 'partials/header/header', 'mobile', $args );
