@@ -30,8 +30,16 @@
 	font-size: 22px;
 }
 
+.fs-32 {
+	font-size: 32px;
+}
+
 body {
 	-webkit-font-smoothing: antialiased;
+}
+
+.br-4 {
+	border-radius: 4px;
 }
 
 .br-12 {
@@ -44,4 +52,18 @@ body {
 
 .mb-20 {
 	margin-bottom: 20px;
+}
+
+.mb-50 {
+	margin-bottom: 50px;
+}
+
+/* TODO - remove temp-button everywhere*/
+
+.temp-button {
+	background: #0a7aff;
+	border-radius: 42px;
+	color: var(--wp--preset--color--white);
+	height: 50px;
+	width: 160px;
 }

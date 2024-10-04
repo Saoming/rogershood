@@ -12,7 +12,7 @@ if ( ! empty( $block['anchor'] ) ) {
 
 
 // Block content
-$community = get_fields();
+$fields = get_fields();
 echo '<pre>';
 //var_dump( $community );
 echo '</pre>';
@@ -20,30 +20,30 @@ echo '</pre>';
 
 <section class="rh-block rh-block--full-bleed  community-cards"
 		 id="<?php echo esc_attr( $id ); ?>"
-		 style="background-image: url(<?php echo esc_attr( $community["background_image"]["url"] ); ?>"
+		 style="background-image: url(<?php echo esc_attr( $fields["background_image"]["url"] ); ?>"
 >
 	<div class="container container--narrow"
 	>
-		<?php if ( $community["pretitle"] ) { ?>
+		<?php if ( $fields["pretitle"] ) { ?>
 			<div class="community-cards__pretitle text-center fw-300 uppercase fs-16">
-				<?php echo esc_attr( $community["pretitle"] ); ?>
+				<?php echo esc_attr( $fields["pretitle"] ); ?>
 			</div>
 		<?php } ?>
-		<?php if ( $community["title"] ) { ?>
+		<?php if ( $fields["title"] ) { ?>
 			<h2 class="community-cards__title text-center">
-				<?php echo esc_attr( $community["title"] ); ?>
+				<?php echo esc_attr( $fields["title"] ); ?>
 			</h2>
 		<?php } ?>
 		<div class="container--inner">
 			<div class="community-card__row row">
 				<?php
 				$i = 1;
-				foreach ( $community["communities"] as $community ) { ?>
+				foreach ( $fields["communities"] as $community ) { ?>
 					<div class="community-card cols-sm-12  col-md-6 col-lg-3 <?php if ($i == 1) echo 'is-active'; ?> ">
 						<div class=" community-card__image-container mb-20">
 							<?php
 							if ( $community["image"] ) {
-								echo wp_get_attachment_image( $community["image"]["ID"], 'full', null, array( 'class' => 'community-card__image br-12' ) );
+								echo wp_get_attachment_image( $community["image"], 'full', null, array( 'class' => 'community-card__image br-12' ) );
 							} else {
 								?>
 								<img class="missing-image"

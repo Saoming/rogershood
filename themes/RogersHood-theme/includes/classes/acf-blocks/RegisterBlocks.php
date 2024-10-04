@@ -35,6 +35,7 @@ class RegisterBlocks {
 		$this->register_product_includes_block();
 		$this->register_benefits_section_block();
 		$this->register_community_cards_block();
+		$this->register_hub_cards_block();
 	}
 
 	/**
@@ -154,6 +155,29 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/community-cards.jpg',
+						),
+					),
+				),
+			)
+		);
+	}	/**
+	 * Registers the Hub Cards
+	 */
+	protected function register_hub_cards_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'hub-cards',
+				'title'           => __( 'Hub Cards' ),
+				'description'     => __( 'Hub Cards' ),
+				'render_template' => 'partials/blocks/hub-cards/hub-cards.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/hub-cards.jpg',
 						),
 					),
 				),
