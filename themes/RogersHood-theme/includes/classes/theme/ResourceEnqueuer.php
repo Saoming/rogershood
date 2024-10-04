@@ -60,6 +60,18 @@ class ResourceEnqueuer {
 		wp_scripts()->add_data( 'jquery-migrate', 'group', 1 );
 	}
 
+	public static function enqueue_lightbox_assets() {
+		wp_enqueue_style(
+			'basic-lightbox-css',
+			TENUP_THEME_TEMPLATE_URL . '/3rd-party/basicLightBox/css/basiclightbox.min.css',
+		);
+
+		wp_enqueue_style(
+			'basic-lightbox-js',
+			TENUP_THEME_TEMPLATE_URL . '/3rd-party/basicLightBox/js/basiclightbox.min.js',
+		);
+	}
+
 	/**
 	 * Enqueues the Transaction Filter script
 	 */

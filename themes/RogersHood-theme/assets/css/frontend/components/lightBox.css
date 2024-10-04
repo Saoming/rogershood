@@ -1,0 +1,7 @@
+.basicLightbox__placeholder {
+	background-color: white;
+	padding: 1.8rem 2.16rem .9rem;
+	max-height: 90vh;
+	overflow: auto;
+	width: 550px;
+}
