@@ -30,9 +30,39 @@ class RegisterBlocks {
 		if ( ! function_exists( 'acf_register_block_type' ) ) {
 			return;
 		}
+		$this->temp_tome_register_blocks();
+
 		$this->register_hero_section_block();
 		$this->register_benefits_section_block();
 	}
+
+
+//	TODO: Remove the function and add the methods to the main one, this is to prevent merge conflicts
+	public function temp_tome_register_blocks() {
+		$this->register_faq_block();
+	}
+
+	protected function register_faq_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'rh-faq',
+				'title'           => __( 'FAQs' ),
+				'render_template' => 'partials/blocks/faq/faq.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/Faq.png',
+						),
+					),
+				),
+			)
+		);
+	}
+
 
 	/**
 	 * Registers the Hero Section block on the homepage
