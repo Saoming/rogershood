@@ -1,9 +1,5 @@
 @import url("../frontend/global/media-queries.css");
 
-.text-and-image-callout__container {
-	padding: 0;
-}
-
 .text-and-image-callout__row {
 	grid-gap: 0;
 }
@@ -36,9 +32,10 @@
 	object-fit: cover;
 }
 
-.text-and-image-callout--image-left .text-and-image-callout__content{
-		order: 2;
+.text-and-image-callout--image-left .text-and-image-callout__content {
+	order: 2;
 }
-.text-and-image-callout--image-left .text-and-image-callout__image-container{
-		order: 1;
+
+.text-and-image-callout--image-left .text-and-image-callout__image-container {
+	order: 1;
 }

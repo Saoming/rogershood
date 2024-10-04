@@ -1,6 +1,7 @@
 @import url("../global/media-queries.css");
 
 /* Layout */
+
 * {
 	box-sizing: border-box;
 }
@@ -23,7 +24,7 @@ video {
 .container {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 1240px;
+	max-width: 1440px;
 	padding-left: 22px;
 	padding-right: 22px;
 	width: 100%;
@@ -39,6 +40,22 @@ video {
 	width: 100vw;
 }
 
+.rh-block {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1240px;
+}
+
+@media all and (max-width: 992px) {
+	.rh-block {
+		padding-bottom: 50px;
+		padding-top: 50px;
+	}
+
+	.col-sm-hidden {
+		display: none;
+	}
+}
 
 .container--tiny {
 	max-width: 1004px;
@@ -47,7 +64,6 @@ video {
 body:not(.wp-admin) {
 	position: relative;
 }
-
 
 body.admin-bar .header {
 	top: 46px;
@@ -58,8 +74,8 @@ body.admin-bar .header {
 }
 
 /*  TODO @SAM pls check */
-@media all and (min-width: 780px) {
 
+@media all and (min-width: 780px) {
 	body.admin-bar .header {
 		top: 32px;
 	}
@@ -67,12 +83,8 @@ body.admin-bar .header {
 
 .row {
 	display: grid;
-	grid-gap: 21px;
+	grid-gap: 20px;
 	grid-template-columns: repeat(12, 1fr);
-}
-
-.row-10 {
-	grid-template-columns: repeat(10, 1fr);
 }
 
 [class*=" col-"],
@@ -117,22 +129,8 @@ body.admin-bar .header {
 }
 
 /*  TODO @SAM pls check */
-@media all and (--bp-until-phone) {
 
-	.rh-block {
-		padding-bottom: 50px;
-		padding-top: 50px;
-	}
-
-
-	.col-sm-hidden {
-		display: none;
-	}
-}
-
-/*  TODO @SAM pls check */
-@media all and (min-width: 768px) {
-
+@media (--bp-medium) {
 	.col-md-1 {
 		grid-column: span 1;
 	}
@@ -174,19 +172,17 @@ body.admin-bar .header {
 	}
 }
 
-
 /*  TODO @SAM pls check */
-@media all and (min-width: 768px) and (max-width: 992px) {
 
+@media all and (min-width: 768px) and (max-width: 992px) {
 	.col-md-hidden {
 		display: none;
 	}
 }
 
-
 /*  TODO @SAM pls check */
-@media all and (min-width: 993px) {
 
+@media all and (min-width: 993px) {
 	.col-lg-1 {
 		grid-column: span 1;
 	}
@@ -233,8 +229,8 @@ body.admin-bar .header {
 }
 
 /*  TODO @SAM pls check */
-@media all and (min-width: 1000px) {
 
+@media all and (min-width: 1000px) {
 	.col-xl-6 {
 		grid-column: span 6;
 	}

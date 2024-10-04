@@ -18,12 +18,10 @@ echo '</pre>';
 include TENUP_THEME_PATH . 'partials/dynamic-stylesheets/block-spacing-stylesheet.php';
 
 ?>
-<!--TODO delete container class-->
-<section class="rh-block product-what-is-it"
+<!--TODO apply button properly-->
+<section class="rh-full-block product-what-is-it"
 		 id="<?php echo esc_attr( $id ); ?>"
 >
-	<div class="product-what-is-it__container container"
-	>
 		<div class="product-what-is-it__row row">
 
 			<div class="col-md-6 product-what-is-it__content"
@@ -65,5 +63,5 @@ include TENUP_THEME_PATH . 'partials/dynamic-stylesheets/block-spacing-styleshee
 				<?php } ?>
 			</div>
 		</div>
-	</div>
+<!--	</div>-->
 </section>
