@@ -95,6 +95,8 @@ class RegisterBlocks {
 				'title'           => __( 'Product Includes' ),
 				'description'     => __( 'Half screen explaining what is it, helps with and ingredients for Product / half screen image' ),
 				'render_template' => 'partials/blocks/product-includes/product-includes.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
 				'supports'        => array( 'anchor' => true ),
 				'example'         => array(
 					'attributes' => array(

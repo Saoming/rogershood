@@ -11,9 +11,9 @@ if ( ! empty( $block['anchor'] ) ) {
 }
 // Block content
 $fields = get_fields();
-echo '<pre>';
-var_dump( $fields );
-echo '</pre>';
+//echo '<pre>';
+//var_dump( $fields );
+//echo '</pre>';
 ?>
 
 <section class="rh-block--full-bleed product-includes"
