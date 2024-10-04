@@ -32,7 +32,6 @@ video {
 	width: 100vw;
 }
 
-
 @media all and (min-width: 1440px) {
 	.rh-block {
 		margin-left: -20px;

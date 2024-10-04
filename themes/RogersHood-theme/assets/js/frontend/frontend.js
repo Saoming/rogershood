@@ -1,5 +1,8 @@
 import '../../css/frontend/style.css';
 
+import cart from './components/cart';
+import Blocks from './blocks/blocks';
+
 document.addEventListener('DOMContentLoaded', function () {
 	const cards = document.querySelectorAll('.community-card');
 	// prettier-ignore
@@ -14,3 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		});
 	});
 });
+
+cart();
+Blocks();
+// import foo from './components/bar';
