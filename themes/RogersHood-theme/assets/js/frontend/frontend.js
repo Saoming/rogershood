@@ -1,7 +1,7 @@
 import '../../css/frontend/style.css';
 
-// import cart from './components/cart';
-// import Blocks from './blocks/blocks';
+import cart from './components/cart';
+import Blocks from './blocks/blocks';
 
 document.addEventListener('DOMContentLoaded', function () {
 	const cards = document.querySelectorAll('.community-card');
@@ -18,6 +18,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 });
 
-// cart();
-// Blocks();
+cart();
+Blocks();
 // import foo from './components/bar';
