@@ -36,8 +36,10 @@ echo '</pre>';
 		<?php } ?>
 		<div class="container--inner">
 			<div class="community-card__row row">
-				<?php foreach ( $community["communities"] as $community ) { ?>
-					<div class="community-card col-lg-3 ">
+				<?php
+				$i = 1;
+				foreach ( $community["communities"] as $community ) { ?>
+					<div class="community-card cols-sm-12  col-md-6 col-lg-3 <?php if ($i == 1) echo 'is-active'; ?> ">
 						<div class=" community-card__image-container mb-20">
 							<?php
 							if ( $community["image"] ) {
@@ -47,14 +49,14 @@ echo '</pre>';
 								<img class="missing-image"
 									 src="<?php echo esc_url( TENUP_THEME_DIST_URL . '/images/missing-image.png' ); ?>">
 							<?php } ?>
+							<?php if ( $community["cta"] ) { ?>
+								<div class="community-card__cta">
+									<a class="button community-card__button"
+									   href="<?php echo esc_url( $community["cta"]["url"] ); ?>"
+									   target="<?php echo esc_attr( $community["cta"]["target"] ); ?>"><?php echo esc_html( $community["cta"]["title"] ); ?></a>
+								</div>
+							<?php } ?>
 						</div>
-						<?php if ( $community["cta"] ) { ?>
-							<div class="community-card__cta">
-								<a class="button community-card__button"
-								   href="<?php echo esc_url( $community["cta"]["url"] ); ?>"
-								   target="<?php echo esc_attr( $community["cta"]["target"] ); ?>"><?php echo esc_html( $community["cta"]["title"] ); ?></a>
-							</div>
-						<?php } ?>
 						<div class="community-card__content__inner text-center">
 							<?php if ( $community["title"] ) { ?>
 								<div class="community-card__title fs-22  ff-scilla mb-12"><?php echo wp_kses_post( $community["title"] ); ?></div>
@@ -66,7 +68,10 @@ echo '</pre>';
 						</div>
 
 					</div>
-				<?php } ?>
+				<?php
+				$i++;
+				}
+				?>
 			</div>
 		</div>
 	</div>
