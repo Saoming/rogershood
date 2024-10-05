@@ -2,7 +2,7 @@
 /**
  * Renders the One Image with Content Block
  *
- * @package stride-theme
+ * @package rogershood-theme
  */
 
 $id = 'product-includes-' . $block['id'];

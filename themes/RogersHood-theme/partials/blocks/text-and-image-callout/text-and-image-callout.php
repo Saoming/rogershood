@@ -2,7 +2,7 @@
 /**
  * Renders the One Image with Content Block
  *
- * @package stride-theme
+ * @package rogershood-theme
  */
 
 $id = 'text-and-image-callout-' . $block['id'];

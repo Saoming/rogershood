@@ -1,8 +1,8 @@
 <?php
 /**
- * Renders the One Image with Content Block
+ * Renders the E-books Image and Content Block
  *
- * @package stride-theme
+ * @package rogershood-theme
  */
 
 $id = 'e-books-full-and-text-' . $block['id'];
