@@ -1,0 +1,84 @@
+const Cart = () => {
+
+	if( ! document.querySelector('body').classList.contains('woocommerce-cart')) {
+		return;
+	}
+
+	document.addEventListener('DOMContentLoaded', () => {
+		addEventListeners();
+	});
+
+	let debounceTimer;
+
+	function debounce (func, timeout = 1000) {
+		clearTimeout(debounceTimer);
+		debounceTimer = setTimeout(() => {
+			func();
+		}, timeout);
+	}
+
+	function updateCart () {
+		console.log('cart updated')
+		const updateCartButton = document.querySelector('.js-cart-update-cart');
+		console.log(updateCartButton);
+		if( ! updateCartButton) {
+			return;
+		}
+
+		updateCartButton.click();
+	}
+
+
+	function addEventListeners() {
+		addInputValueChangeEventListener();
+		addInputIncrementalButtonsEventListener();
+	}
+
+	function addInputValueChangeEventListener() {
+
+		const quantityInputs = document.querySelectorAll('.js-cart-quantity');
+		console.log(quantityInputs);
+
+		quantityInputs.forEach( input => {
+			input.addEventListener('keyup', (e) => {
+				if(e.target.value) {
+					debounce(updateCart, 2000);
+				}
+			})
+		});
+	}
+
+	function addInputIncrementalButtonsEventListener() {
+		const cartButtons = document.querySelectorAll('.js-cart-quantity-control');
+
+		if( ! cartButtons) {
+			return;
+		}
+
+		cartButtons.forEach( button => {
+			button.addEventListener('click', (e) => {
+				e.preventDefault();
+
+				const button = e.target;
+				const change = parseInt(button.dataset.change);
+				const quantityInput = button.parentElement.querySelector('.js-cart-quantity');
+				const value = parseInt(quantityInput.value);
+				const newValue = value + change;
+
+				if(newValue < 1) {
+					return;
+				}
+
+				quantityInput.value = newValue;
+				const updateCartButton = document.querySelector('.js-cart-update-cart');
+				updateCartButton.disabled = false;
+
+
+				debounce(updateCart, 2000);
+			})
+		})
+	}
+}
+
+
+export default Cart;

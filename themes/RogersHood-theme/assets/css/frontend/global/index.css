@@ -4,6 +4,8 @@
 
 @import url("media-queries.css");
 
+@import url("typography.css");
+
 html {
 	font-family: var(--wp--preset--font-family--sofia-pro);
 	font-weight: 300;

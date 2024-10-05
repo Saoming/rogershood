@@ -8,36 +8,4 @@
  */
 /* button:where(:not(.components-button)) {
 
-} */
-
-.button-primary {
-	background-color: var(--wp--preset--color--light-blue);
-	border: 1px solid var(--wp--preset--color--light-blue);
-	border-radius: 42px;
-	color: var(--wp--preset--color--black);
-	padding: 14px 43.5px;
-	text-decoration: none;
-	transition: background 300ms ease-in;
-}
-
-.button-primary:hover {
-	background-color: var(--wp--preset--color--green);
-	border: 1px solid var(--wp--preset--color--green);
-	color: var(--wp--preset--color--white);
-}
-
-.button-secondary {
-	background-color: var(--wp--preset--color--white);
-	border: 1px solid var(--wp--preset--color--light-blue);
-	border-radius: 42px;
-	color: var(--wp--preset--color--black);
-	padding: 14px 43.5px;
-	text-decoration: none;
-	transition: background 300ms ease-in;
-}
-
-.button-secondary:hover {
-	background-color: var(--wp--preset--color--green);
-	border: 1px solid var(--wp--preset--color--green);
-	color: var(--wp--preset--color--white);
 }

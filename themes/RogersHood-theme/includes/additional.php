@@ -11,6 +11,7 @@ use TenUpTheme\Blocks\RegisterBlocks;
 use TenUpTheme\Theme\AcfOptionsPage;
 use TenUpTheme\Theme\AddSvgSupport;
 use TenUpTheme\Blocks\RegisterBlockCategory;
+use TenUpTheme\WooCommerceCustomization\WooCommerceCustomization;
 
 /**
  * Register Additional Functionality to support the theme
@@ -22,11 +23,13 @@ class Additional {
 	protected $register_blocks;
 	protected $acf_options_page;
 	protected $add_svg_support;
+	private $woocommerce;
 
 	/**
 	 * Creates all the Classes
 	 */
 	public function __construct() {
+		$this->woocommerce               = new WooCommerceCustomization();
 		$this->register_block_categories = new RegisterBlockCategory();
 		$this->register_blocks           = new RegisterBlocks();
 		$this->acf_options_page          = new AcfOptionsPage();
@@ -39,6 +42,7 @@ class Additional {
 	 * @return void
 	 */
 	public function init_hooks() {
+		$this->woocommerce->init_hooks();
 		$this->register_block_categories->init_hooks();
 		$this->register_blocks->init_hooks();
 		$this->acf_options_page->init_hooks();

@@ -8,6 +8,8 @@ uploads
 upgrade
 cache
 plugins
+themes/RogersHood-theme/node_modules/
+themes/RogersHood-theme/vendor
 
 # Project Files
 dist
@@ -35,3 +37,5 @@ tasks.json
 Thumbs.db
 Desktop.ini
 /debug.log
+composer.lock
+package-lock.json
