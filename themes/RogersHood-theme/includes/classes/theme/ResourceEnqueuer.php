@@ -66,11 +66,27 @@ class ResourceEnqueuer {
 			TENUP_THEME_TEMPLATE_URL . '/3rd-party/basicLightBox/css/basiclightbox.min.css',
 		);
 
-		wp_enqueue_style(
+		wp_enqueue_script(
 			'basic-lightbox-js',
 			TENUP_THEME_TEMPLATE_URL . '/3rd-party/basicLightBox/js/basiclightbox.min.js',
 		);
 	}
+
+	public static function enqueue_slick_assets() {
+		wp_enqueue_style(
+			'slick-css',
+			TENUP_THEME_TEMPLATE_URL . '/3rd-party/slick/css/slick-theme.css',
+		);
+
+		wp_enqueue_script(
+			'slick-js',
+			TENUP_THEME_TEMPLATE_URL . '/3rd-party/slick/js/slick.min.js',
+			'jquery',
+			false,
+			true
+		);
+	}
+
 
 	/**
 	 * Enqueues the Transaction Filter script

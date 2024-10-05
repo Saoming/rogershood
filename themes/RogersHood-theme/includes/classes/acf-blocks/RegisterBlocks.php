@@ -97,6 +97,7 @@ class RegisterBlocks {
 				'mode'            => 'auto',
 				'category'        => 'rogershood',
 				'supports'        => array( 'anchor' => true ),
+				'enqueue_assets'  => ResourceEnqueuer::enqueue_slick_assets(),
 				'example'         => array(
 					'attributes' => array(
 						'mode' => 'preview',

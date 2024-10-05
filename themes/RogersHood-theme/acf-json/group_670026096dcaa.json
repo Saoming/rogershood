@@ -68,6 +68,28 @@
                     "parent_repeater": "field_6700262c073f3"
                 },
                 {
+                    "key": "field_6700e10a19185",
+                    "label": "Nickname",
+                    "name": "nickname",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6700262c073f3"
+                },
+                {
                     "key": "field_67002abc073f5",
                     "label": "description",
                     "name": "description",
@@ -115,6 +137,33 @@
                     "allow_in_bindings": 0,
                     "preview_size": "medium",
                     "parent_repeater": "field_6700262c073f3"
+                },
+                {
+                    "key": "field_6700dc36ad76a",
+                    "label": "Next Founder",
+                    "name": "next_founder",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "id",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium",
+                    "parent_repeater": "field_6700262c073f3"
                 }
             ]
         }
@@ -137,5 +186,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728064597
+    "modified": 1728110872
 }

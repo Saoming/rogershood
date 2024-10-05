@@ -2,8 +2,30 @@
 	text-align: center;
 }
 
+.text-body-18 {
+	font-size: 18px;
+	line-height: 1.41;
+}
 
 .text-body-20 {
 	font-size:  20px;
 	line-height: 1.5;
+}
+
+
+.is-style-h1 {
+	font-family: Scilla, serif;
+	font-size: clamp(1.625rem, 2vw + 1rem, 3.25rem);
+	font-weight: 500;
+}
+
+
+.is-style-h2 {
+	font-family: Scilla, serif;
+	font-size: clamp(1.625rem, 2vw + 1rem, 2.25rem);
+	font-weight: 500;
+}
+
+.text-font-scilla {
+	font-family: Scilla, serif;
 }

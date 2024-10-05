@@ -1,0 +1,23 @@
+import $ from 'jquery';
+
+const FoundersSlider = () => {
+
+	$(document).ready(function() {
+
+		$('.founders-slider__slider').slick({
+			slidesToScroll: 1,
+			arrows: false,
+			dots: false,
+			autoplay: false,
+			draggable: false,
+			fade: true
+		});
+
+		$('.founders-slider__next').click(function() {
+			$(this).closest('.founders-slider__slider').slick('slickNext');
+		});
+	})
+
+}
+
+export default FoundersSlider;

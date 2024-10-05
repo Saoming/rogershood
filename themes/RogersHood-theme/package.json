@@ -20,7 +20,8 @@
   },
   "dependencies": {
     "basiclightbox": "^5.0.4",
-    "modern-normalize": "^2.0.0"
+    "modern-normalize": "^2.0.0",
+    "slick-carousel": "^1.8.1"
   },
   "10up-toolkit": {
     "useBlockAssets": true,
