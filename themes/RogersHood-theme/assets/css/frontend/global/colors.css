@@ -36,3 +36,11 @@
 .bg-beige {
 	background-color: var(--cart-background-beige);
 }
+
+.bg-white {
+	background: var(--c-white);
+}
+
+.bg-gradient-blue {
+	background: linear-gradient(180deg, #E0EAF7 0%, #C2D1DC 100%);
+}

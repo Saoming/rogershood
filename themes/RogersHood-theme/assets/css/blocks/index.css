@@ -4,6 +4,7 @@
  *
  */
 
- @import url("faq.css");
- @import url("founders-slider.css");
- @import url("ingredient-grid.css");
+@import url("faq.css");
+@import url("founders-slider.css");
+@import url("ingredient-grid.css");
+@import url('single-product-slider.css');

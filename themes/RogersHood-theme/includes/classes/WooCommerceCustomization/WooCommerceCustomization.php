@@ -8,6 +8,10 @@ namespace TenUpTheme\WooCommerceCustomization;
  */
 class WooCommerceCustomization {
 
+	private Cart $cart;
+	private ProductContent $product_customization;
+	private QuantityField $quantity_field;
+
 	public function __construct() {
 		$this->cart = new Cart();
 		$this->product_customization = new ProductContent();

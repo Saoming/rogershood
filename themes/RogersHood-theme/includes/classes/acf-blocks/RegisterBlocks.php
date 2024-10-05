@@ -43,6 +43,7 @@ class RegisterBlocks {
 		$this->register_faq_block();
 		$this->register_ingredient_grid_block();;
 		$this->register_founders_block();
+		$this->register_single_product_slider_block();
 	}
 
 	protected function register_faq_block() {
@@ -103,6 +104,28 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/founders-slider.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+
+	protected function register_single_product_slider_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'rh-single-product-slider',
+				'title'           => __( 'Single Product Slider' ),
+				'render_template' => 'partials/blocks/single-product-slider/single-product-slider.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'enqueue_assets'  => ResourceEnqueuer::enqueue_slick_assets(),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/Single-product-slider.jpg',
 						),
 					),
 				),

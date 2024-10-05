@@ -50,6 +50,10 @@ video {
 	max-width: 1050px;
 }
 
+.container--relative {
+	position: relative;
+}
+
 .rh-full-block {
 	margin-left: calc(50% - 50vw);
 	max-width: 100vw;
@@ -274,9 +278,13 @@ body.admin-bar .header {
 
 @media all and (min-width: 1480px) {
 	.rh-block {
-		margin-left: auto;
-		margin-right: auto;
-		width: 100%;
-		max-width: 1480px;
+		margin-left: -20px;
+		margin-right: -20px;
+		width: 1440px;
+
 	}
+}
+
+.row--no-gap {
+	grid-gap: 0;
 }
