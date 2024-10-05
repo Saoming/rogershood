@@ -1,3 +1,76 @@
 .e-books-full-and-text__content {
-	padding: 100px;
+	padding: 0 20px;
+	background-size: cover;
+	background-position: top right;
+	display: flex;
+	align-items: center;
 }
+
+@media (--bp-medium) {
+	.e-books-full-and-text__content {
+		padding: 0 100px;
+	}
+}
+
+.e-books-full-and-text__content__inner {
+	padding: 50px 0;
+
+}
+
+@media (--bp-medium) {
+	.e-books-full-and-text__content__inner {
+		align-content: center;
+		padding: 100px 0;
+	}
+}
+
+.e-books-full-and-text__title {
+	margin-top: 0;
+}
+
+@media (--bp-medium) {
+	.e-books-full-and-text__title {
+		text-align: left;
+	}
+}
+
+.e-books-full-and-text__image-container {
+	border-radius: 0;
+	height: 100%;
+	overflow: hidden;
+	min-height: 250px;
+	position: relative;
+	width: 100%;
+}
+
+.e-books-full-and-text__image {
+	height: 100%;
+	left: 50%;
+	object-fit: cover;
+	object-position: center;
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 100%;
+}
+
+.e-books-full-and-text__image-container.image--desktop {
+	display: none;
+}
+
+@media (--bp-medium) {
+
+	.e-books-full-and-text__image-container.image--mobile {
+		display: none;
+	}
+
+	.e-books-full-and-text__image-container.image--desktop {
+		border-radius: 0;
+		display: block;
+	}
+
+	.e-books-full-and-text__cta {
+		text-align: left;
+	}
+}
+

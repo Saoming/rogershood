@@ -67,7 +67,7 @@ $image_position = $fields["image_position"] ? '' : 'text-and-image-callout--imag
 					<?php } ?>
 				</div>
 			</div>
-			<div class="col-md-6 text-and-image-callout__column text-and-image-callout__image-container">
+			<div class="col-md-6 text-and-image-callout__image-container">
 				<?php
 				if ( $fields["image"] ) {
 					// TODO: Set image sizes when design

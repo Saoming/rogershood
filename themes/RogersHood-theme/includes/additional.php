@@ -16,24 +16,23 @@ use TenUpTheme\WooCommerceCustomization\WooCommerceCustomization;
 /**
  * Register Additional Functionality to support the theme
  */
-
- Class Additional {
+class Additional {
 
 	protected $register_block_categories;
 	protected $register_blocks;
 	protected $acf_options_page;
 	protected $add_svg_support;
-	 private  $woocommerce;
+	private $woocommerce;
 
-	 /**
+	/**
 	 * Creates all the Classes
 	 */
 	public function __construct() {
-		$this->woocommerce = new WooCommerceCustomization();
-		$this->register_block_categories  = new RegisterBlockCategory();
-		$this->register_blocks            = new RegisterBlocks();
-		$this->acf_options_page           = new AcfOptionsPage();
-		$this->add_svg_support            = new AddSvgSupport();
+		$this->woocommerce               = new WooCommerceCustomization();
+		$this->register_block_categories = new RegisterBlockCategory();
+		$this->register_blocks           = new RegisterBlocks();
+		$this->acf_options_page          = new AcfOptionsPage();
+		$this->add_svg_support           = new AddSvgSupport();
 
 
 	}

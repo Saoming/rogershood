@@ -12,6 +12,7 @@ if ( ! empty( $block['anchor'] ) ) {
 
 $fields = get_fields();
 echo '<pre>';
+//var_dump( $fields["images"]["desktop"] );
 //var_dump( $fields );
 echo '</pre>';
 
@@ -33,11 +34,10 @@ $image_position = $fields["image_position"] ? '' : 'e-books-full-and-text--image
 >
 	<div class="container">
 		<div class="e-books-full-and-text__row row row--no-gap">
-			<div class="col-md-4 e-books-full-and-text__column e-books-full-and-text__image-container">
+			<div class="col-sm-12 col-md-4 e-books-full-and-text__image-container  image--desktop">
 				<?php
-				if ( $fields["image"] ) {
-					// TODO: Set image sizes when design
-					echo wp_get_attachment_image( $fields["image"], 'full', null, array( 'class' => 'e-books-full-and-text__image' ) );
+				if ( $fields["images"]["desktop"] ) {
+					echo wp_get_attachment_image( $fields["images"]["desktop"], 'full', null, array( 'class' => 'e-books-full-and-text__image' ) );
 				} else {
 					?>
 					<img class="missing-image"
@@ -45,42 +45,46 @@ $image_position = $fields["image_position"] ? '' : 'e-books-full-and-text--image
 				<?php } ?>
 			</div>
 
-			<div class="col-md-8 e-books-full-and-text__content"
+			<div class="col-sm-12 col-md-8 e-books-full-and-text__content"
 				 style="background-image: url('<?php echo esc_url( $fields["background_image"]["url"] ); ?>')"
 			>
-				<!--			<div class="e-books-full-and-text__content__inner">-->
-				<?php if ( $fields["pretitle"] ) { ?>
-					<div class="e-books-full-and-text__pretitle pretitle ">
-						<?php echo esc_attr( $fields["pretitle"] ); ?>
-					</div>
-					<?php
-				}
-				if ( $fields["title"] ) {
-					?>
-					<h2 class="e-books-full-and-text__title">
-						<?php echo esc_attr( $fields["title"] ); ?>
-					</h2>
-					<?php
-				}
-				if ( $fields["description"] ) {
-					?>
-					<div class="e-books-full-and-text__description-container">
-						<div class="e-books-full-and-text__description"><?php echo wp_kses_post( $fields["description"] ); ?></div>
-					</div>
-					<?php
-				}
+				<div class="e-books-full-and-text__content__inner">
+					<?php if ( $fields["pretitle"] ) { ?>
+						<div class="e-books-full-and-text__pretitle pretitle ">
+							<?php echo esc_attr( $fields["pretitle"] ); ?>
+						</div>
+						<?php
+					}
+					if ( $fields["title"] ) {
+						?>
+						<h2 class="e-books-full-and-text__title text-center">
+							<?php echo esc_attr( $fields["title"] ); ?>
+						</h2>
+						<?php
+					}
+					if ( $fields["images"]["mobile"] ) {
+						?>
+						<div class="e-books-full-and-text__image-container  image--mobile mb-20">
+							<?php echo wp_get_attachment_image( $fields["images"]["mobile"], 'full', null, array( 'class' => 'e-books-full-and-text__image br-12' ) ); ?>
+						</div>
+						<?php
+					}
+					if ( $fields["description"] ) {
+						?>
+						<div class="e-books-full-and-text__description mb-50"><?php echo wp_kses_post( $fields["description"] ); ?></div>
+						<?php
+					}
 
-				if ( $fields["call_to_action"] ) {
-					?>
-					<div class="e-books-full-and-text__cta">
-						<a class="button e-books-full-and-text__button  <?php echo( esc_attr( $button_style_class ) ); ?>"
-						   href="<?php echo esc_url( $fields["call_to_action"]["url"] ); ?>"
-						   target="<?php echo esc_attr( $fields["call_to_action"]["target"] ); ?>"><?php echo esc_html( $fields["call_to_action"]["title"] ); ?></a>
-					</div>
-				<?php } ?>
+					if ( $fields["call_to_action"] ) {
+						?>
+						<div class="e-books-full-and-text__cta text-center">
+							<a class="button e-books-full-and-text__button  <?php echo( esc_attr( $button_style_class ) ); ?>"
+							   href="<?php echo esc_url( $fields["call_to_action"]["url"] ); ?>"
+							   target="<?php echo esc_attr( $fields["call_to_action"]["target"] ); ?>"><?php echo esc_html( $fields["call_to_action"]["title"] ); ?></a>
+						</div>
+					<?php } ?>
+				</div>
 			</div>
 		</div>
-
-<!--	</div>-->
 	</div>
 </section>
