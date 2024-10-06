@@ -5,6 +5,10 @@ const SingleProductSlider = () => {
 
 	$(document).ready(function () {
 
+		if( ! document.querySelector('.founders-slider__slider')) {
+			return;
+		}
+
 		$('.single-product-slider__slider').slick({
 			slidesToScroll: 1,
 			arrows: false,

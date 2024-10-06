@@ -46,6 +46,8 @@ class RegisterBlocks {
 		$this->register_single_product_slider_block();
 		$this->register_tiktok_feed_block();
 		$this->register_point_information_block();
+		$this->register_products_grid_block();
+		$this->register_popular_reels_block();
 	}
 
 	protected function register_faq_block() {
@@ -178,6 +180,50 @@ class RegisterBlocks {
 
 	}
 
+	protected function register_products_grid_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'rh-products-grid',
+				'title'           => __( 'Products Grid' ),
+				'render_template' => 'partials/blocks/products-grid/products-grid.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/products-grid.png',
+						),
+					),
+				),
+			)
+		);
+
+	}
+
+
+	protected function register_popular_reels_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'rh-popular-reels',
+				'title'           => __( 'Popular Reels' ),
+				'render_template' => 'partials/blocks/popular-reels/popular-reels.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'enqueue_assets'  => ResourceEnqueuer::enqueue_slick_assets(),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/popular-reels.png',
+						),
+					),
+				),
+			)
+		);
+	}
 
 
 

@@ -4,6 +4,10 @@ const FoundersSlider = () => {
 
 	$(document).ready(function() {
 
+		if( ! document.querySelector('.founders-slider__slider')) {
+			return;
+		}
+
 		$('.founders-slider__slider').slick({
 			slidesToScroll: 1,
 			arrows: false,
