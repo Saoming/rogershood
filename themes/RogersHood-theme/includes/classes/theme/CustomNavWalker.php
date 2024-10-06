@@ -15,7 +15,7 @@ class CustomNavWalker extends Walker_Nav_Menu {
 		$permalink = $item->url;
 		$output   .= '<div class="wrapper-level-' . $depth . '' . esc_attr( implode( ' ', $item->classes ) ) . '" role="menu-item">';
 
-		if ( $args->walker->has_children && $depth === 0 ) {
+		if ( $args->walker->has_children ) {
 			$output .= '<div class="menu-item__container">';
 			$output .= '<a href="' . esc_url( $permalink ) . '" class="menu-item-text">' . esc_html( $title ) . '</a>';
 
@@ -32,7 +32,7 @@ class CustomNavWalker extends Walker_Nav_Menu {
 			}
 			$output .= '</div>';
 
-		}  else {
+		} else {
 			$output .= '<div class="single_menu-item__container">';
 			$output .= '<a href="' . esc_url( $permalink ) . '" class="menu-item-text">' . esc_html( $title ) . '</a>';
 			$output .= '</div>';
