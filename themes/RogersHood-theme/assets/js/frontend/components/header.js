@@ -38,11 +38,9 @@ class Header {
 		megaItems.forEach((item) => {
 			item.addEventListener('mouseenter', () => {
 				item.classList.add('is-hovered');
-				item.setAttribute('aria-hidden', 'false');
 			});
 			item.addEventListener('mouseleave', () => {
 				item.classList.remove('is-hovered');
-				item.setAttribute('aria-hidden', 'true');
 			});
 		});
 	}
