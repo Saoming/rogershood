@@ -41,6 +41,7 @@ class RegisterBlocks {
 		$this->register_hub_cards_block();
 		$this->register_e_books_full_and_text_block();
 		$this->register_informational_health_info_block();
+		$this->register_three_steps_block();
 	}
 
 
@@ -290,6 +291,7 @@ class RegisterBlocks {
 			)
 		);
 	}
+
 	/**
 	 * Registers the E-books Image and Content
 	 */
@@ -308,6 +310,31 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/informational-health-info.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+
+	/**
+	 * Registers the Three Steps Block
+	 */
+	protected function register_three_steps_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'three-steps',
+				'title'           => __( 'Three steps' ),
+				'description'     => __( 'How it Works - Three Steps' ),
+				'render_template' => 'partials/blocks/three-steps/three-steps.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/three-steps.jpg',
 						),
 					),
 				),
