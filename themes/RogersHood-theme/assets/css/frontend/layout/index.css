@@ -50,6 +50,10 @@ video {
 	max-width: 1050px;
 }
 
+.container--tiny {
+	max-width: 860px;
+}
+
 .container--relative {
 	position: relative;
 }

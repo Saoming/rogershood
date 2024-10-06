@@ -48,6 +48,8 @@ class RegisterBlocks {
 		$this->register_point_information_block();
 		$this->register_products_grid_block();
 		$this->register_popular_reels_block();
+		$this->register_post_list_block();
+		$this->register_category_links_block();
 	}
 
 	protected function register_faq_block() {
@@ -193,7 +195,7 @@ class RegisterBlocks {
 					'attributes' => array(
 						'mode' => 'preview',
 						'data' => array(
-							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/products-grid.png',
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/products-grid.jpg',
 						),
 					),
 				),
@@ -217,7 +219,7 @@ class RegisterBlocks {
 					'attributes' => array(
 						'mode' => 'preview',
 						'data' => array(
-							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/popular-reels.png',
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/popular-reels.jpg',
 						),
 					),
 				),
@@ -226,11 +228,58 @@ class RegisterBlocks {
 	}
 
 
+	protected function register_post_list_block() {
+
+		acf_register_block_type(
+			array(
+				'name'            => 'rh-post-grid',
+				'title'           => __( 'Post Grid' ),
+				'render_template' => 'partials/blocks/post-grid/post-grid.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/post-list.jpg',
+						),
+					),
+				),
+			)
+		);
+
+	}
+
+	protected function register_category_links_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'rh-category-links',
+				'title'           => __( 'Category Links' ),
+				'render_template' => 'partials/blocks/category-links/category-links.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/category-links.jpg',
+						),
+					),
+				),
+			)
+		);
+
+	}
+
+
 
 	/**
 	 * Registers the Hero Section block on the homepage
 	 */
 	protected function register_hero_section_block() {
+
 		acf_register_block_type(
 			array(
 				'name'            => 'hero-section',

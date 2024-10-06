@@ -35,6 +35,18 @@
 	font-family: Scilla, serif;
 }
 
+.fw-500 {
+	font-weight: 500;
+}
+
+.fw-700 {
+	font-weight: 700;
+}
+
 .fc-white {
 	color: var(--c-white);
+}
+
+.fc-black {
+	color: var(--c-black);
 }

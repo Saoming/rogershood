@@ -131,3 +131,4 @@ function wcc_change_breadcrumb_delimiter( $defaults ) {
 	return $defaults;
 }
 
+

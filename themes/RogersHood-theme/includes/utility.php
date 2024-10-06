@@ -120,3 +120,38 @@ function generate_rating_starts($review_star_rating) {
 
 	return ob_get_clean();
 }
+function render_post_breadcrumbs(){
+	$separator = '<img class="single-post__breadcrumb-separator" src="' . TENUP_THEME_DIST_URL . 'svg/breadcrumb-separator.svg" alt="separator" />';
+	$home_title = 'Home';
+
+	if (is_single()) {
+		global $post;
+
+		echo '<nav class="single-post__breadcrumbs container">';
+		echo '<a href="' . get_home_url() . '">' . $home_title . '</a>' . $separator;
+
+		$categories = get_the_category();
+		if (!empty($categories)) {
+			$last_category = end($categories);
+			$category_parents = get_category_parents($last_category, true, $separator);
+			echo $category_parents;
+		}
+		echo '<span class="single-post__breadcrumbs-title">' . get_the_title() . '</span>';
+		echo '</nav>';
+	}
+}
+
+
+
+function convert_category_to_class($category_name) {
+	// Convert category name to lowercase
+	$category_name = strtolower($category_name);
+
+	// Replace spaces with underscores
+	$category_name = str_replace(' ', '_', $category_name);
+
+	// Remove special characters
+	$category_name = preg_replace('/[^a-z0-9_]/', '', $category_name);
+
+	return $category_name;
+}

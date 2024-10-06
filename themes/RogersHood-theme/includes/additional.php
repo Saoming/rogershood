@@ -11,6 +11,7 @@ use TenUpTheme\Blocks\RegisterBlocks;
 use TenUpTheme\Theme\AcfOptionsPage;
 use TenUpTheme\Theme\AddSvgSupport;
 use TenUpTheme\Blocks\RegisterBlockCategory;
+use TenUpTheme\theme\ImageSizes;
 use TenUpTheme\WooCommerceCustomization\WooCommerceCustomization;
 
 /**
@@ -24,6 +25,7 @@ use TenUpTheme\WooCommerceCustomization\WooCommerceCustomization;
 	protected $acf_options_page;
 	protected $add_svg_support;
 	 private  $woocommerce;
+	 private ImageSizes $image_sizes;
 
 	 /**
 	 * Creates all the Classes
@@ -34,6 +36,7 @@ use TenUpTheme\WooCommerceCustomization\WooCommerceCustomization;
 		$this->register_blocks            = new RegisterBlocks();
 		$this->acf_options_page           = new AcfOptionsPage();
 		$this->add_svg_support            = new AddSvgSupport();
+		$this->image_sizes                = new ImageSizes();
 
 
 	}
@@ -49,6 +52,7 @@ use TenUpTheme\WooCommerceCustomization\WooCommerceCustomization;
 		$this->register_blocks->init_hooks();
 		$this->acf_options_page->init_hooks();
 		$this->add_svg_support->init_hooks();
+		$this->image_sizes->init_hooks();
 	}
 
 }
