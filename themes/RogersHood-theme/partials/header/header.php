@@ -29,6 +29,7 @@ $args['menu_header_mobile'] = wp_nav_menu(
 		'link_before'     => '<span class="menu-item-text">',
 		'link_after'      => '</span>',
 		'items_wrap'      => '<ul id="%1$s" class="%2$s" role="navigation">%3$s</ul>',
+		'walker'          => new \TenUpTheme\Theme\CustomMobileNavWalker(),
 	)
 );
 

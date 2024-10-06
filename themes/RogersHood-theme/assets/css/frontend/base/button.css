@@ -7,8 +7,9 @@
  * using :where to prevent the specificity increase of using :not
  */
 
-/* button:where(:not(.components-button)) {
-} */
+button:where(:not(.components-button)) {
+	all: unset;
+}
 
 .button:where(:not(.components-button)) {
 	background-color: var(--wp--preset--color--light-blue);
