@@ -44,6 +44,7 @@ class RegisterBlocks {
 		$this->register_ingredient_grid_block();;
 		$this->register_founders_block();
 		$this->register_single_product_slider_block();
+		$this->register_tiktok_feed_block();
 	}
 
 	protected function register_faq_block() {
@@ -126,6 +127,27 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/Single-product-slider.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+
+	protected function register_tiktok_feed_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'rh-tiktok-feed',
+				'title'           => __( 'TikTok Feed' ),
+				'render_template' => 'partials/blocks/tiktok-feed/tiktok-feed.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/tiktok-feed.png',
 						),
 					),
 				),
