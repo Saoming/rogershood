@@ -15,6 +15,10 @@ p {
 	line-height: 24px;
 }
 
+.hidden {
+	display: none;
+}
+
 .page-container {
 	margin: 0 auto;
 	max-width: 1440px;

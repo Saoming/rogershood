@@ -6,9 +6,9 @@
  */
 
 namespace TenUpTheme\Blocks;
-use TenUpTheme\Theme\ResourceEnqueuer;
 
 use TenUpTheme\Theme\ResourceEnqueuer;
+
 
 /**
  * Handles Registration of the Custom Blocks
@@ -45,10 +45,11 @@ class RegisterBlocks {
 	}
 
 
-//	TODO: Remove the function and add the methods to the main one, this is to prevent merge conflicts
+	// TODO: Remove the function and add the methods to the main one, this is to prevent merge conflicts
 	public function temp_tome_register_blocks() {
 		$this->register_faq_block();
-		$this->register_ingredient_grid_block();;
+		$this->register_ingredient_grid_block();
+
 		$this->register_founders_block();
 	}
 
@@ -292,5 +293,4 @@ class RegisterBlocks {
 			)
 		);
 	}
-
 }

@@ -2,6 +2,8 @@ import '../../css/frontend/style.css';
 
 import cart from './components/cart';
 import Blocks from './blocks/blocks';
+import Header from './components/header';
+import SplideCarousel from './components/carousel';
 
 document.addEventListener('DOMContentLoaded', function () {
 	const cards = document.querySelectorAll('.community-card');
@@ -20,9 +22,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 cart();
 Blocks();
-// import foo from './components/bar';
-import Header from './components/header';
-import SplideCarousel from './components/carousel';
 
 const header = new Header();
 header.init();

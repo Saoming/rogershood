@@ -47,7 +47,7 @@
 		</a>
 	</div>
 
-	<?php echo wp_kses_post( $args['menu_header'] ); ?>
+	<?php echo wp_kses( $args['menu_header'], $args['allowed_html'] ); ?>
 
 	<div class="header__woo">
 		<a href="/my-account/" class="header__woo-link">
