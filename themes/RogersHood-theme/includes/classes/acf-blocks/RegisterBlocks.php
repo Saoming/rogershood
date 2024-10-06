@@ -45,6 +45,7 @@ class RegisterBlocks {
 		$this->register_founders_block();
 		$this->register_single_product_slider_block();
 		$this->register_tiktok_feed_block();
+		$this->register_point_information_block();
 	}
 
 	protected function register_faq_block() {
@@ -153,6 +154,28 @@ class RegisterBlocks {
 				),
 			)
 		);
+	}
+
+	protected function register_point_information_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'rh-point-information',
+				'title'           => __( 'Point Information' ),
+				'render_template' => 'partials/blocks/point-information/point-information.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/point-information.png',
+						),
+					),
+				),
+			)
+		);
+
 	}
 
 

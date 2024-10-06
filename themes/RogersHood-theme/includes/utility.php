@@ -102,23 +102,20 @@ function generate_rating_starts($review_star_rating) {
 	$half_star = ($review_star_rating - $full_stars) >= 0.5 ? 1 : 0; // Whether to show a half star
 	$empty_stars = 5 - ($full_stars + $half_star); // Remaining empty stars to complete 5
 
-
-	//TODO: Add Real Stars Images
-
 	ob_start();
 	// Output full stars
 	for ($i = 0; $i < $full_stars; $i++) {
-		echo '<img class="full-star" src="' . TENUP_THEME_DIST_URL . '/images/star.png" />';
+		echo '<img class="full-star" src="' . TENUP_THEME_DIST_URL . '/svg/stars/star-full.svg" />';
 	}
 
 	// Output half star if needed
 	if ($half_star) {
-		echo '<span class="half-star">&#9733;</span>';
+		echo '<img class="full-star" src="' . TENUP_THEME_DIST_URL . '/svg/stars/star-half.svg" />';
 	}
 
 	// Output empty stars
 	for ($i = 0; $i < $empty_stars; $i++) {
-		echo '<span class="empty-star">&#9734;</span>';
+		echo '<img class="full-star" src="' . TENUP_THEME_DIST_URL . '/svg/stars/star-empty.svg" />';
 	}
 
 	return ob_get_clean();
