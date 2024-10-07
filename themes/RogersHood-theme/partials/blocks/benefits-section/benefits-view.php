@@ -16,7 +16,7 @@
 			class="benefits-card-container splide"
 			role="group"
 			aria-label="Check our Testimonials Slider"
-			data-splide='{"type":"slide", "arrows": false, "autoplay": false, "pagination": false, "focus": "center", "drag": true, "mediaQuery": "min", "breakpoints": {"640": {"destroy": true, "perPage": "1"}}}'
+			data-splide='{"type":"slide", "arrows": false, "autoplay": false, "pagination": false, "focus": "center", "drag": true, "autoScroll": { "autoStart": false }, "mediaQuery": "min", "breakpoints": {"640": {"destroy": true, "perPage": "1"}}}'
 		>
 			<div class="splide__track">
 				<ul class="splide__list" data-splide-interval="8000">

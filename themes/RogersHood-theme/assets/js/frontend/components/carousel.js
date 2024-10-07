@@ -5,9 +5,14 @@ class SplideCarousel {
 
 	splideSettings() {
 		const elms = document.getElementsByClassName('splide');
+		const { AutoScroll } = window.splide.Extensions;
+		const storeNotification = document.getElementsByClassName('store-notifications__container');
 
 		for (let i = 0; i < elms.length; i++) {
 			// eslint-disable-next-line no-undef
+			if (storeNotification) {
+				new Splide(elms[i]).mount({ AutoScroll });
+			}
 			new Splide(elms[i]).mount();
 		}
 	}
