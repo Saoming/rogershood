@@ -13,7 +13,7 @@ const ProductDirections = () => {
 				autoplay: false,
 				infinite: true,
 				draggable: true,
-				variableWidth: true
+				variableWidth: true,
 			});
 		}
 
@@ -32,12 +32,11 @@ const ProductDirections = () => {
 						autoplay: false,
 						infinite: true,
 						draggable: true,
-						variableWidth: true
+						variableWidth: true,
 					});
 				}
 			}
 		});
 	});
-}
-
+};
 export default ProductDirections;

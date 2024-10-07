@@ -19,7 +19,7 @@ if ( ! get_field( 'block_preview' ) ) {
 	>
 		<div class="container">
 			<div class="product-directions__row row ">
-				<div class="col-sm-12 col-md-3 product-directions__image-container">
+				<div class="col-sm-12 col-md-4 product-directions__image-container">
 					<?php
 					if ( $fields["title"] ) {
 						?>
@@ -37,7 +37,7 @@ if ( ! get_field( 'block_preview' ) ) {
 					<?php } ?>
 				</div>
 				<div class="col-sm-hidden col-md-1"></div>
-				<div class="col-sm-12 col-md-8 product-directions__content">
+				<div class="col-sm-12 col-md-7 product-directions__content">
 					<div class="product-directions__content__inner">
 						<?php
 						if ( $fields["title"] ) {

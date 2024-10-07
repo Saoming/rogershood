@@ -76,7 +76,6 @@ if ( ! get_field( 'block_preview' ) ) {
 
 		</div>
 	</div>
-	</div>
 <?php } else { ?>
 	<div data="gutenberg-preview-img">
 		<img style="max-width:100%; height:auto;" src="<?php the_field( 'block_preview' ) ?>">
