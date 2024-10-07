@@ -1,0 +1,22 @@
+.product-benefits {
+	background: lavender;
+}
+
+.product-benefits__row {
+	row-gap: 0;
+}
+
+.product-benefits__image {
+	height: 100%;
+	object-fit: cover;
+	width: 100%;
+}
+
+.product-benefits__content {
+	padding: 50px 20px;
+}
+
+.product-benefits__icon {
+	max-height: 50px;
+	max-width: 50px;
+}

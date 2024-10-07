@@ -42,6 +42,7 @@ class RegisterBlocks {
 		$this->register_e_books_full_and_text_block();
 		$this->register_two_images_and_content_block();
 		$this->register_three_steps_block();
+		$this->register_product_benefits_block();
 	}
 
 
@@ -546,6 +547,31 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/three-steps.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+
+	/**
+	 * Registers the Product Benefits
+	 */
+	protected function register_product_benefits_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'product-benefits',
+				'title'           => __( 'Product Benefits' ),
+				'description'     => __( 'Text part with icons on left; image on right' ),
+				'render_template' => 'partials/blocks/product-benefits/product-benefits.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/product-benefits.jpg',
 						),
 					),
 				),
