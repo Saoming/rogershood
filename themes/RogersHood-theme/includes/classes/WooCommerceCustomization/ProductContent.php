@@ -35,8 +35,6 @@ class ProductContent {
 	}
 
 	public function add_points_after_product_price( $product_price ) {
-		$product_price = 'asd';
-
 		return $product_price;
 	}
 

@@ -23,9 +23,9 @@ if ( $block_type === 'repeater' ) {
 	$posts = get_field( 'posts_relationship' );
 	foreach ( $posts as $post ) {
 
-		$category      = get_the_category( $post->ID );
-		if( $category) {
-			$category = $category[0];
+		$category = get_the_category( $post->ID );
+		if ( $category ) {
+			$category      = $category[0];
 			$category_name = $category->name;
 			$category_link = get_category_link( $category->term_id );
 		}
@@ -40,8 +40,15 @@ if ( $block_type === 'repeater' ) {
 		];
 	}
 }
+if ( ! get_field( 'block_preview' ) ) {
 
-include TENUP_THEME_PATH . '/views/post-grid/post-grid.php';
+	include TENUP_THEME_PATH . '/views/post-grid/post-grid.php';
+} else {
+	?>
+	<div data="gutenberg-preview-img">
+		<img style="max-width:100%; height:auto;" src="<?php the_field( 'block_preview' ) ?>">
+	</div>
+<?php } ?>
 ?>
 
 

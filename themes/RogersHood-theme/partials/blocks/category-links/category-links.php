@@ -32,39 +32,44 @@ if ( $block_type === 'repeater' ) {
 	}
 }
 
+if ( ! get_field( 'block_preview' ) ) {
+	?>
+	<div class="rh-block category-list">
+		<div class="container container--narrow">
+			<?php if ( $pretitle ) { ?>
+				<div class="category-list__pretitle text-center">
+					<?php echo esc_attr( $pretitle ); ?>
+				</div>
+			<?php }
+			if ( $title ) { ?>
+				<h2 class="category-list__title text-center">
+					<?php echo esc_attr( $title ); ?>
+				</h2>
+			<?php } ?>
+			<div class="row row__category-list">
+				<?php if ( $category_data ) {
+					foreach ( $category_data as $category ) {
+						if ( isset( $category['thumbnail'] ) && $category['thumbnail'] ) {
+							$thumbnail_image_src = wp_get_attachment_image_src( $category['thumbnail'], 'rh-post-thumbnail' )[0];
+						} else {
+							$thumbnail_image_src = '';
+						}
 
-?>
-<div class="rh-block category-list">
-	<div class="container container--narrow">
-		<?php if ( $pretitle ) { ?>
-			<div class="category-list__pretitle text-center">
-				<?php echo esc_attr( $pretitle ); ?>
+						?>
+						<a href="<?php echo esc_url( $category['permalink'] ); ?>"
+						   class="category-list__single-category col-md-4 has-border-radius fw-500 fc-white text-body-22"
+						   style="background-image:url('<?php echo esc_url( $thumbnail_image_src ); ?>')">
+							<?php echo esc_attr( $category['title'] ); ?>
+						</a>
+					<?php }
+				}
+				?>
+
 			</div>
-		<?php }
-		if ( $title ) { ?>
-			<h2 class="category-list__title text-center">
-				<?php echo esc_attr( $title ); ?>
-			</h2>
-		<?php } ?>
-		<div class="row row__category-list">
-			<?php if ( $category_data ) {
-				foreach ( $category_data as $category ) {
-					if ( isset( $category['thumbnail'] ) && $category['thumbnail'] ) {
-						$thumbnail_image_src = wp_get_attachment_image_src( $category['thumbnail'], 'rh-post-thumbnail' )[0];
-					} else {
-						$thumbnail_image_src = '';
-					}
-
-					?>
-					<a href="<?php echo esc_url( $category['permalink'] ); ?>"
-					   class="category-list__single-category col-md-4 has-border-radius fw-500 fc-white text-body-22"
-					   style="background-image:url('<?php echo esc_url( $thumbnail_image_src ); ?>')">
-						<?php echo esc_attr( $category['title'] ); ?>
-					</a>
-				<?php }
-			}
-			?>
-
 		</div>
 	</div>
-</div>
+<?php } else { ?>
+	<div data="gutenberg-preview-img">
+		<img style="max-width:100%; height:auto;" src="<?php the_field( 'block_preview' ) ?>">
+	</div>
+<?php } ?>

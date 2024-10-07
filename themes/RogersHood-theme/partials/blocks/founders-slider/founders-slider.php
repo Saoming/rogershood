@@ -6,6 +6,8 @@
 $title    = get_field( 'title' );
 $founders = get_field( 'founders' );
 
+if ( ! get_field( 'block_preview' ) ) {
+
 
 ?>
 <div class="rh-block founders-slider bg-beige">
@@ -44,11 +46,15 @@ $founders = get_field( 'founders' );
 									<?php echo wp_get_attachment_image( $founder['next_founder'], 'full' ); ?>
 								</div>
 							</div>
-
 						</div>
+
 					</div>
 				<?php }
 			} ?>
 		</div>
 	</div>
-</div>
+	<?php } else { ?>
+		<div data="gutenberg-preview-img">
+			<img style="max-width:100%; height:auto;" src="<?php the_field( 'block_preview' ) ?>">
+		</div>
+	<?php } ?>

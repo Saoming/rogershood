@@ -11,13 +11,12 @@ if ( ! empty( $block['anchor'] ) ) {
 }
 
 $fields = get_fields();
-
-?>
-<section
-		class="rh-block rh-block--full-bleed e-books-full-and-text"
-		id="<?php echo esc_attr( $id ); ?>"
->
-	<div class="container">
+if ( ! get_field( 'block_preview' ) ) {
+	?>
+	<section
+			class="rh-block rh-block--full-bleed e-books-full-and-text"
+			id="<?php echo esc_attr( $id ); ?>"
+	>
 		<div class="e-books-full-and-text__row row row--no-gap">
 			<div class="col-sm-12 col-md-4 e-books-full-and-text__image-container  image--desktop">
 				<?php
@@ -30,9 +29,7 @@ $fields = get_fields();
 				<?php } ?>
 			</div>
 
-			<div class="col-sm-12 col-md-8 e-books-full-and-text__content"
-				 style="background-image: url('<?php echo esc_url( $fields["background_image"]["url"] ); ?>')"
-			>
+			<div class="col-sm-12 col-md-8 e-books-full-and-text__content">
 				<div class="e-books-full-and-text__content__inner">
 					<?php if ( $fields["pretitle"] ) { ?>
 						<div class="e-books-full-and-text__pretitle pretitle ">
@@ -63,7 +60,7 @@ $fields = get_fields();
 					if ( $fields["call_to_action"] ) {
 						?>
 						<div class="e-books-full-and-text__cta text-center">
-							<a class="button e-books-full-and-text__button"
+							<a class="button rh-button rh-button--primary e-books-full-and-text__button"
 							   href="<?php echo esc_url( $fields["call_to_action"]["url"] ); ?>"
 							   target="<?php echo esc_attr( $fields["call_to_action"]["target"] ); ?>"><?php echo esc_html( $fields["call_to_action"]["title"] ); ?></a>
 						</div>
@@ -71,5 +68,10 @@ $fields = get_fields();
 				</div>
 			</div>
 		</div>
+	</section>
+	<?php
+} else { ?>
+	<div data="gutenberg-preview-img">
+		<img style="max-width:100%; height:auto;" src="<?php the_field( 'block_preview' ) ?>">
 	</div>
-</section>
+<?php } ?>
