@@ -63,7 +63,7 @@ $fields = get_fields();
 					if ( $fields["call_to_action"] ) {
 						?>
 						<div class="e-books-full-and-text__cta text-center">
-							<a class="button e-books-full-and-text__button"
+							<a class="button rh-button rh-button--primary e-books-full-and-text__button"
 							   href="<?php echo esc_url( $fields["call_to_action"]["url"] ); ?>"
 							   target="<?php echo esc_attr( $fields["call_to_action"]["target"] ); ?>"><?php echo esc_html( $fields["call_to_action"]["title"] ); ?></a>
 						</div>

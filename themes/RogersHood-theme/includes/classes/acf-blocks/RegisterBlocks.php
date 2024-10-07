@@ -43,6 +43,7 @@ class RegisterBlocks {
 		$this->register_two_images_and_content_block();
 		$this->register_three_steps_block();
 		$this->register_product_benefits_block();
+		$this->register_product_directions_block();
 	}
 
 
@@ -572,6 +573,30 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/product-benefits.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+	/**
+	 * Registers the Product Directions
+	 */
+	protected function register_product_directions_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'product-directions',
+				'title'           => __( 'Product Directions' ),
+				'description'     => __( 'Text sections on left; image on left' ),
+				'render_template' => 'partials/blocks/product-directions/product-directions.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/product-directions.jpg',
 						),
 					),
 				),
