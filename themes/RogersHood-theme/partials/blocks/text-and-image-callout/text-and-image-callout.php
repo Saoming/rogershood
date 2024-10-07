@@ -27,7 +27,7 @@ $image_position = $fields["image_position"] ? '' : 'text-and-image-callout--imag
 
 ?>
 <section
-		class="rh-block rh-block--full-bleed text-and-image-callout <?php echo esc_attr( " $image_position " ); ?>"
+		class="rh-block text-and-image-callout <?php echo esc_attr( " $image_position " ); ?>"
 		id="<?php echo esc_attr( $id ); ?>"
 >
 	<div class="container">
@@ -70,7 +70,6 @@ $image_position = $fields["image_position"] ? '' : 'text-and-image-callout--imag
 			<div class="col-md-6 text-and-image-callout__image-container">
 				<?php
 				if ( $fields["image"] ) {
-					// TODO: Set image sizes when design
 					echo wp_get_attachment_image( $fields["image"], 'full', null, array( 'class' => 'text-and-image-callout__image' ) );
 				} else {
 					?>
