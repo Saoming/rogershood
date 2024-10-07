@@ -1,3 +1,21 @@
+.e-books-full-and-text {
+	background: #fcfbfb;
+}
+
+.e-books-full-and-text::before {
+	content: url("../svg/pattern-leaves-e-books-full-and-text.svg");
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: scale(0.75);
+	transform-origin: top right;
+}
+
+@media (--bp-medium) {
+	.e-books-full-and-text::before {
+		transform: scale(1);
+	}
+}
 .e-books-full-and-text__content {
 	padding: 0 20px;
 	background-size: cover;
