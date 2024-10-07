@@ -57,7 +57,7 @@ class RegisterBlocks {
 		$this->register_point_information_block();
 		$this->register_products_grid_block();
 		$this->register_popular_reels_block();
-		$this->register_post_list_block();
+		$this->register_post_grid_block();
 		$this->register_category_links_block();
 		$this->register_review_slider_block();
 		$this->register_youtube_slider_block();
@@ -163,7 +163,7 @@ class RegisterBlocks {
 					'attributes' => array(
 						'mode' => 'preview',
 						'data' => array(
-							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/tiktok-feed.png',
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/tiktok-feed.jpg',
 						),
 					),
 				),
@@ -184,7 +184,7 @@ class RegisterBlocks {
 					'attributes' => array(
 						'mode' => 'preview',
 						'data' => array(
-							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/point-information.png',
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/point-information.jpg',
 						),
 					),
 				),
@@ -239,7 +239,7 @@ class RegisterBlocks {
 	}
 
 
-	protected function register_post_list_block() {
+	protected function register_post_grid_block() {
 
 		acf_register_block_type(
 			array(
@@ -253,7 +253,7 @@ class RegisterBlocks {
 					'attributes' => array(
 						'mode' => 'preview',
 						'data' => array(
-							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/post-list.jpg',
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/post-grid.jpg',
 						),
 					),
 				),
@@ -497,7 +497,7 @@ class RegisterBlocks {
 					'attributes' => array(
 						'mode' => 'preview',
 						'data' => array(
-							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/e-books-full-and-text.jpg',
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/e-books-full-and-text.png',
 						),
 					),
 				),

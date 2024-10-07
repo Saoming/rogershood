@@ -11,70 +11,76 @@ if ( ! empty( $block['anchor'] ) ) {
 }
 
 $fields = get_fields();
-?>
-<section
-		class="rh-block product-directions"
-		id="<?php echo esc_attr( $id ); ?>"
->
-	<div class="container">
-		<div class="product-directions__row row ">
-			<div class="col-sm-12 col-md-3 product-directions__image-container">
-				<?php
-				if ( $fields["title"] ) {
-					?>
-					<h2 class="product-directions__title text-center title-mobile">
-						<?php echo esc_attr( $fields["title"] ); ?>
-					</h2>
-					<?php
-				}
-				if ( $fields["image"] ) {
-					echo wp_get_attachment_image( $fields["image"], 'full', null, array( 'class' => 'product-directions__image mb-20 br-12' ) );
-				} else {
-					?>
-					<img class="missing-image product-directions__image mb-20 br-12"
-						 src="<?php echo esc_url( TENUP_THEME_DIST_URL . '/images/missing-image.png' ); ?>">
-				<?php } ?>
-			</div>
-			<div class="col-sm-hidden col-md-1"></div>
-			<div class="col-sm-12 col-md-8 product-directions__content">
-				<div class="product-directions__content__inner">
+if ( ! get_field( 'block_preview' ) ) {
+	?>
+	<section
+			class="rh-block product-directions"
+			id="<?php echo esc_attr( $id ); ?>"
+	>
+		<div class="container">
+			<div class="product-directions__row row ">
+				<div class="col-sm-12 col-md-3 product-directions__image-container">
 					<?php
 					if ( $fields["title"] ) {
 						?>
-						<h2 class="product-directions__title title-desktop">
+						<h2 class="product-directions__title text-center title-mobile">
 							<?php echo esc_attr( $fields["title"] ); ?>
 						</h2>
+						<?php
+					}
+					if ( $fields["image"] ) {
+						echo wp_get_attachment_image( $fields["image"], 'full', null, array( 'class' => 'product-directions__image mb-20 br-12' ) );
+					} else {
+						?>
+						<img class="missing-image product-directions__image mb-20 br-12"
+							 src="<?php echo esc_url( TENUP_THEME_DIST_URL . '/images/missing-image.png' ); ?>">
 					<?php } ?>
-					<div class="product-directions__items mb-50">
-						<?php foreach ( $fields["content"] as $item ) { ?>
-						<div class="product-directions__item br-4">
-							<?php
-							if ( $item["title"] ) {
-								?>
-								<div class="product-directions__item-title fw-500">
-									<?php echo esc_attr( $item["title"] ); ?>
-								</div>
-								<?php
-							}
-							if ( $item["description"] ) {
-								?>
-								<div class="product-directions__item-description fw-300">
-									<?php echo wp_kses_post( $item["description"] ); ?>
-								</div>
-								<?php
-							}
+				</div>
+				<div class="col-sm-hidden col-md-1"></div>
+				<div class="col-sm-12 col-md-8 product-directions__content">
+					<div class="product-directions__content__inner">
+						<?php
+						if ( $fields["title"] ) {
 							?>
+							<h2 class="product-directions__title title-desktop">
+								<?php echo esc_attr( $fields["title"] ); ?>
+							</h2>
+						<?php } ?>
+						<div class="product-directions__items mb-50">
+							<?php foreach ( $fields["content"] as $item ) { ?>
+								<div class="product-directions__item br-4">
+									<?php
+									if ( $item["title"] ) {
+										?>
+										<div class="product-directions__item-title fw-500">
+											<?php echo esc_attr( $item["title"] ); ?>
+										</div>
+										<?php
+									}
+									if ( $item["description"] ) {
+										?>
+										<div class="product-directions__item-description fw-300">
+											<?php echo wp_kses_post( $item["description"] ); ?>
+										</div>
+										<?php
+									}
+									?>
+								</div>
+							<?php } ?>
 						</div>
-						<?php }?>
 					</div>
+					<?php if ( $fields["cta"] ) { ?>
+						<div class="product-directions__cta">
+							<a class="button rh-button rh-button-primary product-directions__button"
+							   href="<?php echo esc_url( $fields["cta"]["url"] ); ?>"
+							   target="<?php echo esc_attr( $fields["cta"]["target"] ); ?>"><?php echo esc_html( $fields["cta"]["title"] ); ?></a>
+						</div>
+					<?php } ?>
 				</div>
-				<?php if ( $fields["cta"] ) { ?>
-				<div class="product-directions__cta">
-					<a class="button rh-button rh-button-primary product-directions__button"
-					   href="<?php echo esc_url( $fields["cta"]["url"] ); ?>"
-					   target="<?php echo esc_attr( $fields["cta"]["target"] ); ?>"><?php echo esc_html( $fields["cta"]["title"] ); ?></a>
-				</div>
-				<?php } ?>
 			</div>
-		</div>
-</section>
+	</section>
+<?php } else { ?>
+	<div data="gutenberg-preview-img">
+		<img style="max-width:100%; height:auto;" src="<?php the_field( 'block_preview' ) ?>">
+	</div>
+<?php } ?>
