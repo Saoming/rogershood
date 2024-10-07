@@ -17,8 +17,7 @@ use TenUpTheme\WooCommerceCustomization\WooCommerceCustomization;
 /**
  * Register Additional Functionality to support the theme
  */
-
- Class Additional {
+class Additional {
 
 	protected $register_block_categories;
 	protected $register_blocks;
@@ -26,8 +25,9 @@ use TenUpTheme\WooCommerceCustomization\WooCommerceCustomization;
 	protected $add_svg_support;
 	 private  $woocommerce;
 	 private ImageSizes $image_sizes;
+	private $woocommerce;
 
-	 /**
+	/**
 	 * Creates all the Classes
 	 */
 	public function __construct() {
@@ -37,8 +37,6 @@ use TenUpTheme\WooCommerceCustomization\WooCommerceCustomization;
 		$this->acf_options_page           = new AcfOptionsPage();
 		$this->add_svg_support            = new AddSvgSupport();
 		$this->image_sizes                = new ImageSizes();
-
-
 	}
 
 	/**
