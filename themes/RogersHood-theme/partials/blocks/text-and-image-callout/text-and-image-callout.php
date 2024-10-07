@@ -16,14 +16,6 @@ $fields["background_color"] = ! $fields["background_color"] || 'none' === $field
 
 // Image position - default LEFT
 $image_position = $fields["image_position"] ? '' : 'text-and-image-callout--image-left';
-//TODO apply button properly
-// Button Style - default PRIMARY
-//$button_style = get_field( 'button_style' );
-//if ( $button_style ) {
-//	$button_style_class = 'is-style--secondary';
-//} else {
-//	$button_style_class = 'is-style--primary';
-//}
 
 ?>
 <section
@@ -60,7 +52,7 @@ $image_position = $fields["image_position"] ? '' : 'text-and-image-callout--imag
 					if ( $fields["call_to_action"] ) {
 						?>
 						<div class="text-and-image-callout__cta">
-							<a class="button text-and-image-callout__button  <?php echo( esc_attr( $button_style_class ) ); ?>"
+							<a class="button text-and-image-callout__button"
 							   href="<?php echo esc_url( $fields["call_to_action"]["url"] ); ?>"
 							   target="<?php echo esc_attr( $fields["call_to_action"]["target"] ); ?>"><?php echo esc_html( $fields["call_to_action"]["title"] ); ?></a>
 						</div>

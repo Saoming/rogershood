@@ -12,11 +12,9 @@ if ( ! empty( $block['anchor'] ) ) {
 
 $fields = get_fields();
 
-$image_position = $fields["image_position"] ? '' : 'e-books-full-and-text--image-left';
-
 ?>
 <section
-		class="rh-block rh-block--full-bleed e-books-full-and-text <?php echo esc_attr( " $image_position " ); ?>"
+		class="rh-block rh-block--full-bleed e-books-full-and-text"
 		id="<?php echo esc_attr( $id ); ?>"
 >
 	<div class="container">
