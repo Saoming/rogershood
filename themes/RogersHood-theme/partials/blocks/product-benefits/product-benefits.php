@@ -20,8 +20,8 @@ $fields = get_fields();
 	<!--	<div class="container">-->
 	<div class="product-benefits__row row">
 
-		<div class="col-sm-hidden col-md-1"></div>
-		<div class="col-md-4 product-benefits__image-container">
+		<div class="col-sm-hidden col-md-1 product-benefits__hidden"></div>
+		<div class="col-md-5 product-benefits__image-container">
 			<?php
 			if ( $fields["image"] ) {
 				echo wp_get_attachment_image( $fields["image"], 'full', null, array( 'class' => 'product-benefits__image' ) );
@@ -31,8 +31,9 @@ $fields = get_fields();
 					 src="<?php echo esc_url( TENUP_THEME_DIST_URL . '/images/missing-image.png' ); ?>">
 			<?php } ?>
 		</div>
-		<div class="col-sm-hidden col-md-1"></div>
-		<div class="col-md-6 product-benefits__content">
+		<div class="col-sm-hidden col-md-1 product-benefits__hidden--2"></div>
+
+		<div class="col-md-5 product-benefits__content">
 			<?php foreach ( $fields["benefits"] as $benefit ) { ?>
 				<div class="product-benefits__benefit">
 					<?php
@@ -42,20 +43,21 @@ $fields = get_fields();
 						?>
 						<img class="missing-image product-benefits__icon"
 							 src="<?php echo esc_url( TENUP_THEME_DIST_URL . '/images/missing-image.png' ); ?>">
-					<?php }
+					<?php } ?>
 
+					<div class="product-benefits__text">
+						<?php if ( $benefit["title"] ) {
+							?>
+							<div class="product-benefits__title uppercase fw-300 mb-20"><?php echo wp_kses_post( $benefit["title"] ); ?></div>
+							<?php
+						}
 
-					if ( $benefit["title"] ) {
-						?>
-						<div class="product-benefits__title"><?php echo wp_kses_post( $benefit["title"] ); ?></div>
-						<?php
-					}
-
-					if ( $benefit["description"] ) {
-						?>
-						<div class="product-benefits__description"><?php echo wp_kses_post( $benefit["description"] ); ?></div>
-						<?php
-					} ?>
+						if ( $benefit["description"] ) {
+							?>
+							<div class="product-benefits__description fw-300"><?php echo wp_kses_post( $benefit["description"] ); ?></div>
+							<?php
+						} ?>
+					</div>
 				</div>
 			<?php } ?>
 		</div>

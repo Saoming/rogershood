@@ -1,9 +1,19 @@
-.product-benefits {
-	background: lavender;
-}
-
 .product-benefits__row {
 	row-gap: 0;
+}
+
+@media (--bp-medium) {
+	.product-benefits__content {
+		order: 2;
+	}
+
+	.product-benefits__hidden--2 {
+		order: 3;
+	}
+
+	.product-benefits__image-container {
+		order: 4;
+	}
 }
 
 .product-benefits__image {
@@ -16,7 +26,25 @@
 	padding: 50px 20px;
 }
 
+@media (--bp-medium) {
+	.product-benefits__content {
+		padding: 100px 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
 .product-benefits__icon {
+	margin-right: 24px;
 	max-height: 50px;
 	max-width: 50px;
+}
+
+.product-benefits__benefit {
+	display: flex;
+	margin-bottom: 42px;
+}
+
+.product-benefits__benefit:last-of-type {
+	margin-bottom: 0;
 }
