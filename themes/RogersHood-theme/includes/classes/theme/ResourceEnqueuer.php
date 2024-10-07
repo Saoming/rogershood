@@ -29,7 +29,6 @@ class ResourceEnqueuer {
 	 */
 	public function enqueue_theme_resources() {
 		$this->optimize_wp_rendering();
-		$this->dequeue_unneeded_styles();
 		$this->enqueue_sharer_script();
 	}
 
@@ -64,12 +63,12 @@ class ResourceEnqueuer {
 	public static function enqueue_lightbox_assets() {
 		wp_enqueue_style(
 			'basic-lightbox-css',
-			TENUP_THEME_TEMPLATE_URL . '/3rd-party/basicLightBox/css/basiclightbox.min.css',
+			TENUP_THEME_TEMPLATE_URL . '/3rd-party/basiclightbox/css/basiclightbox.min.css',
 		);
 
 		wp_enqueue_script(
 			'basic-lightbox-js',
-			TENUP_THEME_TEMPLATE_URL . '/3rd-party/basicLightBox/js/basiclightbox.min.js',
+			TENUP_THEME_TEMPLATE_URL . '/3rd-party/basiclightbox/js/basiclightbox.js',
 		);
 	}
 

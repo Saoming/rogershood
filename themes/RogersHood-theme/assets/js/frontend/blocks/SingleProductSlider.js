@@ -5,7 +5,7 @@ const SingleProductSlider = () => {
 
 	$(document).ready(function () {
 
-		if( ! document.querySelector('.founders-slider__slider')) {
+		if( ! document.querySelector('.single-product-slider__slider')) {
 			return;
 		}
 

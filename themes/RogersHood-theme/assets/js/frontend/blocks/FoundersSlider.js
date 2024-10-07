@@ -2,9 +2,9 @@ import $ from 'jquery';
 
 const FoundersSlider = () => {
 
-	$(document).ready(function() {
 
-		if( ! document.querySelector('.founders-slider__slider')) {
+	document.addEventListener('DOMContentLoaded', () => {
+		if (!document.querySelector('.founders-slider__slider')) {
 			return;
 		}
 
@@ -17,7 +17,7 @@ const FoundersSlider = () => {
 			fade: true
 		});
 
-		$('.founders-slider__next').click(function() {
+		$('.founders-slider__next').click(function () {
 			$(this).closest('.founders-slider__slider').slick('slickNext');
 		});
 	})

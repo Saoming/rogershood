@@ -17,6 +17,14 @@
 	width: 348px;
 }
 
+.review-slider__slides .slick-track {
+	display: flex;
+}
+
+.review-slider .slick-track .slick-slide {
+	height: inherit;
+}
+
 .review-slider__star-rating {
 	display: flex;
 	margin-bottom: 16px;

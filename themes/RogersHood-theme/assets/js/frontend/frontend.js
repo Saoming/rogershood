@@ -20,3 +20,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
 Cart();
 Blocks();
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+	const selectElements = document.querySelectorAll(".custom-quantity-dropdown__select");
+
+	// Set initial labels based on the default selection
+	selectElements.forEach(selectElement => {
+		updateLabel(selectElement);
+
+		// Add event listener for each select element
+		selectElement.addEventListener("change", function() {
+			updateLabel(selectElement);
+		});
+	});
+});
+
+function updateLabel(selectElement) {
+	const labelElement = selectElement.parentElement.querySelector(".custom-quantity-dropdown__label");
+	const selectedValue = selectElement.options[selectElement.selectedIndex].text;
+
+	labelElement.textContent = `${selectedValue} Qty`;
+}

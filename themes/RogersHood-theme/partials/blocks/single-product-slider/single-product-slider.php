@@ -74,4 +74,3 @@ $products = get_field( 'products' );
 
 	</div>
 </div>
-</div>
