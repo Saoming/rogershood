@@ -273,6 +273,28 @@ class RegisterBlocks {
 
 	}
 
+	protected function register_review_slider_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'rh-review-slider',
+				'title'           => __( 'Review Slider' ),
+				'render_template' => 'partials/blocks/review-slider/review-slider.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'enqueue_assets'  => ResourceEnqueuer::enqueue_slick_assets(),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/review-slider.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+
 
 
 	/**
