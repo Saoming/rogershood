@@ -14,11 +14,3 @@
 	margin: 0;
 	padding: 0 8px;
 }
-
-.plain-content__content>p br:first-child {
-	display: none;
-}
-
-.plain-content__content>p:first-child br {
-	display: block;
-}
