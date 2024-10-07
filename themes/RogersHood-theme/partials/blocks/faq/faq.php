@@ -68,8 +68,8 @@ if ( $cta ) {
 
 										<div class="faq-block__question-answer">
 											<div class="faq-block__question-answer--inner">
-												<?php echo wp_kses_post( $answer ); ?></div>
-
+												<?php echo wp_kses_post( $answer ); ?>
+											</div>
 										</div>
 									</div>
 									<?php

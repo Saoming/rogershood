@@ -40,7 +40,7 @@ class RegisterBlocks {
 		$this->register_community_cards_block();
 		$this->register_hub_cards_block();
 		$this->register_e_books_full_and_text_block();
-		$this->register_informational_health_info_block();
+		$this->register_two_images_and_content_block();
 		$this->register_three_steps_block();
 	}
 
@@ -506,13 +506,13 @@ class RegisterBlocks {
 	/**
 	 * Registers the E-books Image and Content
 	 */
-	protected function register_informational_health_info_block() {
+	protected function register_two_images_and_content_block() {
 		acf_register_block_type(
 			array(
-				'name'            => 'informational-health-info',
-				'title'           => __( 'Informational Health Info' ),
+				'name'            => 'two-images-and-content',
+				'title'           => __( 'Two Images and Content' ),
 				'description'     => __( 'Two Images and Long Content' ),
-				'render_template' => 'partials/blocks/informational-health-info/informational-health-info.php',
+				'render_template' => 'partials/blocks/two-images-and-content/two-images-and-content.php',
 				'mode'            => 'auto',
 				'category'        => 'rogershood',
 				'supports'        => array( 'anchor' => true ),
@@ -520,7 +520,7 @@ class RegisterBlocks {
 					'attributes' => array(
 						'mode' => 'preview',
 						'data' => array(
-							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/informational-health-info.jpg',
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/two-images-and-content.jpg',
 						),
 					),
 				),

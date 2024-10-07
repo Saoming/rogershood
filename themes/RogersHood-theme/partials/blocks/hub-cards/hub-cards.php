@@ -14,10 +14,6 @@ if ( ! empty( $block['anchor'] ) ) {
 // Block content
 $fields                     = get_fields();
 $fields["background_color"] = ! $fields["background_color"] || 'none' === $fields["background_color"] ? '' : $fields["background_color"];
-
-echo '<pre>';
-//var_dump( $fields );
-echo '</pre>';
 ?>
 
 <section class="rh-block  hub-cards"

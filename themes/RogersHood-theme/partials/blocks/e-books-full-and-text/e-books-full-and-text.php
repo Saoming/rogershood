@@ -11,21 +11,8 @@ if ( ! empty( $block['anchor'] ) ) {
 }
 
 $fields = get_fields();
-echo '<pre>';
-//var_dump( $fields["images"]["desktop"] );
-//var_dump( $fields );
-echo '</pre>';
 
-// Image position - default LEFT
 $image_position = $fields["image_position"] ? '' : 'e-books-full-and-text--image-left';
-//TODO apply button properly
-// Button Style - default PRIMARY
-//$button_style = get_field( 'button_style' );
-//if ( $button_style ) {
-//	$button_style_class = 'is-style--secondary';
-//} else {
-//	$button_style_class = 'is-style--primary';
-//}
 
 ?>
 <section
@@ -78,7 +65,7 @@ $image_position = $fields["image_position"] ? '' : 'e-books-full-and-text--image
 					if ( $fields["call_to_action"] ) {
 						?>
 						<div class="e-books-full-and-text__cta text-center">
-							<a class="button e-books-full-and-text__button  <?php echo( esc_attr( $button_style_class ) ); ?>"
+							<a class="button e-books-full-and-text__button"
 							   href="<?php echo esc_url( $fields["call_to_action"]["url"] ); ?>"
 							   target="<?php echo esc_attr( $fields["call_to_action"]["target"] ); ?>"><?php echo esc_html( $fields["call_to_action"]["title"] ); ?></a>
 						</div>

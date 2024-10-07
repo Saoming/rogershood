@@ -13,12 +13,9 @@ if ( ! empty( $block['anchor'] ) ) {
 
 // Block content
 $fields = get_fields();
-echo '<pre>';
-//var_dump( $community );
-echo '</pre>';
 ?>
 
-<section class="rh-block rh-block--full-bleed  community-cards"
+<section class="rh-block  community-cards"
 		 id="<?php echo esc_attr( $id ); ?>"
 		 style="background-image: url(<?php echo esc_attr( $fields["background_image"]["url"] ); ?>"
 >
@@ -40,7 +37,7 @@ echo '</pre>';
 				$i = 1;
 				foreach ( $fields["communities"] as $community ) { ?>
 					<div class="community-card cols-sm-12  col-md-6 col-lg-3 <?php if ($i == 1) echo 'is-active'; ?> ">
-						<div class=" community-card__image-container mb-20">
+						<div class=" community-card__image-container mb-20 br-12">
 							<?php
 							if ( $community["image"] ) {
 								echo wp_get_attachment_image( $community["image"], 'full', null, array( 'class' => 'community-card__image br-12' ) );

@@ -27,16 +27,24 @@ video {
 .rh-block {
 	margin-left: calc(50% - 50vw);
 	max-width: 100vw;
-	padding: 100px 20px;
+	padding: 60px 20px;
 	position: relative;
 	width: 100vw;
 }
 
+@media (--bp-medium)) {
+	.rh-block {
+		padding-top: 100px;
+		padding-bottom: 100px;
+	}
+}
 @media all and (min-width: 1440px) {
 	.rh-block {
 		margin-left: -20px;
 		margin-right: -20px;
 		max-width: 1440px;
+		padding-top: 100px;
+		padding-bottom: 100px;
 	}
 }
 
