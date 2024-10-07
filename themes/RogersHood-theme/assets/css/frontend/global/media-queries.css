@@ -23,3 +23,7 @@
 @custom-media --wp-small (min-width: 600px);
 
 @custom-media --wp-medium-max (max-width: 782px);
+
+/* Additional media for theme */
+
+@custom-media --bp-until-medium (max-width: 48em); /* 768px */

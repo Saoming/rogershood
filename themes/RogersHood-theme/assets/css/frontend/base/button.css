@@ -6,9 +6,6 @@
  *
  * using :where to prevent the specificity increase of using :not
  */
-/* button:where(:not(.components-button)) {
-
-} */
 
 .button {
 	background-color: var(--wp--preset--color--light-blue);
@@ -16,6 +13,8 @@
 	border-radius: 42px;
 	color: var(--wp--preset--color--black);
 	display: inline-block;
+	min-height: 50px;
+	min-width: 160px;
 	padding: 14px 43.5px;
 	text-decoration: none;
 	transition: background 300ms ease-in;

@@ -11,9 +11,6 @@ if ( ! empty( $block['anchor'] ) ) {
 }
 // Block content
 $fields = get_fields();
-echo '<pre>';
-//var_dump( $fields );
-echo '</pre>';
 ?>
 
 <section class="rh-block rh-block-full-bleed three-steps"
