@@ -24,26 +24,10 @@ p {
 	max-width: 1440px;
 }
 
-.page-container__inner > h1.hero-section-final-title {
-	max-width: 311px;
+.w-full {
+	width: 100%;
 }
 
-.video-text-section__inner {
-	max-width: 504px;
-}
-
-@media only screen and (--bp-medium) {
-	.page-container__inner > h1.hero-section-final-title {
-		max-width: 320px;
-	}
-}
-
-@media only screen and (--bp-large-2) {
-	.page-container__inner > h1.hero-section-final-title {
-		max-width: 880px;
-	}
-
-	.video-text-section__inner {
-		max-width: 504px;
-	}
+.object-cover {
+	object-fit: cover;
 }

@@ -1,5 +1,5 @@
 <section
-	class="benefits-section__container page-container"
+	class="benefits-section__container rh-block"
 >
 	<?php if ( $args['sub_heading_benefits'] ) : ?>
 		<div class="sub-heading-benefits"><?php echo esc_attr( $args['sub_heading_benefits'] ); ?></div>

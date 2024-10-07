@@ -17,17 +17,12 @@
 	--c-yellow: #e5d68c;
 } */
 
-
 :root {
 	--c-white: #fff;
 
-	--cart-background-beige: #F9F9F9;
+	--cart-background-beige: #f9f9f9;
 	--blue-background: #e0eaf7;
 }
-
-
-
-
 
 .bg-blue {
 	background-color: var(--blue-background);
