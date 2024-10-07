@@ -1,16 +1,29 @@
 .hero-container {
-	height: 100vh;
+	height: 768px;
 	padding: 0;
 }
 
 .hero-container video {
-	height: 100vh;
+	height: 768px;
 }
 
 .hero-inner {
 	align-items: center;
+	height: 100%;
+}
+
+.hero-child-inner {
+	grid-column-end: span 10;
+	grid-column-start: 2;
 }
 
 .wysig-video__container {
 	margin-bottom: 32px;
+}
+
+@media only screen and (--bp-large-2) {
+	.hero-child-inner {
+		grid-column-end: span 6;
+		grid-column-start: 4;
+	}
 }

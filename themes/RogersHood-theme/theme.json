@@ -57,8 +57,8 @@
 		},
 		"custom": {},
 		"layout": {
-			"contentSize": "800px",
-			"wideSize": "1000px"
+			"contentSize": "1000px",
+			"wideSize": "1440px"
 		},
 		"spacing": {
 			"margin": false,

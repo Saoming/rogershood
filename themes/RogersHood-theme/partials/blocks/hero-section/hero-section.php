@@ -12,6 +12,7 @@ if ( ! empty( $block['anchor'] ) ) {
 $args['id'] = $id;
 
 if ( function_exists( 'get_field' ) ) {
+	$args['version']            = get_field( 'v1_v2' ); // if it true v1 else v2
 	$args['hero_heading']       = get_field( 'hero_heading' );
 	$args['hero_video']         = get_field( 'hero_video' );
 	$args['hero_background']    = get_field( 'hero_background' );
@@ -27,7 +28,11 @@ if ( function_exists( 'get_field' ) ) {
 }
 
 if ( ! get_field( 'block_preview' ) ) {
-	get_template_part( 'partials/blocks/hero-section/hero', 'view', $args );
+	if ( $args['version'] == true ) {
+		get_template_part( 'partials/blocks/hero-section/hero', 'view2', $args );
+	} else {
+		get_template_part( 'partials/blocks/hero-section/hero', 'view', $args );
+	}
 } else {
 	echo "
 		<div data='gutenberg-preview-img'>
