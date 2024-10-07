@@ -43,7 +43,7 @@ $fields = get_fields();
 								echo wp_get_attachment_image( $community["image"], 'full', null, array( 'class' => 'community-card__image br-12' ) );
 							} else {
 								?>
-								<img class="missing-image"
+								<img class="missing-image community-card__image br-12"
 									 src="<?php echo esc_url( TENUP_THEME_DIST_URL . '/images/missing-image.png' ); ?>">
 							<?php } ?>
 							<?php if ( $community["cta"] ) { ?>

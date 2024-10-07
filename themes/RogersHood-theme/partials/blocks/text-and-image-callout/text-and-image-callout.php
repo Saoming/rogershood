@@ -65,7 +65,7 @@ $image_position = $fields["image_position"] ? '' : 'text-and-image-callout--imag
 					echo wp_get_attachment_image( $fields["image"], 'full', null, array( 'class' => 'text-and-image-callout__image' ) );
 				} else {
 					?>
-					<img class="missing-image"
+					<img class="missing-image text-and-image-callout__image"
 						 src="<?php echo esc_url( TENUP_THEME_DIST_URL . '/images/missing-image.png' ); ?>">
 				<?php } ?>
 			</div>

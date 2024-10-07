@@ -25,7 +25,7 @@ $fields = get_fields();
 					echo wp_get_attachment_image( $fields["images"]["desktop"], 'full', null, array( 'class' => 'e-books-full-and-text__image' ) );
 				} else {
 					?>
-					<img class="missing-image"
+					<img class="missing-image e-books-full-and-text__image"
 						 src="<?php echo esc_url( TENUP_THEME_DIST_URL . '/images/missing-image.png' ); ?>">
 				<?php } ?>
 			</div>
