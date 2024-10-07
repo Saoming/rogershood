@@ -25,18 +25,30 @@ $fields = get_fields();
 		<div class="row three-steps__steps">
 			<div class="three-steps__step col-sm-12 col-md-4">
 				<div class="three-steps__step__number mb-20">1</div>
-				<div class="three-steps__step__title mb-20"><?php echo esc_attr( $fields["step_1"]["title"] ); ?></div>
-				<div class="three-steps__step__description"><?php echo esc_attr( $fields["step_1"]["description"] ); ?></div>
+				<?php if ( $fields["step_1"]["title"] ) { ?>
+					<div class="three-steps__step__title mb-20"><?php echo esc_attr( $fields["step_1"]["title"] ); ?></div>
+				<?php } ?>
+				<?php if ( $fields["step_1"]["description"] ) { ?>
+					<div class="three-steps__step__description"><?php echo esc_attr( $fields["step_1"]["description"] ); ?></div>
+				<?php } ?>
 			</div>
 			<div class="three-steps__step col-sm-12 col-md-4">
 				<div class="three-steps__step__number mb-20">2</div>
-				<div class="three-steps__step__title mb-20"><?php echo esc_attr( $fields["step_2"]["title"] ); ?></div>
-				<div class="three-steps__step__description"><?php echo esc_attr( $fields["step_2"]["description"] ); ?></div>
+				<?php if ( $fields["step_2"]["title"] ) { ?>
+					<div class="three-steps__step__title mb-20"><?php echo esc_attr( $fields["step_2"]["title"] ); ?></div>
+				<?php } ?>
+				<?php if ( $fields["step_2"]["description"] ) { ?>
+					<div class="three-steps__step__description"><?php echo esc_attr( $fields["step_2"]["description"] ); ?></div>
+				<?php } ?>
 			</div>
 			<div class="three-steps__step col-sm-12 col-md-4">
 				<div class="three-steps__step__number mb-20">3</div>
-				<div class="three-steps__step__title mb-20"><?php echo esc_attr( $fields["step_3"]["title"] ); ?></div>
-				<div class="three-steps__step__description"><?php echo esc_attr( $fields["step_3"]["description"] ); ?></div>
+				<?php if ( $fields["step_3"]["title"] ) { ?>
+					<div class="three-steps__step__title mb-20"><?php echo esc_attr( $fields["step_3"]["title"] ); ?></div>
+				<?php } ?>
+				<?php if ( $fields["step_3"]["description"] ) { ?>
+					<div class="three-steps__step__description"><?php echo esc_attr( $fields["step_3"]["description"] ); ?></div>
+				<?php } ?>
 			</div>
 		</div>
 	</div>

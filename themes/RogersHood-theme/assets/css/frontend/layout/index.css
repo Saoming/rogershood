@@ -49,8 +49,9 @@ video {
 }
 
 .rh-block--full-bleed {
-	padding-left: 0;
-	padding-right: 0;
+	padding: 0;
+	/* padding-left: 0; */
+	/* padding-right: 0; */
 }
 
 .container {

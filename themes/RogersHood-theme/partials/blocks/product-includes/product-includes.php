@@ -40,7 +40,7 @@ $fields = get_fields();
 						echo wp_get_attachment_image( $product["image"], 'full', null, array( 'class' => 'product-includes__product__image' ) );
 					} else {
 						?>
-						<img class="missing-image"
+						<img class="missing-image product-includes__product__image"
 							 src="<?php echo esc_url( TENUP_THEME_DIST_URL . '/images/missing-image.png' ); ?>">
 					<?php } ?>
 				</div>

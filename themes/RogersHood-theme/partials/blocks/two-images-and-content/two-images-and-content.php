@@ -31,7 +31,7 @@ $fields = get_fields();
 					echo wp_get_attachment_image( $fields["images"]["top"], 'full', null, array( 'class' => 'two-images-and-content__image mb-20 br-4' ) );
 				} else {
 					?>
-					<img class="missing-image"
+					<img class="missing-image two-images-and-content__image mb-20 br-4"
 						 src="<?php echo esc_url( TENUP_THEME_DIST_URL . '/images/missing-image.png' ); ?>">
 					<?php
 				}
@@ -39,7 +39,7 @@ $fields = get_fields();
 					echo wp_get_attachment_image( $fields["images"]["bottom"], 'full', null, array( 'class' => 'two-images-and-content__image br-4' ) );
 				} else {
 					?>
-					<img class="missing-image"
+					<img class="missing-image two-images-and-content__image br-4"
 						 src="<?php echo esc_url( TENUP_THEME_DIST_URL . '/images/missing-image.png' ); ?>">
 				<?php }
 				?>
