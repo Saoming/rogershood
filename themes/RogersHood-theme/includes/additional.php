@@ -25,8 +25,6 @@ class Additional {
 	protected $add_svg_support;
 	 private  $woocommerce;
 	 private ImageSizes $image_sizes;
-	private $woocommerce;
-
 	/**
 	 * Creates all the Classes
 	 */
