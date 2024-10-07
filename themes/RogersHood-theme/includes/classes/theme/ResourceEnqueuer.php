@@ -44,24 +44,6 @@ class ResourceEnqueuer {
 	}
 
 	/**
-	 * Dequeues the unneeded styles
-	 */
-	protected function dequeue_unneeded_styles() {
-		// if ( ! is_admin() ) {
-		// wp_dequeue_style( 'dashicons' );
-		// }
-	}
-
-	/**
-	 * Moves jQuery to the footer
-	 */
-	public function move_jquery_to_the_footer() {
-		wp_scripts()->add_data( 'jquery', 'group', 1 );
-		wp_scripts()->add_data( 'jquery-core', 'group', 1 );
-		wp_scripts()->add_data( 'jquery-migrate', 'group', 1 );
-	}
-
-	/**
 	 * Enqueues the Sharer Script
 	 *
 	 * Used for Social Sharing
