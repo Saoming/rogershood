@@ -34,6 +34,7 @@
 	background: var(--wp--preset--color--white);
 	padding: 10px;
 	margin-bottom: 27px;
+	max-width: calc(100vw - 20px);
 }
 
 .product-directions__item-description p {
