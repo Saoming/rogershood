@@ -42,6 +42,8 @@ class RegisterBlocks {
 		$this->register_community_cards_block();
 		$this->register_hub_cards_block();
 		$this->register_e_books_full_and_text_block();
+
+		$this->temp_sam_register_blocks();
 	}
 
 
@@ -51,6 +53,11 @@ class RegisterBlocks {
 		$this->register_ingredient_grid_block();
 
 		$this->register_founders_block();
+	}
+
+	// TODO: Remove the function and add the methods to the main one, this is to prevent merge conflicts
+	public function temp_sam_register_blocks() {
+		$this->register_grid_text_quiz_blocks();
 	}
 
 	protected function register_faq_block() {
@@ -287,6 +294,30 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/e-books-full-and-text.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+	/**
+	 * Registers the E-books Image and Content
+	 */
+	protected function register_grid_text_quiz_blocks() {
+		acf_register_block_type(
+			array(
+				'name'            => 'grid-text-quiz-section',
+				'title'           => __( 'Grid and Text (Quiz Section)' ),
+				'description'     => __( 'E-books Image and Content' ),
+				'render_template' => 'partials/blocks/grid-text-quiz-section/grid-text-quiz-section.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/grid-text-quiz-section.jpg',
 						),
 					),
 				),

@@ -1,0 +1,33 @@
+.grid-text-quiz-container {
+	padding: 50px 16px;
+}
+
+.quiz-img-inner {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20px;
+}
+
+.sub-heading-grid-text-quiz {
+	text-transform: uppercase;
+	margin-bottom: 16px;
+}
+
+.grid-text-quiz-inner {
+	align-items: center;
+}
+
+.heading-grid-text-quiz,
+.grid-text-wysig-video__container {
+	margin-bottom: 36px;
+}
+
+@media only screen and (--bp-large-2) {
+	.grid-text-quiz-container {
+		padding: 100px;
+	}
+	.heading-grid-text-quiz,
+	.grid-text-wysig-video__container {
+		margin-bottom: 52px;
+	}
+}
