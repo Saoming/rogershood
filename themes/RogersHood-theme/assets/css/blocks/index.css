@@ -13,7 +13,6 @@
 @import url('products-grid.css');
 @import url('popular-reels.css');
 @import url('category-list.css');
-@import url('review-slider.css');
 @import url("text-and-image-callout.css");
 @import url("product-includes.css");
 @import url("community-cards.css");
@@ -21,3 +20,5 @@
 @import url("e-books-full-and-text.css");
 @import url("informational-health-info.css");
 @import url("three-steps.css");
+@import url("reviews-slider.css");
+@import url("youtube-slider.css");

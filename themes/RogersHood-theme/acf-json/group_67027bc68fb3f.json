@@ -1,6 +1,6 @@
 {
     "key": "group_67027bc68fb3f",
-    "title": "Block - Products Grid",
+    "title": "Blocks - Products Grid",
     "fields": [
         {
             "key": "field_67027bc6dc02a",
@@ -176,5 +176,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728217199
+    "modified": 1728294601
 }

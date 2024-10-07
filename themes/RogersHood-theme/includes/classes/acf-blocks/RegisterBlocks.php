@@ -57,6 +57,8 @@ class RegisterBlocks {
 		$this->register_popular_reels_block();
 		$this->register_post_list_block();
 		$this->register_category_links_block();
+		$this->register_review_slider_block();
+		$this->register_youtube_slider_block();
 	}
 
 	protected function register_faq_block() {
@@ -300,6 +302,29 @@ class RegisterBlocks {
 				),
 			)
 		);
+	}
+
+	protected function register_youtube_slider_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'rh-youtube-slider',
+				'title'           => __( 'Youtube Slider' ),
+				'render_template' => 'partials/blocks/youtube-slider/youtube-slider.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'enqueue_assets'  => ResourceEnqueuer::enqueue_slick_assets(),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/youtube-slider.jpg',
+						),
+					),
+				),
+			)
+		);
+
 	}
 
 

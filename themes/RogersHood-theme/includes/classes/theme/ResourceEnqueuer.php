@@ -30,6 +30,7 @@ class ResourceEnqueuer {
 	public function enqueue_theme_resources() {
 		$this->optimize_wp_rendering();
 		$this->dequeue_unneeded_styles();
+		$this->enqueue_sharer_script();
 	}
 
 	/**
@@ -58,6 +59,24 @@ class ResourceEnqueuer {
 		wp_scripts()->add_data( 'jquery', 'group', 1 );
 		wp_scripts()->add_data( 'jquery-core', 'group', 1 );
 		wp_scripts()->add_data( 'jquery-migrate', 'group', 1 );
+	}
+
+	/**
+	 * Enqueues the Sharer Script
+	 *
+	 * Used for Social Sharing
+	 */
+	public function enqueue_sharer_script() {
+		if ( ! is_singular('post') ) {
+			return;
+		}
+		wp_enqueue_script(
+			'sharer-script',
+			TENUP_THEME_TEMPLATE_URL . '/3rd-party/sharer/sharer.min.js',
+			array(),
+			filemtime( TENUP_THEME_PATH . '/3rd-party/sharer/sharer.min.js' ),
+			true
+		);
 	}
 
 	public static function enqueue_lightbox_assets() {

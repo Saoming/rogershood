@@ -5,6 +5,10 @@ const Faq = () => {
 		// Select all question titles
 		const faqQuestions = document.querySelectorAll('.faq-block__question-title');
 
+		if(!faqQuestions) {
+			return;
+		}
+
 		faqQuestions.forEach((question) => {
 			// Set ARIA attributes for accessibility
 			question.setAttribute('aria-expanded', 'false');

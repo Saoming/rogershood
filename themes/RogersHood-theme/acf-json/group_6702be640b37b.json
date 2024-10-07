@@ -1,6 +1,6 @@
 {
     "key": "group_6702be640b37b",
-    "title": "Block - Post Grid",
+    "title": "Blocks - Post Grid",
     "fields": [
         {
             "key": "field_6702beb6eb4c3",
@@ -282,5 +282,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728233850
+    "modified": 1728294607
 }

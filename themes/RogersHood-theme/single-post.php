@@ -24,9 +24,15 @@ if ( have_posts() ) : while ( have_posts() ) : the_post();
 				Share
 			</div>
 			<div class="single-post__share-buttons">
-				<a href="#"><img src="<?php echo TENUP_THEME_DIST_URL . 'svg/sharer/email-icon.svg' ?>" alt="Email Icon" ></a>
-				<a href="#"><img src="<?php echo TENUP_THEME_DIST_URL . 'svg/sharer/fb-icon.svg' ?>" alt="Facebook Icon" ></a>
-				<a href="#"><img src="<?php echo TENUP_THEME_DIST_URL . 'svg/sharer/x-icon.svg' ?>" alt="X Icon" ></a>
+				<button data-sharer="email" data-url="<?php the_permalink(); ?>" data-subject="Hey! Check out this interesting post">
+					<img src="<?php echo TENUP_THEME_DIST_URL . 'svg/sharer/email-icon.svg' ?>" alt="Email Icon" >
+				</button>
+				<button data-sharer="facebook" data-url="<?php the_permalink(); ?>">
+					<img src="<?php echo TENUP_THEME_DIST_URL . 'svg/sharer/fb-icon.svg' ?>" alt="Facebook Icon" >
+				</button>
+				<button data-sharer="x" data-title="Check out this interesting post!" data-url="<?php the_permalink(); ?>">
+					<img src="<?php echo TENUP_THEME_DIST_URL . 'svg/sharer/x-icon.svg' ?>" alt="X Icon" >
+				</button>
 			</div>
 		</div>
 	</div>

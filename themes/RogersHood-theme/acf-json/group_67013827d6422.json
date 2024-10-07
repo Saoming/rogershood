@@ -1,6 +1,6 @@
 {
     "key": "group_67013827d6422",
-    "title": "Block - Single Product Slider",
+    "title": "Blocks - Single Product Slider",
     "fields": [
         {
             "key": "field_670138281a5c9",
@@ -223,5 +223,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728138269
+    "modified": 1728294594
 }

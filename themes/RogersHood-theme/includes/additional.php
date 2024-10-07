@@ -12,6 +12,7 @@ use TenUpTheme\Theme\AcfOptionsPage;
 use TenUpTheme\Theme\AddSvgSupport;
 use TenUpTheme\Blocks\RegisterBlockCategory;
 use TenUpTheme\theme\ImageSizes;
+use TenUpTheme\Theme\ResourceEnqueuer;
 use TenUpTheme\WooCommerceCustomization\WooCommerceCustomization;
 
 /**
@@ -25,6 +26,8 @@ class Additional {
 	protected $add_svg_support;
 	 private  $woocommerce;
 	 private ImageSizes $image_sizes;
+	private ResourceEnqueuer $resource_enqeueuer;
+
 	/**
 	 * Creates all the Classes
 	 */
@@ -35,6 +38,7 @@ class Additional {
 		$this->acf_options_page           = new AcfOptionsPage();
 		$this->add_svg_support            = new AddSvgSupport();
 		$this->image_sizes                = new ImageSizes();
+		$this->resource_enqeueuer = new ResourceEnqueuer();
 	}
 
 	/**
@@ -49,6 +53,7 @@ class Additional {
 		$this->acf_options_page->init_hooks();
 		$this->add_svg_support->init_hooks();
 		$this->image_sizes->init_hooks();
+		$this->resource_enqeueuer->init_hooks();
 	}
 
 }
