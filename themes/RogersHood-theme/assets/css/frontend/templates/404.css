@@ -1,0 +1,33 @@
+.notfound__content {
+	padding-bottom: 150px;
+	padding-top: 150px;
+	position: relative;
+}
+
+.notfound__content::before {
+	content: url("../svg/pattern-plant.svg");
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: scale(0.75) rotate(180deg) translateY(135%);
+	transform-origin: bottom;
+}
+
+.notfound__content::after {
+	bottom: 0;
+	content: url("../svg/pattern-plant.svg");
+	left: 0;
+	position: absolute;
+	transform: scale(0.75);
+	transform-origin: bottom left;
+}
+
+.notfound__subtitle {
+	font-size: 26px;
+	margin-bottom: 40px;
+}
+
+.notfound__description {
+	margin-bottom: 40px;
+}
+
