@@ -4,9 +4,6 @@
  */
 
 $fields = get_fields();
-echo '<pre>';
-//var_dump( $fields );
-echo '</pre>';
 
 if ( ! get_field( 'block_preview' ) ) {
 	?>
