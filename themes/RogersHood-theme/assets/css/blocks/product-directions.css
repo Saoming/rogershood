@@ -2,6 +2,26 @@
 	background: #fcfbfb;
 }
 
+.product-directions::before {
+	content: url("../svg/pattern-leaves.svg");
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: scale(0.75);
+	transform-origin: top right;
+}
+
+@media (--bp-medium) {
+	.product-directions::before {
+		transform: scale(1);
+	}
+}
+
+.product-directions__container {
+	position: relative;
+	z-index: 2;
+}
+
 .product-directions__title {
 	margin-top: 0;
 }
@@ -31,16 +51,16 @@
 
 .product-directions__item {
 	background: var(--wp--preset--color--white);
-	padding: 10px;
 	margin-bottom: 27px;
+	padding: 10px;
 }
 
 @media (--bp-until-medium) {
 	.product-directions__item {
 		background: none;
 		margin-bottom: 60px;
-		min-width: calc(100vw - 40px);
 		max-width: calc(100vw - 40px);
+		min-width: calc(100vw - 40px);
 	}
 }
 
@@ -64,4 +84,3 @@
 .product-directions .slick-dots {
 	margin-bottom: 30px;
 }
-

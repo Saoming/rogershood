@@ -17,7 +17,7 @@ if ( ! get_field( 'block_preview' ) ) {
 			class="rh-block product-directions"
 			id="<?php echo esc_attr( $id ); ?>"
 	>
-		<div class="container">
+		<div class="product-directions__container container">
 			<div class="product-directions__row row ">
 				<div class="col-sm-12 col-md-4 product-directions__image-container">
 					<?php
