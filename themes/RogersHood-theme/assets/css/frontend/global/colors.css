@@ -25,9 +25,10 @@
 	--c-off-black: #5c5c5c;
 
 
-	--cart-background-beige: #F9F9F9;
+	--cart-background-beige: #f9f9f9;
 	--blue-background: #e0eaf7;
 	--c-category-fab-background: #e0eaf7;
+	--c-peach-light: #faf8f4;
 }
 
 .bg-blue {
@@ -43,6 +44,10 @@
 }
 
 .bg-gradient-blue {
-	background: linear-gradient(180deg, #E0EAF7 0%, #C2D1DC 100%);
+	background: linear-gradient(180deg, #e0eaf7 0%, #c2d1dc 100%);
+}
+
+.bg-peach-light {
+	background-color: var(--c-peach-light);
 }
 

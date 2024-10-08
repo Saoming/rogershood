@@ -1,10 +1,3 @@
-
-.three-steps {
-
-	/* TODO - Theme color to be defined */
-	background: #faf8f4;
-}
-
 .three-steps::before {
 	content: url("../svg/pattern-shell.svg");
 	position: absolute;

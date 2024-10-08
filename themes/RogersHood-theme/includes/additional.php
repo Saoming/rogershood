@@ -14,6 +14,7 @@ use TenUpTheme\Blocks\RegisterBlockCategory;
 use TenUpTheme\theme\ImageSizes;
 use TenUpTheme\Theme\ResourceEnqueuer;
 use TenUpTheme\WooCommerceCustomization\WooCommerceCustomization;
+use TenUpTheme\Theme\GravityForms;
 
 /**
  * Register Additional Functionality to support the theme
@@ -24,21 +25,24 @@ class Additional {
 	protected $register_blocks;
 	protected $acf_options_page;
 	protected $add_svg_support;
-	 private  $woocommerce;
-	 private ImageSizes $image_sizes;
+	private $woocommerce;
+	private ImageSizes $image_sizes;
 	private ResourceEnqueuer $resource_enqeueuer;
+	protected $gravity_forms;
+
 
 	/**
 	 * Creates all the Classes
 	 */
 	public function __construct() {
-		$this->woocommerce = new WooCommerceCustomization();
-		$this->register_block_categories  = new RegisterBlockCategory();
-		$this->register_blocks            = new RegisterBlocks();
-		$this->acf_options_page           = new AcfOptionsPage();
-		$this->add_svg_support            = new AddSvgSupport();
-		$this->image_sizes                = new ImageSizes();
-		$this->resource_enqeueuer = new ResourceEnqueuer();
+		$this->woocommerce               = new WooCommerceCustomization();
+		$this->register_block_categories = new RegisterBlockCategory();
+		$this->register_blocks           = new RegisterBlocks();
+		$this->acf_options_page          = new AcfOptionsPage();
+		$this->add_svg_support           = new AddSvgSupport();
+		$this->image_sizes               = new ImageSizes();
+		$this->resource_enqeueuer        = new ResourceEnqueuer();
+		$this->gravity_forms        = new GravityForms();
 	}
 
 	/**
@@ -54,6 +58,7 @@ class Additional {
 		$this->add_svg_support->init_hooks();
 		$this->image_sizes->init_hooks();
 		$this->resource_enqeueuer->init_hooks();
+		$this->gravity_forms->init_hooks();
 	}
 
 }

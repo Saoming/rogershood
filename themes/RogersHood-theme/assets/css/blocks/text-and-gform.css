@@ -1,42 +1,22 @@
-@import url("../frontend/global/media-queries.css");
-
-.text-and-image-callout {
-	padding-bottom: 0;
-	padding-top: 0;
-}
-
-.text-and-image-callout__content {
-	align-items: center;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-}
-
-.text-and-image-callout__content__inner {
-	max-width: 457px;
-	padding: 80px 30px;
-	text-align: center;
-}
-
-.text-and-image-callout__description {
-	font-size: 16px;
-}
-
 @media (--bp-medium) {
-	.text-and-image-callout__description {
-		font-size: 20px;
+	.text-and-gform__title,
+	.text-and-gform__description {
+		text-align: left;
+	}
+
+	.text-and-gform__gform {
+		background: var(--wp--preset--color--white);
+		border-radius: 12px;
+
+	}
+
+	.text-and-gform__gform .gform_wrapper {
+		padding: 60px;
 	}
 }
 
-.text-and-image-callout__image {
-	min-height: 100%;
-	object-fit: cover;
-}
-
-.text-and-image-callout--image-left .text-and-image-callout__content {
-	order: 2;
-}
-
-.text-and-image-callout--image-left .text-and-image-callout__image-container {
-	order: 1;
+@media (--bp-until-medium) {
+	.text-and-gform__gform .gform_footer {
+		justify-content: center;
+	}
 }

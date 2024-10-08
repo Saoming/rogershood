@@ -9,23 +9,21 @@
 
 .button,
 .rh-button {
-	background-color: var(--wp--preset--color--light-blue);
-	border: 1px solid var(--wp--preset--color--light-blue);
-	border-radius: 42px;
-	color: var(--wp--preset--color--black);
+	background-color: var(--wp--preset--color--light-blue) !important;
+	border: 1px solid var(--wp--preset--color--light-blue) !important;
+	border-radius: 42px !important;
+	color: var(--wp--preset--color--black) !important;
 	display: inline-block;
-	min-height: 50px;
-	min-width: 160px;
-	padding: 14px 43.5px;
-	text-decoration: none;
-	transition: background 300ms ease-in;
+	min-height: 50px !important;
+	min-width: 160px !important;
+	padding: 14px 43.5px !important;
+	text-decoration: none !important;
+	transition: background 300ms ease-in !important;
 }
 
 .button:hover,
 .rh-button:hover {
-	background-color: var(--wp--preset--color--green);
-	border: 1px solid var(--wp--preset--color--green);
-	color: var(--wp--preset--color--white);
+	background-color: var(--wp--preset--color--green) !important;
+	border: 1px solid var(--wp--preset--color--green) !important;
+	color: var(--wp--preset--color--white) !important;
 }
-
-

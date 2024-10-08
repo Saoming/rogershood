@@ -14,7 +14,7 @@ $fields = get_fields();
 if ( ! get_field( 'block_preview' ) ) {
 	?>
 
-	<section class="rh-block rh-block-full-bleed three-steps"
+	<section class="rh-block rh-block-full-bleed three-steps bg-peach-light"
 			 id="<?php echo esc_attr( $id ); ?>"
 	>
 		<div class="three-steps__container container br-8">
