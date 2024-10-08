@@ -14,7 +14,7 @@ $fields = get_fields();
 if ( ! get_field( 'block_preview' ) ) {
 	?>
 	<section
-			class="rh-block product-directions"
+			class="rh-block product-directions bg-ivory"
 			id="<?php echo esc_attr( $id ); ?>"
 	>
 		<div class="product-directions__container container">

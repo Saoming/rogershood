@@ -1,7 +1,3 @@
-.about-us {
-	background: #fcfbfb;
-}
-
 @media (--bp-medium) {
 	.about-us__content {
 		text-align: left;

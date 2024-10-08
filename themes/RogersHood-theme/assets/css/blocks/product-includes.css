@@ -1,9 +1,3 @@
-/* TODO Color not included in theme.json */
-
-.product-includes {
-	background: #fcfbfb;
-}
-
 .product-includes__topics {
 	align-items: center;
 	display: flex;
@@ -20,8 +14,9 @@
 }
 
 .product-includes__product__image {
+	aspect-ratio: 358 / 304;
 	border-radius: 12px 12px 0 0;
-	height: 100%;
+	height: 100% !important;
 	object-fit: cover;
 	width: 100%;
 }

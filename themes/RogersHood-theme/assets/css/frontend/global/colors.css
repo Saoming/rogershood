@@ -27,6 +27,7 @@
 	--blue-background: #e0eaf7;
 	--c-category-fab-background: #e0eaf7;
 	--c-peach-light: #faf8f4;
+	--c-ivory: #fcfbfb;
 }
 
 .bg-blue {
@@ -49,3 +50,6 @@
 	background-color: var(--c-peach-light);
 }
 
+.bg-ivory {
+	background: var(--c-ivory);
+}

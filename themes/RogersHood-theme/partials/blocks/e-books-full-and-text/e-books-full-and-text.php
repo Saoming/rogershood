@@ -14,7 +14,7 @@ $fields = get_fields();
 if ( ! get_field( 'block_preview' ) ) {
 	?>
 	<section
-			class="rh-block rh-block--full-bleed e-books-full-and-text"
+			class="rh-block rh-block--full-bleed e-books-full-and-text bg-ivory"
 			id="<?php echo esc_attr( $id ); ?>"
 	>
 		<div class="e-books-full-and-text__row row row--no-gap">

@@ -13,7 +13,7 @@ if ( ! empty( $block['anchor'] ) ) {
 $fields = get_fields();
 ?>
 
-<section class="rh-block product-includes"
+<section class="rh-block product-includes bg-ivory"
 		 id="<?php echo esc_attr( $id ); ?>"
 >
 	<div class="container container--narrow">
@@ -22,13 +22,14 @@ $fields = get_fields();
 			<?php echo esc_attr( $fields["title"] ); ?>
 		</h2>
 	<?php } ?>
-	<div class="product-includes__topics">
-		<?php foreach ( $fields["products"] as $product ) { ?>
-			<a class="product-includes__topic">
-				<?php echo esc_attr( $product["title"] ); ?>
-			</a>
-		<?php } ?>
-	</div>
+<!--		Todo - Add buttons later-->
+<!--	<div class="product-includes__topics">-->
+<!--		--><?php //foreach ( $fields["products"] as $product ) { ?>
+<!--			<a class="product-includes__topic">-->
+<!--				--><?php //echo esc_attr( $product["title"] ); ?>
+<!--			</a>-->
+<!--		--><?php //} ?>
+<!--	</div>-->
 	<div class="container--inner">
 		<?php foreach ( $fields["products"] as $product ) { ?>
 		<div class="product-includes__product">
