@@ -32,14 +32,14 @@
 
 .single-post__title {
 	line-height: 1;
-	margin-top: 0;
 	margin-bottom: 56px;
+	margin-top: 0;
 	text-transform: uppercase;
 }
 
 .single-post__image {
-	margin-bottom: 56px;
 	line-height: 0;
+	margin-bottom: 56px;
 }
 
 .single-post__content {
@@ -47,14 +47,18 @@
 	margin-bottom: 56px;
 }
 
+.single-post__content p:first-child {
+	line-height: 24px;
+}
+
 .single-post__content p {
 	line-height: 1.375;
 	margin: 0;
 }
 
-.single-post__content p:first-letter {
-	font-size: 42px;
+.single-post__content p:first-child::first-letter {
 	font-family: Scilla, serif;
+	font-size: 42px;
 }
 
 .single-post__share {
