@@ -3,58 +3,82 @@
  * Renders the Founders Slider
  */
 
-$title    = get_field( 'title' );
-$founders = get_field( 'founders' );
+$fields = get_fields();
+echo '<pre>';
+//var_dump( $fields );
+echo '</pre>';
 
 if ( ! get_field( 'block_preview' ) ) {
+	?>
+	<section
+			class="rh-block about-us"
+			id="<?php echo esc_attr( $id ); ?>"
+	>
+		<div class="container">
+			<div class="about-us__row row">
 
-
-?>
-<div class="rh-block founders-slider bg-beige">
-	<div class="container">
-		<div class="founders-slider__slider">
-			<?php if ( $founders ) {
-				foreach ( $founders as $key => $founder ) {
-					?>
-					<div class="founders-slider__slide">
-						<div class="founders-slider__inner">
-							<div class="founders-slider__image">
-								<div class="founders-slider__image-container">
-									<?php echo wp_get_attachment_image( $founder['image'], 'full' ); ?>
-									<div class="founders-slider__nickname text-font-scilla text-body-18 text-center">
-										<?php echo esc_html( $founder['nickname'] ); ?>
-									</div>
-
-								</div>
+				<div class="col-sm-12 col-md-5 about-us__content text-center">
+					<div class="about-us__content__inner mb-50">
+						<?php
+						if ( $fields["pretitle"] ) {
+							?>
+							<div class="about-us__pretitle uppercase mb-16">
+								<?php echo esc_attr( $fields["pretitle"] ); ?>
 							</div>
-							<div class="founders-slider__content">
-								<div class="founders-slider__main-title text-body-20">
-									<?php echo esc_html( $title ); ?>
-								</div>
-								<div class="founder-slider__name is-style-h2">
-									<?php echo esc_html( $founder['name'] ); ?>
-								</div>
-								<div class="founder-slider__description">
-									<?php echo wp_kses_post( $founder['description'] ); ?>
-								</div>
-								<div class="founders-slider__next">
-									<div class="founders-slider__next-button">
-										<img src="<?php echo TENUP_THEME_DIST_URL . '/svg/circle-arrow.svg'; ?>"
-											 class="founders-slider__arrow-next js-founders-slider__arrow-next"
-											 alt="Next Founder">
-									</div>
-									<?php echo wp_get_attachment_image( $founder['next_founder'], 'full' ); ?>
-								</div>
-							</div>
-						</div>
+							<?php
+						}
+						if ( $fields["title"] ) {
+							?>
+							<h2 class="about-us__title">
+								<?php echo esc_attr( $fields["title"] ); ?>
+							</h2>
+							<?php
+						}
+						if ( $fields["description"] ) {
+							?>
+							<div class="about-us__description"><?php echo wp_kses_post( $fields["description"] ); ?></div>
+							<?php
+						}
 
+						if ( $fields["cta"] ) {
+							?>
+							<div class="about-us__cta">
+								<a class="button about-us__button"
+								   href="<?php echo esc_url( $fields["cta"]["url"] ); ?>"
+								   target="<?php echo esc_attr( $fields["cta"]["target"] ); ?>"><?php echo esc_html( $fields["cta"]["title"] ); ?></a>
+							</div>
+						<?php } ?>
 					</div>
-				<?php }
-			} ?>
+				</div>
+				<div class="col-sm-hidden col-md-1"></div>
+				<div class="cols-sm-12 col-md-5 about-us__right">
+					<div class="about-us__image-and-caption">
+						<div class="about-us__image-container">
+							<?php
+							if ( $fields["image"] ) {
+								echo wp_get_attachment_image( $fields["image"], 'full', null, array( 'class' => 'about-us__image' ) );
+							} else {
+								?>
+								<img class="missing-image about-us__image"
+									 src="<?php echo esc_url( TENUP_THEME_DIST_URL . '/images/missing-image.png' ); ?>">
+							<?php } ?>
+						</div>
+						<?php if ( $fields["caption"] ) {
+							?>
+							<div class="about-us__caption ff-scilla">
+								<?php echo esc_attr( $fields["caption"] ); ?>
+							</div>
+							<?php
+						}
+						?>
+					</div>
+				</div>
+				<div class="col-sm-hidden col-md-1"></div>
+			</div>
 		</div>
+	</section>
+<?php } else { ?>
+	<div data="gutenberg-preview-img">
+		<img style="max-width:100%; height:auto;" src="<?php the_field( 'block_preview' ) ?>">
 	</div>
-	<?php } else { ?>
-		<div data="gutenberg-preview-img">
-			<img style="max-width:100%; height:auto;" src="<?php the_field( 'block_preview' ) ?>">
-		</div>
-	<?php } ?>
+<?php } ?>
