@@ -7,12 +7,12 @@
 @import url("faq.css");
 @import url("founders-slider.css");
 @import url("ingredient-grid.css");
-@import url('single-product-slider.css');
-@import url('tiktok-feed.css');
-@import url('point-information.css');
-@import url('products-grid.css');
-@import url('popular-reels.css');
-@import url('category-list.css');
+@import url("single-product-slider.css");
+@import url("tiktok-feed.css");
+@import url("point-information.css");
+@import url("products-grid.css");
+@import url("popular-reels.css");
+@import url("category-list.css");
 @import url("text-and-image-callout.css");
 @import url("product-includes.css");
 @import url("community-cards.css");
@@ -24,3 +24,5 @@
 @import url("youtube-slider.css");
 @import url("product-benefits.css");
 @import url("product-directions.css");
+@import url("text-and-gform.css");
+@import url("about-us.css");

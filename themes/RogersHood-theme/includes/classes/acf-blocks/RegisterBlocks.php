@@ -44,6 +44,8 @@ class RegisterBlocks {
 		$this->register_three_steps_block();
 		$this->register_product_benefits_block();
 		$this->register_product_directions_block();
+		$this->register_text_and_gform_block();
+		$this->register_about_us_block();
 	}
 
 
@@ -579,6 +581,7 @@ class RegisterBlocks {
 			)
 		);
 	}
+
 	/**
 	 * Registers the Product Directions
 	 */
@@ -597,6 +600,57 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/product-directions.jpg',
+						),
+					),
+				),
+			)
+		);
+
+	}
+
+	/**
+	 * Registers the Text and Gravity Form
+	 */
+	protected function register_text_and_gform_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'rh-text-and-gform',
+				'title'           => __( 'Text and Gravity Form' ),
+				'description'     => __( 'Text sections on left; Form on right. Reach out to us section / reach out form' ),
+				'render_template' => 'partials/blocks/text-and-gform/text-and-gform.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/text-and-gform.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+
+	/**
+	 * Registers the About US
+	 */
+	protected function register_about_us_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'rh-about-us',
+				'title'           => __( 'About Us' ),
+				'description'     => __( 'About us Section' ),
+				'render_template' => 'partials/blocks/about-us/about-us.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/about-us.jpg',
 						),
 					),
 				),
