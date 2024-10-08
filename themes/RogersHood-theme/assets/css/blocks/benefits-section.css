@@ -16,11 +16,8 @@
 }
 
 .benefits-card-container {
-	display: grid;
-	gap: 8px;
-	grid-template-columns: repeat(4, 1fr);
-	margin-top: 64px;
 	text-align: left;
+	margin-top: 64px;
 }
 
 .benefit-card-item {
@@ -35,8 +32,20 @@
 	text-transform: uppercase;
 }
 
+@media only screen and (min-width: 639px) {
+	.splide.is-initialized:not(.is-active) .splide__list {
+		display: grid;
+		gap: 8px;
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
 @media only screen and (--bp-large-2) {
 	.benefits-section__container {
 		padding: 100px 65px 100px 110px;
+	}
+
+	.splide.is-initialized:not(.is-active) .splide__list {
+		grid-template-columns: repeat(4, 1fr);
 	}
 }

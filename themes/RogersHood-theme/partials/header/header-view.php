@@ -10,31 +10,40 @@
 <?php if ( $args['activate_site_notifications'] ) : ?>
 	<?php if ( $args['site_notifications'] || $args['number_of_site_notifications'] ) : ?>
 	<!-- Store Notifications -->
-	<div class="store-notifications__container" role="alert">
-		<?php
-		$i = 0;
-		while ( $i < $args['number_of_site_notifications'] ) :
-			?>
-			<span class="store-notifications__text">
-				<?php echo esc_attr( $args['site_notifications'] ); ?>
-			</span>
+	<section
+		class="store-notifications__container splide page-container"
+		role="alert"
+		data-splide='{"type":"loop", "arrows": false, "perPage": 5,  "autoScroll": { "speed": 2, "pauseOnHover": false }, "pagination": false, "focus": "center", "drag": false, "breakpoints": {"640": {"perPage": 1}}}'
+	>
+		<div class="splide__track">
+			<ul class="splide__list" data-splide-interval="20000">
 			<?php
-			++$i;
-			endwhile;
-		?>
-	</div>
+			$i = 0;
+			while ( $i < $args['number_of_site_notifications'] ) :
+				?>
+				<li class="store-notifications__text splide__slide">
+					<?php echo esc_attr( $args['site_notifications'] ); ?>
+				</li>
+				<?php
+				++$i;
+				endwhile;
+			?>
+			</ul>
+		</div>
+	</section>
 	<?php endif; ?>
 <?php endif; ?>
 <header role="banner" class="header__container page-container">
 	<div class="header__menu-mobile">
 		<button
+			id="mobile-navigation-button"
 			type="button"
 			class="header__menu-mobile-button"
-			:aria-expanded="modal"
+			aria-expanded="false"
 			aria-controls="mobile-navigation"
 			aria-label="Navigation Menu"
 		>
-			<svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<svg width="16" height="11" viewBox="0 0 16 11" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
 				<path d="M0 10.77V9.76998H16V10.77H0ZM0 5.99998V4.99998H16V5.99998H0ZM0 1.22998V0.22998H16V1.22998H0Z" fill="currentColor"/>
 			</svg>
 		</button>
@@ -46,7 +55,7 @@
 		</a>
 	</div>
 
-	<?php echo wp_kses_post( $args['menu_header'] ); ?>
+	<?php echo wp_kses( $args['menu_header'], $args['allowed_html'] ); ?>
 
 	<div class="header__woo">
 		<a href="/my-account/" class="header__woo-link">

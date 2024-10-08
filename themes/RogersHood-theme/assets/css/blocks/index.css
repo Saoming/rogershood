@@ -13,6 +13,8 @@
 @import url("products-grid.css");
 @import url("popular-reels.css");
 @import url("category-list.css");
+@import url("hero-section.css");
+@import url("benefits-section.css");
 @import url("text-and-image-callout.css");
 @import url("product-includes.css");
 @import url("community-cards.css");
@@ -26,3 +28,4 @@
 @import url("product-directions.css");
 @import url("text-and-gform.css");
 @import url("about-us.css");
+@import url("grid-text-section.css");

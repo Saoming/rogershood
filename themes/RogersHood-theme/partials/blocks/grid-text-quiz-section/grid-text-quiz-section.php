@@ -12,13 +12,11 @@ if ( ! empty( $block['anchor'] ) ) {
 $args['id'] = $id;
 
 if ( function_exists( 'get_field' ) ) {
-	$args['version']            = get_field( 'v1_v2' ); // if it true v1 else v2
-	$args['hero_heading']       = get_field( 'hero_heading' );
-	$args['hero_video']         = get_field( 'hero_video' );
-	$args['hero_background']    = get_field( 'hero_background' );
-	$args['video_poster_image'] = get_field( 'video_poster_image' );
-	$args['hero_description']   = get_field( 'hero_description' );
-	$args['cta']                = get_field( 'hero_button_v1' );
+	$args['grid_image_repeater_grid_text'] = get_field( 'grid_image_repeater_grid_text' ); // if it true v1 else v2
+	$args['sub_heading_grid_text']         = get_field( 'sub_heading_grid_text' );
+	$args['heading_grid_text']             = get_field( 'heading_grid_text' );
+	$args['description_grid_text']         = get_field( 'description_grid_text' );
+	$args['cta']                           = get_field( 'cta_grid_text' );
 
 	if ( $args['cta'] ) {
 		$args['cta']['link']   = $args['cta']['url'];
@@ -28,11 +26,7 @@ if ( function_exists( 'get_field' ) ) {
 }
 
 if ( ! get_field( 'block_preview' ) ) {
-	if ( $args['version'] == true ) {
-		get_template_part( 'partials/blocks/hero-section/hero', 'view2', $args );
-	} else {
-		get_template_part( 'partials/blocks/hero-section/hero', 'view', $args );
-	}
+	get_template_part( 'partials/blocks/grid-text-quiz-section/grid', 'view', $args );
 } else {
 	echo "
 		<div data='gutenberg-preview-img'>

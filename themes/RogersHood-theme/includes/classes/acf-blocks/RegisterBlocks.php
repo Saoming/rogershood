@@ -6,7 +6,9 @@
  */
 
 namespace TenUpTheme\Blocks;
+
 use TenUpTheme\Theme\ResourceEnqueuer;
+
 
 /**
  * Handles Registration of the Custom Blocks
@@ -32,7 +34,6 @@ class RegisterBlocks {
 			return;
 		}
 		$this->temp_tome_register_blocks();
-
 		$this->register_hero_section_block();
 		$this->register_text_and_image_callout_block();
 		$this->register_product_includes_block();
@@ -46,13 +47,15 @@ class RegisterBlocks {
 		$this->register_product_directions_block();
 		$this->register_text_and_gform_block();
 		$this->register_about_us_block();
+		$this->temp_sam_register_blocks();
 	}
 
 
-//	TODO: Remove the function and add the methods to the main one, this is to prevent merge conflicts
+	// TODO: Remove the function and add the methods to the main one, this is to prevent merge conflicts
 	public function temp_tome_register_blocks() {
 		$this->register_faq_block();
-		$this->register_ingredient_grid_block();;
+		$this->register_ingredient_grid_block();
+
 		$this->register_founders_block();
 		$this->register_single_product_slider_block();
 		$this->register_tiktok_feed_block();
@@ -63,6 +66,11 @@ class RegisterBlocks {
 		$this->register_category_links_block();
 		$this->register_review_slider_block();
 		$this->register_youtube_slider_block();
+	}
+
+	// TODO: Remove the function and add the methods to the main one, this is to prevent merge conflicts
+	public function temp_sam_register_blocks() {
+		$this->register_grid_text_quiz_blocks();
 	}
 
 	protected function register_faq_block() {
@@ -332,7 +340,6 @@ class RegisterBlocks {
 	}
 
 
-
 	/**
 	 * Registers the Hero Section block on the homepage
 	 */
@@ -421,6 +428,7 @@ class RegisterBlocks {
 				'mode'            => 'auto',
 				'category'        => 'rogershood',
 				'supports'        => array( 'anchor' => true ),
+				'enqueue_assets'  => ResourceEnqueuer::register_splide_assets(),
 				'example'         => array(
 					'attributes' => array(
 						'mode' => 'preview',
@@ -482,6 +490,7 @@ class RegisterBlocks {
 			)
 		);
 	}
+
 	/**
 	 * Registers the E-books Image and Content
 	 */
@@ -525,6 +534,32 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/two-images-and-content.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+
+
+	/**
+	 * Registers the E-books Image and Content
+	 */
+	protected function register_grid_text_quiz_blocks() {
+		acf_register_block_type(
+			array(
+				'name'            => 'grid-text-quiz-section',
+				'title'           => __( 'Grid and Text (Quiz Section)' ),
+				'description'     => __( 'E-books Image and Content' ),
+				'render_template' => 'partials/blocks/grid-text-quiz-section/grid-text-quiz-section.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/grid-text-quiz-section.jpg',
 						),
 					),
 				),

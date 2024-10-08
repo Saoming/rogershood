@@ -27,3 +27,23 @@
 	border: 1px solid var(--wp--preset--color--green) !important;
 	color: var(--wp--preset--color--white) !important;
 }
+
+button:where(:not(.components-button)) {
+	all: unset;
+}
+
+.button-rh:where(:not(.components-button)) {
+	background-color: var(--wp--preset--color--light-blue);
+	border: 1px solid var(--wp--preset--color--light-blue);
+	border-radius: 42px;
+	color: var(--wp--preset--color--black);
+	padding: 14px 43.5px;
+	text-decoration: none;
+	transition: background 300ms ease-in;
+}
+
+.button-rh:hover:where(:not(.components-button)) {
+	background-color: var(--wp--preset--color--green);
+	border: 1px solid var(--wp--preset--color--green);
+	color: var(--wp--preset--color--white);
+}

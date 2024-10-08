@@ -38,11 +38,12 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
  * @author stcode
  */
 function include_inc_files() {
-	$files        = array(
+	$files = array(
 		'includes/', // Load core functions.
 		'includes/classes/', // Load classes.
 		'includes/classes/acf-blocks/', // Load additional classes acf blocks..
 		'includes/classes/theme/', // Load additional classes theme.
+		// 'includes/classes/WooCommerceCustomization/', // Load additional classes theme.
 	);
 	$template_dir = trailingslashit( get_template_directory() );
 

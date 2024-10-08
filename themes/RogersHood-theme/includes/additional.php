@@ -26,8 +26,8 @@ class Additional {
 	protected $acf_options_page;
 	protected $add_svg_support;
 	private $woocommerce;
-	private ImageSizes $image_sizes;
-	private ResourceEnqueuer $resource_enqeueuer;
+	private $image_sizes;
+	private $resource_enqeueuer;
 	protected $gravity_forms;
 
 
@@ -42,7 +42,7 @@ class Additional {
 		$this->add_svg_support           = new AddSvgSupport();
 		$this->image_sizes               = new ImageSizes();
 		$this->resource_enqeueuer        = new ResourceEnqueuer();
-		$this->gravity_forms        = new GravityForms();
+		$this->gravity_forms             = new GravityForms();
 	}
 
 	/**
@@ -60,5 +60,4 @@ class Additional {
 		$this->resource_enqeueuer->init_hooks();
 		$this->gravity_forms->init_hooks();
 	}
-
 }

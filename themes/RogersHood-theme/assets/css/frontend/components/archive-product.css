@@ -22,7 +22,6 @@
 .toggle-link {
 	color: var(--wp--preset--color--black);
 	display: inline-block;
-	font-size: 16px;
 	padding: 10px 20px;
 	text-align: center;
 	text-decoration: none;
@@ -36,7 +35,6 @@
 }
 
 .woocommerce-products-header__title {
-	font-size: clamp(1.625rem, 2vw + 1rem, 2.25rem);
 	margin-bottom: 76px;
 	margin-top: 0;
 }

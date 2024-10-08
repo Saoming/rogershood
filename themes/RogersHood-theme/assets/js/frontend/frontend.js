@@ -2,6 +2,8 @@ import '../../css/frontend/style.css';
 
 import Cart from './components/Cart';
 import Blocks from './blocks/blocks';
+import Header from './components/header';
+import SplideCarousel from './components/carousel';
 
 document.addEventListener('DOMContentLoaded', function () {
 	const cards = document.querySelectorAll('.community-card');
@@ -43,3 +45,10 @@ function updateLabel(selectElement) {
 
 	labelElement.textContent = `${selectedValue} Qty`;
 }
+
+
+const header = new Header();
+header.init();
+
+const splideCarousel = new SplideCarousel();
+splideCarousel.init();
