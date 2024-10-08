@@ -15,8 +15,8 @@ $fields = get_fields();
 if ( ! get_field( 'block_preview' ) ) {
 	?>
 	<section
-			class="rh-block text-and-gform bg-peach-light"
-			id="<?php echo esc_attr( $id ); ?>"
+		class="rh-block text-and-gform bg-peach-light"
+		id="<?php echo esc_attr( $id ); ?>"
 	>
 		<div class="container">
 			<div class="text-and-gform__row row">
@@ -37,7 +37,8 @@ if ( ! get_field( 'block_preview' ) ) {
 					}
 					if ( $fields["description"] ) {
 						?>
-						<div class="text-and-gform__description mb-50"><?php echo wp_kses_post( $fields["description"] ); ?></div>
+						<div
+							class="text-and-gform__description mb-50"><?php echo wp_kses_post( $fields["description"] ); ?></div>
 						<?php
 					}
 					if ( $fields["image"] ) {
@@ -50,7 +51,11 @@ if ( ! get_field( 'block_preview' ) ) {
 				</div>
 				<div class="col-sm-hidden col-md-1"></div>
 				<div class="col-md-6 text-and-gform__gform">
-					<?php gravity_form( $fields["gravity_form"], false, false, false, '', true ); ?>
+					<?php
+					if ( function_exists( 'gravity_form' ) ) {
+						gravity_form( $fields["gravity_form"], false, false, false, '', true );
+					}
+					?>
 				</div>
 			</div>
 		</div>
