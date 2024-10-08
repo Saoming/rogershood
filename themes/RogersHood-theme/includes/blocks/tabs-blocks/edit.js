@@ -1,7 +1,8 @@
 /**
  * WordPress dependencies
  */
-import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
+import { InnerBlocks, useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import {PanelBody, TextControl} from '@wordpress/components';
 
 /**
  * Edit component.
@@ -15,31 +16,19 @@ import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
  * @returns {Function} Render the edit screen
  */
 const ExampleBlockEdit = (props) => {
-	const { attributes, setAttributes } = props;
-	const { tabTitle } = attributes;
 
-	const onChangeTitle = (value) => {
-		setAttributes({ tabTitle: value });
-	};
+
 
 	return (
-		<Fragment>
-			<InspectorControls>
-				<PanelBody title="Tab Settings">
-					<TextControl
-						label="Tab Title"
-						value={tabTitle}
-						onChange={onChangeTitle}
-					/>
-				</PanelBody>
-			</InspectorControls>
-			<div className="custom-tab">
-				<h4 className="tab-title">{tabTitle}</h4>
-				<div className="tab-content">
-					<InnerBlocks />
-				</div>
+			<div {...useBlockProps()}>
+				<InnerBlocks
+					allowedBlocks={['rh-block/single-tab-block']}
+					template={[['rh-block/single-tab-block']]}
+					renderAppender={InnerBlocks.ButtonBlockAppender}
+				/>
 			</div>
-		</Fragment>
 	);
+
+
 };
 export default ExampleBlockEdit;

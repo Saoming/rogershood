@@ -16,7 +16,7 @@ $fields = get_fields();
 if ( ! get_field( 'block_preview' ) ) {
 	?>
 
-	<section class="rh-block  community-cards"
+	<section class="rh-block  community-cards bg-beige"
 			 id="<?php echo esc_attr( $id ); ?>"
 			 style="background-image: url(<?php echo esc_attr( $fields["background_image"]["url"] ); ?>"
 	>

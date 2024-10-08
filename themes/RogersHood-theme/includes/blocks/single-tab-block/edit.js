@@ -1,8 +1,8 @@
 /**
  * WordPress dependencies
  */
-import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
-
+import { InnerBlocks, useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import {PanelBody, TextControl} from '@wordpress/components';
 /**
  * Edit component.
  * See https://wordpress.org/gutenberg/handbook/designers-developers/developers/block-api/block-edit-save/#edit
@@ -16,17 +16,28 @@ import { InnerBlocks, useBlockProps } from '@wordpress/block-editor';
  */
 const ExampleBlockEdit = (props) => {
 	const { attributes, setAttributes } = props;
-	const { title } = attributes;
+	const { tabTitle } = attributes;
 
-	const blockProps = useBlockProps();
-
+	const onChangeTitle = (value) => {
+		setAttributes({ tabTitle: value });
+	};
 	return (
-		<div {...blockProps}>
-			<InnerBlocks
-				allowedBlocks={['custom/tab']}
-				template={[['custom/tab']]}
-				renderAppender={InnerBlocks.ButtonBlockAppender}
-			/>
+		<div {...useBlockProps()}>
+			<InspectorControls>
+				<PanelBody title="Tab Settings">
+					<TextControl
+						label="Tab Title"
+						value={tabTitle}
+						onChange={onChangeTitle}
+					/>
+				</PanelBody>
+			</InspectorControls>
+			<div className="custom-tab">
+				<h4 className="tab-title">{tabTitle}</h4>
+				<div className="tab-content">
+					<InnerBlocks />
+				</div>
+			</div>
 		</div>
 	);
 };

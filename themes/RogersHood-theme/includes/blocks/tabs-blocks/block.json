@@ -7,11 +7,6 @@
   "name": "rh-block/tabs-block",
   "icon": "feedback",
   "category": "rogershood",
-  "attributes":{
-    "title": {
-      "type" : "string"
-    }
-  },
   "supports": {
     "html": false
   },
