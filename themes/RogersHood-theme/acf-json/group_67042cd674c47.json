@@ -139,7 +139,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "all"
+                "value": "acf\/grid-text-quiz-section"
             }
         ]
     ],
@@ -152,5 +152,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728327788
+    "modified": 1728330247
 }

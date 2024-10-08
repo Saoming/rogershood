@@ -31,3 +31,7 @@ p {
 .object-cover {
 	object-fit: cover;
 }
+
+.list-none {
+	list-style: none;
+}

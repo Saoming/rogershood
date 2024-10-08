@@ -28,13 +28,13 @@ class Header {
 			if (mega) {
 				item.addEventListener('mouseenter', () => {
 					mega_item_container.classList.add('is-hovered');
-					mega.classList.add('is-active');
+					mega.classList.add('is-header-active');
 					mega.setAttribute('aria-hidden', 'false');
 				});
 
 				item.addEventListener('mouseleave', () => {
 					mega_item_container.classList.remove('is-hovered');
-					mega.classList.remove('is-active');
+					mega.classList.remove('is-header-active');
 					mega.setAttribute('aria-hidden', 'true');
 				});
 			}
@@ -62,13 +62,13 @@ class Header {
 					if (activeItem && activeItem !== item) {
 						const activeMega = activeItem.querySelector('.mobile-sub-menu');
 						svg.classList.remove('rotate-90');
-						activeMega.classList.remove('is-active');
+						activeMega.classList.remove('is-header-active');
 						activeMega.setAttribute('aria-hidden', 'true');
 					}
 
 					svg.classList.toggle('rotate-90');
-					mega.classList.toggle('is-active');
-					const isActive = mega.classList.contains('is-active');
+					mega.classList.toggle('is-header-active');
+					const isActive = mega.classList.contains('is-header-active');
 					mega.setAttribute('aria-hidden', isActive ? 'false' : 'true');
 
 					activeItem = isActive ? item : null;
