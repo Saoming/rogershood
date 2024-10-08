@@ -5,6 +5,30 @@
  * @package TenUpTheme
  */
 
+/**
+ * Custom logging in /log
+ *
+ * @param object $message message to be logged
+ * @param object $data data to file
+ */
+function custom_theme_error_log( $message, $data = '' ) {
+
+	$log = trailingslashit( get_stylesheet_directory() ) . 'log/';
+	if ( ! is_dir( $log ) ) {
+		mkdir( $log );
+	}
+
+	$file = $log . gmdate( 'Y-m-d' ) . '.log';
+	if ( ! is_file( $file ) ) {
+		file_put_contents( $file, '' );
+	}
+	if ( ! empty( $data ) ) {
+		$message = array( $message => $data );
+	}
+	$data_string = print_r( $message, true ) . "\n";
+	file_put_contents( $file, $data_string, FILE_APPEND );
+}
+
 // Useful global constants.
 define( 'TENUP_THEME_VERSION', '0.1.0' );
 define( 'TENUP_THEME_TEMPLATE_URL', get_template_directory_uri() );

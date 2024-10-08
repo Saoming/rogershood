@@ -15,6 +15,7 @@ use TenUpTheme\theme\ImageSizes;
 use TenUpTheme\Theme\ResourceEnqueuer;
 use TenUpTheme\WooCommerceCustomization\WooCommerceCustomization;
 use TenUpTheme\Theme\GravityForms;
+use TenUpTheme\Theme\RegisterPostTypes;
 
 /**
  * Register Additional Functionality to support the theme
@@ -29,6 +30,7 @@ class Additional {
 	private $image_sizes;
 	private $resource_enqeueuer;
 	protected $gravity_forms;
+	protected $register_post_types;
 
 
 	/**
@@ -43,6 +45,7 @@ class Additional {
 		$this->image_sizes               = new ImageSizes();
 		$this->resource_enqeueuer        = new ResourceEnqueuer();
 		$this->gravity_forms             = new GravityForms();
+		$this->register_post_types       = new RegisterPostTypes();
 	}
 
 	/**
@@ -59,5 +62,6 @@ class Additional {
 		$this->image_sizes->init_hooks();
 		$this->resource_enqeueuer->init_hooks();
 		$this->gravity_forms->init_hooks();
+		$this->register_post_types->init_hooks();
 	}
 }
