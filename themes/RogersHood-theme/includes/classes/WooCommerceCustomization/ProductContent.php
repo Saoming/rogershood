@@ -11,6 +11,7 @@ class ProductContent {
 		add_filter( 'get_price_html', array( $this, 'add_points_after_product_price' ), 10 );
 		add_action( 'woocommerce_before_single_product', array( $this, 'add_starting_tag' ), 1 );
 		add_action( 'woocommerce_after_single_product', array( $this, 'add_ending_tag' ), 1 );
+		add_action( 'woocommerce_after_single_product', array( $this, 'render_the_additional_content' ) );
 	}
 
 	public function change_single_product_content() {
@@ -56,5 +57,30 @@ class ProductContent {
 
 		include TENUP_THEME_PATH . 'partials/woocommerce/product/add-to-cart-bar.php';
 		echo ob_get_clean();
+	}
+
+	/**
+	 * Renders the content from the additonal content CPT
+	 * @return void
+	 */
+	public function render_the_additional_content() {
+
+		if ( ! is_product() ) {
+			return;
+		}
+
+		global $product;
+		$product_id = $product->get_id();
+
+		$product_additional_content_id = get_field( 'product_additional_content_id', $product_id );
+
+		if ( ! $product_additional_content_id ) {
+			return;
+		}
+
+		echo '<div class="page-container">';
+		echo apply_filters( 'the_content', get_post_field( 'post_content', $product_additional_content_id[0] ) );
+		echo "</div>";
+
 	}
 }
