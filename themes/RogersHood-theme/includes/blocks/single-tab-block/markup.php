@@ -10,9 +10,14 @@
  * @var array    $context            Block context.
  */
 
+$title = isset($attributes['tabTitle'])  ? $attributes['tabTitle'] : 'Tab';
+
 ?>
-<div <?php echo get_block_wrapper_attributes(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>>
-	<?php
-	echo $content;
-	?>
+<div class="custom-tab">
+	<h4 class="tab-title">
+		<?php echo esc_attr($title); ?>
+	</h4>
+	<div class="tab-content">
+		<?php echo $content; ?>
+	</div>
 </div>

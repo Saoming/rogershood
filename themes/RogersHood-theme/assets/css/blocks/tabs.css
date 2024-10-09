@@ -1,0 +1,19 @@
+.rh-tabs__titles {
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	list-style: none;
+	overflow: auto;
+}
+
+.rh-tabs__title {
+	cursor: pointer;
+}
+
+.rh-tab__content {
+	display: none;
+}
+
+.rh-tab__content.active {
+	display: block;
+}
