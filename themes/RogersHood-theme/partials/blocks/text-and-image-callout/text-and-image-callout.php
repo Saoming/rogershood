@@ -12,7 +12,9 @@ if ( ! empty( $block['anchor'] ) ) {
 
 $fields = get_fields();
 
-$fields["background_color"] = ! $fields["background_color"] || 'none' === $fields["background_color"] ? '' : $fields["background_color"];
+if ($fields["background_color"]) {
+	$bg_color_class = 'bg-beige';
+}
 
 // Image position - default LEFT
 $image_position = $fields["image_position"] ? '' : 'text-and-image-callout--image-left';
@@ -25,8 +27,7 @@ if ( ! get_field( 'block_preview' ) ) {
 		<div class="container">
 			<div class="text-and-image-callout__row row row--no-gap">
 
-				<div class="col-md-6 text-and-image-callout__content"
-					 style="background: <?php echo esc_attr( $fields["background_color"] ); ?> ">
+				<div class="col-md-6 text-and-image-callout__content  <?php echo esc_attr( " $bg_color_class " ); ?>">
 					<div class="text-and-image-callout__content__inner">
 						<?php if ( $fields["pretitle"] ) { ?>
 							<div class="text-and-image-callout__pretitle pretitle ">
