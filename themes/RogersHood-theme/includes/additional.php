@@ -7,6 +7,7 @@
 
 namespace TenUpTheme;
 
+use TenUpTheme\Blocks\Blocks;
 use TenUpTheme\Blocks\RegisterBlocks;
 use TenUpTheme\Theme\AcfOptionsPage;
 use TenUpTheme\Theme\AddSvgSupport;
@@ -31,6 +32,10 @@ class Additional {
 	private $resource_enqeueuer;
 	protected $gravity_forms;
 	protected $register_post_types;
+	/**
+	 * @var Blocks
+	 */
+	private $blocks;
 
 
 	/**
@@ -46,6 +51,7 @@ class Additional {
 		$this->resource_enqeueuer        = new ResourceEnqueuer();
 		$this->gravity_forms             = new GravityForms();
 		$this->register_post_types       = new RegisterPostTypes();
+		$this->blocks                    = new Blocks();
 	}
 
 	/**
@@ -63,5 +69,6 @@ class Additional {
 		$this->resource_enqeueuer->init_hooks();
 		$this->gravity_forms->init_hooks();
 		$this->register_post_types->init_hooks();
+		$this->blocks->init_hooks();
 	}
 }
