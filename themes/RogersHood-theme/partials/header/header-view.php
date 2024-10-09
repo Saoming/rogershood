@@ -16,7 +16,7 @@
 		data-splide='{"type":"loop", "arrows": false, "perPage": 5,  "autoScroll": { "speed": 2, "pauseOnHover": false }, "pagination": false, "focus": "center", "drag": false, "breakpoints": {"640": {"perPage": 1}}}'
 	>
 		<div class="splide__track">
-			<ul class="splide__list" data-splide-interval="20000">
+			<ul class="splide__list" data-splide-interval="8000">
 			<?php
 			$i = 0;
 			while ( $i < $args['number_of_site_notifications'] ) :

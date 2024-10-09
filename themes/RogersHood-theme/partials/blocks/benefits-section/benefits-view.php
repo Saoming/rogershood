@@ -19,7 +19,7 @@
 			data-splide='{"type":"slide", "arrows": false, "autoplay": false, "pagination": false, "focus": "center", "drag": true, "autoScroll": { "autoStart": false }, "mediaQuery": "min", "breakpoints": {"640": {"destroy": true, "perPage": "1"}}}'
 		>
 			<div class="splide__track">
-				<ul class="splide__list" data-splide-interval="8000">
+				<ul class="benefit-card-list splide__list" data-splide-interval="8000">
 					<?php
 					foreach ( $args['cards_repeater_benefits'] as  $single_benefit ) :
 						?>
