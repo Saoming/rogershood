@@ -15,7 +15,7 @@ $fields = get_fields();
 if ( ! get_field( 'block_preview' ) ) {
 	?>
 	<section
-			class="rh-block text-and-gform bg-peach-light"
+			class="rh-block text-and-gform bg-light-beige"
 			id="<?php echo esc_attr( $id ); ?>"
 	>
 		<div class="container">
