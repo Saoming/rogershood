@@ -17,31 +17,10 @@
                 "id": ""
             },
             "message": "",
-            "default_value": 1,
+            "default_value": 0,
             "allow_in_bindings": 1,
             "ui_on_text": "Beige",
             "ui_off_text": "White",
-            "ui": 1
-        },
-        {
-            "key": "field_631875a47e7f1",
-            "label": "Image Position",
-            "name": "image_position",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 1,
-            "allow_in_bindings": 1,
-            "ui_on_text": "Right",
-            "ui_off_text": "Left",
             "ui": 1
         },
         {
@@ -105,26 +84,6 @@
             "media_upload": 1
         },
         {
-            "key": "field_6343fab05e6fa",
-            "label": "Button Style",
-            "name": "button_style",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 1,
-            "ui_on_text": "Primary",
-            "ui_off_text": "Secondary",
-            "ui": 1
-        },
-        {
             "key": "field_631875827e7ef",
             "label": "Call To Action",
             "name": "call_to_action",
@@ -164,6 +123,27 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_631875a47e7f1",
+            "label": "Image Position",
+            "name": "image_position",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Left",
+            "ui_off_text": "Right",
+            "ui": 1
         }
     ],
     "location": [
@@ -184,5 +164,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728470525
+    "modified": 1728473225
 }

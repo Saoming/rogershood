@@ -17,7 +17,7 @@ if ( $fields["background_color"] ) {
 }
 
 // Image position - default LEFT
-$image_position = $fields["image_position"] ? '' : 'text-and-image-callout--image-left';
+$image_position = $fields["image_position"] ? 'text-and-image-callout--image-left' : '';
 if ( ! get_field( 'block_preview' ) ) {
 	?>
 	<section
@@ -29,7 +29,7 @@ if ( ! get_field( 'block_preview' ) ) {
 			<div class="col-md-6 text-and-image-callout__content  <?php echo esc_attr( " $bg_color_class " ); ?>">
 				<div class="text-and-image-callout__content__inner">
 					<?php if ( $fields["pretitle"] ) { ?>
-						<div class="text-and-image-callout__pretitle pretitle ">
+						<div class="text-and-image-callout__pretitle pretitle uppercase">
 							<?php echo esc_attr( $fields["pretitle"] ); ?>
 						</div>
 						<?php
@@ -43,9 +43,7 @@ if ( ! get_field( 'block_preview' ) ) {
 					}
 					if ( $fields["description"] ) {
 						?>
-						<div class="text-and-image-callout__description-container">
-							<div class="text-and-image-callout__description"><?php echo wp_kses_post( $fields["description"] ); ?></div>
-						</div>
+						<div class="text-and-image-callout__description"><?php echo wp_kses_post( $fields["description"] ); ?></div>
 						<?php
 					}
 

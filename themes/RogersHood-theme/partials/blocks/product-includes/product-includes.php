@@ -22,14 +22,14 @@ $fields = get_fields();
 			<?php echo esc_attr( $fields["title"] ); ?>
 		</h2>
 	<?php } ?>
-<!--		Todo - Add buttons later-->
-<!--	<div class="product-includes__topics">-->
-<!--		--><?php //foreach ( $fields["products"] as $product ) { ?>
-<!--			<a class="product-includes__topic">-->
-<!--				--><?php //echo esc_attr( $product["title"] ); ?>
-<!--			</a>-->
-<!--		--><?php //} ?>
-<!--	</div>-->
+		Todo - Add buttons later
+	<div class="product-includes__topics">
+		<?php foreach ( $fields["products"] as $product ) { ?>
+			<a class="product-includes__topic">
+				<?php echo esc_attr( $product["title"] ); ?>
+			</a>
+		<?php } ?>
+	</div>
 	<div class="container--inner">
 		<?php foreach ( $fields["products"] as $product ) { ?>
 		<div class="product-includes__product">
