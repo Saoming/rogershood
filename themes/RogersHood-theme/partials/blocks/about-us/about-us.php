@@ -8,7 +8,7 @@ $fields = get_fields();
 if ( ! get_field( 'block_preview' ) ) {
 	?>
 	<section
-			class="rh-block about-us"
+			class="rh-block about-us bg-ivory"
 			id="<?php echo esc_attr( $id ); ?>"
 	>
 		<div class="container">

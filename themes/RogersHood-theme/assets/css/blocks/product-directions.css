@@ -1,7 +1,3 @@
-.product-directions {
-	background: #fcfbfb;
-}
-
 .product-directions::before {
 	content: url("../svg/pattern-leaves.svg");
 	position: absolute;

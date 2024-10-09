@@ -1,7 +1,3 @@
-.two-images-and-content {
-	/* background: lavender; */
-}
-
 .two-images-and-content__title {
 	margin-top: 0;
 }
@@ -21,17 +17,12 @@
 }
 
 @media (--bp-until-medium) {
-
 	.two-images-and-content__image {
-		max-height: 215px;
+		aspect-ratio: 326/215;
 		object-fit: cover;
 		object-position: top;
 		width: 100%;
 	}
-}
-
-.two-images-and-content__item {
-	/* margin-bottom: 34px; */
 }
 
 .two-images-and-content__item-description p {
@@ -39,7 +30,7 @@
 }
 
 @media (--bp-medium) {
-	.faq-block__question-icon {
+	.faq-block__question-icon.two-images-and-content__icon {
 		display: none;
 	}
 

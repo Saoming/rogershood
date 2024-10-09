@@ -1,11 +1,11 @@
 {
     "key": "group_67051d5b54acc",
-    "title": "CPT - Product Description",
+    "title": "CPT - Select Product Blocks Custom Post for the Product",
     "fields": [
         {
             "key": "field_67051d5b90909",
-            "label": "Product Additional Content Id",
-            "name": "product_additional_content_id",
+            "label": "Product Blocks (Additional Content)",
+            "name": "product_block_additional_content_id",
             "aria-label": "",
             "type": "relationship",
             "instructions": "",
@@ -17,7 +17,7 @@
                 "id": ""
             },
             "post_type": [
-                "rh_product_desc"
+                "rh_product_blocks"
             ],
             "post_status": "",
             "taxonomy": "",
@@ -52,5 +52,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728391019
+    "modified": 1728461868
 }
