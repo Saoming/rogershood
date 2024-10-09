@@ -5,15 +5,25 @@ class SplideCarousel {
 
 	splideSettings() {
 		const elms = document.getElementsByClassName('splide');
-		const { AutoScroll } = window.splide.Extensions;
-		const storeNotification = document.getElementsByClassName('store-notifications__container');
 
 		for (let i = 0; i < elms.length; i++) {
+			// const { AutoScroll } = window.splide.Extensions;
 			// eslint-disable-next-line no-undef
-			if (storeNotification) {
-				new Splide(elms[i]).mount({ AutoScroll });
+			const splide = new Splide(elms[i]).mount();
+			const carouselID = splide.root.id;
+			const btnPrev = document.querySelector('.testimonial-arrow-prev');
+			const btnNext = document.querySelector('.testimonial-arrow-next');
+
+			if (carouselID === 'testimonialsCarousel' || carouselID === 'testimonialPersonSlider') {
+				btnPrev.addEventListener('click', (e) => {
+					console.log(e.target);
+					splide.go('-1');
+				});
+				btnNext.addEventListener('click', (e) => {
+					console.log(e.target);
+					splide.go('+1');
+				});
 			}
-			new Splide(elms[i]).mount();
 		}
 	}
 

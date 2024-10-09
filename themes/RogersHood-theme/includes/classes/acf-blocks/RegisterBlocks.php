@@ -71,7 +71,8 @@ class RegisterBlocks {
 
 	// TODO: Remove the function and add the methods to the main one, this is to prevent merge conflicts
 	public function temp_sam_register_blocks() {
-		$this->register_grid_text_quiz_blocks();
+		$this->register_grid_text_quiz_block();
+		$this->register_testimonials_section_block();
 	}
 
 	protected function register_faq_block() {
@@ -544,9 +545,9 @@ class RegisterBlocks {
 
 
 	/**
-	 * Registers the E-books Image and Content
+	 * Registers the Grid Text Quiz Section
 	 */
-	protected function register_grid_text_quiz_blocks() {
+	protected function register_grid_text_quiz_block() {
 		acf_register_block_type(
 			array(
 				'name'            => 'grid-text-quiz-section',
@@ -561,6 +562,33 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/grid-text-quiz-section.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+
+
+	/**
+	 * Registers the Testimonials Section
+	 */
+	protected function register_testimonials_section_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'testimonials-section',
+				'title'           => __( 'Testimonial Section' ),
+				'description'     => __( 'Testimonial Section' ),
+				'render_template' => 'partials/blocks/testimonials-section/testimonials-section.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'enqueue_assets'  => ResourceEnqueuer::register_splide_assets(),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/testimonials-section.jpg',
 						),
 					),
 				),
@@ -592,6 +620,7 @@ class RegisterBlocks {
 			)
 		);
 	}
+
 
 	/**
 	 * Registers the Product Benefits
@@ -693,6 +722,7 @@ class RegisterBlocks {
 			)
 		);
 	}
+
 	/**
 	 * Registers the Support Cards
 	 */

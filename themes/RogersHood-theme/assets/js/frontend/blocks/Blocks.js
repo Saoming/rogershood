@@ -7,6 +7,7 @@ import ReviewSlider from './ReviewSlider';
 import YoutubeSlider from './YoutubeSlider';
 import ProductDirections from './ProductDirections';
 import ProductIncludes from './ProductIncludes';
+import Tabs from "./Tabs";
 
 const Blocks = () => {
 	Faq();
@@ -18,5 +19,6 @@ const Blocks = () => {
 	YoutubeSlider();
 	ProductDirections();
 	ProductIncludes();
+	Tabs();
 };
 export default Blocks;

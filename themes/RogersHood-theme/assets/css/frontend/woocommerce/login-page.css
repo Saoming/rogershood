@@ -1,0 +1,38 @@
+.rh-login-page__photo-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	line-height: 0;
+	min-height: 700px;
+}
+
+
+.woocommerce .rh-login-page form.login,
+.woocommerce .rh-login-page form.register {
+	border: 0;
+}
+
+.rh-login-page__form-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.rh-login-page__form-container > * {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 400px;
+}
+
+
+.rh-login-page .woocommerce-Input  {
+	border: 1px solid #eeeeee;
+	min-height: 42px;
+	border-radius: 12px;
+}
+
+.rh-login-page .form-row label  {
+	font-size: 18px;
+	line-height: 27px;
+}

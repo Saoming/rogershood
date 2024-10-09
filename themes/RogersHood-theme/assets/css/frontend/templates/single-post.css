@@ -82,3 +82,11 @@
 	padding: 0;
 }
 
+
+.meal-fab {
+	float: left;
+	position: relative;
+	margin-right: 15px;
+	top: 10px;
+	padding: 4px 12px 2px;
+}
