@@ -47,6 +47,7 @@ class RegisterBlocks {
 		$this->register_product_directions_block();
 		$this->register_text_and_gform_block();
 		$this->register_about_us_block();
+		$this->register_support_cards_block();
 		$this->temp_sam_register_blocks();
 	}
 
@@ -621,7 +622,6 @@ class RegisterBlocks {
 	}
 
 
-
 	/**
 	 * Registers the Product Benefits
 	 */
@@ -716,6 +716,31 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/about-us.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+
+	/**
+	 * Registers the Support Cards
+	 */
+	protected function register_support_cards_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'rh-support-cards',
+				'title'           => __( 'Support Cards' ),
+				'description'     => __( 'Top Help search Section' ),
+				'render_template' => 'partials/blocks/support-cards/support-cards.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/support-cards.jpg',
 						),
 					),
 				),

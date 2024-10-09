@@ -1,0 +1,37 @@
+.support-cards__title {
+	margin-bottom: 34px;
+}
+
+@media (--bp-medium) {
+	.support-cards__title {
+		margin-bottom: 80px;
+	}
+}
+
+.support-cards__card {
+	align-items: center;
+	display: flex;
+}
+
+@media (--bp-medium) {
+	.support-cards__card {
+		display: block;
+		text-align: center;
+	}
+}
+
+.support-cards__card__icon {
+	aspect-ratio: 53/53;
+	height: 100%;
+	margin-right: 15px;
+	width: 53px;
+}
+
+.support-cards___link {
+	border: 1px solid var(--c-light-blue);
+	border-radius: 16px;
+
+	cursor: pointer;
+	padding: 30px 15px;
+	text-decoration: none;
+}
