@@ -28,11 +28,12 @@
 	--c-green: #627479;
 	--c-ivory: #fcfbfb;
 	--c-light-beige: #faf8f4;
-	--c-light-blue: #`e0eaf7`;
+	--c-blue: #e0eaf7;
+	--c-light-blue: #b5c3cd;
 }
 
 .bg-blue {
-	background-color: var(--c-light-blue);
+	background-color: var(--c-blue);
 }
 
 .bg-beige {
