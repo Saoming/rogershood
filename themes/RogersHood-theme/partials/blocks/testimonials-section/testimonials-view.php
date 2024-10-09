@@ -23,7 +23,7 @@
 				class="testimonial-person-container splide"
 				role="group"
 				aria-label="Check our Testimonials Content Slider"
-				data-splide='{"type": "slide", "arrows": false, "autoplay": false, "fixedWidth": "206px", "perPage": 5, "perMove": 1, "pagination": false, "focus": "center", "drag": false, "autoScroll": { "autoStart": false }}'
+				data-splide='{"type": "slide", "start": 2, "trimSpace": false, "arrows": false, "autoplay": false, "fixedWidth": "206px", "perPage": 5, "perMove": 1, "pagination": false, "focus": "center", "drag": false, "autoScroll": { "autoStart": false }}'
 			>
 			<div class="splide__track">
 				<ul class="testimonial-list list-none splide__list">
@@ -43,7 +43,7 @@
 				class="testimonial-box-container splide"
 				role="group"
 				aria-label="Check our Testimonials Content Slider"
-				data-splide='{"type": "slide", "arrows": false, "autoplay": false, "perPage": 1, "pagination": false, "focus": "center", "drag": true, "autoScroll": { "autoStart": false }}'
+				data-splide='{"type": "slide", "start": 2, "arrows": false, "autoplay": false, "perPage": 1, "pagination": false, "focus": "center", "drag": true, "autoScroll": { "autoStart": false }}'
 			>
 				<div class="splide__track">
 					<ul class="list-none splide__list">

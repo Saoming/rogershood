@@ -4,10 +4,6 @@
 	position: relative;
 }
 
-.splide:not(.is-overflow) .splide__list {
-	justify-content: center;
-}
-
 .testimonial-list {
 	align-items: center;
 	justify-content: center;
@@ -75,7 +71,7 @@
 
 .testimonial-person-container {
 	margin: 0 auto 52px auto;
-	max-width: 700px;
+	max-width: 735px;
 }
 
 .testimonial-box-item {
