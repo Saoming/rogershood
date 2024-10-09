@@ -6,6 +6,10 @@
 	font-family: var(--wp--preset--font-family--scilla);
 }
 
+.ff-sofia {
+	font-family: var(--wp--preset--font-family--sofia);
+}
+
 .uppercase {
 	text-transform: uppercase;
 }

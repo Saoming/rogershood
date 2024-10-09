@@ -7,7 +7,7 @@ import ReviewSlider from './ReviewSlider';
 import YoutubeSlider from './YoutubeSlider';
 import ProductDirections from './ProductDirections';
 import ProductIncludes from './ProductIncludes';
-import Tabs from "./Tabs";
+import Tabs from './Tabs';
 
 const Blocks = () => {
 	Faq();
