@@ -75,14 +75,14 @@ class ProductContent {
 		global $product;
 		$product_id = $product->get_id();
 
-		$product_additional_content_id = get_field( 'product_additional_content_id', $product_id );
+		$cpt_product_block_id = get_field( 'product_block_additional_content_id', $product_id );
 
-		if ( ! $product_additional_content_id ) {
+		if ( ! $cpt_product_block_id ) {
 			return;
 		}
 
 		echo '<div class="page-container">';
-		echo apply_filters( 'the_content', get_post_field( 'post_content', $product_additional_content_id[0] ) );
+		echo apply_filters( 'the_content', get_post_field( 'post_content', $cpt_product_block_id[0] ) );
 		echo "</div>";
 
 	}
