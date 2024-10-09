@@ -9,6 +9,7 @@ namespace TenUpTheme;
 
 use TenUpTheme\Blocks\Blocks;
 use TenUpTheme\Blocks\RegisterBlocks;
+use TenUpTheme\Shortcodes\Shortcodes;
 use TenUpTheme\Theme\AcfOptionsPage;
 use TenUpTheme\Theme\AddSvgSupport;
 use TenUpTheme\Blocks\RegisterBlockCategory;
@@ -36,12 +37,17 @@ class Additional {
 	 * @var Blocks
 	 */
 	private $blocks;
+	/**
+	 * @var Shortcodes
+	 */
+	private $shortcodes;
 
 
 	/**
 	 * Creates all the Classes
 	 */
 	public function __construct() {
+		$this->shortcodes = new Shortcodes();
 		$this->woocommerce               = new WooCommerceCustomization();
 		$this->register_block_categories = new RegisterBlockCategory();
 		$this->register_blocks           = new RegisterBlocks();
@@ -60,6 +66,7 @@ class Additional {
 	 * @return void
 	 */
 	public function init_hooks() {
+		$this->shortcodes->init_hooks();
 		$this->woocommerce->init_hooks();
 		$this->register_block_categories->init_hooks();
 		$this->register_blocks->init_hooks();
