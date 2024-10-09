@@ -22,7 +22,8 @@
 .rh-login-page__form-container > * {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 400px;
+	width: 440px;
+	max-width: 100%;
 }
 
 
@@ -30,9 +31,28 @@
 	border: 1px solid #eeeeee;
 	min-height: 42px;
 	border-radius: 12px;
+	margin-bottom: 14px !important;
 }
 
 .rh-login-page .form-row label  {
 	font-size: 18px;
 	line-height: 27px;
+}
+
+.rh-login-page .woocommerce-form-login__submit {
+	box-sizing: border-box;
+	margin: 12px 0 22px !important;
+	width: 100%;
+}
+
+
+.woocommerce-form__remeberme-and-forgot-password {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+.rh-login-page__register-link {
+	text-align: center;
+	margin-top: 52px;
 }

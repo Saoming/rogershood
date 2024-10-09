@@ -5,8 +5,9 @@ namespace TenUpTheme\WooCommerceCustomization;
 class MyAccountLogin {
 
 	public function init_hooks() {
-		add_action( 'woocommerce_before_customer_login_form', array( $this, 'login_page_wrapper_start' ), 10, 1 );
-		add_action( 'woocommerce_after_customer_login_form', array( $this, 'login_page_wrapper_end' ), 10, 1 );
+		add_action( 'woocommerce_before_customer_login_form', array( $this, 'login_page_wrapper_start' ), 10 );
+		add_action( 'woocommerce_after_customer_login_form', array( $this, 'add_a_link_to_register_page' ), 8 );
+		add_action( 'woocommerce_after_customer_login_form', array( $this, 'login_page_wrapper_end' ), 20 );
 	}
 
 	public function login_page_wrapper_start() {
@@ -26,6 +27,11 @@ class MyAccountLogin {
 					</div>
 				</div>
 			</div>
+		<?php
+	}
+
+	public function add_a_link_to_register_page() {
+		?>
 		<?php
 	}
 
