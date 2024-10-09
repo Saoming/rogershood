@@ -716,9 +716,6 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/about-us.jpg',
-=======
-							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/testimonials-section.jpg',
->>>>>>> 0991c36f4f3cb80453b63bf9a389d722a86ee1c8
 						),
 					),
 				),
