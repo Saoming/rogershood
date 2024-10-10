@@ -25,8 +25,8 @@ class WooCommerceCustomization {
 		$this->my_account_login            = new MyAccountLogin();
 		$this->my_asccount_menu_items      = new MyAccountMenuItems();
 		$this->shop_content                = new ShopContent();
-		$this->my_account_menu_items      = new MyAccountMenuItems();
-		$this->my_account_lost_password = new MyAccountLostPassword();
+		$this->my_account_menu_items       = new MyAccountMenuItems();
+		$this->my_account_lost_password    = new MyAccountLostPassword();
 	}
 
 	public function init_hooks() {
