@@ -46,7 +46,8 @@
 }
 
 .product-directions__item {
-	background: var(--wp--preset--color--white);
+
+	/* background: var(--wp--preset--color--white); */
 	margin-bottom: 27px;
 	padding: 10px;
 }
