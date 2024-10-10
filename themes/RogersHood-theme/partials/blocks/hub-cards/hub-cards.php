@@ -59,7 +59,7 @@ if ( ! get_field( 'block_preview' ) ) {
 								</div>
 								<?php if ( $cards["cta"] ) { ?>
 									<div class="hub-card__cta">
-										<a class="button hub-card__button"
+										<a class="rh-button hub-card__button"
 										   href="<?php echo esc_url( $cards["cta"]["url"] ); ?>"
 										   target="<?php echo esc_attr( $cards["cta"]["target"] ); ?>"><?php echo esc_html( $cards["cta"]["title"] ); ?></a>
 									</div>

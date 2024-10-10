@@ -53,7 +53,7 @@ if ( ! get_field( 'block_preview' ) ) {
 						<?php }
 						if ( $product_cta ) { ?>
 							<a href="<?php echo esc_url( $product_cta_url ); ?>"
-							   class="rh-products-grid__cta button button-primary" <?php echo esc_attr( $product_cta_title ); ?>>
+							   class="rh-products-grid__cta rh-button rh-button-primary" <?php echo esc_attr( $product_cta_title ); ?>>
 								<?php echo esc_html( $product_cta_title ); ?>
 							</a>
 						<?php } ?>

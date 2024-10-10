@@ -51,7 +51,7 @@ if ( ! get_field( 'block_preview' ) ) {
 								<?php } ?>
 								<?php if ( $community["cta"] ) { ?>
 									<div class="community-card__cta">
-										<a class="button community-card__button"
+										<a class="rh-button community-card__button"
 										   href="<?php echo esc_url( $community["cta"]["url"] ); ?>"
 										   target="<?php echo esc_attr( $community["cta"]["target"] ); ?>"><?php echo esc_html( $community["cta"]["title"] ); ?></a>
 									</div>
