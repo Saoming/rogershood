@@ -12,6 +12,7 @@ class MyAccountAccount {
 
 	public function woocommerce_edit_account_form_start() {
 		?>
+		<h1>Account Details</h1>
 		<div class="row login-page--row">
 			<div class="col-sm-12 col-md-6 rh_account_page_column rh_account_page_column--right">
 				<legend>Account Information</legend>

@@ -9,7 +9,6 @@
 	width: 100%;
 }
 
-
 .woocommerce-MyAccount-navigation-link a {
 	align-items: center;
 	background-color: var(--c-white) !important;
@@ -49,8 +48,28 @@
 	line-height: 18px;
 }
 
-.woocommerce-EditAccountForm button,
 .woocommerce-account .woocommerce-Address-title a {
+	align-items: center;
+	background-color: var(--c-green) !important;
+	border: 1px solid var(--wp--preset--color--green) !important;
+	border-radius: 42px !important;
+	color: var(--c-white) !important;
+	display: inline-flex;
+	float: none !important;
+	font-weight: 500 !important;
+	justify-content: center;
+	margin-bottom: 20px;
+	min-height: 50px;
+	min-width: 160px;
+	padding: 8px 16px !important;
+	text-align: center;
+	text-decoration: none !important;
+	transition: background 300ms ease-in !important;
+}
+
+
+.woocommerce button,
+.woocommerce-EditAccountForm button {
 	background-color: var(--c-green) !important;
 	border: 1px solid var(--wp--preset--color--green) !important;
 	border-radius: 42px !important;
@@ -113,4 +132,12 @@
 .woocommerce .rh_account_page_column .form-row-first,
 .woocommerce .rh_account_page_column .form-row-last {
 	width: 100%;
+}
+
+.woocommerce-MyAccount-navigation {
+	overflow: auto;
+}
+
+.woocommerce-MyAccount-navigation-link {
+	flex-shrink: 0;
 }
