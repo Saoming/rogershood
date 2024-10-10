@@ -10,10 +10,12 @@ cache
 plugins
 themes/RogersHood-theme/node_modules/
 themes/RogersHood-theme/vendor
+log
 
 # Project Files
 dist
 backstop_data
+
 
 # Editors
 *.esproj

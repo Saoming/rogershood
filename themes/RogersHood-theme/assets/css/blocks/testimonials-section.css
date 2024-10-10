@@ -1,12 +1,11 @@
 .testimonials-container {
 	background-color: var(--wp--preset--color--light-beige);
-	padding: 100px;
+	padding: 100px 16px;
 	position: relative;
 }
 
 .testimonial-list {
 	align-items: center;
-	justify-content: center;
 }
 
 .sub-heading-testimonials {
@@ -84,6 +83,10 @@
 }
 
 @media only screen and (--bp-large-2) {
+	.testimonials-container {
+		padding: 100px;
+	}
+
 	.testimonials-arrow-controls {
 		display: flex;
 		justify-content: space-between;
@@ -97,5 +100,9 @@
 
 	.testimonials-arrow-controls button {
 		cursor: pointer;
+	}
+
+	.testimonial-list {
+		justify-content: center;
 	}
 }
