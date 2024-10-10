@@ -98,7 +98,7 @@ function get_latest_product_data( $request ) {
  */
 function fetch_and_store_product_data( $product_id, $site_id = 2 ) {
 
-	$url      = \get_blog_option( $site_id, 'siteurl' ) . '/wp-json/custom/v1/product-data/' . $product_id . '?secret=' . SECRET;
+	$url      = \get_blog_option( $site_id, 'siteurl' ) . '/wp-json/crosssiteproductdata/v1/product-data/' . $product_id . '?secret=' . SECRET;
 	$response = \wp_remote_get( $url );
 
 	if ( ! $response || \is_wp_error( $response ) )
