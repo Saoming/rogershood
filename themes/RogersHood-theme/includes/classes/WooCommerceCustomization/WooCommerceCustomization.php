@@ -12,7 +12,6 @@ class WooCommerceCustomization {
 	private $quantity_field;
 	protected $my_account_register;
 	private $my_account_login;
-	private $my_account_menu_items;
 	private $shop_content;
 	private $my_account_lost_password;
 	private $my_account_lost_password_confirmation;
