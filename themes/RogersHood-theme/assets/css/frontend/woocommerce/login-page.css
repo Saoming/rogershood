@@ -1,11 +1,10 @@
 .rh-login-page__photo-container {
+	align-items: center;
 	display: flex;
 	justify-content: center;
-	align-items: center;
 	line-height: 0;
 	min-height: 700px;
 }
-
 
 .woocommerce .rh-login-page form.login,
 .woocommerce .rh-login-page form.register {
@@ -13,28 +12,28 @@
 }
 
 .rh-login-page__form-container {
+	align-items: center;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
 }
 
 .rh-login-page__form-container > * {
 	margin-left: auto;
 	margin-right: auto;
-	width: 440px;
 	max-width: 100%;
+	width: 440px;
 }
 
-
-.rh-login-page .woocommerce-Input  {
-	border: 1px solid #eeeeee;
-	min-height: 42px;
+.rh-login-page .woocommerce-Input {
+	border: 1px solid #eee;
 	border-radius: 12px;
 	margin-bottom: 14px !important;
+	min-height: 42px;
+	padding: 5px 10px;
 }
 
-.rh-login-page .form-row label  {
+.rh-login-page .form-row label {
 	font-size: 18px;
 	line-height: 27px;
 }
@@ -45,7 +44,6 @@
 	width: 100%;
 }
 
-
 .woocommerce-form__remeberme-and-forgot-password {
 	align-items: center;
 	display: flex;
@@ -53,6 +51,34 @@
 }
 
 .rh-login-page__register-link {
-	text-align: center;
 	margin-top: 52px;
+	text-align: center;
+}
+
+.woocommerce .rh-login-page .woocommerce-form-row {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.woocommerce-LostPassword a {
+	color: var(--c-text);
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.rh-login-page__register-link a {
+	color: var(--c-text);
+	font-weight: 500;
+	text-decoration: none;
+}
+
+.login-page-wrapper .woocommerce-form-row {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.login-page-wrapper .woocommerce-form-row label {
+	margin-bottom: 6px;
 }

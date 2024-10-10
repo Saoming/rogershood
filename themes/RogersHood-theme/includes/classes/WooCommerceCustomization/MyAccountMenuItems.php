@@ -39,8 +39,6 @@ class MyAccountMenuItems {
 			$items['customer-logout'] = $logout;
 		}
 
-		custom_theme_error_log($items);
-
 		return $items;
 		?>
 <!--		<div class="login-page-wrapper">-->
