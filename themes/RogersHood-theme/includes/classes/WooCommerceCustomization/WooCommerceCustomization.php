@@ -13,14 +13,16 @@ class WooCommerceCustomization {
 	protected $my_account_register;
 	private $my_account_login;
 	private $my_asccount_forgot_password;
+	private $my_asccount_menu_items;
 
 	public function __construct() {
-		$this->cart                  = new Cart();
-		$this->product_customization = new ProductContent();
-		$this->quantity_field        = new QuantityField();
-		$this->my_account_register   = new MyAccountRegister();
-		$this->my_account_login      = new MyAccountLogin();
-		$this->my_asccount_forgot_password  = new MyAccountForgotPassword();
+		$this->cart                        = new Cart();
+		$this->product_customization       = new ProductContent();
+		$this->quantity_field              = new QuantityField();
+		$this->my_account_register         = new MyAccountRegister();
+		$this->my_account_login            = new MyAccountLogin();
+		$this->my_asccount_forgot_password = new MyAccountForgotPassword();
+		$this->my_asccount_menu_items      = new MyAccountMenuItems();
 	}
 
 	public function init_hooks() {
@@ -29,6 +31,6 @@ class WooCommerceCustomization {
 		$this->quantity_field->init_hooks();
 		$this->my_account_register->init_hooks();
 		$this->my_account_login->init_hooks();
-		$this->my_asccount_forgot_password->init_hooks();
+		$this->my_asccount_menu_items->init_hooks();
 	}
 }
