@@ -1,12 +1,14 @@
 .rh-products-grid__product {
-	padding: 50px 30px;
-	background-color: rgba(0, 0, 0, 0.6);
 	background-blend-mode: overlay;
+	background-color: rgba(0, 0, 0, 0.6);
+	background-size: cover;
+	padding: 50px 30px;
 	transition: background 300ms;
 }
 
 .rh-products-grid__product:hover {
 	background-color: rgba(0, 0, 0, 0);
+	color: var(--c-text);
 }
 
 .rh-products-grid__name {
@@ -22,22 +24,21 @@
 }
 
 .rh-products-grid__title {
-	margin-top: 0;
 	margin-bottom: 20px;
+	margin-top: 0;
 }
 
 @media all and (width < 768px) {
-
 	.rh-products-grid__row {
-		margin-top: 34px;
 		grid-gap: 26px;
+		margin-top: 34px;
 	}
 
 	.rh-products-grid__product {
 		align-items: center;
-		min-height: 266px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		min-height: 266px;
 	}
 }

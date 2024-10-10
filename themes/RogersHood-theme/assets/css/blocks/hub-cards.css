@@ -74,6 +74,7 @@
 
 .hub-card:hover .hub-card__background_image {
 	opacity: 1;
+	filter: brightness(0.3);
 	transition: opacity ease 0.3s;
 }
 

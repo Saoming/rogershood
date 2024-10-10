@@ -42,7 +42,7 @@ if ( ! get_field( 'block_preview' ) ) {
 					<div class="rh-products-grid__product col-md-4 has-border-radius fc-white text-center "
 						 style="background-image: url('<?php echo esc_url( $background_image_url ); ?>')">
 						<?php if ( $product_name ) { ?>
-							<div class="rh-products-grid__name text-body-22">
+							<div class="rh-products-grid__name text-body-22 fw-500">
 								<?php echo esc_html( $product_name ); ?>
 							</div>
 						<?php }
