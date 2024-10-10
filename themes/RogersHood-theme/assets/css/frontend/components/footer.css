@@ -1,5 +1,6 @@
 .footer__container {
 	background-color: var(--wp--preset--color--green);
+	clear: both;
 	display: flex;
 	flex-direction: row;
 	gap: 56px;

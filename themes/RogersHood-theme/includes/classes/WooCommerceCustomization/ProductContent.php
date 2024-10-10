@@ -12,6 +12,13 @@ class ProductContent {
 		add_action( 'woocommerce_before_single_product', array( $this, 'add_starting_tag' ), 1 );
 		add_action( 'woocommerce_after_single_product', array( $this, 'add_ending_tag' ), 1 );
 		add_action( 'woocommerce_after_single_product', array( $this, 'render_the_additional_content' ) );
+
+		remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10 );
+		remove_action( 'woocommerce_product_removeitional_information', 'wc_display_product_attributes', 10 );
+		remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
+		remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20 );
+
+
 	}
 
 	public function change_single_product_content() {
