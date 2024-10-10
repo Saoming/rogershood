@@ -12,6 +12,8 @@ class WooCommerceCustomization {
 	private $quantity_field;
 	protected $my_account_register;
 	private $my_account_login;
+	private $my_account_menu_items;
+	private $shop_content;
 	private $my_account_lost_password;
 	private $my_account_lost_password_confirmation;
 	private $my_account_menu_items;
@@ -23,6 +25,7 @@ class WooCommerceCustomization {
 		$this->my_account_register                   = new MyAccountRegister();
 		$this->my_account_login                      = new MyAccountLogin();
 		$this->my_account_menu_items                 = new MyAccountMenuItems();
+		$this->shop_content                          = new ShopContent();
 		$this->my_account_lost_password              = new MyAccountLostPassword();
 		$this->my_account_lost_password_confirmation = new MyAccountLostPasswordConfirmation();
 	}
@@ -34,6 +37,7 @@ class WooCommerceCustomization {
 		$this->my_account_register->init_hooks();
 		$this->my_account_login->init_hooks();
 		$this->my_account_menu_items->init_hooks();
+		$this->shop_content->init_hooks();
 		$this->my_account_lost_password->init_hooks();
 		$this->my_account_lost_password_confirmation->init_hooks();
 	}

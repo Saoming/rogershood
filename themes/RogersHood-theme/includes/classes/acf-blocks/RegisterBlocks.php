@@ -56,7 +56,6 @@ class RegisterBlocks {
 	public function temp_tome_register_blocks() {
 		$this->register_faq_block();
 		$this->register_ingredient_grid_block();
-
 		$this->register_founders_block();
 		$this->register_single_product_slider_block();
 		$this->register_tiktok_feed_block();
@@ -67,6 +66,7 @@ class RegisterBlocks {
 		$this->register_category_links_block();
 		$this->register_review_slider_block();
 		$this->register_youtube_slider_block();
+		$this->register_suggested_products_block();
 	}
 
 	// TODO: Remove the function and add the methods to the main one, this is to prevent merge conflicts
@@ -333,6 +333,28 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/youtube-slider.jpg',
+						),
+					),
+				),
+			)
+		);
+
+	}
+
+	protected function register_suggested_products_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'rh-suggested-products',
+				'title'           => __( 'Suggested Products' ),
+				'render_template' => 'partials/blocks/suggested-products/suggested-products.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/suggested-products.jpg',
 						),
 					),
 				),
