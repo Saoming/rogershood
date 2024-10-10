@@ -36,7 +36,7 @@ $nr_included_products = count( $fields["products"] );
 			<div class="product-includes__products">
 				<?php foreach ( $fields["products"] as $index => $product ) { ?>
 					<div class="product-includes__product" data-product-index="<?php echo $index; ?>"
-						 style="display: none;">
+						<?php if ( $index > 0 ) : ?> style="display: none;"<?php endif; ?>>
 						<div class="product-includes__product__row row">
 							<div class="col-md-5 product-includes__product__image-container">
 								<?php
@@ -67,7 +67,7 @@ $nr_included_products = count( $fields["products"] );
 										if ( $product["section_description_1"] ) {
 											?>
 											<div class="product-includes__product__section-description faq-block__question-answer">
-												<div class="faq-block__question-answer--inner">
+												<div class="faq-block__question-answer--inner product-includes__product__section__question-answer--inner">
 													<?php echo wp_kses_post( $product["section_description_1"] ); ?>
 												</div>
 											</div>

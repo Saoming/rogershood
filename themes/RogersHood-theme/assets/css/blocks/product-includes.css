@@ -77,7 +77,9 @@
 		font-size: 30px;
 	}
 }
-
+.product-includes__product__section {
+	/* padding: 14px; */
+}
 @media (--bp-medium) {
 	.product-includes__product__section-title {
 		margin-bottom: 12px;
@@ -101,6 +103,11 @@
 	color: var(--c-white);
 }
 
+
+.faq-block__question.product-includes__product__section.faq-block__question--active .faq-block__question-answer {
+	padding-bottom: 20px;
+}
+
 @media (--bp-medium) {
 	.faq-block__question-icon.product-includes__product__section__icon {
 		display: none;
@@ -117,4 +124,5 @@
 	.faq-block__question.product-includes__product__section .faq-block__question-answer {
 		grid-template-rows: auto;
 	}
+
 }
