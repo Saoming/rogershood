@@ -29,7 +29,8 @@ class ResourceEnqueuer {
 	 */
 	public function enqueue_theme_resources() {
 		$this->optimize_wp_rendering();
-		$this->dequeue_unneeded_styles();
+		$this->enqueue_sharer_script();
+		$this->enqueue_template_resources();
 	}
 
 	/**
@@ -43,34 +44,50 @@ class ResourceEnqueuer {
 	}
 
 	/**
-	 * Dequeues the unneeded styles
+	 * Enqueues the Sharer Script
+	 *
+	 * Used for Social Sharing
 	 */
-	protected function dequeue_unneeded_styles() {
-		// if ( ! is_admin() ) {
-		// wp_dequeue_style( 'dashicons' );
-		// }
-	}
-
-	/**
-	 * Moves jQuery to the footer
-	 */
-	public function move_jquery_to_the_footer() {
-		wp_scripts()->add_data( 'jquery', 'group', 1 );
-		wp_scripts()->add_data( 'jquery-core', 'group', 1 );
-		wp_scripts()->add_data( 'jquery-migrate', 'group', 1 );
+	public function enqueue_sharer_script() {
+		if ( ! is_singular('post') ) {
+			return;
+		}
+		wp_enqueue_script(
+			'sharer-script',
+			TENUP_THEME_TEMPLATE_URL . '/3rd-party/sharer/sharer.min.js',
+			array(),
+			filemtime( TENUP_THEME_PATH . '/3rd-party/sharer/sharer.min.js' ),
+			true
+		);
 	}
 
 	public static function enqueue_lightbox_assets() {
 		wp_enqueue_style(
 			'basic-lightbox-css',
-			TENUP_THEME_TEMPLATE_URL . '/3rd-party/basicLightBox/css/basiclightbox.min.css',
+			TENUP_THEME_TEMPLATE_URL . '/3rd-party/basiclightbox/css/basiclightbox.min.css',
 		);
 
-		wp_enqueue_style(
+		wp_enqueue_script(
 			'basic-lightbox-js',
-			TENUP_THEME_TEMPLATE_URL . '/3rd-party/basicLightBox/js/basiclightbox.min.js',
+			TENUP_THEME_TEMPLATE_URL . '/3rd-party/basiclightbox/js/basiclightbox.js',
 		);
 	}
+
+	public static function enqueue_slick_assets() {
+		wp_enqueue_style(
+			'slick-css',
+			TENUP_THEME_TEMPLATE_URL . '/3rd-party/slick/css/slick-theme.css',
+		);
+
+		wp_enqueue_script(
+			'slick-js',
+			TENUP_THEME_TEMPLATE_URL . '/3rd-party/slick/js/slick.min.js',
+			'jquery',
+			false,
+			true
+		);
+	}
+
 
 	/**
 	 * Enqueues the Transaction Filter script
@@ -151,6 +168,20 @@ class ResourceEnqueuer {
 	public function dequeue_dashicons() {
 		if ( ! is_user_logged_in() ) {
 			wp_deregister_style( 'dashicons' );
+		}
+	}
+
+	/**
+	 * Enqueue the block template
+	 */
+	protected function enqueue_template_resources(	) {
+		if ( is_404() ) {
+			wp_enqueue_style(
+				'404',
+				TENUP_THEME_DIST_URL . 'css/404-style.css',
+				array(),
+				filemtime( TENUP_THEME_DIST_PATH . 'css/404-style.css' )
+			);
 		}
 	}
 }

@@ -1,0 +1,44 @@
+.rh-products-grid__product {
+	background-blend-mode: overlay;
+	background-color: rgba(0, 0, 0, 0.6);
+	background-size: cover;
+	padding: 50px 30px;
+	transition: background 300ms;
+}
+
+.rh-products-grid__product:hover {
+	background-color: rgba(0, 0, 0, 0);
+	color: var(--c-text);
+}
+
+.rh-products-grid__name {
+	margin-bottom: 12px;
+}
+
+.rh-products-grid__cta {
+	margin-top: 24px;
+}
+
+.rh-products-grid__row {
+	margin-top: 60px;
+}
+
+.rh-products-grid__title {
+	margin-bottom: 20px;
+	margin-top: 0;
+}
+
+@media all and (width < 768px) {
+	.rh-products-grid__row {
+		grid-gap: 26px;
+		margin-top: 34px;
+	}
+
+	.rh-products-grid__product {
+		align-items: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		min-height: 266px;
+	}
+}

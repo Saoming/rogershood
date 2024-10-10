@@ -1,0 +1,16 @@
+.plain-content__inner {
+	padding: 100px 0;
+}
+
+.plain-content__title  {
+	margin: 0 0 100px;
+}
+
+.plain-content__content {
+	padding:14px 0;
+}
+
+.plain-content__content p {
+	margin: 0;
+	padding: 0 8px;
+}

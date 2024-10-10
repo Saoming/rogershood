@@ -1,0 +1,14 @@
+.suggested-products .product {
+	width: 100% !important;
+}
+
+.suggested-products__title-container {
+	display: flex;
+	align-items: center;
+}
+
+@media all and (width > 992px ) {
+	.suggested-products__title {
+		max-width: 350px;
+	}
+}

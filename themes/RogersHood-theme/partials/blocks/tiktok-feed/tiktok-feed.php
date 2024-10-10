@@ -1,0 +1,58 @@
+<?php
+$title             = get_field( 'title' );
+$description       = get_field( 'description' );
+$facebook_link     = get_field( 'facebook_link' );
+$instagram_link    = get_field( 'instagram_link' );
+$tiktok_link       = get_field( 'tiktok_link' );
+$feed_shortcode_id = get_field( 'feed_shortcode_id' );
+if ( ! get_field( 'block_preview' ) ) {
+
+	?>
+
+	<div class="rh-block tiktok-feed">
+		<div class="container container--relative">
+			<?php if ( $title ) { ?>
+				<h2 class="tiktok-feed__title text-center">
+					<?php echo esc_html( $title ); ?>
+				</h2>
+			<?php }
+			if ( $description ) { ?>
+				<div class="tiktok-feed__description text-center">
+					<?php echo wp_kses_post( $description ); ?>
+				</div>
+				<?php
+			}
+			?>
+			<div class="tiktok-feed__socials-container">
+				<?php if ( $facebook_link ) { ?>
+					<a href="<?php echo esc_url( $facebook_link ); ?>" class="tiktok-feed__social-link" target="_blank">
+						<img src="<?php echo TENUP_THEME_DIST_URL . '/svg/social-icons/facebook.svg'; ?>"
+							 alt="Facebook">
+					</a>
+				<?php }
+				if ( $instagram_link ) { ?>
+					<a href="<?php echo esc_url( $instagram_link ); ?>" class="tiktok-feed__social-link"
+					   target="_blank">
+						<img src="<?php echo TENUP_THEME_DIST_URL . '/svg/social-icons/instagram.svg'; ?>"
+							 alt="Instagram">
+					</a>
+				<?php }
+				if ( $tiktok_link ) { ?>
+					<a href="<?php echo esc_url( $tiktok_link ); ?>" class="tiktok-feed__social-link" target="_blank">
+						<img src="<?php echo TENUP_THEME_DIST_URL . '/svg/social-icons/tiktok.svg'; ?>" alt="Tiktok">
+					</a>
+				<?php } ?>
+			</div>
+			<?php
+			if ( $feed_shortcode_id ) { ?>
+				<div class="tiktok-feed__feed">
+					<?php echo do_shortcode( "[sbtt-tiktok feed=1]" ); ?>
+				</div>
+			<?php } ?>
+		</div>
+	</div>
+<?php } else { ?>
+	<div data="gutenberg-preview-img">
+		<img style="max-width:100%; height:auto;" src="<?php the_field( 'block_preview' ) ?>">
+	</div>
+<?php } ?>

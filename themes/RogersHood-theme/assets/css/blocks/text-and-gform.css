@@ -1,0 +1,22 @@
+@media (--bp-medium) {
+	.text-and-gform__title,
+	.text-and-gform__description {
+		text-align: left;
+	}
+
+	.text-and-gform__gform {
+		background: var(--wp--preset--color--white);
+		border-radius: 12px;
+
+	}
+
+	.text-and-gform__gform .gform_wrapper {
+		padding: 60px;
+	}
+}
+
+@media (--bp-until-medium) {
+	.text-and-gform__gform .gform_footer {
+		justify-content: center;
+	}
+}

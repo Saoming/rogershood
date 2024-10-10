@@ -1,0 +1,48 @@
+.two-images-and-content__title {
+	margin-top: 0;
+}
+
+.two-images-and-content__title.title-desktop {
+	display: none;
+}
+
+@media (--bp-medium) {
+	.two-images-and-content__title.title-desktop {
+		display: block;
+	}
+
+	.two-images-and-content__title.title-mobile {
+		display: none;
+	}
+}
+
+@media (--bp-until-medium) {
+	.two-images-and-content__image {
+		aspect-ratio: 326/215;
+		object-fit: cover;
+		object-position: top;
+		width: 100%;
+	}
+}
+
+.two-images-and-content__item-description p {
+	margin-top: 8px;
+}
+
+@media (--bp-medium) {
+	.faq-block__question-icon.two-images-and-content__icon {
+		display: none;
+	}
+
+	.faq-block__question.two-images-and-content__item {
+		border-top: none;
+	}
+
+	.faq-block__question.two-images-and-content__item:last-of-type {
+		border-bottom: none;
+	}
+
+	.faq-block__question.two-images-and-content__item .faq-block__question-answer {
+		grid-template-rows: auto;
+	}
+}

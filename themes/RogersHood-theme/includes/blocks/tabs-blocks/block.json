@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "title": "Tabs Block",
+  "description": "Custom Tabs block.",
+  "textdomain": "rh-theme",
+  "name": "rh-block/tabs-block",
+  "icon": "feedback",
+  "category": "rogershood",
+  "supports": {
+    "html": false
+  },
+  "editorScript": "file:./index.js"
+}

@@ -1,0 +1,81 @@
+.three-steps::before {
+	content: url("../svg/pattern-shell.svg");
+	position: absolute;
+	right: 0;
+	top: 0;
+	transform: scale(0.75);
+	transform-origin: top right;
+}
+
+.three-steps::after {
+	bottom: 0;
+	content: url("../svg/pattern-plant.svg");
+	left: 0;
+	position: absolute;
+	transform: scale(0.75);
+	transform-origin: bottom left;
+}
+
+@media (--bp-medium) {
+	.three-steps::before {
+		transform: scale(1);
+	}
+
+	.three-steps::after {
+		transform: scale(1);
+	}
+}
+
+.three-steps__container {
+	background: var(--wp--preset--color--white);
+	padding: 30px;
+	position: relative;
+	z-index: 2;
+}
+
+@media (--bp-medium) {
+	.three-steps__container {
+		padding: 30px;
+	}
+}
+
+@media (-bp-medium) {
+	.three-steps__container {
+		padding: 30px;
+	}
+}
+
+.three-steps__steps {
+	row-gap: 0;
+}
+
+@media (--bp-medium) {
+	.three-steps__steps {
+		padding: 0 64px;
+	}
+}
+
+.three-steps__step {
+	padding: 30px 0;
+	text-align: center;
+}
+
+@media (--bp-medium) {
+	.three-steps__step {
+		padding: 30px;
+		text-align: center;
+	}
+}
+
+.three-steps__step__number {
+	border-bottom: 1px solid;
+	font-family: var(--wp--preset--font-family--scilla);
+	font-size: 52px;
+	font-style: italic;
+	line-height: 62px;
+	padding-bottom: 12px;
+}
+
+.three-steps__step__title {
+	text-transform: uppercase;
+}

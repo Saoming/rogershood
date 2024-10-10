@@ -1,0 +1,96 @@
+@media (--bp-medium) {
+	.about-us__content {
+		text-align: left;
+	}
+
+	.about-us__content__inner {
+		margin-bottom: 0;
+	}
+}
+
+.about-us__title {
+	margin: 0 auto 36px;
+	max-width: 250px;
+}
+
+@media (--bp-medium) {
+	.about-us__title {
+		margin: 0;
+		max-width: initial;
+	}
+}
+
+.about-us__description {
+	margin-bottom: 36px;
+}
+
+.about-us__right {
+	justify-self: center;
+}
+
+.about-us__image-and-caption {
+	position: relative;
+}
+
+.about-us__caption {
+	bottom: 97px;
+	color: var(--wp--preset--color--green);
+	left: 50px;
+	position: absolute;
+	transform: rotate(6deg);
+	z-index: 2;
+}
+
+@media (--bp-medium) {
+	.about-us__caption {
+		bottom: 25%;
+		left: 28%;
+	}
+}
+
+.about-us__image-container {
+	aspect-ratio: 280/399;
+	max-width: 280px;
+	object-fit: contain;
+	object-position: center;
+	position: relative;
+	width: 100%;
+	z-index: 2;
+}
+
+@media (--bp-medium) {
+	.about-us__image-container {
+		aspect-ratio: 280/399;
+		max-width: 440px;
+		object-fit: contain;
+		object-position: center;
+		position: relative;
+		width: 100%;
+		z-index: 2;
+	}
+}
+
+.about-us__image-container::before {
+	content: url("../svg/pattern-leaves--about-us.svg");
+	left: -22px;
+	position: absolute;
+	top: -22px;
+	transform: scale(0.75);
+	z-index: -1;
+}
+
+.about-us__image-container::after {
+	content: url("../svg/pattern-plant--about-us.svg");
+	position: absolute;
+	right: -45px;
+	top: 70px;
+	transform: scale(0.75);
+	z-index: -1;
+}
+
+@media (--bp-medium) {
+	.about-us__image-container::before,
+	.about-us__image-container::after {
+		transform: scale(1);
+	}
+}

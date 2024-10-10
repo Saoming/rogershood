@@ -1,13 +1,16 @@
-/* TODO Color not included in theme.json */
-
-.product-includes {
-	background: #fcfbfb;
-}
-
 .product-includes__topics {
 	align-items: center;
 	display: flex;
-	justify-content: center;
+	grid-gap: 12px;
+	margin-bottom: 35px;
+	overflow: auto;
+	padding-bottom: 15px;
+}
+
+@media (--bp-medium) {
+	.product-includes__topics {
+		justify-content: center;
+	}
 }
 
 .product-includes__product {
@@ -20,8 +23,9 @@
 }
 
 .product-includes__product__image {
+	aspect-ratio: 358 / 304;
 	border-radius: 12px 12px 0 0;
-	height: 100%;
+	height: 100% !important;
 	object-fit: cover;
 	width: 100%;
 }
@@ -47,7 +51,7 @@
 }
 
 @media (--bp-medium) {
-	.product-includes__product____section-title .remove-on-mobile {
+	.product-includes__product__section-title .remove-on-mobile {
 		display: inline-block;
 	}
 }
@@ -73,11 +77,52 @@
 		font-size: 30px;
 	}
 }
+.product-includes__product__section {
+	/* padding: 14px; */
+}
+@media (--bp-medium) {
+	.product-includes__product__section-title {
+		margin-bottom: 12px;
+	}
 
-.product-includes__product__section-title {
-	margin-bottom: 12px;
+	.product-includes__product__section {
+		margin-bottom: 24px;
+	}
 }
 
-.product-includes__product__section {
-	margin-bottom: 24px;
+.product-includes__topic {
+	background: var(--c-white);
+	border-radius: 48px;
+	cursor: pointer;
+	flex-shrink: 0;
+	padding: 10px 20px;
+}
+
+.product-includes__topic.is-active {
+	background: var(--c-green);
+	color: var(--c-white);
+}
+
+
+.faq-block__question.product-includes__product__section.faq-block__question--active .faq-block__question-answer {
+	padding-bottom: 20px;
+}
+
+@media (--bp-medium) {
+	.faq-block__question-icon.product-includes__product__section__icon {
+		display: none;
+	}
+
+	.faq-block__question.product-includes__product__section {
+		border-top: none;
+	}
+
+	.faq-block__question.product-includes__product__section:last-of-type {
+		border-bottom: none;
+	}
+
+	.faq-block__question.product-includes__product__section .faq-block__question-answer {
+		grid-template-rows: auto;
+	}
+
 }

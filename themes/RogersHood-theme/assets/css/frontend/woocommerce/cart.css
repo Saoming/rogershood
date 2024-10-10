@@ -37,6 +37,12 @@ body.woocommerce-cart .cart-collaterals .cart_totals {
 	width: 100%;
 }
 
+
+body.woocommerce-cart .cart-collaterals .cross-sells {
+	padding-top: 36px;
+	border-top: 1px solid #ebebeb;
+}
+
 .cart-collaterals__inner {
 	background: var(--cart-background-beige);
 	border-radius: 12px;
@@ -60,6 +66,8 @@ body.woocommerce-cart .cart-collaterals a.checkout-button {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 100%;
+	line-height: 1.4;
+	text-align: center;
 	width: fit-content;
 }
 
@@ -111,6 +119,7 @@ body.woocommerce-cart .product-remove img {
 body.woocommerce-cart .quantity-field {
 	display: flex;
 	justify-content: flex-start;
+	height: 32px;
 }
 
 body.woocommerce-cart .quantity-field .qty {
@@ -118,13 +127,20 @@ body.woocommerce-cart .quantity-field .qty {
 	border-radius: 0;
 	box-shadow: none;
 	text-align: center;
-	flex-basis: 50px;
+	width: 40px;
+	padding-right: 0;
+}
+
+body.woocommerce-cart .quantity-field .qty::-webkit-outer-spin-button,
+body.woocommerce-cart .quantity-field .qty::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
 }
 
 .cart-quantity-control {
 	background: white;
 	border: 1px solid black;
-	border-radius: 50%;
+	border-radius: 40px;
 }
 
 .cart-quantity-control.minus {
@@ -149,4 +165,20 @@ body.woocommerce-cart .quantity-field .qty {
 	margin-top: 5px;
 	font-style: italic;
 }
+
+.cart-collaterals__inner h2 {
+ 	font-size: 20px;
+	line-height: 20px;
+	font-family: "Sofia Pro", sans-serif;
+}
+
+body.woocommerce-cart .cross-sells h2 {
+	font-size: 16px;
+	line-height: 1.4;
+}
+
+.js-cart-update-cart.button {
+	visibility: hidden;
+}
+
 

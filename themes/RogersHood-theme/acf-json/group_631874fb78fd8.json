@@ -7,25 +7,6 @@
             "label": "Background Color",
             "name": "background_color",
             "aria-label": "",
-            "type": "color_picker",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "enable_opacity": 0,
-            "return_format": "string",
-            "allow_in_bindings": 0
-        },
-        {
-            "key": "field_631875a47e7f1",
-            "label": "Image Position",
-            "name": "image_position",
-            "aria-label": "",
             "type": "true_false",
             "instructions": "",
             "required": 0,
@@ -36,10 +17,10 @@
                 "id": ""
             },
             "message": "",
-            "default_value": 1,
+            "default_value": 0,
             "allow_in_bindings": 1,
-            "ui_on_text": "Right",
-            "ui_off_text": "Left",
+            "ui_on_text": "Beige",
+            "ui_off_text": "White",
             "ui": 1
         },
         {
@@ -103,26 +84,6 @@
             "media_upload": 1
         },
         {
-            "key": "field_6343fab05e6fa",
-            "label": "Button Style",
-            "name": "button_style",
-            "aria-label": "",
-            "type": "true_false",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "message": "",
-            "default_value": 1,
-            "ui_on_text": "Primary",
-            "ui_off_text": "Secondary",
-            "ui": 1
-        },
-        {
             "key": "field_631875827e7ef",
             "label": "Call To Action",
             "name": "call_to_action",
@@ -162,6 +123,27 @@
             "max_height": "",
             "max_size": "",
             "mime_types": ""
+        },
+        {
+            "key": "field_631875a47e7f1",
+            "label": "Image Position",
+            "name": "image_position",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 0,
+            "allow_in_bindings": 1,
+            "ui_on_text": "Left",
+            "ui_off_text": "Right",
+            "ui": 1
         }
     ],
     "location": [
@@ -182,5 +164,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728072676
+    "modified": 1728473225
 }

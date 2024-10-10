@@ -7,7 +7,7 @@
  */
 
 /* :root {
-	--c-light-blue: #000;
+	--c-c-light-blue: #000;
 	--c-beige: #fff;
 	--c-green: #627479;
 	--c-light-beige: #F2F1EF;
@@ -19,11 +19,40 @@
 
 :root {
 	--c-white: #fff;
+	--c-black: #000;
+	--c-dark-grey: #5e5e5e;
+	--c-off-black: #5c5c5c;
 
 	--cart-background-beige: #f9f9f9;
-	--blue-background: #e0eaf7;
+	--c-category-fab-background: #e0eaf7;
+	--c-green: #627479;
+	--c-ivory: #fcfbfb;
+	--c-light-beige: #faf8f4;
+	--c-blue: #e0eaf7;
+	--c-light-blue: #b5c3cd;
+	--c-text: #121212;
 }
 
 .bg-blue {
-	background-color: var(--blue-background);
+	background-color: var(--c-blue);
+}
+
+.bg-beige {
+	background-color: var(--cart-background-beige);
+}
+
+.bg-white {
+	background: var(--c-white);
+}
+
+.bg-gradient-blue {
+	background: linear-gradient(180deg, var(--c-light-blue) 0%, #c2d1dc 100%);
+}
+
+.bg-light-beige {
+	background-color: var(--c-light-beige);
+}
+
+.bg-ivory {
+	background: var(--c-ivory);
 }

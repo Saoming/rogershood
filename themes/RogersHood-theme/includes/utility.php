@@ -87,3 +87,71 @@ function adjust_brightness( $hex, $steps ) {
 
 	return $return;
 }
+
+
+
+
+
+function generate_rating_starts($review_star_rating) {
+	// Check if the review_star_rating is a number
+	if (!is_numeric($review_star_rating)) {
+		return;
+	}
+
+	$full_stars = floor($review_star_rating); // Number of full stars
+	$half_star = ($review_star_rating - $full_stars) >= 0.5 ? 1 : 0; // Whether to show a half star
+	$empty_stars = 5 - ($full_stars + $half_star); // Remaining empty stars to complete 5
+
+	ob_start();
+	// Output full stars
+	for ($i = 0; $i < $full_stars; $i++) {
+		echo '<img class="full-star" src="' . TENUP_THEME_DIST_URL . '/svg/stars/star-full.svg" />';
+	}
+
+	// Output half star if needed
+	if ($half_star) {
+		echo '<img class="full-star" src="' . TENUP_THEME_DIST_URL . '/svg/stars/star-half.svg" />';
+	}
+
+	// Output empty stars
+	for ($i = 0; $i < $empty_stars; $i++) {
+		echo '<img class="full-star" src="' . TENUP_THEME_DIST_URL . '/svg/stars/star-empty.svg" />';
+	}
+
+	return ob_get_clean();
+}
+function render_post_breadcrumbs(){
+	$separator = '<img class="single-post__breadcrumb-separator" src="' . TENUP_THEME_DIST_URL . 'svg/breadcrumb-separator.svg" alt="separator" />';
+	$home_title = 'Home';
+
+	if (is_single()) {
+		global $post;
+
+		echo '<nav class="single-post__breadcrumbs container">';
+		echo '<a href="' . get_home_url() . '">' . $home_title . '</a>' . $separator;
+
+		$categories = get_the_category();
+		if (!empty($categories)) {
+			$last_category = end($categories);
+			$category_parents = get_category_parents($last_category, true, $separator);
+			echo $category_parents;
+		}
+		echo '<span class="single-post__breadcrumbs-title">' . get_the_title() . '</span>';
+		echo '</nav>';
+	}
+}
+
+
+
+function convert_category_to_class($category_name) {
+	// Convert category name to lowercase
+	$category_name = strtolower($category_name);
+
+	// Replace spaces with underscores
+	$category_name = str_replace(' ', '_', $category_name);
+
+	// Remove special characters
+	$category_name = preg_replace('/[^a-z0-9_]/', '', $category_name);
+
+	return $category_name;
+}

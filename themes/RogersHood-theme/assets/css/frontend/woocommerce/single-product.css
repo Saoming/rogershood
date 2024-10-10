@@ -1,0 +1,113 @@
+.related.products {
+	clear: both;
+}
+
+.single-product .entry-summary {
+	padding-left: 100px;
+}
+
+.custom-quantity-dropdown {
+	position: relative;
+	display: inline-block;
+	width: 121px; /* Adjust width as needed */
+}
+
+.custom-quantity-dropdown select {
+	width: 100%;
+	padding: 12px 20px;
+	border-radius: 40px;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	background: transparent; /* Make the background transparent */
+	font-size: 16px;
+	color: transparent; /* Make the default text transparent */
+	cursor: pointer;
+	position: relative;
+	z-index: 1;
+}
+
+/* Adding a custom arrow icon for the dropdown */
+.custom-quantity-dropdown::before {
+	content: url('../svg/caret-down.svg');
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	transform: translateY(-50%);
+	pointer-events: none;
+	font-size: 14px;
+	color: #333;
+}
+
+
+.custom-quantity-dropdown__label {
+	position: absolute;
+	top: 50%;
+	left: 20px;
+	right: 30px;
+	transform: translateY(-50%);
+	font-size: 16px;
+	color: #333;
+	pointer-events: none;
+	text-align: center;
+}
+
+.single-product.woocommerce .entry-summary form.cart::before {
+	display: none;
+}
+
+.single-product.woocommerce div.product .woocommerce-product-rating {
+	margin-bottom: 12px;
+}
+
+.single-product.woocommerce .woocommerce-breadcrumb {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1180px;
+}
+
+.single-product.woocommerce .site-main {
+	padding-top: 30px;
+}
+
+
+/**
+ * Add to Cart Bar
+ */
+
+.add-to-cart-bar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: #fff;
+	padding: 20px;
+	border-top: 1px solid black;
+	z-index: 9;
+}
+
+.add-to-cart-bar__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.add-to-cart-bar__product-info {
+	align-items: center;
+	display: flex;
+	gap: 24px;
+}
+
+.bar-thumbnail {
+	max-height: 80px;
+	line-height: 0;
+}
+
+.bar-thumbnail img{
+	max-height: 100%;
+	max-width: 100%;
+	height: 63px;
+	width: 80px;
+	object-fit: cover;
+
+}

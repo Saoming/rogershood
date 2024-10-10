@@ -2,6 +2,8 @@
 
 @import url("skip-to-content-link.css");
 
+@import url("slick.css");
+
 @import url("header.css");
 
 @import url("footer.css");
@@ -11,3 +13,5 @@
 @import url("archive-product.css");
 
 @import url("single-product.css");
+
+@import url("post-grid.css");

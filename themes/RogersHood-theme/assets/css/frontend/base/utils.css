@@ -11,3 +11,20 @@
 	width: 1px;
 	word-wrap: normal !important;
 }
+
+.has-border-radius {
+	border-radius: 12px;
+}
+
+.overflow-hidden {
+	overflow: hidden;
+}
+
+
+.no-padding-bottom {
+	padding-bottom: 0 !important;
+}
+
+.no-padding-top {
+	padding-top: 0 !important;
+}
