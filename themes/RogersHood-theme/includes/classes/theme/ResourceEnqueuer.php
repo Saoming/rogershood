@@ -110,7 +110,6 @@ class ResourceEnqueuer {
 			array(),
 			filemtime( TENUP_THEME_PATH . '/3rd-party/splide-js-4.1.3/splide-core.min.css' )
 		);
-
 		wp_enqueue_script(
 			'splide-script',
 			TENUP_THEME_TEMPLATE_URL . '/3rd-party/splide-js-4.1.3/splide.min.js',
@@ -120,6 +119,13 @@ class ResourceEnqueuer {
 				'strategy'  => 'defer',
 				'in_footer' => true,
 			)
+		);
+
+		wp_enqueue_script(
+			'splide-auto-scroll',
+			TENUP_THEME_TEMPLATE_URL . '/3rd-party/splide-js-4.1.3/splide-extension-auto-scroll.min.js',
+			array(),
+			filemtime( TENUP_THEME_PATH . '/3rd-party/splide-js-4.1.3/splide-extension-auto-scroll.min.js' )
 		);
 	}
 

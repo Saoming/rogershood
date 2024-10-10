@@ -1,9 +1,7 @@
 .store-notifications__container {
-	align-items: center;
 	background-color: var(--wp--preset--color--green);
-	display: flex;
-	justify-content: space-between;
 	padding: 12px 43px;
+	width: 100%;
 }
 
 .store-notifications__text {

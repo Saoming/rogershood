@@ -1,5 +1,6 @@
 <section
-	class="benefits-section__container page-container"
+	 id="<?php echo esc_attr( $args['id'] ); ?>"
+	class="benefits-section__container rh-block"
 >
 	<?php if ( $args['sub_heading_benefits'] ) : ?>
 		<div class="sub-heading-benefits"><?php echo esc_attr( $args['sub_heading_benefits'] ); ?></div>
@@ -16,10 +17,10 @@
 			class="benefits-card-container splide"
 			role="group"
 			aria-label="Check our Testimonials Slider"
-			data-splide='{"type":"slide", "arrows": false, "autoplay": false, "pagination": false, "focus": "center", "drag": true, "mediaQuery": "min", "breakpoints": {"640": {"destroy": true, "perPage": "1"}}}'
+			data-splide='{"type":"slide", "arrows": false, "autoplay": false, "pagination": false, "focus": "center", "drag": true, "autoScroll": { "autoStart": false }, "mediaQuery": "min", "breakpoints": {"640": {"destroy": true, "perPage": "1"}}}'
 		>
 			<div class="splide__track">
-				<ul class="splide__list" data-splide-interval="8000">
+				<ul class="benefit-card-list splide__list" data-splide-interval="8000">
 					<?php
 					foreach ( $args['cards_repeater_benefits'] as  $single_benefit ) :
 						?>

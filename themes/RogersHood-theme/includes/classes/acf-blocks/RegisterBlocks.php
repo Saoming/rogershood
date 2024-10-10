@@ -42,6 +42,8 @@ class RegisterBlocks {
 		$this->register_community_cards_block();
 		$this->register_hub_cards_block();
 		$this->register_e_books_full_and_text_block();
+
+		$this->temp_sam_register_blocks();
 	}
 
 
@@ -51,6 +53,13 @@ class RegisterBlocks {
 		$this->register_ingredient_grid_block();
 
 		$this->register_founders_block();
+	}
+
+	// TODO: Remove the function and add the methods to the main one, this is to prevent merge conflicts
+	public function temp_sam_register_blocks() {
+		$this->register_grid_text_quiz_block();
+		$this->register_testimonials_section_block();
+		$this->register_top_help_search_block();
 	}
 
 	protected function register_faq_block() {
@@ -287,6 +296,80 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/e-books-full-and-text.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+	/**
+	 * Registers the Grid Text Quiz Section
+	 */
+	protected function register_grid_text_quiz_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'grid-text-quiz-section',
+				'title'           => __( 'Grid and Text (Quiz Section)' ),
+				'description'     => __( 'E-books Image and Content' ),
+				'render_template' => 'partials/blocks/grid-text-quiz-section/grid-text-quiz-section.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/grid-text-quiz-section.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+	/**
+	 * Registers the Testimonials Section
+	 */
+	protected function register_testimonials_section_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'testimonials-section',
+				'title'           => __( 'Testimonial Section' ),
+				'description'     => __( 'Testimonial Section' ),
+				'render_template' => 'partials/blocks/testimonials-section/testimonials-section.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'enqueue_assets'  => ResourceEnqueuer::register_splide_assets(),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/testimonials-section.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+	/**
+	 * Registers the Top Help Search Section
+	 */
+	protected function register_top_help_search_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'top-help-search-section',
+				'title'           => __( 'Top Help Search Section' ),
+				'description'     => __( 'TTop Help Search Section' ),
+				'render_template' => 'partials/blocks/top-help-search/top-help-search.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'enqueue_assets'  => ResourceEnqueuer::register_splide_assets(),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/top-help-search.jpg',
 						),
 					),
 				),

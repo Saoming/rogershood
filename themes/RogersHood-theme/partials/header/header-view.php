@@ -10,19 +10,28 @@
 <?php if ( $args['activate_site_notifications'] ) : ?>
 	<?php if ( $args['site_notifications'] || $args['number_of_site_notifications'] ) : ?>
 	<!-- Store Notifications -->
-	<div class="store-notifications__container" role="alert">
-		<?php
-		$i = 0;
-		while ( $i < $args['number_of_site_notifications'] ) :
-			?>
-			<span class="store-notifications__text">
-				<?php echo esc_attr( $args['site_notifications'] ); ?>
-			</span>
+	<section
+		id="headerBanner"
+		class="store-notifications__container splide page-container"
+		role="alert"
+		data-splide='{"type":"loop", "arrows": false, "perPage": 5,  "autoScroll": { "speed": 2, "pauseOnHover": false }, "pagination": false, "focus": "center", "drag": false, "breakpoints": {"640": {"perPage": 1}}}'
+	>
+		<div class="splide__track">
+			<ul class="splide__list" data-splide-interval="8000">
 			<?php
-			++$i;
-			endwhile;
-		?>
-	</div>
+			$i = 0;
+			while ( $i < $args['number_of_site_notifications'] ) :
+				?>
+				<li class="store-notifications__text splide__slide">
+					<?php echo esc_attr( $args['site_notifications'] ); ?>
+				</li>
+				<?php
+				++$i;
+				endwhile;
+			?>
+			</ul>
+		</div>
+	</section>
 	<?php endif; ?>
 <?php endif; ?>
 <header role="banner" class="header__container page-container">

@@ -77,8 +77,6 @@ body.admin-bar .header {
 	position: fixed;
 }
 
-/*  TODO @SAM pls check */
-
 @media all and (min-width: 780px) {
 	body.admin-bar .header {
 		top: 32px;
