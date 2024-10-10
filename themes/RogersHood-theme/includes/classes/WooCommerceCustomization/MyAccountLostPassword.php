@@ -15,11 +15,14 @@ class MyAccountLostPassword {
 		?>
 		<div class="login-page-wrapper ">
 			<div class="rh-block rh-block--full-bleed  rh-login-page">
-				<div class="row">
-					<div class="col-md-6 bg-beige rh-login-page__photo-container">
-						<img src="<?php echo esc_url(TENUP_THEME_DIST_URL . '/images/login-page-photo.png'); ?>" alt="Login Page Photo" />
+				<div class="row login-page--row">
+					<div class="col-sm-12 col-md-6 bg-beige rh-login-page__photo-container">
+						<img src="<?php echo esc_url(TENUP_THEME_DIST_URL . '/images/login-page-photo.png'); ?>"
+							 alt="Login Page Photo"
+							 class="rh-login-page__image"/>
 					</div>
 					<div class="col-md-6 rh-login-page__form-container">
+
 						<h1>Forgot Password?</h1>
 		<?php
 	}
@@ -40,5 +43,4 @@ class MyAccountLostPassword {
 		?>
 		<?php
 	}
-
 }

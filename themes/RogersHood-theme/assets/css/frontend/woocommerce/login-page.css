@@ -6,6 +6,18 @@
 	min-height: 700px;
 }
 
+@media (--bp-until-medium) {
+	.rh-login-page__photo-container {
+		min-height: 100px;
+		order: 2;
+		padding: 65px 20px;
+	}
+
+	.rh-login-page__image {
+		max-height: 100px;
+	}
+}
+
 .woocommerce .rh-login-page form.login,
 .woocommerce .rh-login-page form.register {
 	border: 0;
@@ -82,3 +94,8 @@
 .login-page-wrapper .woocommerce-form-row label {
 	margin-bottom: 6px;
 }
+
+.login-page-wrapper .rh-button {
+	margin-top: 50px;
+}
+
