@@ -39,7 +39,7 @@ class WooCommerceCustomization {
 		$this->quantity_field->init_hooks();
 		$this->my_account_register->init_hooks();
 		$this->my_account_login->init_hooks();
-		$this->my_asccount_menu_items->init_hooks();
+		$this->my_account_menu_items->init_hooks();
 		$this->shop_content->init_hooks();
 		$this->my_account_lost_password->init_hooks();
 		$this->my_account_lost_password_confirmation->init_hooks();
