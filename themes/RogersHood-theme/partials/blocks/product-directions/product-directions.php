@@ -48,7 +48,9 @@ if ( ! get_field( 'block_preview' ) ) {
 						<?php } ?>
 						<div class="product-directions__items mb-50">
 							<?php foreach ( $fields["content"] as $item ) { ?>
-								<div class="product-directions__item br-4">
+								<div class="product-directions__item br-4 <?php if ( $fields["has_content_background_white"] ) {
+									echo 'bg-white';
+								} ?>">
 									<?php
 									if ( $item["title"] ) {
 										?>

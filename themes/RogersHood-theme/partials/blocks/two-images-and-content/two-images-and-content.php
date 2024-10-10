@@ -71,7 +71,7 @@ if ( ! get_field( 'block_preview' ) ) {
 									?>
 									<div class="two-images-and-content__item-title faq-block__question-title fw-500">
 										<?php echo esc_attr( $item["title"] ); ?>
-										<span class="faq-block__question-icon"></span>
+										<span class="faq-block__question-icon two-images-and-content__icon"></span>
 									</div>
 									<?php
 								}
