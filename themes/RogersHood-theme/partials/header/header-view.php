@@ -11,6 +11,7 @@
 	<?php if ( $args['site_notifications'] || $args['number_of_site_notifications'] ) : ?>
 	<!-- Store Notifications -->
 	<section
+		id="headerBanner"
 		class="store-notifications__container splide page-container"
 		role="alert"
 		data-splide='{"type":"loop", "arrows": false, "perPage": 5,  "autoScroll": { "speed": 2, "pauseOnHover": false }, "pagination": false, "focus": "center", "drag": false, "breakpoints": {"640": {"perPage": 1}}}'
