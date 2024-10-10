@@ -38,7 +38,7 @@ if ( ! get_field( 'block_preview' ) ) {
 					if ( $fields["description"] ) {
 						?>
 						<div
-							class="text-and-gform__description mb-50"><?php echo wp_kses_post( $fields["description"] ); ?></div>
+								class="text-and-gform__description mb-50"><?php echo wp_kses_post( $fields["description"] ); ?></div>
 						<?php
 					}
 					if ( $fields["image"] ) {
@@ -53,7 +53,8 @@ if ( ! get_field( 'block_preview' ) ) {
 				<div class="col-md-6 text-and-gform__gform">
 					<?php
 					if ( function_exists( 'gravity_form' ) ) {
-						gravity_form( $fields["gravity_form"], false, false, false, '', true );
+						$gravity_shortcode = '[gravityform id="' . $fields["gravity_form"] . '" title="false" description="false" ajax="true"]';
+						echo do_shortcode( $gravity_shortcode );
 					}
 					?>
 				</div>

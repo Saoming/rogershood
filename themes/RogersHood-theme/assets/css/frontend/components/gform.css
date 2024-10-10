@@ -1,0 +1,41 @@
+.rh-block .gfield_label {
+	font-size: 18px !important;
+	font-weight: 300 !important;
+}
+
+.rh-block .ginput_container input,
+.rh-block .ginput_container select,
+.rh-block .ginput_container textarea {
+	border: 1px solid #eee !important;
+	border-radius: 12px !important;
+	box-shadow: none !important;
+	margin-bottom: 14px !important;
+	min-height: 42px !important;
+	padding: 5px 10px !important;
+}
+
+.rh-block .gform_wrapper .gform_fields {
+	grid-row-gap: 12px !important;
+}
+
+.rh-block .ginput_container select {
+	color: var(--c-dark-grey) !important;
+	padding-top: 0 !important;
+}
+
+.rh-block .gform_footer .button {
+	background-color: var(--c-light-blue) !important;
+	border: 1px solid var(--c-light-blue) !important;
+	border-radius: 42px !important;
+	color: var(--c-text) !important;
+	float: none !important;
+	font-size: 16px !important;
+	font-weight: 300 !important;
+	margin-bottom: 20px;
+	min-height: 50px !important;
+	min-width: 160px !important;
+	padding: 0 !important;
+	text-align: center;
+	text-decoration: none !important;
+	transition: background 300ms ease-in !important;
+}
