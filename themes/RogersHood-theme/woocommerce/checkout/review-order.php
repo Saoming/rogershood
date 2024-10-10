@@ -16,6 +16,7 @@
  */
 
 defined( 'ABSPATH' ) || exit;
+return;
 ?>
 <table class="shop_table woocommerce-checkout-review-order-table">
 	<thead>
@@ -103,8 +104,8 @@ defined( 'ABSPATH' ) || exit;
 			<th><?php esc_html_e( 'Total', 'woocommerce' ); ?></th>
 			<td><?php wc_cart_totals_order_total_html(); ?></td>
 		</tr>
-
+		1
 		<?php do_action( 'woocommerce_review_order_after_order_total' ); ?>
-
+		2
 	</tfoot>
 </table>

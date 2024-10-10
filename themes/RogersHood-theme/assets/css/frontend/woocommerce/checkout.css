@@ -1,0 +1,178 @@
+.woocommerce-checkout .page-container .woocommerce{
+	max-width: 1240px;
+	margin: auto;
+}
+.woocommerce form .form-row-first, .woocommerce form .form-row-last, .woocommerce-page form .form-row-first, .woocommerce-page form .form-row-last{
+	width: calc( 50% - 2.5px );
+}
+
+form.checkout .select2-container--default .select2-selection--single .select2-selection__rendered {
+	line-height: 42px;
+	padding: 0 29px;
+}
+
+form.checkout .select2-container .select2-selection--single{
+	height: 42px;
+}
+form.checkout .select2-container--default .select2-selection--single .select2-selection__arrow {
+	height: 40px;
+}
+
+.woocommerce form.checkout .form-row input.input-text,
+.woocommerce form.checkout .form-row textarea{
+	padding: 0 29px;
+}
+
+.woocommerce form.checkout .woocommerce-input-wrapper > input{
+	margin-bottom: 0px!important;
+	color: var(--Dark-Grey, #5E5E5E);
+	font-family: "Sofia Pro";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: normal;
+}
+
+.woocommerce form.checkout .form-row{
+	margin: 0 0 12px;
+	padding: 2.5px;
+}
+
+.woocommerce form.checkout .checkout-row{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+}
+.woocommerce form.checkout .checkout-right,
+.woocommerce form.checkout .checkout-left{
+	-webkit-box-flex: 0;
+	-ms-flex: 0 0 50%;
+	flex: 0 0 50%;
+	max-width: 50%;
+	padding: 0 15px;
+}
+.woocommerce form.checkout .checkout-right{
+	padding-left: 134px;
+}
+
+div.woocommerce-checkout-review-order-table-new{
+	border-radius: 12px;
+	background: #F9F9F9;
+	padding: 50px 15px 64px;
+}
+div.woocommerce-checkout-review-order-table-new h4{
+	text-align:center;
+	margin: 0 0 42px;
+}
+div.woocommerce-checkout-review-order-table-new table.woocommerce-checkout-review-order-table-new{
+	border: none;
+}
+div.woocommerce-checkout-review-order-table-new table.woocommerce-checkout-review-order-table-new th,
+div.woocommerce-checkout-review-order-table-new table.woocommerce-checkout-review-order-table-new td{
+	border-top: none;
+}
+table.woocommerce-checkout-review-order-table-new .product-thumbnail img{
+	max-width: 110px;
+	height: 107px;
+	object-fit: contain;
+}
+table.woocommerce-checkout-review-order-table-new .product-name br{
+	line-height: 0;
+	display: block;
+}
+table.woocommerce-checkout-review-order-table-new .product-name{
+	color: var(--Black, #121212);
+	font-family: "Sofia Pro";
+	font-size: 18px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+}
+table.woocommerce-checkout-review-order-table-new .product-name .quantity-field{
+	border: 1px solid var(--Green, #627479);
+	border-radius: 40px;
+	height: 32px;
+	display: inline-block;
+	margin: 18px 0;
+}
+table.woocommerce-checkout-review-order-table-new .product-name .quantity-field input{
+	width: auto;
+	pointer-events: none;
+	margin-right: -18px;
+}
+table.woocommerce-checkout-review-order-table-new .product-name .quantity-field input,
+table.woocommerce-checkout-review-order-table-new .product-name .quantity-field button{
+	border: none;
+	background: transparent;
+	width: 24px;
+	height: 30px;
+	text-align: center;
+	padding-left: 0;
+	padding-right: 0;
+}
+.woocommerce form.checkout .checkout-right div.woocommerce-checkout-review-order-table-new #place_order,
+.woocommerce form.checkout .checkout-right div.woocommerce-checkout-review-order-table-new .apply_coupon{
+	width: 180px;
+	padding: 14px 10px;
+	justify-content: center;
+	align-items: center;
+	color: var(--Black, #121212);
+	text-align: center;
+	font-size: 16px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 140%; /* 22.4px */
+	min-height: 1px;
+	box-sizing: border-box;
+}
+
+
+.woocommerce form.checkout  div.woocommerce-checkout-review-order-table-new .woocommerce-input-wrapper > input#coupon_code{
+	padding: 8px 16px;
+	height: 52px;
+}
+.woocommerce form.checkout  div.woocommerce-checkout-review-order-table-new table tfoot tr td label span,
+.woocommerce form.checkout  div.woocommerce-checkout-review-order-table-new table tfoot tr td label bdi{
+	font-weight: 300;
+}
+.woocommerce form.checkout  div.woocommerce-checkout-review-order-table-new table tfoot tr:not(:last-child) th,
+.woocommerce form.checkout  div.woocommerce-checkout-review-order-table-new table tfoot tr:not(:last-child) td{
+	font-weight: 300;
+}
+
+.woocommerce-checkout #payment{
+	background: transparent;
+}
+.woocommerce-checkout #payment ul.payment_methods{
+	padding: 0;
+	border-bottom: none;
+}
+.woocommerce-checkout #payment div.payment_box::before,
+.woocommerce-checkout #payment div.payment_box::after,
+.woocommerce-checkout #payment ul.payment_methods::after,
+.woocommerce-checkout #payment ul.payment_methods li:not(.woocommerce-notice)::after{
+	display: none;
+}
+.woocommerce-checkout #payment div.payment_box{
+	background: transparent;
+}
+
+.woocommerce-checkout #payment div.payment_box {
+	padding: 0;
+}
+.payment_method_woocommerce_payments fieldset,
+.payment_method_woocommerce_payments fieldset > div{
+	border: none;
+	padding: 0!important;
+}
+.checkout-left .custom-checkboxes {
+	margin-top: 74px;
+}
+.checkout-left .custom-checkboxes p.form-row{
+	padding-left: 0;
+	padding-right: 0;
+}
