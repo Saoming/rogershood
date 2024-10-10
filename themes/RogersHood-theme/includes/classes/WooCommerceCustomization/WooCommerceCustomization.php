@@ -14,6 +14,7 @@ class WooCommerceCustomization {
 	private $my_account_login;
 	private $my_asccount_forgot_password;
 	private $my_asccount_menu_items;
+	private $shop_content;
 
 	public function __construct() {
 		$this->cart                        = new Cart();
@@ -23,6 +24,8 @@ class WooCommerceCustomization {
 		$this->my_account_login            = new MyAccountLogin();
 		$this->my_asccount_forgot_password = new MyAccountForgotPassword();
 		$this->my_asccount_menu_items      = new MyAccountMenuItems();
+		$this->shop_content                = new ShopContent();
+
 	}
 
 	public function init_hooks() {
@@ -32,5 +35,7 @@ class WooCommerceCustomization {
 		$this->my_account_register->init_hooks();
 		$this->my_account_login->init_hooks();
 		$this->my_asccount_menu_items->init_hooks();
+		$this->my_asccount_forgot_password->init_hooks();
+		$this->shop_content->init_hooks();
 	}
 }
