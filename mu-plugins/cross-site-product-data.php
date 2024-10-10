@@ -5,7 +5,7 @@
  * Version:           1.0.0
  * Requires at least: 5.9
  * Requires PHP:      7.4
- * Author:            Sybre Waaijer
+ * Author:            Samuel Tirtawidjaja
  * Author URI:        https://eonstudios.io/
  * License:           GPLv3
  * License URI:       https://www.gnu.org/licenses/gpl-3.0.html

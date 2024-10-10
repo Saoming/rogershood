@@ -73,18 +73,3 @@
 		</a>
 	</div>
 </header>
-
-
-<sectio class="product-recommendation rh-block container">
-	<div class="row">
-		<div class="col-md-12 col-lg-6">
-			<h2> For optimal results, we recomend the following cleanse boosters: </h2>
-		</div>
-
-		<div class="col-md-12 col-lg-6">
-
-		</div>
-
-	</div>
-
-</section>
