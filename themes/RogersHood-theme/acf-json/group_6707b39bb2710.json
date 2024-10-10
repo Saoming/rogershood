@@ -1,7 +1,28 @@
 {
     "key": "group_6707b39bb2710",
-    "title": "Block - Suggested Products",
+    "title": "Blocks - Suggested Products",
     "fields": [
+        {
+            "key": "field_6708002eb33d2",
+            "label": "Pretitle",
+            "name": "pretitle",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
         {
             "key": "field_6707b39b60ce0",
             "label": "Title",
@@ -74,5 +95,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728558398
+    "modified": 1728577593
 }
