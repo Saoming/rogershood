@@ -16,6 +16,8 @@ class WooCommerceCustomization {
 	private $my_account_lost_password;
 	private $my_account_lost_password_confirmation;
 	private $my_account_menu_items;
+	private $my_account_address;
+	private $my_account_account;
 
 	public function __construct() {
 		$this->cart                                  = new Cart();
@@ -27,6 +29,8 @@ class WooCommerceCustomization {
 		$this->shop_content                          = new ShopContent();
 		$this->my_account_lost_password              = new MyAccountLostPassword();
 		$this->my_account_lost_password_confirmation = new MyAccountLostPasswordConfirmation();
+		$this->my_account_address = new MyAccountAddress();
+		$this->my_account_account = new MyAccountAccount();
 	}
 
 	public function init_hooks() {
@@ -39,5 +43,7 @@ class WooCommerceCustomization {
 		$this->shop_content->init_hooks();
 		$this->my_account_lost_password->init_hooks();
 		$this->my_account_lost_password_confirmation->init_hooks();
+		$this->my_account_address->init_hooks();
+		$this->my_account_account->init_hooks();
 	}
 }
