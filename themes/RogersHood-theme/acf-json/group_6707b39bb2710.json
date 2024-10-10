@@ -1,32 +1,11 @@
 {
-    "key": "group_66f5bc29ca1b3",
-    "title": "Settings - Site Footer",
+    "key": "group_6707b39bb2710",
+    "title": "Block - Suggested Products",
     "fields": [
         {
-            "key": "field_66f5bc36c6ff8",
-            "label": "Disclaimer",
-            "name": "disclaimer",
-            "aria-label": "",
-            "type": "textarea",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "allow_in_bindings": 0,
-            "rows": "",
-            "placeholder": "",
-            "new_lines": ""
-        },
-        {
-            "key": "field_6707a733964a1",
-            "label": "Shop Page Pattern ID",
-            "name": "shop_page_pattern_id",
+            "key": "field_6707b39b60ce0",
+            "label": "Title",
+            "name": "title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -43,14 +22,46 @@
             "placeholder": "",
             "prepend": "",
             "append": ""
+        },
+        {
+            "key": "field_6707b3a860ce1",
+            "label": "Products",
+            "name": "products",
+            "aria-label": "",
+            "type": "relationship",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "post_type": [
+                "product"
+            ],
+            "post_status": "",
+            "taxonomy": "",
+            "filters": [
+                "search",
+                "post_type",
+                "taxonomy"
+            ],
+            "return_format": "object",
+            "min": "",
+            "max": "",
+            "allow_in_bindings": 1,
+            "elements": "",
+            "bidirectional": 0,
+            "bidirectional_target": []
         }
     ],
     "location": [
         [
             {
-                "param": "options_page",
+                "param": "block",
                 "operator": "==",
-                "value": "acf-options-site-footer"
+                "value": "acf\/rh-suggested-products"
             }
         ]
     ],
@@ -63,5 +74,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728554947
+    "modified": 1728558398
 }
