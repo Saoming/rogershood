@@ -59,6 +59,7 @@ class RegisterBlocks {
 	public function temp_sam_register_blocks() {
 		$this->register_grid_text_quiz_block();
 		$this->register_testimonials_section_block();
+		$this->register_top_help_search_block();
 	}
 
 	protected function register_faq_block() {
@@ -344,6 +345,31 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/testimonials-section.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+	/**
+	 * Registers the Top Help Search Section
+	 */
+	protected function register_top_help_search_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'top-help-search-section',
+				'title'           => __( 'Top Help Search Section' ),
+				'description'     => __( 'TTop Help Search Section' ),
+				'render_template' => 'partials/blocks/top-help-search/top-help-search.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'enqueue_assets'  => ResourceEnqueuer::register_splide_assets(),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/top-help-search.jpg',
 						),
 					),
 				),

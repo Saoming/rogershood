@@ -4,7 +4,7 @@
  *
  * @package TenUpTheme
  */
-$id = 'hero-section-' . $block['id'];
+$id = 'benefits-section-' . $block['id'];
 if ( ! empty( $block['anchor'] ) ) {
 	$id = $block['anchor'];
 }
