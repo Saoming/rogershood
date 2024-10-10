@@ -120,7 +120,7 @@
                     "label": "CTA",
                     "name": "cta",
                     "aria-label": "",
-                    "type": "url",
+                    "type": "link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -129,9 +129,8 @@
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
+                    "return_format": "array",
                     "allow_in_bindings": 1,
-                    "placeholder": "",
                     "parent_repeater": "field_670648ef49fbb"
                 }
             ]
@@ -155,5 +154,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728577941
+    "modified": 1728581511
 }

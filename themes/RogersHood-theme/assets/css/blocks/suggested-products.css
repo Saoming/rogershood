@@ -7,6 +7,10 @@
 	align-items: center;
 }
 
+.suggested-products__title-container.col-lg-12 {
+	text-align: center;
+}
+
 @media all and (width > 992px ) {
 	.suggested-products__title {
 		max-width: 350px;
