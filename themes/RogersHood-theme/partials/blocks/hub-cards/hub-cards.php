@@ -44,6 +44,7 @@ if ( ! get_field( 'block_preview' ) ) {
 						<div class="hub-card cols-sm-12  col-md-4 br-4">
 							<div class="hub-card__background_image__container">
 								<?php echo wp_get_attachment_image( $cards["background_image"], 'full', null, array( 'class' => 'hub-card__background_image br-4' ) ); ?>
+								<div class="overlay"></div>
 							</div>
 							<div class="hub-card__content__inner">
 								<div class="hub-card__content__inner__top">
