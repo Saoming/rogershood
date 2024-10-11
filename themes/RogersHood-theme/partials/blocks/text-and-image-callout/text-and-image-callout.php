@@ -50,7 +50,7 @@ if ( ! get_field( 'block_preview' ) ) {
 					if ( $fields["call_to_action"] ) {
 						?>
 						<div class="text-and-image-callout__cta">
-							<a class="button text-and-image-callout__button"
+							<a class="rh-button rh-button--primary text-and-image-callout__button"
 							   href="<?php echo esc_url( $fields["call_to_action"]["url"] ); ?>"
 							   target="<?php echo esc_attr( $fields["call_to_action"]["target"] ); ?>"><?php echo esc_html( $fields["call_to_action"]["title"] ); ?></a>
 						</div>

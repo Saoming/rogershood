@@ -8,7 +8,7 @@ class MyAccountMenuItems {
 		add_action( 'woocommerce_account_menu_items', array( $this, 'woocommerce_account_menu_items' ), 10 );
 	}
 
-	public function woocommerce_account_menu_items($items) {
+	public function woocommerce_account_menu_items( $items ) {
 
 		if ( isset( $items['dashboard'] ) ) {
 			unset( $items['dashboard'] );
@@ -35,21 +35,9 @@ class MyAccountMenuItems {
 			unset( $items['customer-logout'] ); // Temporarily remove 'Logout'
 
 			// Reinsert 'Downloads' and 'Logout' in the correct order
-			$items['downloads'] = $downloads;
+			$items['downloads']       = $downloads;
 			$items['customer-logout'] = $logout;
 		}
-
-		custom_theme_error_log($items);
-
 		return $items;
-		?>
-<!--		<div class="login-page-wrapper">-->
-<!--			<div class="rh-block rh-block--full-bleed rh-login-page">-->
-<!--				<div class="row">-->
-<!--					<div class="col-md-6 bg-beige rh-login-page__photo-container">-->
-<!--						<img src="--><?php //echo esc_url(TENUP_THEME_DIST_URL . '/images/login-page-photo.png'); ?><!--" alt="Login Page Photo" />-->
-<!--					</div>-->
-<!--					<div class="col-md-6 rh-login-page__form-container">-->
-		<?php
 	}
 }

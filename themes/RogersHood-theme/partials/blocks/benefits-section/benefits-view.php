@@ -1,4 +1,5 @@
 <section
+	 id="<?php echo esc_attr( $args['id'] ); ?>"
 	class="benefits-section__container rh-block"
 >
 	<?php if ( $args['sub_heading_benefits'] ) : ?>

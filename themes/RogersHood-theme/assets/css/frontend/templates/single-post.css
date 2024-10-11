@@ -65,7 +65,7 @@
 	margin-top: 30px;
 }
 
-.single-post__content p:first-child::first-letter {
+.single-post__content  > p:first-child::first-letter {
 	font-family: Scilla, serif;
 	font-size: 42px;
 }

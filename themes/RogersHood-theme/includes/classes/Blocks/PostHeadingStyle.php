@@ -15,8 +15,6 @@ class PostHeadingStyle {
 		     ( isset( $_GET['post_type'] ) && $_GET['post_type'] === 'post' ) ||
 		     ( isset( $_GET['post'] ) && get_post_type( $_GET['post'] ) === 'post' )
 		) {
-			custom_theme_error_log( 'inside' );
-
 			// Register block style for core/heading
 			register_block_style(
 				'core/heading',

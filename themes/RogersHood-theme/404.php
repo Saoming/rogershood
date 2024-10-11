@@ -14,7 +14,7 @@ get_header(); ?>
 			<div class="notfound__subtitle ff-scilla">Something went wrong</div>
 			<div class="notfound__description">We can’t find the page you are looking for.</div>
 			<div class="notfound__cta">
-				<a class="rh-button button "
+				<a class="rh-button"
 				   href="<?php echo home_url(); ?>">
 					Back to Home
 				</a>

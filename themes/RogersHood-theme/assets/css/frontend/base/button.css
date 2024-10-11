@@ -7,7 +7,6 @@
  * using :where to prevent the specificity increase of using :not
  */
 
-.button,
 .rh-button {
 	background-color: var(--wp--preset--color--light-blue) !important;
 	border: 1px solid var(--wp--preset--color--light-blue) !important;
@@ -22,7 +21,6 @@
 	transition: background 300ms ease-in !important;
 }
 
-.button:hover,
 .rh-button:hover {
 	background-color: var(--wp--preset--color--green) !important;
 	border: 1px solid var(--wp--preset--color--green) !important;
@@ -33,7 +31,7 @@ button:where(:not(.components-button)) {
 	all: unset;
 }
 
-.button-rh:where(:not(.components-button)) {
+.rh-button:where(:not(.components-button)) {
 	background-color: var(--wp--preset--color--light-blue);
 	border: 1px solid var(--wp--preset--color--light-blue);
 	border-radius: 42px;
@@ -43,7 +41,7 @@ button:where(:not(.components-button)) {
 	transition: background 300ms ease-in;
 }
 
-.button-rh:hover:where(:not(.components-button)) {
+.rh-button:hover:where(:not(.components-button)) {
 	background-color: var(--wp--preset--color--green);
 	border: 1px solid var(--wp--preset--color--green);
 	color: var(--wp--preset--color--white);

@@ -8,6 +8,8 @@ uploads
 upgrade
 cache
 plugins
+!plugins/rogershood-quiz
+!plugins/rogershood-reviews
 themes/RogersHood-theme/node_modules/
 themes/RogersHood-theme/vendor
 log
