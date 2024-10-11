@@ -11,7 +11,7 @@ if ( ! empty( $block['anchor'] ) ) {
 }
 
 $fields = get_fields();
-
+$bg_color_class = '';
 if ( $fields["background_color"] ) {
 	$bg_color_class = 'bg-beige';
 }

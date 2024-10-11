@@ -22,6 +22,16 @@
 	padding-right: 10px;
 }
 
+.tiktok-feed__feed .sb-grid-wrapper {
+	display: flex !important;
+	flex-wrap: nowrap;
+	overflow-x: auto;
+}
+
+.tiktok-feed__feed .sb-post-item-wrap{
+	flex-shrink: 0;
+}
+
 
 @media all and (width < 768px ) {
 

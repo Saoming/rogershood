@@ -1,0 +1,7 @@
+.woocommerce nav.woocommerce-pagination ul {
+	border: 0;
+}
+
+.woocommerce nav.woocommerce-pagination li {
+	border-right: 0 !important;
+}
