@@ -52,10 +52,8 @@ if ( ! get_field( 'block_preview' ) ) {
 				<div class="col-sm-hidden col-md-1"></div>
 				<div class="col-md-6 text-and-gform__gform">
 					<?php
-					if ( function_exists( 'gravity_form' ) ) {
 						$gravity_shortcode = '[gravityform id="' . $fields["gravity_form"] . '" title="false" description="false" ajax="true"]';
 						echo do_shortcode( $gravity_shortcode );
-					}
 					?>
 				</div>
 			</div>
