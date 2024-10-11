@@ -68,8 +68,8 @@
 }
 
 
-.woocommerce-button,
-.woocommerce-EditAccountForm button {
+.rh-login-page .woocommerce-button,
+.rh-login-page .woocommerce-EditAccountForm button {
 	background-color: var(--c-green) !important;
 	border: 1px solid var(--wp--preset--color--green) !important;
 	border-radius: 42px !important;
