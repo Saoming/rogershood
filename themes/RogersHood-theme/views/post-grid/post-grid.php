@@ -8,7 +8,7 @@
 		<?php }
 		if ( $title ) { ?>
 			<h2 class="post-grid__title text-center">
-				<?php echo esc_textarea( $pretitle ); ?>
+				<?php echo esc_textarea( $title ); ?>
 			</h2>
 		<?php } ?>
 		<div class="row post-grid__row">
@@ -54,4 +54,3 @@
 		</div>
 	</div>
 </div>
-
