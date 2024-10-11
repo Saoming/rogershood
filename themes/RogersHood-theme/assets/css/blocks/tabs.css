@@ -17,3 +17,32 @@
 .rh-tab__content.active {
 	display: block;
 }
+
+.rh-tab__title {
+
+}
+
+
+
+.rh-tab__title {
+	border: 1px solid var(--wp--preset--color--light-blue) !important;
+	border-radius: 42px !important;
+	color: var(--wp--preset--color--black) !important;
+	display: inline-block;
+	padding: 8px 16px;
+	text-align: center;
+	text-decoration: none !important;
+	transition: background 300ms ease-in !important;
+	box-sizing: border-box;
+}
+
+.rh-tab__title:hover {
+	background-color: var(--wp--preset--color--green) !important;
+	border: 1px solid var(--wp--preset--color--green) !important;
+	color: var(--wp--preset--color--white) !important;
+}
+
+.rh-tab__title.active {
+	background-color: var(--wp--preset--color--light-blue) !important;
+
+}
