@@ -32,9 +32,9 @@
 .header__menu {
 	display: flex;
 	gap: 26px;
+	height: 40px;
 	list-style: none;
 	margin: 0;
-	height: 40px;
 	padding: 0;
 }
 
@@ -63,8 +63,8 @@
 .mobile-header__woo .header__woo-link {
 	align-items: center;
 	display: flex;
-	text-decoration: none;
 	gap: 8px;
+	text-decoration: none;
 }
 
 .header__woo-link {
@@ -167,7 +167,7 @@
 	display: none;
 }
 
-.is-active {
+.is-header-active {
 	display: block;
 }
 
@@ -178,9 +178,9 @@
 .mobile-navigation__container {
 	background-color: var(--wp--preset--color--white);
 	height: 100%;
-	top: 0;
 	left: 0;
 	position: fixed;
+	top: 0;
 	width: 100%;
 	z-index: 99999;
 }
@@ -212,8 +212,8 @@
 
 	.header__menu-mobile {
 		display: block;
-		padding: 0;
 		margin: 0;
+		padding: 0;
 	}
 
 	.header__woo > a:nth-child(1) {
