@@ -662,7 +662,7 @@ class RegisterBlocks {
 					'attributes' => array(
 						'mode' => 'preview',
 						'data' => array(
-							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/three-steps.jpg',
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/top-help-search.jpg',
 						),
 					),
 				),
