@@ -43,7 +43,7 @@
 							?>
 							<a href="<?php echo esc_url( $post['category_link'] ); ?>"
 							   class="posts-grid__category-container post-grid--<?php echo esc_attr( $category_class ); ?>">
-								<?php echo esc_attr( $post['category_name'] ); ?>
+								<?php echo wp_kses_post( $post['category_name'] ); ?>
 							</a>
 						<?php } ?>
 					</div>

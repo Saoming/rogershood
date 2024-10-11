@@ -67,6 +67,7 @@ class RegisterBlocks {
 		$this->register_review_slider_block();
 		$this->register_youtube_slider_block();
 		$this->register_suggested_products_block();
+		$this->register_share_component_block();
 	}
 
 	// TODO: Remove the function and add the methods to the main one, this is to prevent merge conflicts
