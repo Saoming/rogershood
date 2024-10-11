@@ -131,7 +131,11 @@ class Checkout {
 	}
 
 	public static function enqueue_checkout_assets() {
-		if ( is_checkout() ) {
+		if(!function_exists('is_checkout')) {
+			return;
+		}
+
+		if ( \is_checkout() ) {
 			wp_enqueue_style(
 				'theme-woocommerce-checkout',
 				TENUP_THEME_TEMPLATE_URL . '/assets/css/frontend/woocommerce/checkout.css',
