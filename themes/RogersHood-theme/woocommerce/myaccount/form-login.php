@@ -73,7 +73,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 			</div>
 			</div>
 			<div class="rh-login-page__register-link">
-				<p>Don't have an account? <a href="<?php echo esc_url( home_url() . '/register' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></a></p>
+				<p>Don't have an account? <a href="?register"><?php esc_html_e( 'Register', 'woocommerce' ); ?></a></p>
 			</div>
 	</div>
 

@@ -141,3 +141,25 @@
 .woocommerce-MyAccount-navigation-link {
 	flex-shrink: 0;
 }
+
+
+.rh-login-page .u-column2 {
+	display: none;
+}
+
+body.rh-register .rh-login-page .u-column2 {
+	display: block;
+
+}
+
+.rh-login-page #customer_login.u-columns {
+	display: block;
+}
+
+body.rh-register .rh-login-page #customer_login.u-columns {
+	display: none;
+}
+
+body.rh-register  .u-column2 h2 {
+	text-align: center;
+}

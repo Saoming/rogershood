@@ -156,3 +156,15 @@ function wcc_change_breadcrumb_delimiter( $defaults ) {
 	return $defaults;
 }
 
+
+
+
+add_filter('body_class', 'add_body_register_class');
+
+function add_body_register_class($classes) {
+	if(isset($_GET['register'])) {
+		$classes[] = 'rh-register';
+	}
+
+	return $classes;
+}

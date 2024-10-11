@@ -5,7 +5,7 @@ namespace TenUpTheme\Shortcodes;
 class RegisterPage {
 
 	public function init_hooks() {
-		add_shortcode( 'rh_woocommerce_registration_form', array( $this, 'render_separate_registration_form' ) );
+//		add_shortcode( 'rh_woocommerce_registration_form', array( $this, 'render_separate_registration_form' ) );
 	}
 
 	/**
