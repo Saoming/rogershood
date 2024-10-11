@@ -33,7 +33,67 @@ class Checkout {
 
 		add_action( 'woocommerce_admin_order_data_after_billing_address', [ $this, 'display_optin_data_in_admin_order' ] , 10, 1 );
 
+		add_filter( 'wcpay_upe_appearance', [ $this, 'fix_payment_form' ] );
 
+
+	}
+
+	function fix_payment_form( $appearance ) {
+		$appearance->rules->{'.Label'} = [
+			'font-size' => '16px',
+			'line-height' => 'normal',
+			'font-family' => 'Sofia Pro',
+		];
+		$appearance->rules->{'#root'} = [
+			'font-family' => 'Sofia Pro',
+		];
+		$appearance->rules->{'.Input'} = [
+			'backgroundColor' => '#fff',
+			'border' => '1px solid #EBEBEB',
+			'padding' => '11px 19px',
+			'box-shadow' => 'none',
+			'font-family' => 'Sofia Pro',
+		];
+		$appearance->rules->{'.Input:focus'} = [
+			'outline' => 'none',
+			'box-shadow' => 'none',
+		];
+		$appearance->rules->{'.p-Input--focused'} = [
+			'outline' => 'none',
+			'box-shadow' => 'none',
+		];
+		$appearance->rules->{'.Input--invalid'} = [
+			'backgroundColor' => '#fff',
+			'border' => '1px solid #EBEBEB',
+			'padding' => '11px 29px',
+		];
+
+		$appearance->fonts = [
+			[
+				'cssSrc'    => 'url('. get_stylesheet_directory_uri() .'/assets/css/frontend/woocommerce/style-for-stripe.css)',
+			]
+		];
+		$appearance->theme = 'flat';
+		$appearance->base = [
+			'fontFamily' => 'Sofia Pro',
+		];
+		$appearance->variables = array(
+			'fontFamily' => 'Sofia Pro',
+			'fontWeightNormal' => '300',
+			'fontLineHeight' => 'normal',
+			'borderRadius' => '12px',
+			'colorBackground' => '#fff',
+			'colorPrimary' => '#121212',
+			'accessibleColorOnColorPrimary' => '#5E5E5E',
+			'colorText' => '#5E5E5E',
+			'colorTextSecondary' => '#5E5E5E',
+			'colorTextPlaceholder' => '#5E5E5E',
+			'fontSizeBase' => '16px',
+			'focusBoxShadow' => 'none',
+			'fontSizeSm' => '16px',
+		);
+
+		return $appearance;
 	}
 
 
