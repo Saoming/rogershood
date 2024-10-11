@@ -29,6 +29,24 @@
             "preview_size": "medium"
         },
         {
+            "key": "field_6708e31f916d9",
+            "label": "Brand Link",
+            "name": "brand_link",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "allow_in_bindings": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_66f8ef68132b3",
             "label": "Site Notifications",
             "name": "site_notifications",
@@ -148,5 +166,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728574339
+    "modified": 1728635705
 }

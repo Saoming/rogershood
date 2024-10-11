@@ -35,9 +35,12 @@ $args['menu_header_mobile'] = wp_nav_menu(
 
 if ( function_exists( 'get_field' ) ) {
 	$args['header_brand']                 = get_field( 'brand', 'option' ); // in future replaces  in network site options
+	$args['brand_link']                   = get_field( 'brand_link', 'option' ); // in future replaces  in network site options
 	$args['site_notifications']           = get_field( 'site_notifications', 'option' ); // in future replace with network site options with function call
 	$args['number_of_site_notifications'] = get_field( 'number_of_site_notifications', 'option' ); // in future replace with network site options with function call
 	$args['activate_site_notifications']  = get_field( 'activate_site_notifications', 'option' ); // in future replace with network site options with function call
+	$args['my_account_link']              = get_field( 'my_account_link', 'option' ); // in future replaces  in network site options
+	$args['cart_link']                    = get_field( 'cart_link', 'option' ); // in future replaces  in network site options
 }
 
 $args['allowed_html'] = array(

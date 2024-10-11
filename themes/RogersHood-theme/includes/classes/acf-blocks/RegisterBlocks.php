@@ -203,7 +203,6 @@ class RegisterBlocks {
 				),
 			)
 		);
-
 	}
 
 	protected function register_products_grid_block() {
@@ -225,7 +224,6 @@ class RegisterBlocks {
 				),
 			)
 		);
-
 	}
 
 
@@ -272,7 +270,32 @@ class RegisterBlocks {
 				),
 			)
 		);
+	}
 
+	/**
+	 * Registers the Top Help Search Section
+	 */
+	protected function register_top_help_search_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'top-help-search-section',
+				'title'           => __( 'Top Help Search Section' ),
+				'description'     => __( 'TTop Help Search Section' ),
+				'render_template' => 'partials/blocks/top-help-search/top-help-search.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'enqueue_assets'  => ResourceEnqueuer::register_splide_assets(),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/top-help-search.jpg',
+						),
+					),
+				),
+			)
+		);
 	}
 
 	protected function register_category_links_block() {
@@ -294,7 +317,6 @@ class RegisterBlocks {
 				),
 			)
 		);
-
 	}
 
 	protected function register_review_slider_block() {
@@ -339,7 +361,6 @@ class RegisterBlocks {
 				),
 			)
 		);
-
 	}
 
 	protected function register_suggested_products_block() {
@@ -361,7 +382,6 @@ class RegisterBlocks {
 				),
 			)
 		);
-
 	}
 
 
@@ -632,6 +652,7 @@ class RegisterBlocks {
 				'mode'            => 'auto',
 				'category'        => 'rogershood',
 				'supports'        => array( 'anchor' => true ),
+<<<<<<< HEAD
 				'example'         => array(
 					'attributes' => array(
 						'mode' => 'preview',
@@ -658,11 +679,17 @@ class RegisterBlocks {
 				'category'        => 'rogershood',
 				'supports'        => array( 'anchor' => true ),
 				'enqueue_assets'  => ResourceEnqueuer::register_splide_assets(),
+=======
+>>>>>>> b08a4e2a4d25f599203d39e5bed22fc403909923
 				'example'         => array(
 					'attributes' => array(
 						'mode' => 'preview',
 						'data' => array(
+<<<<<<< HEAD
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/top-help-search.jpg',
+=======
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/three-steps.jpg',
+>>>>>>> b08a4e2a4d25f599203d39e5bed22fc403909923
 						),
 					),
 				),
@@ -719,7 +746,6 @@ class RegisterBlocks {
 				),
 			)
 		);
-
 	}
 
 	/**
@@ -790,7 +816,10 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/support-cards.jpg',
+<<<<<<< HEAD
 
+=======
+>>>>>>> b08a4e2a4d25f599203d39e5bed22fc403909923
 						),
 					),
 				),
