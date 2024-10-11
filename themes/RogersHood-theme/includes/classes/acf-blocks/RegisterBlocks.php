@@ -780,7 +780,7 @@ class RegisterBlocks {
 			array(
 				'name'            => 'rh-support-cards',
 				'title'           => __( 'Support Cards' ),
-				'description'     => __( 'Top Help search Section' ),
+				'description'     => __( 'Support Cards Section' ),
 				'render_template' => 'partials/blocks/support-cards/support-cards.php',
 				'mode'            => 'auto',
 				'category'        => 'rogershood',
