@@ -48,7 +48,6 @@ button:where(:not(.components-button)) {
 	color: var(--wp--preset--color--white);
 }
 
-
 .woocommerce-account .woocommerce-Button {
 	background-color: var(--wp--preset--color--light-blue) !important;
 	border: 1px solid var(--wp--preset--color--light-blue) !important;
@@ -63,7 +62,6 @@ button:where(:not(.components-button)) {
 	transition: background 300ms ease-in !important;
 	box-sizing: border-box;
 	width: fit-content;
-
 }
 
 .woocommerce-account .woocommerce-Button:hover {
@@ -104,3 +102,4 @@ button:where(:not(.components-button)) {
 	background-color: var(--wp--preset--color--green);
 	border: 1px solid var(--wp--preset--color--green);
 	color: var(--wp--preset--color--white);
+}
