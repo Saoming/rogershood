@@ -8,7 +8,7 @@
 		<?php }
 		if ( $title ) { ?>
 			<h2 class="post-grid__title text-center">
-				<?php echo esc_textarea( $pretitle ); ?>
+				<?php echo esc_textarea( $title ); ?>
 			</h2>
 		<?php } ?>
 		<div class="row post-grid__row">
@@ -43,7 +43,7 @@
 							?>
 							<a href="<?php echo esc_url( $post['category_link'] ); ?>"
 							   class="posts-grid__category-container post-grid--<?php echo esc_attr( $category_class ); ?>">
-								<?php echo esc_attr( $post['category_name'] ); ?>
+								<?php echo wp_kses_post( $post['category_name'] ); ?>
 							</a>
 						<?php } ?>
 					</div>
@@ -54,4 +54,3 @@
 		</div>
 	</div>
 </div>
-

@@ -49,6 +49,5 @@ if ( ! get_field( 'block_preview' ) ) {
 		<img style="max-width:100%; height:auto;" src="<?php the_field( 'block_preview' ) ?>">
 	</div>
 <?php } ?>
-?>
 
 

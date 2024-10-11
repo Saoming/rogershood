@@ -1,0 +1,55 @@
+.woocommerce-order .woocommerce-thankyou-order-received {
+	display: none;
+}
+
+.woocommerce-order .woocommerce-customer-details {
+	display: none;
+}
+
+.rh-woo-thankyou__title {
+	font-size: 18px;
+}
+
+.woocommerce-order .rh-woo-thankyou__row {
+	background: var(--c-light-beige);
+	border-radius: 12px;
+	padding: 50px;
+}
+
+.rh-woo-thankyou__text {
+	margin-bottom: 12px;
+}
+
+.rh-woo-thankyou__row ul.order_details {
+	padding-left: 0;
+}
+
+.rh-woo-thankyou__row ul.order_details li {
+	display: flex;
+	flex-direction: column;
+	padding-left: 0;
+}
+
+.woocommerce .rh-woo-thankyou__row ul.order_details li {
+	border-right: none;
+	display: inline-block;
+}
+
+.woocommerce .rh-woo-thankyou__row ul.order_details li,
+.woocommerce .rh-woo-thankyou__row ul.order_details li strong {
+	font-size: 16px;
+	font-weight: 300;
+	line-height: 1.3;
+	margin-bottom: 12px;
+	text-transform: none;
+}
+
+.woocommerce .rh-woo-thankyou__row ul.order_details li strong {
+	display: inline;
+}
+
+
+.rh-woo-thankyou__row {
+	border-radius: 12px;
+	background: var(--c-light-beige);
+}

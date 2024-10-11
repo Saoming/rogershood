@@ -6,8 +6,8 @@
  */
 
 
-$account_page_url = get_field( 'account_page_link', 'option' ) ?? '#';
-$cart_page_url    = get_field( 'cart_page_link', 'option' ) ?? '#';
+$account_page_url = get_field( 'my_account_link', 'option' ) ?? '#';
+$cart_page_url    = get_field( 'cart_link', 'option' ) ?? '#';
 ?>
 
 <?php if ( $args['activate_site_notifications'] ) : ?>
