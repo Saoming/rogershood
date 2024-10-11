@@ -141,6 +141,28 @@ class RegisterBlocks {
 		);
 	}
 
+	protected function register_share_component_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'rh-share-component',
+				'title'           => __( 'Share Component' ),
+				'render_template' => 'partials/blocks/share-component/share-component.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/share-component.jpg',
+						),
+					),
+				),
+			)
+		);
+
+	}
+
 	protected function register_single_product_slider_block() {
 		acf_register_block_type(
 			array(
@@ -150,7 +172,6 @@ class RegisterBlocks {
 				'mode'            => 'auto',
 				'category'        => 'rogershood',
 				'supports'        => array( 'anchor' => true ),
-				'enqueue_assets'  => ResourceEnqueuer::enqueue_slick_assets(),
 				'example'         => array(
 					'attributes' => array(
 						'mode' => 'preview',
