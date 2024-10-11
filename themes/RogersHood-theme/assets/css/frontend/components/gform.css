@@ -1,11 +1,14 @@
-.rh-block .gfield_label {
+.gfield_label {
 	font-size: 18px !important;
 	font-weight: 300 !important;
 }
 
-.rh-block .ginput_container input,
-.rh-block .ginput_container select,
-.rh-block .ginput_container textarea {
+.ginput_container input[type="text"],
+.ginput_container input[type="password"],
+.ginput_container input[type="email"],
+.ginput_container input[type="tel"],
+.ginput_container select,
+.ginput_container textarea {
 	border: 1px solid #eee !important;
 	border-radius: 12px !important;
 	box-shadow: none !important;
@@ -14,16 +17,17 @@
 	padding: 5px 10px !important;
 }
 
-.rh-block .gform_wrapper .gform_fields {
+.gform_wrapper .gform_fields {
 	grid-row-gap: 12px !important;
 }
 
-.rh-block .ginput_container select {
+.ginput_container select {
 	color: var(--c-dark-grey) !important;
 	padding-top: 0 !important;
 }
 
-.rh-block .gform_footer .button {
+.gform_wrapper input[type="button"],
+.gform_wrapper .button {
 	background-color: var(--c-light-blue) !important;
 	border: 1px solid var(--c-light-blue) !important;
 	border-radius: 42px !important;
@@ -38,4 +42,8 @@
 	text-align: center;
 	text-decoration: none !important;
 	transition: background 300ms ease-in !important;
+}
+
+.gf_progressbar_percentage {
+	background-color: var(--c-green) !important;
 }
