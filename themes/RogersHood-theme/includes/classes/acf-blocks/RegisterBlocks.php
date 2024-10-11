@@ -618,7 +618,6 @@ class RegisterBlocks {
 			)
 		);
 	}
-<<<<<<< HEAD
 
 	/**
 	 * Registers the Three Steps Block
@@ -633,7 +632,18 @@ class RegisterBlocks {
 				'mode'            => 'auto',
 				'category'        => 'rogershood',
 				'supports'        => array( 'anchor' => true ),
-=======
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/three-steps.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+
 	/**
 	 * Registers the Top Help Search Section
 	 */
@@ -648,13 +658,11 @@ class RegisterBlocks {
 				'category'        => 'rogershood',
 				'supports'        => array( 'anchor' => true ),
 				'enqueue_assets'  => ResourceEnqueuer::register_splide_assets(),
->>>>>>> dff7d51db452ecc0e374aa9e69cdef6c6db4d860
 				'example'         => array(
 					'attributes' => array(
 						'mode' => 'preview',
 						'data' => array(
-<<<<<<< HEAD
-							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/three-steps.jpg',
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/top-help-search.jpg',
 						),
 					),
 				),
