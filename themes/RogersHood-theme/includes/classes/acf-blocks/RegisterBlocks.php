@@ -790,9 +790,7 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/support-cards.jpg',
-=======
-							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/top-help-search.jpg',
->>>>>>> dff7d51db452ecc0e374aa9e69cdef6c6db4d860
+
 						),
 					),
 				),
