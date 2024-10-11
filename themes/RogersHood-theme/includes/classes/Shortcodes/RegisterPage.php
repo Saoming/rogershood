@@ -5,7 +5,7 @@ namespace TenUpTheme\Shortcodes;
 class RegisterPage {
 
 	public function init_hooks() {
-		add_shortcode( 'rh_woocommerce_registration_form', array( $this, 'render_separate_registration_form' ) );
+//		add_shortcode( 'rh_woocommerce_registration_form', array( $this, 'render_separate_registration_form' ) );
 	}
 
 	/**
@@ -18,7 +18,7 @@ class RegisterPage {
 		do_action( 'woocommerce_before_customer_login_form' );
 
 		// Get the registration form template
-		$html = wc_get_template_html( 'myaccount/form-login.php' );
+		$html = wc_get_template_html( 'myaccount/form-login-with-register.php' );
 
 		// Use DOMDocument to manipulate the HTML
 		$dom = new \DOMDocument();

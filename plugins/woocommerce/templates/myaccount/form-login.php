@@ -27,7 +27,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 	<div class="u-column1 col-1">
 
-<?php endif; ?>
+		<?php endif; ?>
 
 		<h2><?php esc_html_e( 'Login', 'woocommerce' ); ?></h2>
 
@@ -61,7 +61,7 @@ do_action( 'woocommerce_before_customer_login_form' ); ?>
 
 		</form>
 
-<?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
+		<?php if ( 'yes' === get_option( 'woocommerce_enable_myaccount_registration' ) ) : ?>
 
 	</div>
 

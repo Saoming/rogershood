@@ -61,7 +61,7 @@ function register_product_data_endpoint() {
 		),
 	);
 }
-\add_action( 'rest_api_init', 'register_product_data_endpoint' );
+\add_action( 'rest_api_init', __NAMESPACE__ . '\register_product_data_endpoint' );
 
 /**
  * @access private

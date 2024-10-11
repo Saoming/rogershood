@@ -4,7 +4,7 @@ namespace TenUpTheme\Shortcodes;
 
 class LoginPage {
 	public function init_hooks() {
-		add_shortcode( 'rh_woocommerce_login_form', array($this, 'render_separate_login_form' ));
+//		add_shortcode( 'rh_woocommerce_login_form', array($this, 'render_separate_login_form' ));
 	}
 
 

@@ -68,8 +68,8 @@
 }
 
 
-.woocommerce button,
-.woocommerce-EditAccountForm button {
+.rh-login-page .woocommerce-button,
+.rh-login-page .woocommerce-EditAccountForm button {
 	background-color: var(--c-green) !important;
 	border: 1px solid var(--wp--preset--color--green) !important;
 	border-radius: 42px !important;
@@ -140,4 +140,26 @@
 
 .woocommerce-MyAccount-navigation-link {
 	flex-shrink: 0;
+}
+
+
+.rh-login-page .u-column2 {
+	display: none;
+}
+
+body.rh-register .rh-login-page .u-column2 {
+	display: block;
+
+}
+
+.rh-login-page #customer_login.u-columns {
+	display: block;
+}
+
+body.rh-register .rh-login-page #customer_login.u-columns {
+	display: none;
+}
+
+body.rh-register  .u-column2 h2 {
+	text-align: center;
 }
