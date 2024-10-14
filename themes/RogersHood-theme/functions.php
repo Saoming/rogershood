@@ -56,14 +56,14 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 
 function rh_get_active_plugins() {
 
-	$active_plugins = (array) get_option( 'active_plugins', [] );
+	$active_plugins = (array) get_option( 'active_plugins', array() );
 
 	if ( is_multisite() ) {
 		// Due to legacy code, active_sitewide_plugins stores them in the keys,
 		// whereas active_plugins stores them in the values. array_keys() resolves the disparity.
 		$active_plugins = array_merge(
 			$active_plugins,
-			array_keys( get_site_option( 'active_sitewide_plugins', [] ) )
+			array_keys( get_site_option( 'active_sitewide_plugins', array() ) )
 		);
 
 		// $plugins is already sorted at `activate_plugin`.
@@ -134,23 +134,10 @@ add_action(
 	100,
 );
 
-add_filter('body_class', 'add_body_register_class');
+add_filter( 'body_class', 'add_body_register_class' );
 
-function add_body_register_class($classes) {
-	if(isset($_GET['register'])) {
-		$classes[] = 'rh-register';
-	}
-
-	return $classes;
-}
-
-
-
-
-add_filter('body_class', 'add_body_register_class');
-
-function add_body_register_class($classes) {
-	if(isset($_GET['register'])) {
+function add_body_register_class( $classes ) {
+	if ( isset( $_GET['register'] ) ) {
 		$classes[] = 'rh-register';
 	}
 
