@@ -1,7 +1,7 @@
 <section class="hero-container rh-block" id="<?php echo esc_attr( $args['id'] ); ?>">
 	<section
 		class="hero-inner-container bg-blue"
-		<?php if ( $args['hero_background']['url'] ) : ?>
+		<?php if ( $args['hero_background'] ) : ?>
 		style="background: url('<?php echo esc_url( $args['hero_background']['url'] ); ?>'); background-size: cover; background-repeat: no-repeat;"
 		<?php endif; ?>
 	>
