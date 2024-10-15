@@ -32,7 +32,7 @@ class CoreHeading {
 			// Add FAB button with meal type
 			$meal_color = $meal_colors[$meal] ?? 'gray';
 			$fab_button = sprintf(
-				'<div class="meal-fab meal-%s text-body-20" style="background-color: %s; border-radius: 60px; color: black; display: inline-block; text-transform: uppercase;">%s</div>',
+				'<div class="meal-fab meal-%s" style="background-color: %s; border-radius: 60px; color: black; display: inline-block; text-transform: uppercase;">%s</div>',
 				esc_attr($meal),
 				esc_attr($meal_color),
 				esc_html($meal)
