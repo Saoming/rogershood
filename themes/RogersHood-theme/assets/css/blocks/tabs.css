@@ -1,9 +1,15 @@
 .rh-tabs__titles {
 	display: flex;
 	gap: 20px;
-	justify-content: center;
 	list-style: none;
 	overflow: auto;
+	padding-inline-start: 0;
+}
+
+@media (--bp-medium) {
+	.rh-tabs__titles {
+		justify-content: center;
+	}
 }
 
 .rh-tabs__title {
@@ -19,21 +25,16 @@
 }
 
 .rh-tab__title {
-
-}
-
-
-
-.rh-tab__title {
 	border: 1px solid var(--wp--preset--color--light-blue) !important;
 	border-radius: 42px !important;
+	box-sizing: border-box;
 	color: var(--wp--preset--color--black) !important;
 	display: inline-block;
+	flex-shrink: 0;
 	padding: 8px 16px;
 	text-align: center;
 	text-decoration: none !important;
 	transition: background 300ms ease-in !important;
-	box-sizing: border-box;
 }
 
 .rh-tab__title:hover {

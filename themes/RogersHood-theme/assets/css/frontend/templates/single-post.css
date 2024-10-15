@@ -95,6 +95,7 @@
 .meal-fab {
 	float: left;
 	margin-right: 15px;
+	margin-top: 3px;
 	padding: 4px 12px 2px;
 	position: relative;
 	top: 10px;
