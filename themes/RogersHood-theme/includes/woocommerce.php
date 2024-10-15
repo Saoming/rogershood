@@ -104,7 +104,7 @@ function wcc_change_breadcrumb_delimiter( $defaults ) {
 }
 
 /**
- * Change the breadcrumb separator
+ * Remove the default product title and Add a custom one
  */
 remove_action( 'woocommerce_shop_loop_item_title', 'woocommerce_template_loop_product_title', 10 );
 add_filter( 'woocommerce_shop_loop_item_title', 'wc_link_fix', 10 );
