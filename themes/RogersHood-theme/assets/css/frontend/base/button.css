@@ -7,10 +7,12 @@
  * using :where to prevent the specificity increase of using :not
  */
 
+.wp-block-button .wp-element-button,
 .rh-button {
 	background-color: var(--wp--preset--color--light-blue) !important;
 	border: 1px solid var(--wp--preset--color--light-blue) !important;
 	border-radius: 42px !important;
+	box-sizing: border-box;
 	color: var(--wp--preset--color--black) !important;
 	display: inline-block;
 	min-height: 50px !important;
@@ -19,9 +21,9 @@
 	text-align: center;
 	text-decoration: none !important;
 	transition: background 300ms ease-in !important;
-	box-sizing: border-box;
 }
 
+.wp-block-button .wp-element-button:hover,
 .rh-button:hover {
 	background-color: var(--wp--preset--color--green) !important;
 	border: 1px solid var(--wp--preset--color--green) !important;
@@ -52,6 +54,7 @@ button:where(:not(.components-button)) {
 	background-color: var(--wp--preset--color--light-blue) !important;
 	border: 1px solid var(--wp--preset--color--light-blue) !important;
 	border-radius: 42px !important;
+	box-sizing: border-box;
 	color: var(--wp--preset--color--black) !important;
 	display: inline-block;
 	min-height: 50px !important;
@@ -60,7 +63,6 @@ button:where(:not(.components-button)) {
 	text-align: center;
 	text-decoration: none !important;
 	transition: background 300ms ease-in !important;
-	box-sizing: border-box;
 	width: fit-content;
 }
 
