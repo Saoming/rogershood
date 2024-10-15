@@ -24,11 +24,8 @@ if ( have_posts() ) :
 			<?php the_content(); ?>
 		</div>
 
-	</div>
-</div>
-
 		<?php
-endwhile;
+	endwhile;
 endif;
 
 get_footer();

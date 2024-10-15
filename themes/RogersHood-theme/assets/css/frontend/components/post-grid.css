@@ -1,15 +1,15 @@
 .posts-grid__image-container {
 	display: block;
 	line-height: 0;
-	overflow: hidden;
 	margin-bottom: 26px;
+	overflow: hidden;
 }
 
 .posts-grid__title-container {
 	color: var(--c-black);
+	margin-bottom: 16px;
 	text-decoration: none;
 	text-transform: uppercase;
-	margin-bottom: 16px;
 }
 
 .post-grid__row {
@@ -30,13 +30,24 @@
 }
 
 .posts-grid__category-container {
+	background: var(--c-category-fab-background);
+	border-radius: 40px;
+	color: var(--c-black);
 	display: inline-block;
 	padding: 8px 16px 6px;
-	border-radius: 40px;
-	background: var(--c-category-fab-background);
-	text-decoration: none;
 	position: absolute;
-	top: 16px;
 	right: 20px;
+	text-decoration: none;
 	text-transform: uppercase;
+	top: 16px;
+}
+
+.post-grid__post:nth-child(2) .posts-grid__category-container {
+	background: #b5ddc0;
+}
+
+.posts-grid__image {
+	aspect-ratio: 400/272;
+	object-fit: cover;
+	width: 100%;
 }

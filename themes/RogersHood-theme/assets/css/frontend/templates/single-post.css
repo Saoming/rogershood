@@ -39,16 +39,16 @@
 
 .single-post__image {
 	line-height: 0;
+	margin-bottom: 56px;
 	margin-left: -20px;
 	margin-right: -20px;
-	margin-bottom: 56px;
 }
 
 .single-post__content {
 	color: var(--c-dark-grey);
 }
 
-.single-post__content p:first-child {
+.single-post__content > p:first-child {
 	line-height: 24px;
 	margin-bottom: 40px;
 }
@@ -95,6 +95,7 @@
 .meal-fab {
 	float: left;
 	margin-right: 15px;
+	margin-top: 3px;
 	padding: 4px 12px 2px;
 	position: relative;
 	top: 10px;
@@ -105,8 +106,8 @@
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	width: 100%;
 	height: 300px;
+	width: 100%;
 }
 
 @media only screen and (width >= 64em) {
