@@ -58,6 +58,18 @@ get_header(); ?>
 			</ul>
 
 			<?php the_posts_navigation(); ?>
+		<?php else : ?>
+			<section class="rh-block notfound__content bg-blue">
+				<div class="container notfound__container text-center">
+					<h1 class="notfound__title">
+						<?php
+							/* translators: the search query */
+							printf( esc_html__( '%1$s Search Results for: "%2$s"', 'tenup-theme' ), esc_html( $wp_query->found_posts ), '<span>' . esc_html( get_search_query() ) . '</span>' );
+						?>
+					</h1>
+					<?php get_search_form(); ?>
+				</div>
+			</section>
 		<?php endif; ?>
 	</section>
 

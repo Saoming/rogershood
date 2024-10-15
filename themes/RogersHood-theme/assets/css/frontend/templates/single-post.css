@@ -109,9 +109,9 @@
 	height: 300px;
 }
 
-@media only screen and (--bp-large-2) {
+@media only screen and (width >= 64em) {
 	.single-post__image {
-		margin-left: 0;
-		margin-right: 0;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
