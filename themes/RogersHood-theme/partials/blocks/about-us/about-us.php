@@ -4,6 +4,7 @@
  */
 
 $fields = get_fields();
+$id     = uniqid( 'about-us-' );
 
 if ( ! get_field( 'block_preview' ) ) {
 	?>
@@ -40,7 +41,7 @@ if ( ! get_field( 'block_preview' ) ) {
 						if ( $fields["cta"] ) {
 							?>
 							<div class="about-us__cta">
-								<a class="button about-us__button"
+								<a class="rh-button about-us__button"
 								   href="<?php echo esc_url( $fields["cta"]["url"] ); ?>"
 								   target="<?php echo esc_attr( $fields["cta"]["target"] ); ?>"><?php echo esc_html( $fields["cta"]["title"] ); ?></a>
 							</div>

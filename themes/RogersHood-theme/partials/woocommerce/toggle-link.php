@@ -12,12 +12,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<a
 		class="
 		<?php
-		if ( '/shop/' === $_SERVER['REQUEST_URI'] ) {
+		if ( is_shop() ) {
 			echo 'current';
 		}
 		?>
 		toggle-link"
-		href="/shop/"
+		href="<?php echo esc_url( get_permalink( rh_get_shop_page_id() ) ); ?>"
 		aria-label="Link to Shop page"
 	>
 	All
@@ -26,12 +26,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<a
 		class="
 		<?php
-		if ( '/product-category/kits/' === $_SERVER['REQUEST_URI'] ) {
+		if ( is_product_category( 'kits' ) ) {
 			echo 'current';
 		}
 		?>
 		toggle-link"
-		href="/product-category/kits/"
+		href="<?php echo esc_url( get_term_link( 'kits', 'product_cat' ) ); ?>"
 		aria-label="Link to Kits page"
 	>
 	Kits
@@ -40,12 +40,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<a
 		class="
 		<?php
-		if ( '/product-category/products/' === $_SERVER['REQUEST_URI'] ) {
+		if ( is_product_category( 'products' ) ) {
 			echo 'current';
 		}
 		?>
 		toggle-link"
-		href="/product-category/products/"
+		href="<?php echo esc_url( get_term_link( 'products', 'product_cat' ) ); ?>"
 		aria-label="Link to Products page"
 	>
 	Products

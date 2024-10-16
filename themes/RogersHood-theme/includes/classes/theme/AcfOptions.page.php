@@ -52,6 +52,14 @@ class AcfOptionsPage {
 					'parent_slug' => $parent['menu_slug'],
 				)
 			);
+
+			acf_add_options_sub_page(
+				array(
+					'page_title'  => __( 'WooCommerce', 'tenup-theme' ),
+					'menu_title'  => __( 'WooCommerce', 'tenup-theme' ),
+					'parent_slug' => $parent['menu_slug'],
+				)
+			);
 		}
 	}
 }

@@ -4,7 +4,7 @@ namespace TenUpTheme\Shortcodes;
 
 class LoginPage {
 	public function init_hooks() {
-		add_shortcode( 'rh_woocommerce_login_form', array($this, 'render_separate_login_form' ));
+//		add_shortcode( 'rh_woocommerce_login_form', array($this, 'render_separate_login_form' ));
 	}
 
 
@@ -12,7 +12,7 @@ class LoginPage {
 	 * https://www.businessbloomer.com/woocommerce-separate-login-registration/
 	 */
 	public function render_separate_login_form() {
-		if ( is_user_logged_in() ) return '<p>You are already registered</p>';
+		if ( is_user_logged_in() ) return '<p>You are already logged</p>';
 
 		ob_start();
 		do_action( 'woocommerce_before_customer_login_form' );

@@ -40,14 +40,15 @@
 .single-post__image {
 	line-height: 0;
 	margin-bottom: 56px;
+	margin-left: -20px;
+	margin-right: -20px;
 }
 
 .single-post__content {
 	color: var(--c-dark-grey);
-	margin-bottom: 56px;
 }
 
-.single-post__content p:first-child {
+.single-post__content > p:first-child {
 	line-height: 24px;
 	margin-bottom: 40px;
 }
@@ -65,7 +66,7 @@
 	margin-top: 30px;
 }
 
-.single-post__content p:first-child::first-letter {
+.single-post__content > p:first-child::first-letter {
 	font-family: Scilla, serif;
 	font-size: 42px;
 }
@@ -94,7 +95,24 @@
 .meal-fab {
 	float: left;
 	margin-right: 15px;
+	margin-top: 3px;
 	padding: 4px 12px 2px;
 	position: relative;
 	top: 10px;
+}
+
+.parallax {
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 300px;
+	width: 100%;
+}
+
+@media only screen and (--bp-large-2) {
+	.single-post__image {
+		margin-left: auto;
+		margin-right: auto;
+	}
 }

@@ -54,7 +54,24 @@ if ( file_exists( __DIR__ . '/vendor/autoload.php' ) ) {
 	require_once __DIR__ . '/vendor/autoload.php';
 }
 
+function rh_get_active_plugins() {
 
+	$active_plugins = (array) get_option( 'active_plugins', array() );
+
+	if ( is_multisite() ) {
+		// Due to legacy code, active_sitewide_plugins stores them in the keys,
+		// whereas active_plugins stores them in the values. array_keys() resolves the disparity.
+		$active_plugins = array_merge(
+			$active_plugins,
+			array_keys( get_site_option( 'active_sitewide_plugins', array() ) )
+		);
+
+		// $plugins is already sorted at `activate_plugin`.
+		sort( $active_plugins );
+	}
+
+	return $active_plugins;
+}
 
 /**
  * Get all the include files for the theme.
@@ -84,7 +101,6 @@ function include_inc_files() {
 		}
 	}
 }
-
 
 include_inc_files();
 
@@ -118,41 +134,12 @@ add_action(
 	100,
 );
 
-/**
- *  Disable Default Header Store Notice
- */
-function modify_woocommerce_demo_store() {
-	return null;
+add_filter( 'body_class', 'add_body_register_class' );
+
+function add_body_register_class( $classes ) {
+	if ( isset( $_GET['register'] ) ) {
+		$classes[] = 'rh-register';
+	}
+
+	return $classes;
 }
-
-add_filter( 'woocommerce_demo_store', 'modify_woocommerce_demo_store', 10, 2 );
-
-/**
- *  Remove Ebook and Any Uncategorized in the default Shop Query
- */
-function custom_pre_get_posts_query( $q ) {
-
-	$tax_query = (array) $q->get( 'tax_query' );
-
-	$tax_query[] = array(
-		'taxonomy' => 'product_cat',
-		'field'    => 'slug',
-		'terms'    => array( 'ebooks', 'uncategorized' ),
-		'operator' => 'NOT IN',
-	);
-
-	$q->set( 'tax_query', $tax_query );
-}
-
-add_action( 'woocommerce_product_query', 'custom_pre_get_posts_query' );
-
-/**
- * Change the breadcrumb separator
- */
-add_filter( 'woocommerce_breadcrumb_defaults', 'wcc_change_breadcrumb_delimiter' );
-function wcc_change_breadcrumb_delimiter( $defaults ) {
-	// Change the breadcrumb delimeter from '/' to '>'
-	$defaults['delimiter'] = ' &gt; ';
-	return $defaults;
-}
-

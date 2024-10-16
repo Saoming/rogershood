@@ -41,7 +41,6 @@ if ( $block_type === 'repeater' ) {
 	}
 }
 if ( ! get_field( 'block_preview' ) ) {
-
 	include TENUP_THEME_PATH . '/views/post-grid/post-grid.php';
 } else {
 	?>
@@ -49,6 +48,5 @@ if ( ! get_field( 'block_preview' ) ) {
 		<img style="max-width:100%; height:auto;" src="<?php the_field( 'block_preview' ) ?>">
 	</div>
 <?php } ?>
-?>
 
 

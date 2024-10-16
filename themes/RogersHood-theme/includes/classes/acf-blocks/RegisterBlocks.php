@@ -56,7 +56,6 @@ class RegisterBlocks {
 	public function temp_tome_register_blocks() {
 		$this->register_faq_block();
 		$this->register_ingredient_grid_block();
-
 		$this->register_founders_block();
 		$this->register_single_product_slider_block();
 		$this->register_tiktok_feed_block();
@@ -67,12 +66,15 @@ class RegisterBlocks {
 		$this->register_category_links_block();
 		$this->register_review_slider_block();
 		$this->register_youtube_slider_block();
+		$this->register_suggested_products_block();
+		$this->register_share_component_block();
 	}
 
 	// TODO: Remove the function and add the methods to the main one, this is to prevent merge conflicts
 	public function temp_sam_register_blocks() {
 		$this->register_grid_text_quiz_block();
 		$this->register_testimonials_section_block();
+		$this->register_top_help_search_block();
 	}
 
 	protected function register_faq_block() {
@@ -140,6 +142,28 @@ class RegisterBlocks {
 		);
 	}
 
+	protected function register_share_component_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'rh-share-component',
+				'title'           => __( 'Share Component' ),
+				'render_template' => 'partials/blocks/share-component/share-component.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/share-component.jpg',
+						),
+					),
+				),
+			)
+		);
+
+	}
+
 	protected function register_single_product_slider_block() {
 		acf_register_block_type(
 			array(
@@ -149,7 +173,6 @@ class RegisterBlocks {
 				'mode'            => 'auto',
 				'category'        => 'rogershood',
 				'supports'        => array( 'anchor' => true ),
-				'enqueue_assets'  => ResourceEnqueuer::enqueue_slick_assets(),
 				'example'         => array(
 					'attributes' => array(
 						'mode' => 'preview',
@@ -202,7 +225,6 @@ class RegisterBlocks {
 				),
 			)
 		);
-
 	}
 
 	protected function register_products_grid_block() {
@@ -224,7 +246,6 @@ class RegisterBlocks {
 				),
 			)
 		);
-
 	}
 
 
@@ -271,7 +292,32 @@ class RegisterBlocks {
 				),
 			)
 		);
+	}
 
+	/**
+	 * Registers the Top Help Search Section
+	 */
+	protected function register_top_help_search_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'top-help-search-section',
+				'title'           => __( 'Top Help Search Section' ),
+				'description'     => __( 'TTop Help Search Section' ),
+				'render_template' => 'partials/blocks/top-help-search/top-help-search.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'enqueue_assets'  => ResourceEnqueuer::register_splide_assets(),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/top-help-search.jpg',
+						),
+					),
+				),
+			)
+		);
 	}
 
 	protected function register_category_links_block() {
@@ -293,7 +339,6 @@ class RegisterBlocks {
 				),
 			)
 		);
-
 	}
 
 	protected function register_review_slider_block() {
@@ -338,7 +383,27 @@ class RegisterBlocks {
 				),
 			)
 		);
+	}
 
+	protected function register_suggested_products_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'rh-suggested-products',
+				'title'           => __( 'Suggested Products' ),
+				'render_template' => 'partials/blocks/suggested-products/suggested-products.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/suggested-products.jpg',
+						),
+					),
+				),
+			)
+		);
 	}
 
 
@@ -622,6 +687,7 @@ class RegisterBlocks {
 	}
 
 
+
 	/**
 	 * Registers the Product Benefits
 	 */
@@ -670,7 +736,6 @@ class RegisterBlocks {
 				),
 			)
 		);
-
 	}
 
 	/**
@@ -731,7 +796,7 @@ class RegisterBlocks {
 			array(
 				'name'            => 'rh-support-cards',
 				'title'           => __( 'Support Cards' ),
-				'description'     => __( 'Top Help search Section' ),
+				'description'     => __( 'Support Cards Section' ),
 				'render_template' => 'partials/blocks/support-cards/support-cards.php',
 				'mode'            => 'auto',
 				'category'        => 'rogershood',

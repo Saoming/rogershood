@@ -35,17 +35,49 @@
 @media only screen and (min-width: 639px) {
 	.splide.is-initialized:not(.is-active) .benefit-card-list.splide__list {
 		display: grid;
-		gap: 8px;
+		gap: 26px;
 		grid-template-columns: repeat(2, 1fr);
 	}
 }
 
 @media only screen and (--bp-large-2) {
 	.benefits-section__container {
-		padding: 100px 65px 100px 110px;
+		padding: 100px 65px 100px 65px;
+	}
+
+	.benefits-card-container .splide__track {
+		overflow: unset;
 	}
 
 	.splide.is-initialized:not(.is-active) .benefit-card-list.splide__list {
 		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.benefits-card-container
+		.splide__track
+		.benefit-card-list
+		.benefit-card-item:nth-child(1) {
+		transform: rotate(-2.481deg);
+	}
+
+	.benefits-card-container
+		.splide__track
+		.benefit-card-list
+		.benefit-card-item:nth-child(2) {
+		transform: rotate(3.886deg);
+	}
+
+	.benefits-card-container
+		.splide__track
+		.benefit-card-list
+		.benefit-card-item:nth-child(3) {
+		transform: rotate(-1.965deg);
+	}
+
+	.benefits-card-container
+		.splide__track
+		.benefit-card-list
+		.benefit-card-item:nth-child(4) {
+		transform: rotate(1.299deg);
 	}
 }

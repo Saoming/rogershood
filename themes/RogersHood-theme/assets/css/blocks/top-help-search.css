@@ -1,0 +1,22 @@
+.top-search-container {
+	padding: 0;
+}
+
+.top-search-result-container {
+	padding: 80px 24px;
+}
+
+.top-search-inner {
+	grid-column-start: 2;
+	grid-column-end: span 10;
+}
+
+.top-search-title {
+	margin-top: 0;
+	margin-bottom: 16px;
+}
+
+.wysig-top-search__container {
+	font-size: 20px;
+	margin-bottom: 35px;
+}

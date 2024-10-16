@@ -1,15 +1,23 @@
 .hero-container {
-	height: 768px;
+	height: 100%;
 	padding: 0;
 }
 
 .hero-container video {
-	height: 768px;
+	height: 100%;
+}
+
+.hero-inner-container {
+	padding: 80px 24px;
 }
 
 .hero-inner {
 	align-items: center;
 	height: 100%;
+}
+
+.hero-inner-content {
+	padding: 100px 18px;
 }
 
 .hero-child-inner {
@@ -22,6 +30,14 @@
 }
 
 @media only screen and (--bp-large-2) {
+	.hero-container {
+		padding: 0;
+	}
+
+	.hero-container video {
+		height: 768px;
+	}
+
 	.hero-child-inner {
 		grid-column-end: span 6;
 		grid-column-start: 4;

@@ -36,7 +36,7 @@ if ( ! get_field( 'block_preview' ) ) {
 						if ( $cta ) { ?>
 							<div class="faq-block__intro__cta button-primary">
 								<a href="<?php echo esc_url( $cta_link ); ?>" <?php echo esc_attr( $cta_target ); ?>
-								   class="button button-primary"><?php echo esc_html( $cta_text ); ?></a>
+								   class="rh-button button-primary"><?php echo esc_html( $cta_text ); ?></a>
 							</div>
 						<?php }
 						if ( $image ) { ?>

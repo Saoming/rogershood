@@ -60,7 +60,7 @@
 	<div class="rh-tabs">
 		<ul class="rh-tabs__titles">
 			<?php foreach ( $tab_titles_content as $index => $title_content ) : ?>
-				<li class="rh-tab__title rh-button rh-button--primary <?php echo $index === 0 ? 'active' : ''; ?>" data-tab="rh-tab-<?php echo esc_attr( $index ); ?>">
+				<li class="rh-tab__title <?php echo $index === 0 ? 'active' : ''; ?>" data-tab="rh-tab-<?php echo esc_attr( $index ); ?>">
 					<?php echo esc_html( $title_content ); ?>
 				</li>
 			<?php endforeach; ?>

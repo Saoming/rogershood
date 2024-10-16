@@ -48,7 +48,9 @@ if ( ! get_field( 'block_preview' ) ) {
 						<?php } ?>
 						<div class="product-directions__items mb-50">
 							<?php foreach ( $fields["content"] as $item ) { ?>
-								<div class="product-directions__item br-4">
+								<div class="product-directions__item br-4 <?php if ( $fields["has_content_background_white"] ) {
+									echo 'bg-white';
+								} ?>">
 									<?php
 									if ( $item["title"] ) {
 										?>
@@ -71,7 +73,7 @@ if ( ! get_field( 'block_preview' ) ) {
 					</div>
 					<?php if ( $fields["cta"] ) { ?>
 						<div class="product-directions__cta">
-							<a class="button rh-button rh-button-primary product-directions__button"
+							<a class="rh-button rh-button-primary product-directions__button"
 							   href="<?php echo esc_url( $fields["cta"]["url"] ); ?>"
 							   target="<?php echo esc_attr( $fields["cta"]["target"] ); ?>"><?php echo esc_html( $fields["cta"]["title"] ); ?></a>
 						</div>

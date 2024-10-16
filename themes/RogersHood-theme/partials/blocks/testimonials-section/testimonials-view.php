@@ -73,6 +73,7 @@
 								</div>
 
 								<div class="testimonial-social">
+									<?php if ( $cta_link ) : ?>
 									<a
 										href="<?php echo esc_url( $cta_link ); ?>"
 										target="<?php echo esc_attr( $cta_target ); ?>"
@@ -84,6 +85,9 @@
 											<path d="M20.3333 5.68081L20.3471 5.66553" stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 										</svg>
 									</a>
+									<?php endif; ?>
+
+									<?php if ( $cta_link2 ) : ?>
 									<a
 										href="<?php echo esc_url( $cta_link2 ); ?>"
 										target="<?php echo esc_attr( $cta_target2 ); ?>"
@@ -94,6 +98,7 @@
 											<path d="M10.333 13C9.54188 13 8.76852 13.2346 8.11073 13.6741C7.45293 14.1136 6.94024 14.7384 6.63749 15.4693C6.33474 16.2002 6.25553 17.0044 6.40987 17.7804C6.56421 18.5563 6.94517 19.269 7.50458 19.8284C8.06399 20.3878 8.77672 20.7688 9.55265 20.9231C10.3286 21.0775 11.1328 20.9983 11.8637 20.6955C12.5946 20.3928 13.2194 19.8801 13.6589 19.2223C14.0984 18.5645 14.333 17.7911 14.333 17V5C14.777 6.33333 16.4663 9 19.6663 9" stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 										</svg>
 									</a>
+									<?php endif; ?>
 								</div>
 							</li>
 						<?php endforeach; ?>
