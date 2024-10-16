@@ -19,6 +19,8 @@ log
 dist
 backstop_data
 
+# Zipped theme
+/themes/RogersHood-theme.zip
 
 # Editors
 *.esproj
