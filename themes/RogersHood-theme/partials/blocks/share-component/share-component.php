@@ -6,8 +6,10 @@ if ( ! get_field( 'block_preview' ) ) { ?>
 			Share
 		</div>
 		<div class="single-post__share-buttons">
-			<button data-sharer="email" data-url="<?php the_permalink(); ?>"
-					data-subject="Hey! Check out this interesting post">
+			<button
+					onclick='window.location.href = "mailto:?body=<?php the_permalink(); ?>"; '
+			>
+
 				<img src="<?php echo TENUP_THEME_DIST_URL . 'svg/sharer/email-icon.svg' ?>" alt="Email Icon">
 			</button>
 			<button data-sharer="facebook" data-url="<?php the_permalink(); ?>">

@@ -113,11 +113,20 @@ class Cart {
 	}
 
 	// Add point information to the product name in the cart
-	public function add_point_to_the_product_name($content) {
+	public function add_point_to_the_product_name($content, $cart_item) {
 		if(is_cart()) {
-			//TODO: Add point Logic
-			$points = "{placeholder}";
-			$content = $content . ' <div class="cart-product-name__point">Earn ' . $points . ' points</div>';
+
+			$settings = get_option( 'rogershood_points_settings' );
+			$points_per_dollar = $settings['points_earned_per_dollar'] ?? 1;
+
+			$product = wc_get_product( $cart_item['product_id'] );
+
+			$points = $product->get_data()['price'] * $points_per_dollar;
+
+			if($points > 0 ) {
+				$content = $content . ' <div class="cart-product-name__point">Earn ' . $points . ' points</div>';
+			}
+
 		}
 
 		return $content;

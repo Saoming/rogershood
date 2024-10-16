@@ -25,6 +25,10 @@ class ProductContent {
 	public function change_single_product_content() {
 
 		if ( is_cart() ) {
+			global $rh_points_plugin;
+
+			remove_actioN( 'woocommerce_after_shop_loop_item_title', array( $rh_points_plugin['shop'], 'show_potential_points_after_product_title' ), 11 );
+
 			return;
 		}
 

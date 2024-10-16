@@ -6,6 +6,7 @@
 
 $pretitle = get_field( 'pretitle' );
 $title    = get_field( 'title' );
+$smaller_title_disabled = get_field( 'smaller_title_disabled' );
 
 if ( ! get_field( 'block_preview' ) ) {
 	?>
@@ -29,7 +30,7 @@ if ( ! get_field( 'block_preview' ) ) {
 				<div class="rh-youtube-slider__slider">
 					<div class="">
 						<div class="container--relative ">
-							<?php if ( $title ) { ?>
+							<?php if ( $title && !$smaller_title_disabled) { ?>
 								<div class="rh-youtube-slider__slider-title text-body-22 fw-500">
 									<?php echo esc_html( $title ); ?>
 									<span
