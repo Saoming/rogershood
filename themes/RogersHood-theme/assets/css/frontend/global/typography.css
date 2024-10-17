@@ -87,26 +87,6 @@ body {
 	padding-top: 80px;
 }
 
-/* Added classes for styling Single Post Start */
-
-.row-gap-0 {
-	row-gap: 0;
-}
-
-@media (max-width: 768px) {
-	.wp-block-table td {
-		font-size: 10px;
-	}
-}
-
-@media (max-width: 556px) {
-	.wp-block-table td {
-		font-size: 8px;
-	}
-}
-
-/* Added classes for styling Single Post End */
-
 .max-width-headings {
 	margin-left: auto;
 	margin-right: auto;
