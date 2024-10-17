@@ -16,7 +16,7 @@ if ( function_exists( 'get_field' ) ) {
 	$args['text_and_video_heading']     = get_field( 'text_and_video_heading' );
 	$args['text_and_video_video']       = get_field( 'text_and_video_video' );
 	$args['text_and_video_background']  = get_field( 'text_and_video_background' );
-	$args['video_poster_image']         = get_field( 'video_poster_image' );
+	$args['text_video_poster_image']    = get_field( 'text_video_poster_image' );
 	$args['text_and_video_description'] = get_field( 'text_and_video_description' );
 	$args['text_video_cta']             = get_field( 'text_and_video_button' );
 
