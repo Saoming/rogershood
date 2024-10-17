@@ -1,0 +1,41 @@
+.text-video-container {
+	height: 100%;
+	padding: 0;
+}
+
+.text-video-inner-container {
+	padding: 80px 24px;
+}
+
+.text-video-inner {
+	align-items: center;
+	height: 100%;
+}
+
+.text-video-inner-content {
+	padding: 100px 18px;
+}
+
+.text-video-child-inner {
+	grid-column-end: span 10;
+	grid-column-start: 2;
+}
+
+.wysig-text-video__container {
+	margin-bottom: 32px;
+}
+
+.text-video-subheading {
+	margin-bottom: 16px;
+}
+
+@media only screen and (--bp-large-2) {
+	.text-video-container {
+		padding: 0;
+	}
+
+	.text-video-child-inner {
+		grid-column-end: span 6;
+		grid-column-start: 4;
+	}
+}

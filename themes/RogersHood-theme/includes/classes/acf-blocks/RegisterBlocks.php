@@ -75,6 +75,7 @@ class RegisterBlocks {
 		$this->register_grid_text_quiz_block();
 		$this->register_testimonials_section_block();
 		$this->register_top_help_search_block();
+		$this->register_text_video_block();
 	}
 
 	protected function register_faq_block() {
@@ -161,7 +162,6 @@ class RegisterBlocks {
 				),
 			)
 		);
-
 	}
 
 	protected function register_single_product_slider_block() {
@@ -694,7 +694,7 @@ class RegisterBlocks {
 	protected function register_product_benefits_block() {
 		acf_register_block_type(
 			array(
-				'name'            => 'product-benefits',
+				'name'            => 'rh-product-benefits',
 				'title'           => __( 'Product Benefits' ),
 				'description'     => __( 'Text part with icons on left; image on right' ),
 				'render_template' => 'partials/blocks/product-benefits/product-benefits.php',
@@ -719,7 +719,7 @@ class RegisterBlocks {
 	protected function register_product_directions_block() {
 		acf_register_block_type(
 			array(
-				'name'            => 'product-directions',
+				'name'            => 'rh-product-directions',
 				'title'           => __( 'Product Directions' ),
 				'description'     => __( 'Text sections on left; image on left' ),
 				'render_template' => 'partials/blocks/product-directions/product-directions.php',
@@ -806,6 +806,31 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/support-cards.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+
+	/**
+	 * Registers the Text and Video Block
+	 */
+	protected function register_text_video_block() {
+		acf_register_block_type(
+			array(
+				'name'            => 'rh-text-video',
+				'title'           => __( 'Text and Video' ),
+				'description'     => __( 'Text and Video Section' ),
+				'render_template' => 'partials/blocks/text-and-video/text-and-video.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/text-and-video.jpg',
 						),
 					),
 				),
