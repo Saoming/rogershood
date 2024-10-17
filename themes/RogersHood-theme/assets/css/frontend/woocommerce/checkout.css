@@ -68,6 +68,7 @@ form.checkout
 div.woocommerce-checkout-review-order-table-new {
 	border-radius: 12px;
 	padding: 15px 0px 55px;
+	margin: 19px 0 0;
 }
 div.woocommerce-checkout-review-order-table-new h4 {
 	text-align: center;
@@ -338,3 +339,20 @@ table.woocommerce-checkout-review-order-table-new
 		padding-left: 10.5515%;
 	}
 }
+
+body.woocommerce-checkout .woocommerce form .form-row label{
+	/*line-height: 1.9;*/
+}
+body.woocommerce-checkout .wp-block-heading.has-text-align-center{
+	margin-block-start: 0.8em;
+	margin-block-end: 0.63em;
+}
+body.woocommerce-checkout .woocommerce-billing-fields__field-wrapper{
+	margin-top: -2px;
+}
+/* TODO: Remove this */
+.wcpay-payment-request-wrapper,
+#wcpay-express-checkout-button-separator{
+	display: none!important;
+}
+/* TODO: Remove this end */
