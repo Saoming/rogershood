@@ -3,10 +3,6 @@
 	padding: 0;
 }
 
-.hero-container video {
-	height: 100%;
-}
-
 .hero-inner-container {
 	padding: 80px 24px;
 }
@@ -32,10 +28,6 @@
 @media only screen and (--bp-large-2) {
 	.hero-container {
 		padding: 0;
-	}
-
-	.hero-container video {
-		height: 768px;
 	}
 
 	.hero-child-inner {

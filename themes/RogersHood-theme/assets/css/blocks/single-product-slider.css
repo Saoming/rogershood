@@ -1,5 +1,3 @@
-
-
 .single-product-slider__content {
 	padding: 142px 100px 100px 124px;
 }
@@ -32,8 +30,10 @@
 }
 
 .single-product-slider__image {
-	width: 100%;
+	border-bottom-right-radius: 12px;
+	border-top-right-radius: 12px;
 	height: 100%;
+	width: 100%;
 }
 
 .single-product-slider__rating-stars {
@@ -50,7 +50,6 @@
 }
 
 @media all and (width < 768px) {
-
 	.single-product-slider__content {
 		padding: 60px 28px;
 		grid-row: 2;
@@ -67,7 +66,4 @@
 	.single-product-slider .slick-dots {
 		bottom: -45px;
 	}
-
 }
-
-

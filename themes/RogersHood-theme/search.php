@@ -16,7 +16,18 @@ get_header(); ?>
 							<h1 class="top-search-title">
 							<?php
 								/* translators: the search query */
-								printf( esc_html__( '%1$s Search Results for: "%2$s"', 'tenup-theme' ), esc_html( $wp_query->found_posts ), '<span>' . esc_html( get_search_query() ) . '</span>' );
+								printf(
+									esc_html(
+										_n(
+											'%1$s Search Result for: "%2$s"',
+											'%1$s Search Results for: "%2$s"',
+											$wp_query->found_posts,
+											'tenup-theme',
+										)
+									),
+									esc_html( $wp_query->found_posts ),
+									'<span>' . esc_html( get_search_query() ) . '</span>',
+								);
 							?>
 							</h1>
 							<?php get_search_form(); ?>
@@ -58,6 +69,29 @@ get_header(); ?>
 			</ul>
 
 			<?php the_posts_navigation(); ?>
+		<?php else : ?>
+			<section class="rh-block notfound__content bg-blue">
+				<div class="container notfound__container text-center">
+					<h1 class="notfound__title">
+						<?php
+							/* translators: the search query */
+							printf(
+								esc_html(
+									_n(
+										'%1$s Search Result for: "%2$s"',
+										'%1$s Search Results for: "%2$s"',
+										$wp_query->found_posts,
+										'tenup-theme',
+									)
+								),
+								esc_html( $wp_query->found_posts ),
+								'<span>' . esc_html( get_search_query() ) . '</span>',
+							);
+						?>
+					</h1>
+					<?php get_search_form(); ?>
+				</div>
+			</section>
 		<?php endif; ?>
 	</section>
 
