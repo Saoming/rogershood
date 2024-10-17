@@ -2,6 +2,11 @@
 	margin-bottom: 34px;
 }
 
+.support-cards__card__title,
+.support-cards__card__description {
+	color: var(--wp--preset--color--black);
+}
+
 @media (--bp-medium) {
 	.support-cards__title {
 		margin-bottom: 80px;
