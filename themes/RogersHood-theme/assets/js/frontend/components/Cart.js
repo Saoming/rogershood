@@ -58,7 +58,7 @@ const Cart = () => {
 				e.preventDefault();
 				let debounceTimer;
 
-				const button = e.target;
+				const button = e.target.parentElement;
 				const change = parseInt(button.dataset.change);
 				const quantityInput = button.parentElement.querySelector('.js-cart-quantity');
 				const value = parseInt(quantityInput.value);

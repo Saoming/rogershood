@@ -29,7 +29,7 @@
 /* Cart Collaterals */
 .woocommerce-cart .cart-collaterals {
 	flex-shrink: 0;
-	flex-basis: 400px;
+	flex-basis: 450px;
 }
 
 body.woocommerce-cart .cart-collaterals .cross-sells,
@@ -67,6 +67,7 @@ body.woocommerce-cart .cart-collaterals a.checkout-button {
 	margin-right: auto;
 	max-width: 100%;
 	line-height: 1.4;
+	padding: 14px 38.5px;
 	text-align: center;
 	width: fit-content;
 }
@@ -92,10 +93,43 @@ body.woocommerce-cart .shop_table {
 
 /* Product Styles */
 body.woocommerce-cart ul.products.columns-2 li.product {
-	display: flex;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-column-gap: 20px;
 	margin-right: 0;
 	width: 100%;
 }
+
+body.woocommerce-cart .woocommerce ul.products li.product .button {
+	position: static;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+body.woocommerce-cart .wc-ratings__container {
+	align-items: flex-start;
+	display: flex;
+	flex-direction: column;
+	grid-row: 1 / span 1;
+	grid-column: 2 / span 1;
+	margin-bottom: 0;
+}
+
+body.woocommerce-cart .wc-ratings__container .ratings-count {
+	display: none;
+}
+
+
+body.woocommerce-cart .woocommerce-loop-product__link {
+	grid-row: 1 / span 4;
+}
+
+body.woocommerce-cart .woocommerce-loop-product__title {
+	text-transform: capitalize !important;
+	grid-row: 2 / span 1;
+	padding-bottom: 0 !important;
+}
+
 
 body.woocommerce-cart .product-thumbnail {
 	padding: 18px;
@@ -128,7 +162,7 @@ body.woocommerce-cart .quantity-field .qty {
 	box-shadow: none;
 	text-align: center;
 	width: 40px;
-	padding-right: 0;
+	padding-right: 4px;
 }
 
 body.woocommerce-cart .quantity-field .qty::-webkit-outer-spin-button,
@@ -141,6 +175,14 @@ body.woocommerce-cart .quantity-field .qty::-webkit-inner-spin-button {
 	background: white;
 	border: 1px solid black;
 	border-radius: 40px;
+	min-width: 25px;
+	text-align: center;
+}
+
+.cart-quantity-control span {
+	font-size: 25px;
+	position: relative;
+	top: 0px;
 }
 
 .cart-quantity-control.minus {
@@ -162,12 +204,12 @@ body.woocommerce-cart .quantity-field .qty::-webkit-inner-spin-button {
 }
 
 .cart-product-name__point {
-	margin-top: 5px;
+
 	font-style: italic;
 }
 
 .cart-collaterals__inner h2 {
- 	font-size: 20px;
+	font-size: 20px;
 	line-height: 20px;
 	font-family: "Sofia Pro", sans-serif;
 }

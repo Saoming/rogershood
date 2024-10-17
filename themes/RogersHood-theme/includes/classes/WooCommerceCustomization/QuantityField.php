@@ -38,9 +38,9 @@ class QuantityField {
 		ob_start();
 		?>
 		<div class="quantity-field">
-			<button class="cart-quantity-control js-cart-quantity-control minus" data-change="-1" data-cart-item-key="<?php echo esc_attr($cart_item_key); ?>">-</button>
+			<button class="cart-quantity-control js-cart-quantity-control minus" data-change="-1" data-cart-item-key="<?php echo esc_attr($cart_item_key); ?>"><span>-</span></button>
 			<input type="number" class="js-cart-quantity qty" name="cart[<?php echo esc_attr($cart_item_key); ?>][qty]" value="<?php echo esc_attr($quantity); ?>" />
-			<button class="cart-quantity-control js-cart-quantity-control plus"  data-change="1" data-cart-item-key="<?php echo esc_attr($cart_item_key); ?>">+</button>
+			<button class="cart-quantity-control js-cart-quantity-control plus"  data-change="1" data-cart-item-key="<?php echo esc_attr($cart_item_key); ?>"><span>+</span></button>
 		</div>
 		<?php
 		return ob_get_clean();

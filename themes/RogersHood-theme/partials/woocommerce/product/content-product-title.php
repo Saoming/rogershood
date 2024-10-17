@@ -9,7 +9,7 @@
 	echo '<div class="woo-product-link__hover">';
 		foreach ( $product->get_gallery_image_ids() as  $index => $image_id ) {
 		if ( 0 == $index ) {
-		printf( '<img class="woo-product-img__hover tomepajk123" src="%s">', esc_url( wp_get_attachment_url( $image_id ) ) );
+		printf( '<img class="woo-product-img__hover" src="%s">', esc_url( wp_get_attachment_url( $image_id ) ) );
 		}
 		break;
 		}
