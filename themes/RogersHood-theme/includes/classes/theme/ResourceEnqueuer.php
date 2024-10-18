@@ -49,7 +49,7 @@ class ResourceEnqueuer {
 	 * Used for Social Sharing
 	 */
 	public function enqueue_sharer_script() {
-		if ( ! is_singular('post') ) {
+		if ( ! is_singular( 'post' ) ) {
 			return;
 		}
 		wp_enqueue_script(
@@ -88,30 +88,25 @@ class ResourceEnqueuer {
 		);
 	}
 
-
 	/**
-	 * Enqueues the Transaction Filter script
+	 * Registers the Swiper Assets
 	 */
-	public static function enqueue_transactions_filter_script() {
-		wp_enqueue_script(
-			'transactions-filter-script-defer',
-			TENUP_THEME_DIST_URL . '/js/transactions-filter-script.js',
+	public static function enqueue_swiper_assets() {
+		wp_enqueue_style(
+			'swiper-css',
+			TENUP_THEME_TEMPLATE_URL . '/3rd-party/swiper/swiper-bundle.min.css',
 			array(),
-			filemtime( TENUP_THEME_DIST_PATH . '/js/transactions-filter-script.js' ),
-			false
 		);
-	}
 
-	/**
-	 * Enqueues the Animated Counter Hero Before Archive script
-	 */
-	public static function enqueue_animated_counter_hero_script() {
 		wp_enqueue_script(
-			'animated-counter-hero-script-defer',
-			TENUP_THEME_DIST_URL . '/js/animated-counter-hero-script.js',
+			'swiper-js',
+			TENUP_THEME_TEMPLATE_URL . '/3rd-party/swiper/swiper-bundle.min.js',
 			array(),
-			filemtime( TENUP_THEME_DIST_PATH . '/js/animated-counter-hero-script.js' ),
-			false
+			false,
+			array(
+				'strategy'  => 'defer',
+				'in_footer' => true,
+			)
 		);
 	}
 
@@ -174,7 +169,7 @@ class ResourceEnqueuer {
 	/**
 	 * Enqueue the block template
 	 */
-	protected function enqueue_template_resources(	) {
+	protected function enqueue_template_resources() {
 		if ( is_404() ) {
 			wp_enqueue_style(
 				'404',
