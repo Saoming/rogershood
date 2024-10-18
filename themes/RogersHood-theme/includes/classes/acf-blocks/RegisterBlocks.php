@@ -76,6 +76,7 @@ class RegisterBlocks {
 		$this->register_testimonials_section_block();
 		$this->register_top_help_search_block();
 		$this->register_text_video_block();
+		$this->register_hero_slider_section_block();
 	}
 
 	protected function register_faq_block() {
@@ -831,6 +832,31 @@ class RegisterBlocks {
 						'mode' => 'preview',
 						'data' => array(
 							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/text-and-video.jpg',
+						),
+					),
+				),
+			)
+		);
+	}
+
+	/**
+	 * Registers the Hero Slider block on the homepage
+	 */
+	protected function register_hero_slider_section_block() {
+
+		acf_register_block_type(
+			array(
+				'name'            => 'hero-slider',
+				'title'           => __( 'Hero Slider' ),
+				'render_template' => 'partials/blocks/hero-slider/hero-slider.php',
+				'mode'            => 'auto',
+				'category'        => 'rogershood',
+				'supports'        => array( 'anchor' => true ),
+				'example'         => array(
+					'attributes' => array(
+						'mode' => 'preview',
+						'data' => array(
+							'block_preview' => TENUP_THEME_TEMPLATE_URL . '/block-preview/hero-slider.jpg',
 						),
 					),
 				),
