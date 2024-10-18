@@ -10,6 +10,11 @@
 	text-transform: uppercase;
 }
 
+.header__brand-link img {
+	width: 142px;
+	height: 60px;
+}
+
 .header__container {
 	align-items: center;
 	display: flex;
