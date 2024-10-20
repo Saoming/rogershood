@@ -35,10 +35,52 @@ class Checkout {
 
 		add_filter( 'wcpay_upe_appearance', [ $this, 'fix_payment_form' ] );
 
+		add_filter( 'woocommerce_checkout_fields', [ $this, 'add_shipping_phone_field' ] );
 
+		add_action( 'woocommerce_checkout_update_order_meta', [ $this, 'save_shipping_phone_field' ] );
+
+		add_action( 'woocommerce_admin_order_data_after_shipping_address', [ $this, 'display_shipping_phone_in_admin_order' ], 10, 1 );
+
+		add_filter( 'woocommerce_checkout_fields', [ $this, 'remove_company_fields' ] );
 	}
 
-	function fix_payment_form( $appearance ) {
+	public function remove_company_fields( $fields ) {
+		// Remove company name from billing
+		unset( $fields['billing']['billing_company'] );
+
+		// Remove company name from shipping
+		unset( $fields['shipping']['shipping_company'] );
+
+		return $fields;
+	}
+
+	public function display_shipping_phone_in_admin_order( $order ) {
+		$shipping_phone = $order->get_meta( 'shipping_phone');
+		if ( $shipping_phone ) {
+			echo '<p><strong>' . __( 'Shipping Phone' ) . ':</strong> ' . $shipping_phone . '</p>';
+		}
+	}
+
+	public function save_shipping_phone_field( $order_id ) {
+		if ( ! empty( $_POST['shipping_phone'] ) ) {
+			$order = wc_get_order( $order_id );
+			$order->update_meta_data( 'shipping_phone', sanitize_text_field( $_POST['shipping_phone'] ) );
+			$order->save();
+		}
+	}
+	public function add_shipping_phone_field( $fields ) {
+		// Add shipping phone field
+		$fields['shipping']['shipping_phone'] = array(
+			'type'        => 'tel',
+			'label'       => __('Phone', 'woocommerce'),
+			'required'    => true,  // Set to true if you want it to be required
+			'class'       => array('form-row-wide'),
+			'priority'    => 125,
+		);
+		return $fields;
+	}
+
+	public function fix_payment_form( $appearance ) {
 		$appearance->rules->{'.Label'} = [
 			'font-size' => '16px',
 			'line-height' => 'normal',
@@ -97,7 +139,7 @@ class Checkout {
 	}
 
 
-	function custom_end_table() {
+	public function custom_end_table() {
 		echo '<div class="custom-checkboxes">';
 
 		// Required checkbox: Agree to terms
@@ -132,7 +174,7 @@ class Checkout {
 
 	// Handle AJAX request to update cart quantity
 
-	function update_cart_quantity() {
+	public function update_cart_quantity() {
 		if ( isset( $_POST['cart_item_key'], $_POST['qty'] ) ) {
 			$cart_item_key = sanitize_text_field( $_POST['cart_item_key'] );
 			$new_quantity = intval( $_POST['qty'] );
@@ -153,7 +195,7 @@ class Checkout {
 		wp_die(); // Required to terminate properly
 	}
 
-	function apply_custom_coupon_callback() {
+	public function apply_custom_coupon_callback() {
 		// Check if a coupon code is passed
 		if ( ! isset( $_POST['coupon_code'] ) || empty( $_POST['coupon_code'] ) ) {
 			wp_send_json_error( __( 'No coupon code provided.', 'woocommerce' ) );
@@ -312,6 +354,11 @@ class Checkout {
 						<?php
 					}
 					?>
+					<tr>
+						<td class="divider-line" colspan="3">
+							<hr/>
+						</td>
+					</tr>
 					<tr>
 						<td colspan="3">
 							<div class="custom-coupon-section">
