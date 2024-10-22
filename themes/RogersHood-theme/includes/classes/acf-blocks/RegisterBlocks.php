@@ -695,7 +695,7 @@ class RegisterBlocks {
 	protected function register_product_benefits_block() {
 		acf_register_block_type(
 			array(
-				'name'            => 'rh-product-benefits',
+				'name'            => 'product-benefits',
 				'title'           => __( 'Product Benefits' ),
 				'description'     => __( 'Text part with icons on left; image on right' ),
 				'render_template' => 'partials/blocks/product-benefits/product-benefits.php',
@@ -720,7 +720,7 @@ class RegisterBlocks {
 	protected function register_product_directions_block() {
 		acf_register_block_type(
 			array(
-				'name'            => 'rh-product-directions',
+				'name'            => 'product-directions',
 				'title'           => __( 'Product Directions' ),
 				'description'     => __( 'Text sections on left; image on left' ),
 				'render_template' => 'partials/blocks/product-directions/product-directions.php',
