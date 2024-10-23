@@ -28,7 +28,7 @@ class AcfOptionsPage {
 	 * Create ACF Options Page and sub-pages
 	 */
 	public function register_options_page() {
-		if ( function_exists( 'acf_add_options_page' ) && is_user_logged_in() && 'administrator' === wp_get_current_user()->roles[0] ) {
+		if ( function_exists( 'acf_add_options_page' ) && current_user_can('edit_theme_options')) {
 			$parent = acf_add_options_page(
 				array(
 					'page_title' => __( 'RogersHood Theme Settings', 'tenup-theme' ),

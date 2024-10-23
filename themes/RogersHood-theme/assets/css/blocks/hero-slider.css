@@ -88,7 +88,7 @@
 	}
 
 	.hero-product-slider:hover {
-		height: calc(calc(25vw - 12.5px) + calc(25vw - 12.5px) / 5);
+		height: calc(100% + 75px);
 		transform: translateY(-75px);
 	}
 

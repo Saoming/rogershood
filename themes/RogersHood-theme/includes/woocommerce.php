@@ -73,7 +73,7 @@ function custom_pre_get_posts_query( $q ) {
 	);
 
 	// Filter the terms to get the IDs of the excluded categories
-	$excluded_cats    = array_filter( $terms, fn( $term ) => in_array( $term->slug, array( 'ebooks', 'uncategorized' ), true ) );
+	$excluded_cats    = array_filter( $terms, fn( $term ) => in_array( $term->slug, array( 'uncategorized' ), true ) );
 	$excluded_cat_ids = array_map( fn( $term ) => $term->term_id, $excluded_cats );
 
 	// Exclude the categories from the query
