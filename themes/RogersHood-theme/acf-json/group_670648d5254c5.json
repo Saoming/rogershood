@@ -116,6 +116,28 @@
                     "parent_repeater": "field_670648ef49fbb"
                 },
                 {
+                    "key": "field_670e66a6f361d",
+                    "label": "Description",
+                    "name": "description",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 0,
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_670648ef49fbb"
+                },
+                {
                     "key": "field_67065049412f7",
                     "label": "CTA",
                     "name": "cta",
@@ -154,5 +176,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728581511
+    "modified": 1728997153
 }
