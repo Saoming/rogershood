@@ -43,7 +43,7 @@
 				class="testimonial-box-container splide"
 				role="group"
 				aria-label="Check our Testimonials Content Slider"
-				data-splide='{"type": "slide", "start": 2, "arrows": false, "autoplay": false, "perPage": 1, "pagination": false, "focus": "center", "drag": true, "autoScroll": { "autoStart": false }}'
+				data-splide='{"type": "slide", "start": 3, "arrows": false, "autoplay": false, "perPage": 1, "pagination": false, "focus": "center", "drag": true, "autoScroll": { "autoStart": false }}'
 			>
 				<div class="splide__track">
 					<ul class="list-none splide__list">
@@ -73,7 +73,7 @@
 								</div>
 
 								<div class="testimonial-social">
-									<?php if ( $cta_link ) : ?>
+									<?php if ( $cta ) : ?>
 									<a
 										href="<?php echo esc_url( $cta_link ); ?>"
 										target="<?php echo esc_attr( $cta_target ); ?>"
@@ -83,6 +83,18 @@
 											<path d="M13.0001 18.3332C14.4146 18.3332 15.7711 17.7713 16.7713 16.7711C17.7715 15.7709 18.3334 14.4143 18.3334 12.9998C18.3334 11.5853 17.7715 10.2288 16.7713 9.2286C15.7711 8.22841 14.4146 7.6665 13.0001 7.6665C11.5856 7.6665 10.229 8.22841 9.22885 9.2286C8.22865 10.2288 7.66675 11.5853 7.66675 12.9998C7.66675 14.4143 8.22865 15.7709 9.22885 16.7711C10.229 17.7713 11.5856 18.3332 13.0001 18.3332Z" stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 											<path d="M1 18.3333V7.66667C1 5.89856 1.70238 4.20286 2.95262 2.95262C4.20286 1.70238 5.89856 1 7.66667 1H18.3333C20.1014 1 21.7971 1.70238 23.0474 2.95262C24.2976 4.20286 25 5.89856 25 7.66667V18.3333C25 20.1014 24.2976 21.7971 23.0474 23.0474C21.7971 24.2976 20.1014 25 18.3333 25H7.66667C5.89856 25 4.20286 24.2976 2.95262 23.0474C1.70238 21.7971 1 20.1014 1 18.3333Z" stroke="#121212" stroke-width="1.5"/>
 											<path d="M20.3333 5.68081L20.3471 5.66553" stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</a>
+									<?php endif; ?>
+									<?php if ( $cta2 ) : ?>
+									<a
+										href="<?php echo esc_url( $cta_link2 ); ?>"
+										target="<?php echo esc_attr( $cta_target2 ); ?>"
+										aria-label="Click to go to Tiktok URL"
+									>
+										<svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M25 7.66667V18.3333C25 20.1014 24.2976 21.7971 23.0474 23.0474C21.7971 24.2976 20.1014 25 18.3333 25H7.66667C5.89856 25 4.20286 24.2976 2.95262 23.0474C1.70238 21.7971 1 20.1014 1 18.3333V7.66667C1 5.89856 1.70238 4.20286 2.95262 2.95262C4.20286 1.70238 5.89856 1 7.66667 1H18.3333C20.1014 1 21.7971 1.70238 23.0474 2.95262C24.2976 4.20286 25 5.89856 25 7.66667Z" stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+											<path d="M10.333 13C9.54188 13 8.76852 13.2346 8.11073 13.6741C7.45293 14.1136 6.94024 14.7384 6.63749 15.4693C6.33474 16.2002 6.25553 17.0044 6.40987 17.7804C6.56421 18.5563 6.94517 19.269 7.50458 19.8284C8.06399 20.3878 8.77672 20.7688 9.55265 20.9231C10.3286 21.0775 11.1328 20.9983 11.8637 20.6955C12.5946 20.3928 13.2194 19.8801 13.6589 19.2223C14.0984 18.5645 14.333 17.7911 14.333 17V5C14.777 6.33333 16.4663 9 19.6663 9" stroke="#121212" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 										</svg>
 									</a>
 									<?php endif; ?>

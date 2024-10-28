@@ -15,7 +15,6 @@ class ShopContent {
 		if ( ! $pattern_id ) {
 			return;
 		}
-
 		$pattern = get_post( $pattern_id );
 
 		if ( ! $pattern ) {

@@ -15,6 +15,9 @@ if ( have_posts() ) :
 		<h1 class="single-post__title container container--narrow text-center">
 			<?php echo the_title(); ?>
 		</h1>
+		<div class="single_post__disclaimer container container--narrow text-center">
+			The information provided is for informational purposes only and should not be considered as medical advice. Always consult with a healthcare professional before using any supplements, especially if you are pregnant, nursing, have a medical condition, or are taking medications.
+		</div>
 		<?php if ( has_post_thumbnail() ) : ?>
 		<div class="single-post__image container container--narrow">
 			<div class="parallax" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');"></div>

@@ -18,8 +18,6 @@
  */
 
 defined( 'ABSPATH' ) || exit;
-custom_theme_error_log( $order );
-custom_theme_error_log( $order->get_shipping_first_name() );
 
 ?>
 

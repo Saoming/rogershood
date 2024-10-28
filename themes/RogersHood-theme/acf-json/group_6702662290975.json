@@ -1,6 +1,6 @@
 {
     "key": "group_6702662290975",
-    "title": "Blocks - Tiktok Feed",
+    "title": "Blocks - Video Feed",
     "fields": [
         {
             "key": "field_67026622c541f",
@@ -97,24 +97,6 @@
             "default_value": "",
             "allow_in_bindings": 0,
             "placeholder": ""
-        },
-        {
-            "key": "field_67026669c5424",
-            "label": "Feed Shortcode ID",
-            "name": "feed_shortcode_id",
-            "aria-label": "",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "allow_in_bindings": 0,
-            "placeholder": ""
         }
     ],
     "location": [
@@ -135,5 +117,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1728210587
+    "modified": 1729747644
 }

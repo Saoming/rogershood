@@ -189,9 +189,9 @@ class RegisterBlocks {
 	protected function register_tiktok_feed_block() {
 		acf_register_block_type(
 			array(
-				'name'            => 'rh-tiktok-feed',
-				'title'           => __( 'TikTok Feed' ),
-				'render_template' => 'partials/blocks/tiktok-feed/tiktok-feed.php',
+				'name'            => 'rh-video-feed',
+				'title'           => __( 'Video Feed' ),
+				'render_template' => 'partials/blocks/video-feed/video-feed.php',
 				'mode'            => 'auto',
 				'category'        => 'rogershood',
 				'supports'        => array( 'anchor' => true ),

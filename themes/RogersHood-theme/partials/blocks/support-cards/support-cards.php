@@ -20,16 +20,16 @@ if ( ! get_field( 'block_preview' ) ) {
 		<div class="support-cards__container container container--narrow br-8">
 			<?php if ( $fields['title'] ) { ?>
 				<h2 class="support-cards__title text-center">
-					<?php echo esc_attr( $fields['title'] ); ?>
+					<?php echo esc_html( $fields['title'] ?? '' ); ?>
 				</h2>
 			<?php } ?>
 			<div class="row support-cards__cards">
 				<?php foreach ( $fields['cards'] as $card ) { ?>
 					<a class="support-cards___link col-sm-12 col-md-4"
-						href="<?php echo esc_url( $card['cta']['url'] ); ?>"
-						target="<?php echo esc_attr( $card['cta']['target'] ); ?>">
+						href="<?php echo esc_url( $card['cta']['url'] ?? '' ); ?>"
+						target="<?php echo esc_attr( ! empty( $card['cta']['target'] ? $card['cta']['target'] : '' ) ); ?>">
 						<div class="support-cards__card ">
-							<?php echo esc_html( $fields['cta']['title'] ); ?>
+							<?php echo esc_html( ! empty( $fields['cta']['title'] ) ? $fields['cta']['title'] : '' ); ?>
 
 							<?php
 							if ( $card['icon'] ) {
@@ -41,10 +41,10 @@ if ( ! get_field( 'block_preview' ) ) {
 							<?php } ?>
 							<div class="support-cards__card__text">
 								<?php if ( $card['title'] ) { ?>
-									<h3 class="support-cards__card__title fs-18 mb-20"><?php echo esc_attr( $card['title'] ); ?></h3>
+									<h3 class="support-cards__card__title fs-18 mb-20"><?php echo esc_attr( ! empty( $card['title'] ) ? $card['title'] : '' ); ?></h3>
 								<?php } ?>
 								<?php if ( $card['description'] ) { ?>
-									<div class="support-cards__card__description"><?php echo esc_attr( $card['description'] ); ?></div>
+									<div class="support-cards__card__description"><?php echo esc_attr( ! empty( $card['description'] ) ? $card['description'] : '' ); ?></div>
 								<?php } ?>
 							</div>
 						</div>

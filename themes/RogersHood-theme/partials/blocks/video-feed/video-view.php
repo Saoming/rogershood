@@ -1,15 +1,4 @@
-<?php
-$title             = get_field( 'title' );
-$description       = get_field( 'description' );
-$facebook_link     = get_field( 'facebook_link' );
-$instagram_link    = get_field( 'instagram_link' );
-$tiktok_link       = get_field( 'tiktok_link' );
-$feed_shortcode_id = get_field( 'feed_shortcode_id' );
-if ( ! get_field( 'block_preview' ) ) {
-
-	?>
-
-	<div class="rh-block tiktok-feed">
+<div class="rh-block tiktok-feed">
 		<div class="container container--relative">
 			<?php if ( $title ) { ?>
 				<h2 class="tiktok-feed__title text-center">
@@ -51,8 +40,3 @@ if ( ! get_field( 'block_preview' ) ) {
 			<?php } ?>
 		</div>
 	</div>
-<?php } else { ?>
-	<div data="gutenberg-preview-img">
-		<img style="max-width:100%; height:auto;" src="<?php the_field( 'block_preview' ) ?>">
-	</div>
-<?php } ?>

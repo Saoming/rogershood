@@ -68,11 +68,6 @@
 	max-width: 820px;
 }
 
-.testimonial-person-container {
-	margin: 0 auto 52px auto;
-	max-width: 735px;
-}
-
 .testimonial-box-item {
 	background-color: var(--wp--preset--color--white);
 	padding: 40px 60px;
