@@ -19,19 +19,22 @@ if ( $products ) {
 					<div class="suggested-products__pretitle">
 						<?php echo esc_attr( $pretitle ); ?>
 					</div>
-				<?php }
-				if ( $title ) { ?>
+					<?php
+				}
+				if ( $title ) {
+					?>
 					<h2 class="suggested-products__title">
 						<?php echo esc_html( $title ); ?>
 					</h2>
 				<?php } ?>
 			</div>
 			<?php
-			foreach ( $products as $product_id ) { ?>
+			foreach ( $products as $product ) {
+				?>
 				<div class="col-md-6 col-lg-4">
 					<div class="suggested-products__inner">
-						<?php $product_id = get_sub_field( 'product' );
-						echo do_shortcode( '[product id="' . $product_id . '"]' );
+						<?php
+						echo do_shortcode( '[product id="' . $product->ID . '"]' );
 						?>
 					</div>
 				</div>
