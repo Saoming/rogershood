@@ -7,13 +7,13 @@ if ( ! empty( $block['anchor'] ) ) {
 
 $args['id'] = $id;
 
-if ( function_exists('get_field')) {
-	$args['title']  	= get_field( 'title' );
-	$description       = get_field( 'description' );
-	$facebook_link     = get_field( 'facebook_link' );
-	$instagram_link    = get_field( 'instagram_link' );
-	$tiktok_link       = get_field( 'tiktok_link' );
-	$feed_shortcode_id = get_field( 'feed_shortcode_id' );
+if ( function_exists( 'get_field' ) ) {
+	$args['title']          = get_field( 'title' );
+	$args['description']    = get_field( 'description' );
+	$args['facebook_link']  = get_field( 'facebook_link' );
+	$args['instagram_link'] = get_field( 'instagram_link' );
+	$args['tiktok_link']    = get_field( 'tiktok_link' );
+	$args['video_repeater'] = get_field( 'video_repeater' );
 }
 
 

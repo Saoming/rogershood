@@ -28,13 +28,20 @@
 	overflow-x: auto;
 }
 
-.tiktok-feed__feed .sb-post-item-wrap{
+.tiktok-feed__feed .sb-post-item-wrap {
 	flex-shrink: 0;
 }
 
+.video-feed__container {
+	display: flex;
+	gap: 20px;
+}
 
-@media all and (width < 768px ) {
+.video-feed__item {
+	min-width: 230px;
+}
 
+@media all and (width < 768px) {
 	.tiktok-feed__title {
 		padding: 0;
 	}
@@ -54,17 +61,8 @@
 		margin-bottom: 22px;
 	}
 
-	.sb-grid-wrapper {
-		display: flex !important;
+	.video-feed__container {
 		flex-wrap: nowrap;
 		overflow-x: auto;
 	}
-
-	.sb-post-item-wrap {
-		flex-shrink: 0;
-		padding-bottom: 0 !important;
-		margin-bottom: 0 !important;
-	}
-
-
 }
