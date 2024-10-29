@@ -359,6 +359,15 @@ class Checkout {
 							<hr/>
 						</td>
 					</tr>
+					<?php if (function_exists('woocommerce_redeem_points_form')) { ?>
+						<tr>
+							<td colspan="3">
+								<div class="custom-points-section">
+									<?php woocommerce_redeem_points_form(); // Echo the redeem points form ?>
+								</div>
+							</td>
+						</tr>
+					<?php } ?>
 					<tr>
 						<td colspan="3">
 							<div class="custom-coupon-section">
