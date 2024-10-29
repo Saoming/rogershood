@@ -4,6 +4,10 @@
 	position: relative;
 }
 
+.testimonial-person-container {
+	margin-bottom: 52px;
+}
+
 .testimonial-list {
 	align-items: center;
 }
@@ -49,18 +53,24 @@
 
 .testimonial-item.splide__slide.is-active {
 	filter: grayscale(0%);
+	margin: 0 -32px;
 	z-index: 8;
 }
 
-.testimonial-item:nth-child(n + 2):not(:nth-child(3), :nth-child(5)) {
-	margin: 0 -60px;
+.testimonial-item {
+	margin: 0 -40px;
+}
+
+.testimonial-item:nth-child(even) {
 	z-index: 4;
 }
 
-.testimonial-item:nth-child(1),
-.testimonial-item:nth-child(5) {
-	margin: 0 -32px;
+.testimonial-item:nth-child(odd) {
 	z-index: 3;
+}
+
+.testimonial-item.splide__slide.is-active .testimonial-item {
+	margin: 0;
 }
 
 .testimonial-box-container {
