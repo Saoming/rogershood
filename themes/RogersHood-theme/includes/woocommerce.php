@@ -113,3 +113,26 @@ function wc_link_fix() {
 	echo '<h2 class="' . esc_attr( apply_filters( 'woocommerce_product_loop_title_classes', 'woocommerce-loop-product__title' ) ) . '">' . get_the_title() . '</h2>'; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 	echo '</a>';
 }
+
+/**
+ * Track the number of items in the cart and set a cookie
+ */
+add_action( 'woocommerce_cart_updated', 'track_cart_items_with_cookies' );
+function track_cart_items_with_cookies() {
+	if ( WC()->cart  ) {
+		$cart_items_count = WC()->cart->get_cart_contents_count();
+
+		// Set the cookie
+		setcookie( 'custom_cart_item_count', $cart_items_count, time() + 3600 * 24, '/' ); // 1-day expiry
+	}
+}
+
+function get_cart_items_count_from_cookies() {
+	$total_items = 0;
+
+	if ( isset( $_COOKIE['custom_cart_item_count'] ) ) {
+		$total_items = intval( $_COOKIE['custom_cart_item_count'] );
+	}
+
+	return $total_items;
+}
