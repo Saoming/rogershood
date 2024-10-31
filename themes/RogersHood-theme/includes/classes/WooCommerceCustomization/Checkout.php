@@ -4,44 +4,43 @@ namespace TenUpTheme\WooCommerceCustomization;
 
 class Checkout {
 	public function init_hooks() {
-		add_action( 'woocommerce_before_checkout_form', [ $this, 'add_title_to_checkout' ] );
+		add_action( 'woocommerce_before_checkout_form', array( $this, 'add_title_to_checkout' ) );
 
-		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue_checkout_assets' ] );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_checkout_assets' ) );
 
 		add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
 
-		add_filter( 'woocommerce_quantity_input_type', [ $this, 'quantity_input_type' ] );
+		add_filter( 'woocommerce_quantity_input_type', array( $this, 'quantity_input_type' ) );
 
-		add_action( 'woocommerce_custom_summary_table', [ $this, 'woocommerce_custom_summary_table' ] );
+		add_action( 'woocommerce_custom_summary_table', array( $this, 'woocommerce_custom_summary_table' ) );
 
-		add_action( 'wp_ajax_apply_custom_coupon', [$this, 'apply_custom_coupon_callback' ] );
-		add_action( 'wp_ajax_nopriv_apply_custom_coupon', [$this, 'apply_custom_coupon_callback' ] );
+		add_action( 'wp_ajax_apply_custom_coupon', array( $this, 'apply_custom_coupon_callback' ) );
+		add_action( 'wp_ajax_nopriv_apply_custom_coupon', array( $this, 'apply_custom_coupon_callback' ) );
 
-		add_action( 'wp_ajax_update_cart_quantity', [$this,'update_cart_quantity'] );
-		add_action( 'wp_ajax_nopriv_update_cart_quantity', [$this,'update_cart_quantity'] );
+		add_action( 'wp_ajax_update_cart_quantity', array( $this, 'update_cart_quantity' ) );
+		add_action( 'wp_ajax_nopriv_update_cart_quantity', array( $this, 'update_cart_quantity' ) );
 
-		add_filter('woocommerce_update_order_review_fragments', [ $this, 'update_order_review_fragment' ] );
-
+		add_filter( 'woocommerce_update_order_review_fragments', array( $this, 'update_order_review_fragment' ) );
 
 		remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
 
-		add_action( 'woocommerce_custom_end_table', [ $this, 'custom_end_table' ], 20 );
+		add_action( 'woocommerce_custom_end_table', array( $this, 'custom_end_table' ), 20 );
 
-		add_action( 'woocommerce_checkout_process', [ $this, 'validate_terms_checkbox' ] );
+		add_action( 'woocommerce_checkout_process', array( $this, 'validate_terms_checkbox' ) );
 
-		add_action( 'woocommerce_checkout_create_order', [ $this, 'save_optin_data_to_order' ], 10, 2 );
+		add_action( 'woocommerce_checkout_create_order', array( $this, 'save_optin_data_to_order' ), 10, 2 );
 
-		add_action( 'woocommerce_admin_order_data_after_billing_address', [ $this, 'display_optin_data_in_admin_order' ] , 10, 1 );
+		add_action( 'woocommerce_admin_order_data_after_billing_address', array( $this, 'display_optin_data_in_admin_order' ), 10, 1 );
 
-		add_filter( 'wcpay_upe_appearance', [ $this, 'fix_payment_form' ] );
+		add_filter( 'wcpay_upe_appearance', array( $this, 'fix_payment_form' ) );
 
-		add_filter( 'woocommerce_checkout_fields', [ $this, 'add_shipping_phone_field' ] );
+		add_filter( 'woocommerce_checkout_fields', array( $this, 'add_shipping_phone_field' ) );
 
-		add_action( 'woocommerce_checkout_update_order_meta', [ $this, 'save_shipping_phone_field' ] );
+		add_action( 'woocommerce_checkout_update_order_meta', array( $this, 'save_shipping_phone_field' ) );
 
-		add_action( 'woocommerce_admin_order_data_after_shipping_address', [ $this, 'display_shipping_phone_in_admin_order' ], 10, 1 );
+		add_action( 'woocommerce_admin_order_data_after_shipping_address', array( $this, 'display_shipping_phone_in_admin_order' ), 10, 1 );
 
-		add_filter( 'woocommerce_checkout_fields', [ $this, 'remove_company_fields' ] );
+		add_filter( 'woocommerce_checkout_fields', array( $this, 'remove_company_fields' ) );
 	}
 
 	public function remove_company_fields( $fields ) {
@@ -55,7 +54,7 @@ class Checkout {
 	}
 
 	public function display_shipping_phone_in_admin_order( $order ) {
-		$shipping_phone = $order->get_meta( 'shipping_phone');
+		$shipping_phone = $order->get_meta( 'shipping_phone' );
 		if ( $shipping_phone ) {
 			echo '<p><strong>' . __( 'Shipping Phone' ) . ':</strong> ' . $shipping_phone . '</p>';
 		}
@@ -71,68 +70,68 @@ class Checkout {
 	public function add_shipping_phone_field( $fields ) {
 		// Add shipping phone field
 		$fields['shipping']['shipping_phone'] = array(
-			'type'        => 'tel',
-			'label'       => __('Phone', 'woocommerce'),
-			'required'    => true,  // Set to true if you want it to be required
-			'class'       => array('form-row-wide'),
-			'priority'    => 125,
+			'type'     => 'tel',
+			'label'    => __( 'Phone', 'woocommerce' ),
+			'required' => true,  // Set to true if you want it to be required
+			'class'    => array( 'form-row-wide' ),
+			'priority' => 125,
 		);
 		return $fields;
 	}
 
 	public function fix_payment_form( $appearance ) {
-		$appearance->rules->{'.Label'} = [
-			'font-size' => '16px',
+		$appearance->rules->{'.Label'}            = array(
+			'font-size'   => '16px',
 			'line-height' => 'normal',
 			'font-family' => 'Sofia Pro',
-		];
-		$appearance->rules->{'#root'} = [
+		);
+		$appearance->rules->{'#root'}             = array(
 			'font-family' => 'Sofia Pro',
-		];
-		$appearance->rules->{'.Input'} = [
+		);
+		$appearance->rules->{'.Input'}            = array(
 			'backgroundColor' => '#fff',
-			'border' => '1px solid #EBEBEB',
-			'padding' => '11px 19px',
+			'border'          => '1px solid #EBEBEB',
+			'padding'         => '11px 19px',
+			'box-shadow'      => 'none',
+			'font-family'     => 'Sofia Pro',
+		);
+		$appearance->rules->{'.Input:focus'}      = array(
+			'outline'    => 'none',
 			'box-shadow' => 'none',
-			'font-family' => 'Sofia Pro',
-		];
-		$appearance->rules->{'.Input:focus'} = [
-			'outline' => 'none',
+		);
+		$appearance->rules->{'.p-Input--focused'} = array(
+			'outline'    => 'none',
 			'box-shadow' => 'none',
-		];
-		$appearance->rules->{'.p-Input--focused'} = [
-			'outline' => 'none',
-			'box-shadow' => 'none',
-		];
-		$appearance->rules->{'.Input--invalid'} = [
+		);
+		$appearance->rules->{'.Input--invalid'}   = array(
 			'backgroundColor' => '#fff',
-			'border' => '1px solid #EBEBEB',
-			'padding' => '11px 29px',
-		];
+			'border'          => '1px solid #EBEBEB',
+			'padding'         => '11px 29px',
+		);
 
-		$appearance->fonts = [
-			[
-				'cssSrc'    => 'url('. get_stylesheet_directory_uri() .'/assets/css/frontend/woocommerce/style-for-stripe.css)',
-			]
-		];
-		$appearance->theme = 'flat';
-		$appearance->base = [
+		$appearance->fonts     = array(
+			array(
+				'cssSrc' => 'url(' . get_stylesheet_directory_uri() . '/assets/css/frontend/woocommerce/style-for-stripe.css)',
+			),
+		);
+		$appearance->theme     = 'flat';
+		$appearance->base      = array(
 			'fontFamily' => 'Sofia Pro',
-		];
+		);
 		$appearance->variables = array(
-			'fontFamily' => 'Sofia Pro',
-			'fontWeightNormal' => '300',
-			'fontLineHeight' => 'normal',
-			'borderRadius' => '12px',
-			'colorBackground' => '#fff',
-			'colorPrimary' => '#121212',
+			'fontFamily'                    => 'Sofia Pro',
+			'fontWeightNormal'              => '300',
+			'fontLineHeight'                => 'normal',
+			'borderRadius'                  => '12px',
+			'colorBackground'               => '#fff',
+			'colorPrimary'                  => '#121212',
 			'accessibleColorOnColorPrimary' => '#5E5E5E',
-			'colorText' => '#5E5E5E',
-			'colorTextSecondary' => '#5E5E5E',
-			'colorTextPlaceholder' => '#5E5E5E',
-			'fontSizeBase' => '16px',
-			'focusBoxShadow' => 'none',
-			'fontSizeSm' => '16px',
+			'colorText'                     => '#5E5E5E',
+			'colorTextSecondary'            => '#5E5E5E',
+			'colorTextPlaceholder'          => '#5E5E5E',
+			'fontSizeBase'                  => '16px',
+			'focusBoxShadow'                => 'none',
+			'fontSizeSm'                    => '16px',
 		);
 
 		return $appearance;
@@ -143,28 +142,37 @@ class Checkout {
 		echo '<div class="custom-checkboxes">';
 
 		// Required checkbox: Agree to terms
-		woocommerce_form_field( 'agree_terms', array(
-			'type'     => 'checkbox',
-			'class'    => array('form-row terms'),
-			'label'    => 'I have read and agree to the website <a href="#" target="_blank">terms and conditions</a>',
-			'required' => true,
-		));
+		woocommerce_form_field(
+			'agree_terms',
+			array(
+				'type'     => 'checkbox',
+				'class'    => array( 'form-row terms' ),
+				'label'    => 'I have read and agree to the website <a href="https://rogershood.com/terms-of-service/" target="_blank">terms and conditions</a>',
+				'required' => true,
+			)
+		);
 
 		// Optional checkbox: Sign up for email updates
-		woocommerce_form_field( 'email_optin', array(
-			'type'  => 'checkbox',
-			'class' => array('form-row email-updates'),
-			'label' => 'Sign me up to receive email updates and news',
-			'required' => false,
-		));
+		woocommerce_form_field(
+			'email_optin',
+			array(
+				'type'     => 'checkbox',
+				'class'    => array( 'form-row email-updates' ),
+				'label'    => 'Sign me up to receive email updates and news',
+				'required' => false,
+			)
+		);
 
 		// Optional checkbox: Sign up for SMS updates
-		woocommerce_form_field( 'sms_optin', array(
-			'type'  => 'checkbox',
-			'class' => array('form-row sms-updates'),
-			'label' => 'Sign me up to receive SMS updates and news',
-			'required' => false,
-		));
+		woocommerce_form_field(
+			'sms_optin',
+			array(
+				'type'     => 'checkbox',
+				'class'    => array( 'form-row sms-updates' ),
+				'label'    => 'Sign me up to receive SMS updates and news',
+				'required' => false,
+			)
+		);
 
 		echo '<p>By checking this box and entering your phone number above, you consent to receive marketing text messages (such as [promotion codes] and [cart reminders]) from [company name] at the number provided, including messages sent by autodialer. Consent is not a condition of any purchase. Message and data rates may apply. Message frequency varies. You can unsubscribe at any time by replying STOP or clicking the unsubscribe link (where available) in one of our messages. View our Privacy Policy and Terms of Service</p>';
 
@@ -177,7 +185,7 @@ class Checkout {
 	public function update_cart_quantity() {
 		if ( isset( $_POST['cart_item_key'], $_POST['qty'] ) ) {
 			$cart_item_key = sanitize_text_field( $_POST['cart_item_key'] );
-			$new_quantity = intval( $_POST['qty'] );
+			$new_quantity  = intval( $_POST['qty'] );
 
 			if ( $new_quantity > 0 ) {
 				// Update the cart quantity
@@ -233,7 +241,7 @@ class Checkout {
 	}
 
 	public static function enqueue_checkout_assets() {
-		if(!function_exists('is_checkout')) {
+		if ( ! function_exists( 'is_checkout' ) ) {
 			return;
 		}
 
@@ -243,7 +251,7 @@ class Checkout {
 				TENUP_THEME_TEMPLATE_URL . '/assets/css/frontend/woocommerce/checkout.css',
 			);
 
-			//TODO: fix versioning
+			// TODO: fix versioning
 			wp_register_script(
 				'theme-woocommerce-checkout',
 				TENUP_THEME_TEMPLATE_URL . '/assets/js/frontend/woocommerce/checkout.js'
@@ -332,8 +340,8 @@ class Checkout {
 										'max_value'    => $max_quantity,
 										'min_value'    => $min_quantity,
 										'product_name' => $product_name,
-										'readonly' => 1,
-										'type' => 'text',
+										'readonly'     => 1,
+										'type'         => 'text',
 									),
 									$_product,
 									false
@@ -359,7 +367,7 @@ class Checkout {
 							<hr/>
 						</td>
 					</tr>
-					<?php if (function_exists('woocommerce_redeem_points_form')) { ?>
+					<?php if ( function_exists( 'woocommerce_redeem_points_form' ) ) { ?>
 						<tr>
 							<td colspan="3">
 								<div class="custom-points-section">
@@ -474,7 +482,7 @@ class Checkout {
 
 	public function display_optin_data_in_admin_order( $order ) {
 		$email_optin = $order->get_meta( 'email_optin' );
-		$sms_optin = $order->get_meta( 'sms_optin' );
+		$sms_optin   = $order->get_meta( 'sms_optin' );
 
 		echo '<p><strong>Email Updates Opt-in:</strong> ' . ucfirst( $email_optin ) . '</p>';
 		echo '<p><strong>SMS Updates Opt-in:</strong> ' . ucfirst( $sms_optin ) . '</p>';
