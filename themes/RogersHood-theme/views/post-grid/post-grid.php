@@ -32,7 +32,9 @@
 						   class="posts-grid__title-container fc-black fw-500">
 							<?php echo esc_attr( $post['title'] ); ?>
 						</a>
-						<?php custom_theme_error_log($post["excerpt"]);?>
+						<?php
+//						custom_theme_error_log($post["excerpt"]);
+						?>
 						<?php if ( isset( $post['excerpt'] ) && $post['excerpt'] ) { ?>
 							<div class="posts-grid__excerpt-container">
 								<?php echo wp_kses_post( $post['excerpt'] ); ?>

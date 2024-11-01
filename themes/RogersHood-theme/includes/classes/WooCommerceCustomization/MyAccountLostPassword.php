@@ -11,7 +11,7 @@ class MyAccountLostPassword {
 	}
 
 	public function lost_password_page_wrapper_start() {
-		custom_theme_error_log('woocommerce_before_lost_password_form');
+//		custom_theme_error_log('woocommerce_before_lost_password_form');
 		?>
 		<div class="login-page-wrapper ">
 			<div class="rh-block rh-block--full-bleed  rh-login-page">
