@@ -119,19 +119,25 @@ function wc_link_fix() {
  */
 add_action( 'woocommerce_cart_updated', 'track_cart_items_with_cookies' );
 function track_cart_items_with_cookies() {
-	if ( WC()->cart  ) {
+	if ( WC()->cart ) {
 		$cart_items_count = WC()->cart->get_cart_contents_count();
 
 		// Set the cookie
-		setcookie( 'custom_cart_item_count', $cart_items_count, time() + 3600 * 24, '/' ); // 1-day expiry
+		setcookie(
+			'custom_cart_item_count_1',
+			$cart_items_count,
+			time() + 3600 * 24,
+			'/',
+			'.' . parse_url( network_home_url(), PHP_URL_HOST )
+		); // 1-day expiry
 	}
 }
 
 function get_cart_items_count_from_cookies() {
 	$total_items = 0;
 
-	if ( isset( $_COOKIE['custom_cart_item_count'] ) ) {
-		$total_items = intval( $_COOKIE['custom_cart_item_count'] );
+	if ( isset( $_COOKIE['custom_cart_item_count_1'] ) ) {
+		$total_items = intval( $_COOKIE['custom_cart_item_count_1'] );
 	}
 
 	return $total_items;
