@@ -8,7 +8,7 @@ class Checkout {
 
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_checkout_assets' ) );
 
-		add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
+//		add_filter( 'woocommerce_enable_order_notes_field', '__return_false' );
 
 		add_filter( 'woocommerce_quantity_input_type', array( $this, 'quantity_input_type' ) );
 
